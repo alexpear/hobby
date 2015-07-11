@@ -1,0 +1,480 @@
+2012 dec 15
+Lovecraftian star-forebears, the Kek, & uAI takeover.
+In the beginning there was Faction BT
+
+   status:
+   Faction BT is Scale 0 and Tech 0 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT expands to Scale 3
+
+   status:
+   Faction BT is Scale 3 and Tech 0 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT advances to Tech level 1
+
+   status:
+   Faction BT is Scale 3 and Tech 1 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT advances to Tech level 3
+
+   status:
+   Faction BT is Scale 3 and Tech 3 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT advances to Tech level 5
+
+   status:
+   Faction BT is Scale 3 and Tech 5 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT expands to Scale 6
+
+   status:
+   Faction BT is Scale 6 and Tech 5 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT expands to Scale 7
+
+   status:
+   Faction BT is Scale 7 and Tech 5 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT expands to Scale 8
+
+   status:
+   Faction BT is Scale 8 and Tech 5 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT expands to Scale 11
+
+   status:
+   Faction BT is Scale 11 and Tech 5 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT expands to Scale 14
+
+   status:
+   Faction BT is Scale 14 and Tech 5 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+
+Faction BT has given rise to a new faction: Faction RW
+
+   status:
+   Faction BT is Scale 3 and Tech 5 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+   Faction RW is Scale 11 and Tech 5 and has species-types: 
+      Species Type HWA: (Body-Type: machine, Bodies: one, Minds: one)
+
+Faction RW absorbs Faction BT
+
+   status:
+   Faction RW is Scale 14 and Tech 5 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+      Species Type HWA: (Body-Type: machine, Bodies: one, Minds: one)
+
+Faction RW advances to Tech level 7
+
+   status:
+   Faction RW is Scale 14 and Tech 7 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+      Species Type HWA: (Body-Type: machine, Bodies: one, Minds: one)
+
+Faction RW advances to Tech level 8
+
+   status:
+   Faction RW is Scale 14 and Tech 8 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+      Species Type HWA: (Body-Type: machine, Bodies: one, Minds: one)
+
+Faction RW has given rise to a new faction: Faction W2
+
+   status:
+   Faction RW is Scale 10 and Tech 8 and has species-types: 
+      Species Type KEK: (Body-Type: other, Bodies: many, Minds: many)
+      Species Type HWA: (Body-Type: machine, Bodies: one, Minds: one)
+   Faction W2 is Scale 4 and Tech 8 and has species-types: 
+      Species Type HWA: (Body-Type: machine, Bodies: one, Minds: one)
+      Species Type 0JI: (Body-Type: biological, Bodies: many, Minds: many)
+
+
+
+
+
+
+
+
+
+2012 dec 12
+Earth & AU Earth:
+In the beginning there was Faction HQ
+
+   status:
+   Faction HQ is Scale 0 and Tech 0 and has species-types: 
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction HQ has given rise to a new faction: Faction PJ
+
+   status:
+   Faction HQ is Scale 0 and Tech 0 and has species-types: 
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction PJ is Scale 0 and Tech 0 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction PJ expands to Scale 2
+
+   status:
+   Faction HQ is Scale 0 and Tech 0 and has species-types: 
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction PJ is Scale 2 and Tech 0 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction HQ merges into Faction PJ
+
+   status:
+   Faction PJ is Scale 2 and Tech 0 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction PJ expands to Scale 5
+
+   status:
+   Faction PJ is Scale 5 and Tech 0 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction PJ has given rise to a new faction: Faction YI
+
+   status:
+   Faction PJ is Scale 0 and Tech 0 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction YI is Scale 5 and Tech 0 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction YI absorbs Faction PJ
+
+   status:
+   Faction YI is Scale 5 and Tech 0 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction YI advances to Tech level 2
+
+   status:
+   Faction YI is Scale 5 and Tech 2 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction YI advances to Tech level 3
+
+   status:
+   Faction YI is Scale 5 and Tech 3 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction YI has given rise to a new faction: Faction S9
+
+   status:
+   Faction YI is Scale 3 and Tech 3 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction S9 is Scale 2 and Tech 3 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction S9 advances to Tech level 5
+
+   status:
+   Faction YI is Scale 3 and Tech 3 and has species-types: 
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction S9 is Scale 2 and Tech 5 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction YI has given rise to a new faction: Faction B3
+
+   status:
+   Faction YI is Scale 0 and Tech 3 and has species-types: 
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction B3 is Scale 3 and Tech 3 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction S9 is Scale 2 and Tech 5 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction B3 & Faction S9 have a conflict! 
+Before, 
+Faction B3: scale 3 tech 3 
+Faction S9: scale 2 tech 5
+After, 
+Faction B3: scale 3 tech 3 
+Faction S9: scale 2 tech 5
+
+   status:
+   Faction YI is Scale 0 and Tech 3 and has species-types: 
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction B3 is Scale 3 and Tech 3 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction S9 is Scale 2 and Tech 5 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction S9 expands to Scale 5
+
+   status:
+   Faction YI is Scale 0 and Tech 3 and has species-types: 
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction B3 is Scale 3 and Tech 3 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction S9 is Scale 5 and Tech 5 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction YI & Faction S9 have a conflict! 
+Before, 
+Faction YI: scale 0 tech 3 
+Faction S9: scale 5 tech 5
+After, 
+Faction YI: scale 0 tech 3 
+Faction S9: scale 5 tech 5
+
+   status:
+   Faction YI is Scale 0 and Tech 3 and has species-types: 
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+   Faction B3 is Scale 3 and Tech 3 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction S9 is Scale 5 and Tech 5 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction B3 absorbs Faction YI
+
+   status:
+   Faction B3 is Scale 3 and Tech 3 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction S9 is Scale 5 and Tech 5 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction S9 & Faction B3 have a conflict! 
+Before, 
+Faction S9: scale 5 tech 5 
+Faction B3: scale 3 tech 3
+After, 
+Faction S9: scale 7 tech 5 
+Faction B3: scale 0 tech 3
+
+   status:
+   Faction B3 is Scale 0 and Tech 3 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction S9 is Scale 7 and Tech 5 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction B3 merges into Faction S9
+
+   status:
+   Faction S9 is Scale 7 and Tech 5 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction S9 advances to Tech level 7
+
+   status:
+   Faction S9 is Scale 7 and Tech 7 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction S9 expands to Scale 9
+
+   status:
+   Faction S9 is Scale 9 and Tech 7 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+
+Faction S9 has given rise to a new faction: Faction U2
+
+   status:
+   Faction S9 is Scale 0 and Tech 7 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 9 and Tech 7 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction U2 expands to Scale 11
+
+   status:
+   Faction S9 is Scale 0 and Tech 7 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 11 and Tech 7 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction S9 & Faction U2 have a conflict! 
+Before, 
+Faction S9: scale 0 tech 7 
+Faction U2: scale 11 tech 7
+After, 
+Faction S9: scale 0 tech 7 
+Faction U2: scale 12 tech 7
+
+   status:
+   Faction S9 is Scale 0 and Tech 7 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 12 and Tech 7 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction U2 advances to Tech level 9
+
+   status:
+   Faction S9 is Scale 0 and Tech 7 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 12 and Tech 9 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction S9 & Faction U2 have a conflict! 
+Before, 
+Faction S9: scale 0 tech 7 
+Faction U2: scale 12 tech 9
+After, 
+Faction S9: scale 0 tech 7 
+Faction U2: scale 13 tech 9
+
+   status:
+   Faction S9 is Scale 0 and Tech 7 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 13 and Tech 9 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction U2 & Faction S9 have a conflict! 
+Before, 
+Faction U2: scale 13 tech 9 
+Faction S9: scale 0 tech 7
+After, 
+Faction U2: scale 14 tech 9 
+Faction S9: scale 0 tech 7
+
+   status:
+   Faction S9 is Scale 0 and Tech 7 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 14 and Tech 9 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction S9 advances to Tech level 9
+
+   status:
+   Faction S9 is Scale 0 and Tech 9 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 14 and Tech 9 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction U2 expands to Scale 16
+
+   status:
+   Faction S9 is Scale 0 and Tech 9 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 16 and Tech 9 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+
+Faction S9 expands to Scale 1
+
+   status:
+   Faction S9 is Scale 1 and Tech 9 and has species-types: 
+      Human (from Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type K7H (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)
+   Faction U2 is Scale 16 and Tech 9 and has species-types: 
+      Human (from AU Earth) (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type KN1 (Body-Type: biological, Bodies: many, Minds: many)
+      Species Type 6VD (Body-Type: biological, Bodies: many, Minds: several)
+      Species Type JXM (Body-Type: machine, Bodies: many, Minds: several)

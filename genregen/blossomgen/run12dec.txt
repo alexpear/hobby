@@ -1,0 +1,59 @@
+In the beginning there was Faction YS
+ -Yog-Sotthoth
+Faction YS has expanded to Scale 2
+ -increases his fell dominion over the stars
+Faction YS has advanced to Tech 2
+Faction YS has advanced to Tech 3
+ -learns much in the darkness
+Faction YS has given rise to a new faction: Faction J0
+ -the Jund, a race of brainless piglike people, blindly buildling in the dark
+Faction J0 has advanced to Tech 5
+ -Yog taught them much, and their knowledge grew in the dark
+Faction YS has advanced to Tech 4
+Faction J0 & Faction YS have a conflict! 
+ -proud and foolish, the Jund become rebellious
+Before, 
+Faction J0: scale 2 tech 5 
+Faction YS: scale 0 tech 4
+After, 
+Faction J0: scale 2 tech 5 
+Faction YS: scale 0 tech 4
+ -The Jund have everything, but Yog knows their inner genes, and can thwart them for now. 
+Faction YS has advanced to Tech 6
+Faction J0 has advanced to Tech 7
+ -an arms race
+Faction YS merges into Faction J0
+ -the Great Bargain of the Elder Years, the Conquering of Yog. Mad brainless Jund steer both stars to an unknown fate
+Faction J0 has given rise to a new faction: Faction VL
+ -Now the Ve-Lung are created, born of wasted spawn. Humanoid, and cunning.
+Faction VL has advanced to Tech 8
+Faction J0 has advanced to Tech 9
+Faction VL has given rise to a new faction: Faction W1
+ -In secret, the Ve-Lung design a virus: the humans of World One
+Faction W1 has expanded to Scale 2
+ -They spread into space with Ve-Lung-given starcraft, yet unnoticed by the Jund or by tormented Yog
+Faction J0 has advanced to Tech 11
+Faction VL & Faction W1 have a conflict! 
+ -Grown proud, the ignorant humans turn the might of their colonies, a mere two centuries old, on their own creators.
+Before, 
+Faction VL: scale 1 tech 8 
+Faction W1: scale 2 tech 8
+After, 
+Faction VL: scale 1 tech 8 
+Faction W1: scale 2 tech 8
+ -Lasers flash between the stars in the golden age of human warfare
+Faction W1 has advanced to Tech 10
+ -The humans learn quickly.
+Faction J0 has expanded to Scale 2
+ -Enterprising humans have allied with the Jund, trading and selling their terraforming services. The new combo is potent.
+Faction VL & Faction W1 have a conflict! 
+ -After a lull, the war resumes in earnest
+Before, 
+Faction VL: scale 1 tech 8 
+Faction W1: scale 2 tech 10
+After, 
+Faction VL: scale 0 tech 8 
+Faction W1: scale 3 tech 10
+ -Humans trounce the slender aliens, capturing their homeworld and enslaving their warriors!
+Faction W1 has expanded to Scale 5
+ -The golden age of xenohumanity has begun. 
