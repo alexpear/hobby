@@ -1,0 +1,53 @@
+9 [science domain / STEM] education
+8 stock markets
+9 kickstarter
+8 housecleaning
+9 online dating
+8 nanotech research
+10 the pharmaceutical/drug market
+10 medicine
+10 lab research
+10 R&D / engineering
+9 maths research
+9 land distribution
+9 practical climatology
+10 government
+9 natural language translation
+9 natural language processing / understanding by machines
+9 command economy 
+9 innovation & inspiration generators
+8 theology
+8 church service
+9 news / journalism
+9 [topic] counseling
+8 travel
+9 housing (unusual living situations maybe)
+9 city planning
+10 space industry
+9 space habitation
+10 transportation
+11 the energy crisis
+9 mathematical modeling of systems
+8 the meaning of life
+8 cosmology
+8 theoretical physics
+9 long-term efforts
+9 sustainability 
+9 taxation
+8 entertainment industry business models
+9 cooperative business 
+10 large corporations
+9 parenting
+8 creative writing / storytelling
+9 music creation
+9 making an artificial person (Moravec) 
+8 pronouns
+8 gender
+8 identity
+9 psychology
+9 psychiatry / what to do with unusual brains
+7 undergraduate college education 
+
+
+
+

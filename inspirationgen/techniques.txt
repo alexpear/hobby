@@ -1,0 +1,78 @@
+11 taking inspiration from Kickstarter
+9 throwing lots of processing power at the problem
+11 crowdsourcing
+9 open source / libre ideas
+10 grassroots
+7 the web 2.0 movement
+9 the economic Long Tail 
+10 leaderless
+11 market mechanics
+9 stock market esque
+7 reverse psychology
+9 expert advice
+8 expert systems
+6 voice recognition
+9 machine learning / data mining
+9 democracy
+9 as a game
+9 for fun
+8 standardization
+7 miniaturized
+9 high-tech solutions
+10 low-tech / reliable solutions 
+8 info compartamentalization
+8 paperless
+9 cryptography
+8 socialism
+9 centralization
+8 artificial intelligence techniques
+10 decentralization
+10 automation
+8 Occam's razor
+11 incentivising
+11 reputation systems
+10 transparency
+9 making backups
+9 an empirical approach
+8 botany-inspired techniques
+11 systems like Couchsurfing (matching people up)
+8 one person's trash is another person's treasure
+9 swarm intelligence
+10 assembly line -like innovations
+8 randomization
+9 robotics
+9 flying robots (quadcopters UAVs etc)
+10 sustainability
+10 the long-term
+9 greedy algorithms
+10 Facebook-esque techniques
+9 imagining what it'll be like in the future
+9 the perspective of our ancestors
+8 memetics
+9 taking inspiration from Nature & biology 
+9 logistics 
+8 Sun Tzu's Art of War
+9 the Dao de Jing
+7 quantum mechanics
+6 quantum computing
+9 the various desires of everyone involved
+9 ethical egoism
+8 teamwork
+9 specialisation 
+9 generalists / education
+7 WWJD 
+9 Nature (physics)
+6 fiction
+8 the mouths of babes
+9 the Golden Rule
+9 marketing
+8 Economics 2.0 (from Accelerando) 
+9 thinking of people as computers
+9 thinking of machines as people
+6 the difference between the mind & the brain
+8 being rigorously rational
+8 double-blind protocols
+7 questioning everything
+7 questioning all assumptions
+
+
