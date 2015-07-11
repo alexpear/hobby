@@ -1,0 +1,21 @@
+17 stormtrooper
+14 cyborg
+11 full cyborg
+14 combat cyborg
+36 soldier
+12 warrior
+12 sergeant
+18 lieutenant
+3 colonel
+18 deserter from the Rebellion
+9 pilot
+33 demolitions expert
+18 EOD expert
+11 veteran
+33 rookie
+9 captain
+39 commander
+15 lone wolf 
+18 astrophysics major
+2 orphan
+30 jokester

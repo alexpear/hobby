@@ -1,0 +1,3 @@
+34 {smallweapon}, {smallweapon}, and {smallweapon}
+34 {bigweapon}, {smallweapon}, and {smallweapon}
+15 {bigweapon}, {bigweapon}, and {smallweapon}

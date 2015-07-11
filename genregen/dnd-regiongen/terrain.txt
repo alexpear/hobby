@@ -1,0 +1,20 @@
+3 Forest
+3 Deep Forest
+3 Pine Forest
+3 Rainforest
+2 Jungle
+12 Grassland
+9 Plains
+9 Mountainous
+12 Lake
+9 Tundra
+9 Snowplains
+9 Marsh
+12 Wetland
+9 Desert
+9 Wasteland
+12 Valley
+9 Riverbank
+9 Delta
+9 Farmland
+9 Hilly

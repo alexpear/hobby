@@ -1,0 +1,24 @@
+87 a pistol
+14 a scoped pistol
+44 a heavy pistol
+60 a magnum
+78 an SMG
+116 a combat knife
+89 a gladius
+6 a small buckler
+7 a buckler
+9 a small combat shield
+7 a combat shield
+6 a hand shield
+29 a free hand
+
+19 a wrist-mounted energy shield
+39 a plasma rifle
+22 a plasma pistol
+44 an energy sword
+1 a mauler
+18 a plasma knife
+7 a spiker
+1 a needler
+
+17 a boltshot 

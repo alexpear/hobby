@@ -1,0 +1,172 @@
+9 fire
+9 water
+9 earth
+9 air
+9 heavens
+5 lands
+9 hells 
+9 shadows
+
+9 angels
+9 demons
+5 nightmares
+4 spirits
+4 ghosts
+4 shades
+
+2 wheat 
+1 barley
+1 sugarcane
+3 rice 
+1 pomegranates
+1 poisons
+1 cheeses
+1 mushrooms
+
+9 humans
+9 elves
+8 dwarves
+9 golems
+9 vampires
+9 walking corpses
+9 werewolves
+6 orcs
+9 goblins
+9 ogres
+7 trolls
+7 troglodytes 
+9 giants
+6 satyrs
+6 nymphs
+2 dryads
+8 sirens
+8 centaurs
+9 sphynxes
+9 cyclopes 
+2 salamanders
+8 abominations
+8 ghouls
+9 wights
+9 wraiths
+6 liches
+
+9 kami
+9 horses
+1 mules
+1 donkeys
+1 camels
+2 scorpions
+5 spiders
+1 cattle 
+1 bulls
+1 sheep
+1 bears
+1 goats
+1 pigs
+1 boars
+1 unicorns
+1 pegasi
+2 ants
+9 dogs
+9 lions 
+7 tigers
+2 panthers
+2 jaguars
+3 hyenas 
+9 wolves
+5 rats
+9 serpents
+9 dragons
+4 gryffins
+9 elephants
+
+8 warriors
+9 knights
+9 paladins
+9 hoplites
+9 legionnaires
+8 rangers
+8 archers
+9 chariots
+9 flagellants
+9 militia
+9 commoners
+9 necromancers
+9 sorcerers
+1 wizards
+9 riders
+9 monarchs
+9 princes
+9 princesses
+9 emperors
+9 nobles
+7 bureaucrats
+9 lepers
+9 farmers
+9 scholars
+9 scoundrels
+9 petty warlords
+9 crusaders
+7 cultists
+3 mutants
+7 prophets
+9 clerics
+5 priests
+9 monks
+9 bishops
+9 children
+
+9 swords
+9 spears
+9 shields
+9 knives
+9 hearths
+9 scythes
+
+9 temples
+9 shrines
+9 barrows
+9 towers
+9 cities
+9 fertile fields
+9 machines
+9 wooden ships 
+9 cairns
+9 tombs
+9 ziggurats
+9 palaces
+9 villages
+9 watchtowers
+9 walls
+
+9 oceans
+9 seas
+9 mountains
+9 forests
+9 fell jungles
+9 grasslands
+9 rivers
+9 beaches 
+9 dunes
+9 deserts
+9 islands
+9 floating islands
+
+9 clouds
+9 snowstorms
+1 blizzards
+1 typhoons
+9 tsunamis
+9 monsoons
+5 hurricanes
+6 rainstorms
+9 thunderstorms
+9 forest fires
+9 earthquakes
+9 volcanos
+9 meteors
+9 comets
+9 stars
+
+
+

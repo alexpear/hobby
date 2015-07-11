@@ -1,0 +1,5 @@
+9 densely populated
+21 sparsely populated
+9 scattered {settlements}
+9 lots of farmland
+9 one central city 

@@ -1,0 +1,5 @@
+12 grenade
+5 mine
+9 charge
+7 trap
+10 bomb

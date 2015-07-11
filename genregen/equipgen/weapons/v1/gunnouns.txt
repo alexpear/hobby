@@ -1,0 +1,37 @@
+123 rifle
+71 carbine
+16 shotgun
+9 LMG
+11 SMG
+14 phaser
+8 laser
+40 cannon
+25 repeater
+25 crossbow
+4 sling
+21 blaster
+13 blunderbuss
+13 musket 
+12 automatic
+9 hand cannon
+8 rod
+8 hand shotgun
+6 thrower
+2 gun
+
+51 pistol
+2 sidearm
+3 digipistol
+1 screwdriver
+18 handgun
+9 revolver
+12 derringer
+2 minishotgun
+7 microweapon
+
+5 machine gun
+19 turret
+9 platform
+6 catapult
+10 mortar
+3 prototype

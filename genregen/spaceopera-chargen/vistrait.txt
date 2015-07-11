@@ -1,0 +1,36 @@
+9 a wide mouth
+12 is missing one eye
+18 a distinctive scar on one cheek
+14 a large scar on [her/his] face
+15 a strong chin
+15 thick eyebrows
+15 very pale skin
+12 brown skin
+18 dark brown skin 
+15 freckles
+15 high cheekbones
+9 blue eyes
+15 green eyes
+18 brown eyes
+15 grey eyes
+21 wears glasses when helmetless
+15 wears an almost spherical helmet
+15 wears an armored helmet with a very narrow visor
+12 wears a helmet optimized for peripheral vision
+12 a small mouth
+12 never smiles
+18 is always smiling
+7 a sudden, manic smile
+7 a sudden, manic grin
+18 a deep, gravelly voice
+9 a surprisingly gentle voice
+12 a very deep voice
+9 white, perfect teeth
+9 a small nose
+15 an English accent
+18 an Indian accent
+12 a Russian accent
+24 a Kenyan accent
+12 an Australian accent
+15 a German accent
+12 a Japanese accent 

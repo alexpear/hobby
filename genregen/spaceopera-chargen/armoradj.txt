@@ -1,0 +1,52 @@
+12 battered
+12 rusty
+15 scarred
+9 sleek
+19 angular
+12 brand-new
+19 reinforced
+19 aging
+12 modified
+16 custom
+11 customized
+12 painted
+13 decorated
+9 hand-repaired
+18 bulky
+21 grimy
+14 dirty
+12 grubby
+15 faded
+12 camouflage-patterned
+15 unshielded
+18 minimal
+15 lightweight
+21 heavy
+12 prototype
+12 unusual
+15 pre-war
+14 archaic
+21 reliable
+12 well-tested
+18 heavily modified
+27 deceptively light-looking 
+18 aerodynamic
+15 crude
+15 a retired model of
+19 trophy-strewn
+12 heavily damaged
+18 damaged
+12 mostly-functional
+9 classified
+9 top secret 
+10 Mark I
+7 Mark II 
+15 Mark III
+15 Mark IV
+12 Mark V
+12 Mark VI
+15 Mark VII
+9 high-endurance
+15 strength-enhancing
+18 plasma-resistant
+24 hardened

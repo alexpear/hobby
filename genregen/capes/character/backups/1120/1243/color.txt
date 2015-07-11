@@ -1,0 +1,39 @@
+11 magenta
+11 salmon
+99 red
+11 crimson
+11 vermillion
+11 scarlet
+99 orange
+99 yellow
+11 lemon yellow
+99 green
+11 lime green
+11 lime
+11 bright green
+11 olive green
+99 blue
+11 sky blue
+11 aquamarine
+11 turquoise
+99 purple
+11 violet
+99 white
+11 beige
+11 light grey
+11 steel
+11 gunmetal
+11 gunmetal grey
+44 chrome
+33 bronze
+99 grey
+11 dark grey
+99 black
+99 brown
+11 tan
+11 olive
+99 silver 
+11 opal
+99 gold
+
+

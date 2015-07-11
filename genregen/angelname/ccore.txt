@@ -1,0 +1,65 @@
+9 b
+4 bl
+8 br
+
+21 c
+14 ch
+9 cl
+13 cr
+12 cth
+
+39 d
+5 dr
+1 dy
+
+12 f
+5 fl
+9 fr
+
+15 g
+3 gh
+2 gl
+5 gr
+
+9 h
+12 j
+
+18 k
+1 kl
+1 kr
+
+30 l
+
+30 m
+2 mn
+
+33 n
+
+12 p
+67 ph
+13 pl
+7 pr
+
+1 q
+37 qu
+
+48 r
+
+15 s
+14 sh
+8 sl
+
+18 t
+48 th
+1 tl
+8 tr
+
+24 v
+
+12 w
+4 wh
+7 wr
+
+30 x
+21 y
+39 z

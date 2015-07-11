@@ -1,0 +1,54 @@
+31 assault
+25 slug
+14 battle
+22 heavy
+
+11 damaged
+10 rusty
+7 grubby
+10 dented
+7 makeshift
+
+20 needle
+11 spike
+12 concussion
+9 detonation
+
+9 radiation
+37 pulse
+2 las
+25 laser
+9 muon
+11 ion
+9 fire
+2 flame
+2 incendiary
+5 heat
+2 thermal
+2 thermite
+2 thermo
+21 melta
+15 fusion
+8 shock
+5 electro
+9 lightning
+2 ray
+5 beam
+
+4 alpha
+4 beta
+4 gamma
+2 delta
+2 epsilon
+1 kappa
+2 phi
+2 rho
+1 sigma
+11 tau
+
+1 xenon
+1 boron
+1 carbon
+1 polonium
+1 uranium
+1 neon

@@ -1,0 +1,18 @@
+27 pistol
+7 carbine
+2 sidearm
+7 SMG
+7 phaser
+3 digipistol
+9 crossbow
+1 screwdriver
+8 blaster
+18 handgun
+9 revolver
+6 automatic
+12 derringer
+9 hand cannon
+2 minishotgun
+5 hand shotgun
+7 microweapon
+1 thrower

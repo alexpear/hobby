@@ -1,0 +1,12 @@
+46 rifle
+31 pistol
+12 repeater
+37 gun
+28 shotgun
+12 blaster
+12 prototype
+9 mortar
+46 cannon
+3 projector
+9 crossbow
+3 harpoon 

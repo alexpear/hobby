@@ -1,0 +1,21 @@
+63 rifle
+46 carbine
+13 shotgun
+6 LMG
+8 SMG
+14 phaser
+8 laser
+10 cannon
+13 repeater
+14 crossbow
+4 sling
+15 blaster
+13 blunderbuss
+13 musket 
+12 automatic
+9 hand cannon
+5 rod
+2 minishotgun
+8 hand shotgun
+1 thrower
+2 gun

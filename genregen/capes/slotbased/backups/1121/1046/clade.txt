@@ -1,0 +1,12 @@
+19 human
+19 baseline
+19 turian
+19 jilrahinae
+19 eldar
+9 asari
+9 posthuman
+19 synthetic
+9 synthmorph
+9 goblinoid
+9 ogryn
+9 ratling

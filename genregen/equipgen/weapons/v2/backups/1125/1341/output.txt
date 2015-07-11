@@ -1,0 +1,4 @@
+29 {shooteradj} {smallgunnoun}
+29 {shooteradj} {biggunnoun}
+9 {shooteradj}{smallgunnoun}
+9 {shooteradj}{biggunnoun}

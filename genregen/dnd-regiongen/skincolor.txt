@@ -1,0 +1,13 @@
+12 dark
+22 dark brown
+19 fair
+19 brown
+6 auburn
+7 night-black
+8 paper-white
+3 green
+8 blue
+3 pink
+11 ash grey
+12 iridescent
+10 wine red

@@ -1,0 +1,4 @@
+39 {1weapon}
+138 only {1weapon} 
+102 {2weapons}
+26 {3weapons}

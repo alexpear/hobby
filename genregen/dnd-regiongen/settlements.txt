@@ -1,0 +1,10 @@
+9 villages
+9 towns
+9 hamlets
+2 manors
+9 farms
+9 clans
+9 tribes
+9 dens
+4 fiefdoms
+3 baronies 

@@ -1,0 +1,13 @@
+5 machine gun
+7 LMG
+15 cannon
+19 turret
+9 platform
+13 blaster
+10 blunderbuss
+7 thrower
+6 catapult
+3 crossbow
+19 repeater 
+10 mortar
+3 prototype

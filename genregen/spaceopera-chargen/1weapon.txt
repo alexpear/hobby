@@ -1,0 +1,2 @@
+151 {smallweapon}
+55 {bigweapon}

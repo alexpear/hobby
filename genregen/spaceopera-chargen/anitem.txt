@@ -1,0 +1,27 @@
+55 {grenades}
+30 extra ammo
+12 extra magazines
+25 extra bullets
+15 a radio
+12 a commlink
+22 an extraction beacon
+21 a teleport beacon
+12 a tracking beacon 
+12 a locket
+15 a tactical nuke
+18 satchel charges
+15 proximity mines
+21 two dog tags
+37 a starship-rated AI
+19 a Koran
+16 a Bible
+15 a crucifix
+18 network intrusion equipment
+9 a datapad
+28 a grappling hook
+40 a jetpack
+24 an armorlock capacitor
+
+30 a hologram projector
+19 a bubble shield
+18 active camouflage projectors

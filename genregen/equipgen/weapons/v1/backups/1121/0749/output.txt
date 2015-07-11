@@ -1,0 +1,4 @@
+103 {meleeadjs} {meleenouns}
+157 {shooteradjs} {maingunnouns}
+46 {shooteradjs} {sidegunnouns}
+52 {shooteradjs} {heavygunnouns}

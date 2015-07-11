@@ -1,0 +1,38 @@
+191 human
+97 elf
+18 drow
+24 half-elf
+
+21 half-orc
+21 orc
+15 goblin
+13 hobgoblin
+15 half-giant
+19 halfling
+35 ogre
+24 gnoll
+27 troglodyte 
+
+75 dwarf
+
+57 vampire
+6 undead
+18 ghost
+
+8 sphynx
+1 naga
+1 yuan-ti
+
+19 gnome
+13 dryad
+
+11 werewolf
+
+4 lizardfolk
+15 catfolk
+23 tiefling
+13 dragonborn
+12 ratling
+
+39 golem
+24 warforged 

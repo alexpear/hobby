@@ -1,0 +1,26 @@
+22 assault
+22 slug
+11 battle
+
+11 needle
+11 spike
+
+22 pulse
+22 las
+22 laser
+9 muon
+11 tau
+11 ion
+9 fire
+2 flame
+2 incendiary
+2 heat
+2 thermal
+2 thermite
+2 thermo
+9 melta
+9 fusion
+2 shock
+2 electro
+9 lightning
+

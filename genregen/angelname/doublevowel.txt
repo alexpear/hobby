@@ -1,0 +1,27 @@
+2 aa
+15 ae
+2 ai
+2 au
+
+8 ea
+5 ee
+4 ei
+1 eo
+2 eu
+
+31 ia
+4 ie
+16 io
+1 iu
+
+1 oa
+1 oe
+1 oi
+2 oo
+5 ou
+
+1 ua
+2 ue
+5 ui
+1 uo
+1 uu

@@ -1,0 +1,2 @@
+130 carries {weapons}, plus {items}
+222 carries {weapons}

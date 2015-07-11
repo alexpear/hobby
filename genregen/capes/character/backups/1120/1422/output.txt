@@ -1,0 +1,2 @@
+933 {name} is {charadj} {charnoun} who {fightswith}.  Her outfit is {color} with {color} trim. It includes {outfitbase} {outfit2nd}, {outfit3rd}. In an op she sometimes {action}.
+936 {name} is {charadj} {charnoun} who {fightswith}.  His outfit is {color} with {color} trim. It includes {outfitbase} {outfit2nd}, {outfit3rd}. In an op he sometimes {action}.

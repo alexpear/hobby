@@ -1,0 +1,37 @@
+1 magenta
+1 salmon
+18 red
+5 crimson
+1 vermillion
+5 scarlet
+18 orange
+8 yellow
+1 lemon yellow
+21 green
+1 lime green
+1 lime
+1 bright green
+8 olive green
+15 blue
+5 sky blue
+1 aquamarine
+1 turquoise
+15 purple
+1 violet
+15 white
+1 beige
+1 light grey
+7 steel
+9 gunmetal
+7 gunmetal grey
+4 chrome
+10 bronze
+21 grey
+1 dark grey
+30 black
+18 brown
+1 tan
+1 olive
+18 silver 
+1 opal
+12 gold

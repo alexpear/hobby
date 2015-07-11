@@ -1,0 +1,14 @@
+9 sword
+9 rifle
+9 pistol
+9 machine gun
+9 knife
+9 axe
+9 spear
+9 glaive
+9 cannon
+9 bandolier of grenades
+9 carbine
+9 mace
+9 warhammer
+9 whip

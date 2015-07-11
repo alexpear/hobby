@@ -1,0 +1,61 @@
+48 fighter
+18 guard
+37 ranger
+27 adventurer
+27 dragonslayer
+16 sellsword
+6 mercenary
+19 bandit
+10 outlaw
+16 marshal
+31 commander
+17 general
+22 admiral
+48 knight
+12 blackguard
+6 death knight
+1 dragon-tamer
+4 dragon rider
+12 hunter
+
+12 wizard
+12 sorcerer
+30 mage
+21 spellsword
+35 warmage
+34 battlemage
+13 hexmage
+18 witch 
+
+14 bard
+35 troubador 
+
+28 rogue
+18 thief
+20 scoundrel
+16 pirate
+12 assassin
+
+24 cleric
+18 priest
+21 bishop
+22 monk
+2 invoker
+15 cultist
+33 paladin
+39 healer
+22 druid
+
+33 noble
+18 peasant
+33 farmer
+15 merchant
+24 artisan
+11 mason
+27 artificer
+22 explorer
+7 prospector
+41 official
+20 apprentice
+9 journeyman
+7 guild master

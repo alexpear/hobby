@@ -1,0 +1,21 @@
+19 a sword
+9 a longsword
+9 a broadsword
+9 a gladius
+19 a rifle
+9 a longrifle
+9 an assault rifle
+9 a shotgun
+19 a pistol
+27 a machine gun
+12 a knife
+18 an axe
+12 a hand axe
+12 a spear
+15 a glaive
+9 a cannon
+18 a bandolier of grenades
+21 a carbine
+12 a mace
+27 a warhammer
+9 a whip

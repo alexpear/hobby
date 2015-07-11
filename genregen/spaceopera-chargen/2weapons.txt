@@ -1,0 +1,3 @@
+61 {smallweapon} and {smallweapon}
+67 {bigweapon} and {smallweapon}
+15 {bigweapon} and {bigweapon}

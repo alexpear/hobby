@@ -1,0 +1,10 @@
+43 [She/He] is {anadj} {charnoun} {charfurtherinfo}. [She/He] {wears} {outfitfurtherinfo}. [She/He] {hashair} and {vistrait}. In the field [she/he] {infield}. [She/He] {plotsentence}. 
+43 [She/He] is {anadj} {charnoun} {charfurtherinfo}. [She/He] {hashair} and {vistrait}. [She/He] {wears} {outfitfurtherinfo}. In the field [she/he] {infield}. [She/He] {plotsentence}. 
+
+0 testing subsections: 
+0 He is {anadj} {charnoun} {charfurtherinfo}.
+0 He {hashair} and {vistrait}.
+0 He {wears} {outfitfurtherinfo}.
+0 In the field she {infield}.
+
+0 later, add a sentence talking about their reputation, what others say about her, etc. Or just add to plotsentence. 

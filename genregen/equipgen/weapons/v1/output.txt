@@ -1,0 +1,4 @@
+144 {meleeadjs} {meleenouns}
+44 {meleeadjs}{meleenouns}
+246 {shooteradjs} {gunnouns}
+146 {shooteradjs}{gunnouns}

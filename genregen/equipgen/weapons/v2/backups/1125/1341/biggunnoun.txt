@@ -1,0 +1,9 @@
+22 rifle
+9 repeater
+22 gun
+22 shotgun
+9 blaster
+9 prototype
+9 mortar
+22 cannon
+3 projector

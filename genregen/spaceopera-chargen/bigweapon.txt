@@ -1,0 +1,34 @@
+57 an assault rifle
+47 a sniper rifle
+47 a longrifle
+49 a shotgun
+20 a rocket launcher
+20 a lascannon
+28 a grenade launcher
+19 a katana
+22 a broadsword
+13 a greatsword 
+35 a length of reinforced cable
+22 a railgun
+14 a flamethrower
+19 a heavy machine gun
+44 a tower shield
+14 a large shield
+
+21 a plasma rifle
+12 a needler
+9 a needle rifle
+12 a carbine
+12 a focus rifle
+28 an energy sword
+22 a grav hammer
+4 a fuel rod cannon 
+14 a plasma cannon 
+1 a brute shot
+13 a plasma repeater
+7 a plasma launcher
+1 a storm rifle
+
+13 a lightrifle
+1 a binary rifle
+25 an incineration cannon 

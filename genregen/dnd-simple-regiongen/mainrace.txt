@@ -1,0 +1,65 @@
+182 humans
+64 elves
+18 drow
+6 half-elves
+
+18 half-orcs
+15 orcs
+9 goblins
+13 hobgoblins
+5 half-giants
+8 halflings
+38 ogres
+27 gnolls
+7 troglodytes 
+
+42 dwarves
+
+30 vampires
+9 undead
+12 zombies
+21 skeletons
+15 ghosts
+18 wraiths
+18 wights
+15 spirits
+9 kami
+4 spectres
+1 liches
+
+2 sphynxes
+5 dragons
+
+6 gnomes
+3 dryads
+
+4 werewolves
+
+4 lizardfolk
+2 catfolk
+26 tieflings
+19 dragonborn
+2 ratlings
+
+36 golems
+1 warforged 
+11 elementals
+
+1 statues
+1 tombs
+1 trees
+4 fish
+1 wolves
+1 buffalo
+1 cattle
+1 sheep
+4 elephants
+1 dogs
+1 rats
+1 lions
+1 tigers
+1 bears
+1 lizards
+1 birds
+1 rocks
+1 ruins

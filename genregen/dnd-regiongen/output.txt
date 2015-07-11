@@ -1,0 +1,1 @@
+56 TERRAIN: {terrain},  POPULATION: {homogeneity} {race} with {vistraits}, {popdensity},  RULED BY: {ruledby},  HISTORY: {history}. 
