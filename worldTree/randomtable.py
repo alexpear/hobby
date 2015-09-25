@@ -130,21 +130,19 @@ class Node:
     self.output = Output('{' + outputname + '}')
     self.children = children
   
-  # cls means 'class', it's a bit like 'self' and stands in for the text 'Node'.
   @classmethod
-  def fromnodetype(cls, nodetype):
-#    print ' debug: in Node.fromnodetype, nodetype.name is ' + nodetype.name
+  def fromnodetype(nodeClass, nodetype):
     newchildren = []
     for childtype in nodetype.childtypes:
       for i in range(randint(childtype.min, childtype.max)):
         nodetypeofchild = typefromname(childtype.name)
         if nodetypeofchild == None:
           # if it's not listed in the typestable, ie if it's a Childtype not a Nodetype, it's a leaf. clumsy? 
-          newchildren.append(cls(childtype.name, []))
+          newchildren.append(nodeClass(childtype.name, []))
         else:
           # if the child is a Nodetype ie a nonleaf 
-          newchildren.append(cls.fromnodetype(nodetypeofchild))
-    return cls(nodetype.name, newchildren)
+          newchildren.append(nodeClass.fromnodetype(nodetypeofchild))
+    return nodeClass(nodetype.name, newchildren)
 
 #debug
 def printtree(node, indent):
