@@ -85,32 +85,6 @@ class Output:
       with open(result.filename, 'w') as file:
         file.write('\n'.join(lines))
 
-# main method, not in a class for now
-def presenttouser():
-  while True:
-    outputs = []
-    for i in range(outputscount):
-      outputs.append(Output('{output}'))
-      print ''
-      print i+1, outputs[i].text
-    # we also have a none of the above:
-    print ''
-    print (outputscount+1), 'None of the above'
-    print ''
-    # wait for input 
-    userinput = input('Which is the best? ')
-    if userinput=='':  # Doesn't seem to work 
-      continue
-    chosen = int(userinput)
-    print ''
-    if chosen <= 0:
-      return  # Quit
-    if chosen <= outputscount:
-      outputs[chosen-1].reward()
-    # if 'None of the above' do nothing
-
-# presenttouser()
-
 # interactive gen, tree
 
 # ugly global
