@@ -114,7 +114,6 @@ class Nodetype:
   def __init__(self, string):
     lines = string.splitlines()
     self.name = lines[0].strip()
-#    print ' debug: near top of Nodetype constructor, name is ' + self.name
     self.childtypes = []
     for l in range(1, len(lines)):
       words = lines[l].split()
@@ -122,7 +121,6 @@ class Nodetype:
         print 'Error: structure.txt in unexpected format.'
         return
       childname = ' '.join(words[:-3])
-#      print ' debug: childname is ' + childname
       self.childtypes.append(Childtype(childname, int(words[-3]), int(words[-1])))
   
 
@@ -162,7 +160,6 @@ def parsestructurefile():
     entries = structurefile.read().split('\n\n')
     for entry in entries:
       typestable.append(Nodetype(entry))
-      #print ' debug: just added Nodetype "' + typestable[-1].name + '" to typestable'
 
 # run
 parsestructurefile()
