@@ -146,7 +146,7 @@ class Node:
 
 def printTreeRecursor(node, indent):
   for i in range(indent):
-    print '',
+    print ' ',
   print node.output.text
   for child in node.children:
     printTreeRecursor(child, indent+1)
