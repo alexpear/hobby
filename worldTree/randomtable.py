@@ -144,13 +144,18 @@ class Node:
           newchildren.append(nodeClass.fromnodetype(nodetypeofchild))
     return nodeClass(nodetype.name, newchildren)
 
-#debug
-def printtree(node, indent):
+def printTreeRecursor(node, indent):
   for i in range(indent):
     print '',
   print node.output.text
   for child in node.children:
-    printtree(child, indent+1)
+    printTreeRecursor(child, indent+1)
+
+# just print it for now, before REPL is implemented.
+def printTree(node):
+  print('')
+  printTreeRecursor(node, 0)
+  print('')
 
 # not sure how to organize, but here is alg
 def parsestructurefile():
@@ -162,9 +167,7 @@ def parsestructurefile():
 # run
 parsestructurefile()
 root = Node.fromnodetype(typestable[0]) # first entry assumed to be root type
-print ''
-printtree(root, 0)
-print ''
+printTree(root)
       
       
       
