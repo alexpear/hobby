@@ -1,0 +1,14 @@
+9 Forest
+9 Grassland
+9 Plains
+9 Mountain
+9 Lake
+9 Tundra
+9 Snowplains
+9 Marsh
+9 Wetland
+9 Desert
+9 Wasteland
+9 Valley
+9 Riverbank
+9 Delta
