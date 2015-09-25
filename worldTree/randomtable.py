@@ -170,7 +170,20 @@ root = Node.fromnodetype(typestable[0]) # first entry assumed to be root type
 printTree(root)
       
       
-      
+'''
+short term TODO
+- functions to save and load trees.
+  - eg as JSON
+- TreeExplorer obj. Stores a tree, list of ptrs to each node in tree, and currentNode ptr.
+  - navigation functions. ls(), up(), go(which) etc
+  - reroll() function, which regens currentNode and its subtree.
+- standardize camelCase
+- later: rewrite in JS?
+  - web interface?
+    - saving by... pasting?
+      - URL?
+      - something more elaborate?
+'''
 
 
 
