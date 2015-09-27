@@ -111,8 +111,9 @@ def makeNodeTypeDict(string):
   return typeDict
 
 def nodeFromTypeName(typeName):
+  description = Output('{'+typeName+'}').text
   return {
-    'description': Output('{'+typeName+'}'),
+    'description': description,
     'children': []
   }
 
@@ -138,7 +139,7 @@ def nodeFromType(nodeType):
 def printTreeRecursor(node, indent):
   for i in range(indent):
     print '  ',
-  print(node['description'].text)
+  print(node['description'])
   for child in node['children']:
     printTreeRecursor(child, indent+1)
 
