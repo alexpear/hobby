@@ -165,9 +165,9 @@ def printTree(node):
   print('')
 
 # not sure how to organize, but here is alg
-def parsestructurefile():
-  with open('structure.txt') as structurefile:
-    entries = structurefile.read().split('\n\n')
+def parseStructureFile():
+  with open('structure.txt') as structureFile:
+    entries = structureFile.read().split('\n\n')
     for entry in entries:
       typestable.append(makeNodeTypeDict(entry))
 
