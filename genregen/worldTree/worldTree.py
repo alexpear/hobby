@@ -171,6 +171,7 @@ class TreeExplorer:
     self.root = self.newTree()
     self.currentNode = self.root
 
+  # TODO: add extra newline when going back up multiple levels
   @staticmethod
   def printSubtreeRecursor(node, indent, siblingNumber=1):
     for i in range(indent):
@@ -211,6 +212,7 @@ short term TODO
     - saving by... pasting?
       - URL?
       - something more elaborate?
+- later: neater file/class structure
 '''
 
 
