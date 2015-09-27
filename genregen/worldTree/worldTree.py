@@ -140,6 +140,7 @@ class TreeExplorer:
     description = Output('{'+typeName+'}').text
     return {
       'description': description,
+      'typeName': typeName,
       'children': [],
       'parent': parent
     }
