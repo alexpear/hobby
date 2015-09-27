@@ -135,7 +135,7 @@ class TreeSpace:
 
 
 class TreeExplorer:
-  # Always returns a node with no children i.e. a leaf.
+  # This function does not generate the children of the node.
   @staticmethod
   def nodeFromTypeName(typeName, parent):
     description = Output('{'+typeName+'}').text
@@ -283,10 +283,12 @@ short term TODO
 - TreeExplorer obj. Stores a tree, list of ptrs to each node in tree, and currentNode ptr.
   - reroll() function, which regens currentNode and its subtree.
 - standardize camelCase
-- later: rewrite in JS?
-  - web interface?
-    - saving by... pasting?
-      - URL?
-      - something more elaborate?
-- later: neater file/class structure
+- later:
+  - neater file structure
+  - reorder functions
+  - rewrite in JS?
+    - web interface?
+      - saving by... pasting?
+        - URL?
+        - something more elaborate?
 '''
