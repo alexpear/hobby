@@ -6,4 +6,4 @@
 
 1 {APopulationAdj} population of {race}
 
-29 {PopulationAdj} {race}
+49 {PopulationAdj} {race}
