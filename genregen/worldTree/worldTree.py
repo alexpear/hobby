@@ -172,16 +172,21 @@ class TreeExplorer:
     self.currentNode = self.root
 
   @staticmethod
-  def printTreeRecursor(node, indent):
+  def printSubtreeRecursor(node, indent, siblingNumber=1):
     for i in range(indent):
-      print '  ',
-    print(node['description'])
-    for child in node['children']:
-      TreeExplorer.printTreeRecursor(child, indent+1)
+      print '    ',
 
-  def printTree(self):
+    # Prepend sibling number, except in subtree's root.
+    if indent > 0:
+      print(siblingNumber),
+    print(node['description'])
+    for childIndex, child in enumerate(node['children']):
+      TreeExplorer.printSubtreeRecursor(child, indent+1, Util.toUserNumbering(childIndex))
+
+  @staticmethod
+  def printSubtree(node):
     print('')
-    TreeExplorer.printTreeRecursor(self.root, 0)
+    TreeExplorer.printSubtreeRecursor(node, 0)
     print('')
 
   def toJson(self):
