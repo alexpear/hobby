@@ -91,65 +91,71 @@ class Output:
 # ugly global
 typestable = [] # of Nodetype objects
 
-def typefromname(name):
-  for type in typestable:
-    if type.name == name:
-      return type
-#  else:
-#    print 'btw: node type "' + name + '" not found'
+def typeFromName(typeName):
+  for typeDict in typestable:
+    if typeDict['name'] == typeName:
+      return typeDict
 
-class Childtype:
-  def __init__(self, name, min, max):
-    self.name = name
-    self.min = min
-    self.max = max
 
-class Nodetype:
-  ''' a structure.txt entry might look like:
-    
-  region
-  biome 1 to 1
-  racepresence 0 to 3
+''' a structure.txt entry might look like:
 
-  '''
-  def __init__(self, string):
-    lines = string.splitlines()
-    self.name = lines[0].strip()
-    self.childtypes = []
-    for l in range(1, len(lines)):
-      words = lines[l].split()
-      if len(words) < 4 or words[-2] != 'to':
-        print 'Error: structure.txt in unexpected format.'
-        return
-      childname = ' '.join(words[:-3])
-      self.childtypes.append(Childtype(childname, int(words[-3]), int(words[-1])))
-  
+region
+biome 1 to 1
+racepresence 0 to 3
+'''
+def makeNodeTypeDict(string):
+  lines = string.splitlines()
+  typeDict = {
+    'name': lines[0].strip(),
+    'childProfiles': []
+  }
 
-# one node in the generated tree
-class Node:
-  def __init__(self, outputname, children):
-    self.output = Output('{' + outputname + '}')
-    self.children = children
-  
-  @classmethod
-  def fromnodetype(nodeClass, nodetype):
-    newchildren = []
-    for childtype in nodetype.childtypes:
-      for i in range(randint(childtype.min, childtype.max)):
-        nodetypeofchild = typefromname(childtype.name)
-        if nodetypeofchild == None:
-          # if it's not listed in the typestable, ie if it's a Childtype not a Nodetype, it's a leaf. clumsy? 
-          newchildren.append(nodeClass(childtype.name, []))
-        else:
-          # if the child is a Nodetype ie a nonleaf 
-          newchildren.append(nodeClass.fromnodetype(nodetypeofchild))
-    return nodeClass(nodetype.name, newchildren)
+  for line in lines[1:]:
+    words = line.split()
+    if len(words) < 4 or words[-2] != 'to':
+      print('error: structure file not in the expected format. was expecting "location 0 to 3" etc.')
+      return
+
+    childProfile = {
+      'name': ' '.join(words[:-3]),
+      'min': int(words[-3]),
+      'max': int(words[-1])
+    }
+
+    typeDict['childProfiles'].append(childProfile)
+
+  return typeDict
+
+def nodeFromTypeName(typeName):
+  return {
+    'description': Output('{'+typeName+'}'),
+    'children': []
+  }
+
+def nodeFromType(nodeType):
+  node = nodeFromTypeName(nodeType['name'])
+
+  for childProfile in nodeType['childProfiles']:
+    childName = childProfile['name']
+    nodeTypeOfChild = typeFromName(childName)
+    repeats = randint(childProfile['min'], childProfile['max'])
+    for i in range(repeats):
+      if nodeTypeOfChild:
+        # if we found a nodeType on file, then it's an interior node.
+        newChild = nodeFromType(nodeTypeOfChild)
+      else:
+        # if it's not listed in the typestable, then it's a leaf type.
+        newChild = nodeFromTypeName(childName)
+
+      node['children'].append(newChild)
+
+  return node
 
 def printTreeRecursor(node, indent):
   for i in range(indent):
-    print ' ',
-  print node.output.text
-  for child in node.children:
+    print '  ',
+  print(node['description'].text)
+  for child in node['children']:
     printTreeRecursor(child, indent+1)
 
 # just print it for now, before REPL is implemented.
@@ -163,11 +169,11 @@ def parsestructurefile():
   with open('structure.txt') as structurefile:
     entries = structurefile.read().split('\n\n')
     for entry in entries:
-      typestable.append(Nodetype(entry))
+      typestable.append(makeNodeTypeDict(entry))
 
 # run
-parsestructurefile()
-root = Node.fromnodetype(typestable[0]) # first entry assumed to be root type
+parseStructureFile()
+root = nodeFromType(typestable[0]) # first entry assumed to be root type
 printTree(root)
       
       
