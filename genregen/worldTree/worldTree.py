@@ -225,7 +225,6 @@ explorer.printTree()
 '''
 short term TODO
 - TreeExplorer obj. Stores a tree, list of ptrs to each node in tree, and currentNode ptr.
-  - navigation functions. ls(), up(), go(which) etc
   - reroll() function, which regens currentNode and its subtree.
 - standardize camelCase
 - later: rewrite in JS?
