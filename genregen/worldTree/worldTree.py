@@ -254,8 +254,12 @@ class TreeExplorer:
 
   @staticmethod
   def loadFromCache(fileName=cacheFileName):
-    with open(fileName, 'r') as cacheFile:
-      return pickle.load(cacheFile)
+    try:
+      with open(fileName, 'r') as cacheFile:
+        return pickle.load(cacheFile)
+    except:
+      print('could not load from cache ' + fileName)
+      return None
 
 
 explorer = TreeExplorer()
