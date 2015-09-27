@@ -207,14 +207,28 @@ class TreeExplorer:
       self.currentNode = self.currentNode['parent']
     self.ls()
 
-  # We start indexing from 1, because this function is a non-technical user interface.
-  def go(self, childIndex=1):
+  # This function counts from 1,2,3...
+  @staticmethod
+  def getChild(node, childIndex):
     listIndex = Util.fromUserNumbering(childIndex)
-    children = self.currentNode['children']
+    children = node['children']
     if listIndex >= len(children):
       print('child number ' + str(childIndex) + ' not found.')
-      return
-    self.currentNode = children[listIndex]
+      return None
+    return children[listIndex]
+
+  # We start indexing from 1 because this function is a non-technical user interface.
+  def go(self, childIndex=1):
+    child = TreeExplorer.getChild(self.currentNode, childIndex)
+    if child:
+      self.currentNode = child
+    self.ls()
+
+  # We start indexing from 1 because this function is a non-technical user interface.
+  def reroll(self, childIndex=1):
+    child = TreeExplorer.getChild(self.currentNode, childIndex)
+    if child:
+      pass
     self.ls()
 
   cacheFileName = 'wtCache.txt'
