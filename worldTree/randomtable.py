@@ -158,8 +158,8 @@ def parseStructureFile():
 parseStructureFile()
 root = nodeFromType(typesTable[0]) # first entry assumed to be root type
 printTree(root)
-      
-      
+
+
 '''
 short term TODO
 - functions to save and load trees.
