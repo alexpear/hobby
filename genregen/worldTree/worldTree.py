@@ -9,6 +9,20 @@ import json
 from random import choice
 from random import randint
 
+class Util:
+  # Users count 1,2,3 while programmers count 0,1,2
+  # Kind of silly but helps me remember
+  @staticmethod
+  def toUserNumbering(n):
+    return n + 1
+
+  @staticmethod
+  def fromUserNumbering(n):
+    if n == 0:
+      print('error: zero passed to fromUserNumbering()')
+      return
+    return n - 1
+
 class Result:
   def __init__(self, text, fileName, lineNum):
     self.text = text
