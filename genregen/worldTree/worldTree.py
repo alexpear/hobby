@@ -242,7 +242,7 @@ class TreeExplorer:
       cacheFile.write(pickledString)
 
   @staticmethod
-  def loadFromCache(self, fileName=cacheFileName):
+  def loadFromCache(fileName=cacheFileName):
     with open(fileName, 'r') as cacheFile:
       return pickle.load(cacheFile)
 
