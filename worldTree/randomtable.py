@@ -7,6 +7,7 @@ To use: Put a copy of this file in the dir, next to the tables as txt files. The
 Original of file created 2013-11-18 by Alex Pearson
 '''
 
+import json
 from random import choice
 from random import randint
 
@@ -154,16 +155,23 @@ def parseStructureFile():
     for entry in entries:
       typesTable.append(makeNodeTypeDict(entry))
 
+def newTree():
+  return nodeFromType(typesTable[0]) # first entry assumed to be root type
+
+def toJson(node):
+  return json.dumps(node)
+
+def fromJson(jsonString):
+  return json.loads(jsonString)
+
 # run
 parseStructureFile()
-root = nodeFromType(typesTable[0]) # first entry assumed to be root type
+root = newTree()
 printTree(root)
 
 
 '''
 short term TODO
-- functions to save and load trees.
-  - eg as JSON
 - TreeExplorer obj. Stores a tree, list of ptrs to each node in tree, and currentNode ptr.
   - navigation functions. ls(), up(), go(which) etc
   - reroll() function, which regens currentNode and its subtree.
