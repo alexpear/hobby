@@ -85,6 +85,7 @@ class Output:
       with open(result.filename, 'w') as file:
         file.write('\n'.join(lines))
 
+
 # interactive gen, tree
 
 # ugly global
