@@ -178,11 +178,12 @@ class TreeExplorer:
   # TODO: add extra newline when going back up multiple levels
   @staticmethod
   def printSubtreeRecursor(node, indent, siblingNumber=1):
+    indentUnit = '    '
     for i in range(indent):
-      print '    ',
+      print indentUnit,
 
-    # Prepend sibling number, except in subtree's root.
-    if indent > 0:
+    # Prepend sibling number only for the direct children
+    if indent == 1:
       print(siblingNumber),
     print(node['description'])
     for childIndex, child in enumerate(node['children']):
