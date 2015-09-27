@@ -145,12 +145,16 @@ class TreeExplorer:
       'parent': parent
     }
 
+  # Convenience function
+  def typeFromName(self, typeName):
+    return self.treeSpace.typeFromName(typeName)
+
   def nodeFromType(self, nodeType, parent):
     node = TreeExplorer.nodeFromTypeName(nodeType['name'], parent)
 
     for childProfile in nodeType['childProfiles']:
       childName = childProfile['name']
-      nodeTypeOfChild = self.treeSpace.typeFromName(childName)
+      nodeTypeOfChild = self.typeFromName(childName)
       repeats = randint(childProfile['min'], childProfile['max'])
       for i in range(repeats):
         if nodeTypeOfChild:
