@@ -149,7 +149,7 @@ def printTree(node):
   printTreeRecursor(node, 0)
   print('')
 
-# not sure how to organize, but here is alg
+# TODO: make more flexible and probably more object oriented.
 def parseStructureFile():
   with open('structure.txt') as structureFile:
     entries = structureFile.read().split('\n\n')
