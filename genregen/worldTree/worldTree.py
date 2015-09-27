@@ -190,6 +190,27 @@ class TreeExplorer:
     TreeExplorer.printSubtreeRecursor(node, 0)
     print('')
 
+  def printTree(self):
+    TreeExplorer.printSubtree(self.root)
+
+  def ls(self):
+    TreeExplorer.printSubtree(self.currentNode)
+
+  def up(self):
+    self.currentNode = self.currentNode['parent']
+    self.ls()
+
+  # We start indexing from 1, because this function is a non-technical user interface.
+  def go(self, childIndex=1):
+    listIndex = Util.fromUserNumbering(childIndex)
+    children = self.currentNode['children']
+    if listIndex >= len(children):
+      print('child number ' + str(childIndex) + ' not found.')
+      return
+
+    self.currentNode = children[listIndex]
+    self.ls()
+
   def toJson(self):
     # TODO: Deal with circular reference in 'parent'
     return json.dumps(self.root)
