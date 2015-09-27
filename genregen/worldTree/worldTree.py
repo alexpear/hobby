@@ -68,106 +68,116 @@ class Output:
     self.fillSquareBrackets(choice([0,1]))
 
 
-# interactive gen, tree
-
-# ugly global
-typesTable = [] # of Nodetype objects
-
-def typeFromName(typeName):
-  for typeDict in typesTable:
-    if typeDict['name'] == typeName:
-      return typeDict
-
-
-''' a structure.txt entry might look like:
-
-region
-biome 1 to 1
-racePresence 0 to 3
-'''
-def makeNodeTypeDict(string):
-  lines = string.splitlines()
-  typeDict = {
-    'name': lines[0].strip(),
-    'childProfiles': []
-  }
-
-  for line in lines[1:]:
-    words = line.split()
-    if len(words) < 4 or words[-2] != 'to':
-      print('error: structure file not in the expected format. was expecting "location 0 to 3" etc.')
-      return
-
-    childProfile = {
-      'name': ' '.join(words[:-3]),
-      'min': int(words[-3]),
-      'max': int(words[-1])
+class TreeSpace:
+  '''
+  a structureFile entry might look like this:
+  region
+  biome 1 to 1
+  racePresence 0 to 3
+  '''
+  @staticmethod
+  def makeNodeTypeDict(string):
+    lines = string.splitlines()
+    typeDict = {
+      'name': lines[0].strip(),
+      'childProfiles': []
     }
 
-    typeDict['childProfiles'].append(childProfile)
+    for line in lines[1:]:
+      words = line.split()
+      if len(words) < 4 or words[-2] != 'to':
+        print('error: structure file not in the expected format. was expecting "location 0 to 3" etc.')
+        return
 
-  return typeDict
+      childProfile = {
+        'name': ' '.join(words[:-3]),
+        'min': int(words[-3]),
+        'max': int(words[-1])
+      }
 
-def nodeFromTypeName(typeName):
-  description = Output('{'+typeName+'}').text
-  return {
-    'description': description,
-    'children': []
-  }
+      typeDict['childProfiles'].append(childProfile)
 
-def nodeFromType(nodeType):
-  node = nodeFromTypeName(nodeType['name'])
+    return typeDict
 
-  for childProfile in nodeType['childProfiles']:
-    childName = childProfile['name']
-    nodeTypeOfChild = typeFromName(childName)
-    repeats = randint(childProfile['min'], childProfile['max'])
-    for i in range(repeats):
-      if nodeTypeOfChild:
-        # if we found a nodeType on file, then it's an interior node.
-        newChild = nodeFromType(nodeTypeOfChild)
-      else:
-        # if it's not listed in the typestable, then it's a leaf type.
-        newChild = nodeFromTypeName(childName)
+  @staticmethod
+  def parseTypes(fileName='structure.txt'):
+    allTypes = []
+    with open(fileName) as structureFile:
+      entries = structureFile.read().split('\n\n')
+      for entry in entries:
+        allTypes.append(TreeSpace.makeNodeTypeDict(entry))
+    return allTypes
 
-      node['children'].append(newChild)
+  def __init__(self):
+    self.nodeTypes = TreeSpace.parseTypes()
+    self.rootType = self.nodeTypes[0]
 
-  return node
+  def typeFromName(self, typeName):
+    for typeDict in self.nodeTypes:
+      if typeDict['name'] == typeName:
+        return typeDict
+    else:
+      return None
 
-def printTreeRecursor(node, indent):
-  for i in range(indent):
-    print '  ',
-  print(node['description'])
-  for child in node['children']:
-    printTreeRecursor(child, indent+1)
 
-# just print it for now, before REPL is implemented.
-def printTree(node):
-  print('')
-  printTreeRecursor(node, 0)
-  print('')
+class TreeExplorer:
+  @staticmethod
+  def nodeFromTypeName(typeName):
+    description = Output('{'+typeName+'}').text
+    return {
+      'description': description,
+      'children': []
+    }
 
-# TODO: make more flexible and probably more object oriented.
-def parseStructureFile():
-  with open('structure.txt') as structureFile:
-    entries = structureFile.read().split('\n\n')
-    for entry in entries:
-      typesTable.append(makeNodeTypeDict(entry))
+  def nodeFromType(self, nodeType):
+    node = TreeExplorer.nodeFromTypeName(nodeType['name'])
 
-def newTree():
-  return nodeFromType(typesTable[0]) # first entry assumed to be root type
+    for childProfile in nodeType['childProfiles']:
+      childName = childProfile['name']
+      nodeTypeOfChild = self.treeSpace.typeFromName(childName)
+      repeats = randint(childProfile['min'], childProfile['max'])
+      for i in range(repeats):
+        if nodeTypeOfChild:
+          # if we found a nodeType on file, then it's an interior node.
+          newChild = self.nodeFromType(nodeTypeOfChild)
+        else:
+          # if it's not listed in the typestable, then it's a leaf type.
+          newChild = TreeExplorer.nodeFromTypeName(childName)
 
-def toJson(node):
-  return json.dumps(node)
+        node['children'].append(newChild)
 
-def fromJson(jsonString):
-  return json.loads(jsonString)
+    return node
 
-# run
-parseStructureFile()
-root = newTree()
-printTree(root)
+  def newTree(self):
+    return self.nodeFromType(self.treeSpace.rootType)
 
+  def __init__(self, treeSpace=TreeSpace()):
+    self.treeSpace = treeSpace
+    self.root = self.newTree()
+    self.currentNode = self.root
+
+  @staticmethod
+  def printTreeRecursor(node, indent):
+    for i in range(indent):
+      print '  ',
+    print(node['description'])
+    for child in node['children']:
+      TreeExplorer.printTreeRecursor(child, indent+1)
+
+  def printTree(self):
+    print('')
+    TreeExplorer.printTreeRecursor(self.root, 0)
+    print('')
+
+  def toJson(self):
+    return json.dumps(self.root)
+
+  @staticmethod
+  def fromJson(jsonString):
+    return json.loads(jsonString)
+
+explorer = TreeExplorer()
+explorer.printTree()
 
 '''
 short term TODO
