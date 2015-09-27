@@ -135,6 +135,7 @@ class TreeSpace:
 
 
 class TreeExplorer:
+  # Always returns a node with no children i.e. a leaf.
   @staticmethod
   def nodeFromTypeName(typeName, parent):
     description = Output('{'+typeName+'}').text
