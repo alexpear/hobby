@@ -202,7 +202,9 @@ class TreeExplorer:
     TreeExplorer.printSubtree(self.currentNode)
 
   def up(self):
-    self.currentNode = self.currentNode['parent']
+    # If we're not at self.root, go up.
+    if self.currentNode['parent']:
+      self.currentNode = self.currentNode['parent']
     self.ls()
 
   # We start indexing from 1, because this function is a non-technical user interface.
