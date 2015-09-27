@@ -211,7 +211,6 @@ class TreeExplorer:
     if listIndex >= len(children):
       print('child number ' + str(childIndex) + ' not found.')
       return
-
     self.currentNode = children[listIndex]
     self.ls()
 
@@ -234,6 +233,7 @@ class TreeExplorer:
 explorer = TreeExplorer()
 explorer.printTree()
 
+
 '''
 short term TODO
 - TreeExplorer obj. Stores a tree, list of ptrs to each node in tree, and currentNode ptr.
@@ -246,14 +246,3 @@ short term TODO
       - something more elaborate?
 - later: neater file/class structure
 '''
-
-
-
-
-
-
-
-
-
-
-
