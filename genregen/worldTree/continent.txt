@@ -1,4 +1,4 @@
-9 {ContinentSize} continent
+19 {ContinentSize} continent
 9 {ContinentSize} island
 9 {ContinentSize} archipeligo
 
