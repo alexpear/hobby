@@ -168,7 +168,11 @@ class TreeExplorer:
 
   def __init__(self, treeSpace=TreeSpace()):
     self.treeSpace = treeSpace
-    self.root = self.newTree()
+    cachedTree = TreeExplorer.loadFromCache()
+    if cachedTree:
+      self.root = cachedTree
+    else:
+      self.root = self.newTree()
     self.currentNode = self.root
 
   # TODO: add extra newline when going back up multiple levels
