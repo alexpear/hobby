@@ -10,9 +10,6 @@ Original of file created 2013-11-18 by Alex Pearson
 from random import choice
 from random import randint
 
-outputscount = 2
-rewardsize = 3
-
 class Result:
   def __init__(self, text, fileName, lineNum):
     self.text = text
@@ -68,22 +65,8 @@ class Output:
   def __init__(self, textIn):
     self.text = textIn
     self.results = []
-    self.fillblanks()
-    self.fillsquarebrackets(choice([0,1]))
-
-  # Reward the Output, ie all its rolls. 
-  def reward(self):
-    for result in self.results:
-      with open(result.filename, 'r') as file:        
-        lines = file.read().splitlines()
-        chosenline = lines[result.linenum]
-        # debug: should maybe print line, what we will replace it with 
-        firstspace = chosenline.find(' ')
-        oldweight = int(chosenline[:firstspace])
-        # now write back the new line 
-        lines[result.linenum] = str(oldweight+rewardsize) + chosenline[firstspace:]
-      with open(result.filename, 'w') as file:
-        file.write('\n'.join(lines))
+    self.fillBlanks()
+    self.fillSquareBrackets(choice([0,1]))
 
 
 # interactive gen, tree
