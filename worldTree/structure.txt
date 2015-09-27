@@ -5,4 +5,4 @@ continent
 biome 1 to 3
 
 biome
-racepresence 0 to 3
+racePresence 0 to 3

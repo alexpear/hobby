@@ -14,59 +14,59 @@ outputscount = 2
 rewardsize = 3
 
 class Result:
-  def __init__(self, text, filename, linenum):
+  def __init__(self, text, fileName, lineNum):
     self.text = text
-    self.filename = filename
-    self.linenum = linenum
+    self.filename = fileName
+    self.lineNum = lineNum
 
 class Table:
-  def __init__(self, filename): 
+  def __init__(self, fileName):
     self.results = []
-    with open(filename) as file:
+    with open(fileName) as file:
       lines = file.read().splitlines()
-      for linenum, line in enumerate(lines):
+      for lineNum, line in enumerate(lines):
         words = line.split()
         if len(words) < 2:
           continue
         text = ' '.join(words[1:])
-        tempresult = Result(text, filename, linenum)
+        tempResult = Result(text, fileName, lineNum)
         weight = int(words[0])
         for i in range(weight):
-          self.results.append(tempresult)
+          self.results.append(tempResult)
 
   def result(self):
     return choice(self.results)
 
 class Output:
-  def fillblanks(self):
-    leftbracket = self.text.find('{')
-    if leftbracket > -1:
-      rightbracket = self.text.find('}')
-      tablename = self.text[leftbracket+1 : rightbracket]
-      slottable = Table(tablename + '.txt')
-      self.results.append(slottable.result())
+  def fillBlanks(self):
+    leftBracket = self.text.find('{')
+    if leftBracket > -1:
+      rightBracket = self.text.find('}')
+      tableName = self.text[leftBracket+1 : rightBracket]
+      slotTable = Table(tableName + '.txt')
+      self.results.append(slotTable.result())
       # Replace bracket-to-bracket text with Result text (in real output.text)
-      self.text = self.text[:leftbracket]  + self.results[-1].text + self.text[rightbracket+1 :]
-      self.fillblanks()
+      self.text = self.text[:leftBracket] + self.results[-1].text + self.text[rightBracket+1 :]
+      self.fillBlanks()
 
   # took out color codes
   # 2013-12-10. Something goes wrong combined with the color code stuff. The code for the esc character is 4 characters but gets shrunk into one and that throws stuff off. Also the color codes contain the '[' character. i added start for this. 
   # Fill in blanks of the format [herself/himself]. Only used for gender for now. You can use either order so long as you're consistent. Parameter 'which' is a 0 or 1 and determines whether you use the left or right pronoun. (0 is left/first). Param 'start' says to only consider characters after that index (this is used to ignore '['s in color codes). 
-  def fillsquarebrackets(self, which):
-    leftbracket = self.text.find('[')
-    if leftbracket > -1:
+  def fillSquareBrackets(self, which):
+    leftBracket = self.text.find('[')
+    if leftBracket > -1:
       slash = self.text.find('/')
-      rightbracket = self.text.find(']')
+      rightBracket = self.text.find(']')
       if which == 0:
-        chosen = self.text[leftbracket+1 : slash]
+        chosen = self.text[leftBracket+1 : slash]
       else:
-        chosen = self.text[slash+1 : rightbracket]
+        chosen = self.text[slash+1 : rightBracket]
       t = self.text
-      self.text = t.replace(t[leftbracket : rightbracket+1], chosen)
-      self.fillsquarebrackets(which)
+      self.text = t.replace(t[leftBracket : rightBracket+1], chosen)
+      self.fillSquareBrackets(which)
 
-  def __init__(self, textin):
-    self.text = textin
+  def __init__(self, textIn):
+    self.text = textIn
     self.results = []
     self.fillblanks()
     self.fillsquarebrackets(choice([0,1]))
@@ -89,10 +89,10 @@ class Output:
 # interactive gen, tree
 
 # ugly global
-typestable = [] # of Nodetype objects
+typesTable = [] # of Nodetype objects
 
 def typeFromName(typeName):
-  for typeDict in typestable:
+  for typeDict in typesTable:
     if typeDict['name'] == typeName:
       return typeDict
 
@@ -101,7 +101,7 @@ def typeFromName(typeName):
 
 region
 biome 1 to 1
-racepresence 0 to 3
+racePresence 0 to 3
 '''
 def makeNodeTypeDict(string):
   lines = string.splitlines()
@@ -169,11 +169,11 @@ def parseStructureFile():
   with open('structure.txt') as structureFile:
     entries = structureFile.read().split('\n\n')
     for entry in entries:
-      typestable.append(makeNodeTypeDict(entry))
+      typesTable.append(makeNodeTypeDict(entry))
 
 # run
 parseStructureFile()
-root = nodeFromType(typestable[0]) # first entry assumed to be root type
+root = nodeFromType(typesTable[0]) # first entry assumed to be root type
 printTree(root)
       
       
