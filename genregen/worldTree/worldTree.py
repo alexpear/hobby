@@ -260,7 +260,6 @@ class TreeExplorer:
   # This file is overwritten each time save() is called.
   def saveToCache(self, fileName=cacheFileName):
     pickledString = pickle.dumps(self.root)
-    print(pickledString)
     with open(fileName, 'w') as cacheFile:
       cacheFile.write(pickledString)
 
