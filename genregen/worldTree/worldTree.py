@@ -146,31 +146,43 @@ class TreeExplorer:
       'parent': parent
     }
 
+  def subtreeFromTypeName(self, typeName, parent):
+    interiorType = self.typeFromName(typeName)
+    if interiorType:
+      # Node will be an interior node.
+      return self.subtreeFromType(interiorType, parent)
+    else:
+      # Node is a leaf.
+      return TreeExplorer.nodeFromTypeName(typeName, parent)
+
   # Convenience function
   def typeFromName(self, typeName):
     return self.treeSpace.typeFromName(typeName)
 
-  def nodeFromType(self, nodeType, parent):
+  def subtreeFromType(self, nodeType, parent):
     node = TreeExplorer.nodeFromTypeName(nodeType['name'], parent)
 
     for childProfile in nodeType['childProfiles']:
-      childName = childProfile['name']
-      nodeTypeOfChild = self.typeFromName(childName)
+      childTypeName = childProfile['name']
+      nodeTypeOfChild = self.typeFromName(childTypeName)
       repeats = randint(childProfile['min'], childProfile['max'])
       for i in range(repeats):
         if nodeTypeOfChild:
           # if we found a nodeType on file, then it's an interior node.
-          newChild = self.nodeFromType(nodeTypeOfChild, node)
+          newChild = self.subtreeFromType(nodeTypeOfChild, node)
         else:
           # if it's not listed in the typestable, then it's a leaf type.
-          newChild = TreeExplorer.nodeFromTypeName(childName, node)
+          newChild = TreeExplorer.nodeFromTypeName(childTypeName, node)
 
         node['children'].append(newChild)
 
     return node
 
   def newTree(self):
-    return self.nodeFromType(self.treeSpace.rootType, parent=None)
+    return self.subtreeFromType(self.treeSpace.rootType, parent=None)
+
+  def subtreeFromOldSubtree(self, oldNode):
+    return self.subtreeFromTypeName(oldNode['typeName'], oldNode['parent'])
 
   def __init__(self, treeSpace=TreeSpace()):
     self.treeSpace = treeSpace
@@ -201,7 +213,7 @@ class TreeExplorer:
     TreeExplorer.printSubtreeRecursor(node, 0)
     print('')
 
-  def printTree(self):
+  def printWholeTree(self):
     TreeExplorer.printSubtree(self.root)
 
   def ls(self):
@@ -237,9 +249,8 @@ class TreeExplorer:
     if listIndex >= len(childrenList):
       print('child number ' + str(childIndex) + ' not found.')
       return
-    oldNode = childrenList[listIndex]
-    nodeType = self.typeFromName(oldNode['typeName'])
-    newSubtree = self.nodeFromType(nodeType)
+    oldSubtree = childrenList[listIndex]
+    newSubtree = self.subtreeFromOldSubtree(oldSubtree)
     childrenList[listIndex] = newSubtree
     self.ls()
 
@@ -259,12 +270,12 @@ class TreeExplorer:
       with open(fileName, 'r') as cacheFile:
         return pickle.load(cacheFile)
     except:
-      print('could not load from cache ' + fileName)
+      print('(could not load from cache ' + fileName + ')')
       return None
 
 
 explorer = TreeExplorer()
-explorer.printTree()
+explorer.printWholeTree()
 
 
 '''
