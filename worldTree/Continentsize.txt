@@ -1,5 +1,0 @@
-9 Large
-9 Small
-1 Compact
-9 Medium
-0 Sizeable
