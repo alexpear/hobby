@@ -231,9 +231,15 @@ class TreeExplorer:
 
   # We start indexing from 1 because this function is a non-technical user interface.
   def reroll(self, childIndex=1):
-    child = TreeExplorer.getChild(self.currentNode, childIndex)
-    if child:
-      pass
+    listIndex = Util.fromUserNumbering(childIndex)
+    childrenList = self.currentNode['children']
+    if listIndex >= len(childrenList):
+      print('child number ' + str(childIndex) + ' not found.')
+      return
+    oldNode = childrenList[listIndex]
+    nodeType = self.typeFromName(oldNode['typeName'])
+    newSubtree = self.nodeFromType(nodeType)
+    childrenList[listIndex] = newSubtree
     self.ls()
 
   cacheFileName = 'wtCache.txt'
