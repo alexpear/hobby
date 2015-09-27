@@ -3,8 +3,6 @@
 '''
 Skeleton for genregens / random generators
 To use: Put a copy of this file in the dir, next to the tables as txt files. The file describing the main format of your generated strings should be called output.txt and should contain at least one line something like '9 {adj} {noun}'. (Then ofc you would need more tables adj.txt and noun.txt, etc.) 
-
-Original of file created 2013-11-18 by Alex Pearson
 '''
 
 import json
