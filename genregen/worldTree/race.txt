@@ -1,4 +1,4 @@
-203 humans
+303 humans
 70 elves
 21 drow
 6 half-elves
