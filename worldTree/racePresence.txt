@@ -1,0 +1,9 @@
+0 Inhabited by {race}
+0 Inhabited by a large population of {race}
+1 A lot of {race}
+1 A lot of shit
+0 A small population of {race}
+
+1 {APopulationAdj} population of {race}
+
+49 {PopulationAdj} {race}
