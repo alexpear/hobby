@@ -5,7 +5,7 @@ Skeleton for genregens / random generators
 To use: Put a copy of this file in the dir, next to the tables as txt files. The file describing the main format of your generated strings should be called output.txt and should contain at least one line something like '9 {adj} {noun}'. (Then ofc you would need more tables adj.txt and noun.txt, etc.) 
 '''
 
-import json
+import pickle
 from random import choice
 from random import randint
 
@@ -211,13 +211,21 @@ class TreeExplorer:
     self.currentNode = children[listIndex]
     self.ls()
 
-  def toJson(self):
-    # TODO: Deal with circular reference in 'parent'
-    return json.dumps(self.root)
+  cacheFileName = 'wtCache.txt'
+
+  # Store the current tree temporarily in a file.
+  # This file is overwritten each time save() is called.
+  def saveToCache(self, fileName=cacheFileName):
+    pickledString = pickle.dumps(self.root)
+    print(pickledString)
+    with open(fileName, 'w') as cacheFile:
+      cacheFile.write(pickledString)
 
   @staticmethod
-  def fromJson(jsonString):
-    return json.loads(jsonString)
+  def loadFromCache(self, fileName=cacheFileName):
+    with open(fileName, 'r') as cacheFile:
+      return pickle.load(cacheFile)
+
 
 explorer = TreeExplorer()
 explorer.printTree()
