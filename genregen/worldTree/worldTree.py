@@ -136,15 +136,16 @@ class TreeSpace:
 
 class TreeExplorer:
   @staticmethod
-  def nodeFromTypeName(typeName):
+  def nodeFromTypeName(typeName, parent):
     description = Output('{'+typeName+'}').text
     return {
       'description': description,
-      'children': []
+      'children': [],
+      'parent': parent
     }
 
-  def nodeFromType(self, nodeType):
-    node = TreeExplorer.nodeFromTypeName(nodeType['name'])
+  def nodeFromType(self, nodeType, parent):
+    node = TreeExplorer.nodeFromTypeName(nodeType['name'], parent)
 
     for childProfile in nodeType['childProfiles']:
       childName = childProfile['name']
@@ -153,17 +154,17 @@ class TreeExplorer:
       for i in range(repeats):
         if nodeTypeOfChild:
           # if we found a nodeType on file, then it's an interior node.
-          newChild = self.nodeFromType(nodeTypeOfChild)
+          newChild = self.nodeFromType(nodeTypeOfChild, node)
         else:
           # if it's not listed in the typestable, then it's a leaf type.
-          newChild = TreeExplorer.nodeFromTypeName(childName)
+          newChild = TreeExplorer.nodeFromTypeName(childName, node)
 
         node['children'].append(newChild)
 
     return node
 
   def newTree(self):
-    return self.nodeFromType(self.treeSpace.rootType)
+    return self.nodeFromType(self.treeSpace.rootType, parent=None)
 
   def __init__(self, treeSpace=TreeSpace()):
     self.treeSpace = treeSpace
@@ -184,6 +185,7 @@ class TreeExplorer:
     print('')
 
   def toJson(self):
+    # TODO: Deal with circular reference in 'parent'
     return json.dumps(self.root)
 
   @staticmethod
