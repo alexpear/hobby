@@ -99,14 +99,14 @@ class TreeSpace:
 
     for line in lines[1:]:
       words = line.split()
-      if len(words) < 4 or words[-2] != 'to':
-        print('error: structure file not in the expected format. was expecting "location 0 to 3" etc.')
+      if len(words) < 4 or words[1] != 'to':
+        print('error: structure file not in the expected format. was expecting "0 to 1 personality summary" etc.')
         return
 
       childProfile = {
-        'name': ' '.join(words[:-3]),
-        'min': int(words[-3]),
-        'max': int(words[-1])
+        'min': int(words[0]),
+        'max': int(words[2]),
+        'name': ' '.join(words[3:])
       }
 
       typeDict['childProfiles'].append(childProfile)

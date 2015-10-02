@@ -1,8 +1,8 @@
 world
-continent 2 to 3
+2 to 3 continent
 
 continent
-biome 1 to 3
+1 to 3 biome
 
 biome
-racePresence 0 to 3
+0 to 3 racepresence
