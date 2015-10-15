@@ -195,7 +195,10 @@ class TreeExplorer:
 
   # TODO: add extra newline when going back up multiple levels
   @staticmethod
-  def printSubtreeRecursor(node, indent, siblingNumber=1):
+  def printSubtreeRecursor(node, indent, maxIndent, siblingNumber=1):
+    if indent > maxIndent:
+      return
+
     indentUnit = '    '
     for i in range(indent):
       print indentUnit,
@@ -205,12 +208,14 @@ class TreeExplorer:
       print(siblingNumber),
     print(node['description'])
     for childIndex, child in enumerate(node['children']):
-      TreeExplorer.printSubtreeRecursor(child, indent+1, Util.toUserNumbering(childIndex))
+      TreeExplorer.printSubtreeRecursor(
+        child, indent+1, maxIndent=maxIndent,
+        siblingNumber=Util.toUserNumbering(childIndex))
 
   @staticmethod
-  def printSubtree(node):
+  def printSubtree(node, depth=2):
     print('')
-    TreeExplorer.printSubtreeRecursor(node, 0)
+    TreeExplorer.printSubtreeRecursor(node, 0, maxIndent=2)
     print('')
 
   def printWholeTree(self):
