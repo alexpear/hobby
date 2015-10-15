@@ -119,7 +119,7 @@ class TreeSpace:
     with open(fileName) as structureFile:
       entries = structureFile.read().split('\n\n')
       for entry in entries:
-        allTypes.append(TreeSpace.makeNodeTypeDict(entry))
+        allTypes.append(TreeSpace.makeNodeTypeDict(entry.strip()))
     return allTypes
 
   def __init__(self):
