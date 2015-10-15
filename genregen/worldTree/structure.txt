@@ -1,8 +1,16 @@
 world
-2 to 3 continent
+3 to 5 floor
 
-continent
-1 to 3 biome
+floor
+1 to 8 room
 
-biome
-0 to 3 racepresence
+room
+0 to 3 container
+0 to 3 furnishing
+0 to 1 creature
+
+container
+0 to 3 item
+
+creature
+0 to 1 item
