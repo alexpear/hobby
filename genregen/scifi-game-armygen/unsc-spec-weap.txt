@@ -1,0 +1,19 @@
+147  
+34 , rocket launcher
+6 , flamethrower
+21 , heavy laser
+12 , machine gun turret
+18 , grenade launcher
+9 , sniper rifle
+15 , SAW
+24 , sandbags
+21 , transport Warthog
+24 , field officer
+18 , infiltration training
+9 , guerrilla training
+21 , Flood experience
+18 , captured plasma grenades
+12 , captured focus rifle
+12 , Pelican dropship
+15 , penal regiment
+24 , fresh from boot camp 

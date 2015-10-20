@@ -1,0 +1,4 @@
+9 Elite Rangers
+18 Elite Stealth Squad x{troopcount}
+12 Elite SpecOps
+12 Elite Zealot Squad

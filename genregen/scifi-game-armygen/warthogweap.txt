@@ -1,0 +1,4 @@
+18 machine gun
+7 missile pod
+7 rocket pod
+21 gauss cannon
