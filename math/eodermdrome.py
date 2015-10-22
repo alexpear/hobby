@@ -67,6 +67,7 @@ def is_eodermdrome(string):
       len(string) not in small_eodermdrome_lengths):
     return False
 
+  # TODO: this hurdle probably takes about as long as the main loop. Needed?
   uniques_count = uniquetypes(string)
   if len(string) != uniques_count_to_eodermdrome_length(uniques_count):
     return False
@@ -80,6 +81,8 @@ def is_eodermdrome(string):
     
     pair = char + string[index+1]
     flipped_pair = pair[::-1]  # eg 'TK' -> 'KT'
+
+    # TODO: This boolean expression could probably be sped up slightly
     if pair in seen_edges or flipped_pair in seen_edges:
       return False
     else:
