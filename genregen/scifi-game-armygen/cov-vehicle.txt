@@ -1,0 +1,14 @@
+12 Ghost
+15 Brute Chopper
+
+9 Spectre hovercraft
+9 Prowler hovercraft
+12 Revenant hovercraft
+15 Wraith tank
+
+9 Banshee
+
+9 Phantom dropship
+12 Spirit dropship
+
+18 Scarab 

@@ -1,0 +1,7 @@
+0 75 {unsc-troops} \n {unsc-other} \n {unsc-other}
+0 93 {unsc-troops} \n {unsc-troops} \n {unsc-other}
+0 62 {unsc-troops} \n {unsc-troops} \n {unsc-troops}
+0 78 {unsc-troops} \n {unsc-troops} \n {unsc-other} \n {unsc-other}
+
+25 {unsc-big} \n {unsc-small}
+31 {unsc-small} \n {unsc-small} \n {unsc-small}

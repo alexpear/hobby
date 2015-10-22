@@ -1,0 +1,17 @@
+18 Assorted Crew
+21 Heavy Weapons Team
+21 Sniper Team
+21 Command Squad
+
+30 Veterans, Flood campaigns
+25 Veterans, Covenant War
+
+15 Spartan Squad w/ {unsc-main-weap}{unsc-spec-weap}
+12 Spartan Operative{unsc-spec-weap}
+
+16 Rangers w/ Mongeese
+36 Warthog, {warthogweap}
+24 Scorpion Tank
+21 Elephant
+21 Pelican Dropship
+24 Falcon aircraft

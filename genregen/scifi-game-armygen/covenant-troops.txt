@@ -1,0 +1,10 @@
+79 Lance of {troopcount}
+39 Lance of {troopcount} w/ Grunt Major
+40 Jackals x{troopcount}
+14 Skirmishers x{troopcount}, carbines
+11 Skirmishers x{troopcount}, energy bracers
+
+64 Elites x{troopcount}
+40 Brutes x{troopcount}
+
+23 Drones x{troopcount}

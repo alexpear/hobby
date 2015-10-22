@@ -1,0 +1,18 @@
+9 10 Marines, {unsc-main-weap}, {unsc-spec-weap}
+9 ODST Team of 6, {unsc-main-weap}, {unsc-spec-weap}
+9 10 Marines in 2 transport Warthogs, {unsc-main-weap}
+9 8 Marines on 4 Mongeese, {unsc-spec-weap}
+9 Falcon aircraft
+9 Scorpion tank
+9 Elephant command vehicle
+9 8 Veterans, Flood campaigns, {unsc-main-weap}, {unsc-spec-weap}
+9 8 Veterans, Covenant War, {unsc-main-weap}, {unsc-spec-weap}
+9 Spartan Operative, {unsc-spec-weap}, {unsc-main-weap}
+9 Spartan Team of 3, {unsc-main-weap}
+9 Special Weapons team, {unsc-spec-weap}
+9 3 Rangers, sniper rifle
+9 Warthog, gauss cannon
+9 Warthog, rocket pod
+9 Warthog, machine gun, {unsc-spec-weap}
+12 10 Marines, Pelican dropship, {unsc-main-weap}
+9 Command squad w/ officer & 9 Marines, {unsc-main-weap}, {unsc-spec-weap}
