@@ -1,4 +1,2 @@
-57 {covenant-troops} \n {covenant-other} \n {covenant-other}
-96 {covenant-troops} \n {covenant-troops} \n {covenant-other}
-26 {covenant-troops} \n {covenant-troops} \n {covenant-troops}
-54 {covenant-troops} \n {covenant-troops} \n {covenant-other} \n {covenant-other}
+11 {cov-small} \n {cov-small} \n {cov-small}
+23 {cov-large} \n {cov-small}

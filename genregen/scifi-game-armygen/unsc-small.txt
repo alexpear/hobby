@@ -1,5 +1,5 @@
-28 5 Marines, {unsc-main-weap}
+31 5 Marines, {unsc-main-weap}
 9 10 Cadets, {unsc-main-weap}
-9 2 Rangers on Mongoose, {unsc-main-weap}
+12 2 Rangers on Mongoose, {unsc-main-weap}
 12 10 assorted Crew/Engineers, pistols
-18 7 Marines, survivors of larger squad, {unsc-main-weap}
+21 7 Marines, survivors of larger squad, {unsc-main-weap}

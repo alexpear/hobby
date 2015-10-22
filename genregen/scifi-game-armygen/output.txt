@@ -2,5 +2,5 @@
 0 {astartes-troops} \n {astartes-troops} \n {astartes-other}
 0 {astartes-troops} \n {astartes-troops} \n {astartes-troops}
 
-79 {unsc}
-67 {cov}
+82 {unsc}
+79 {cov}

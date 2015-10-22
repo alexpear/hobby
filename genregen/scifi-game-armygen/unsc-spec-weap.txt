@@ -1,19 +1,29 @@
 147  
-34 , rocket launcher
-6 , flamethrower
-21 , heavy laser
-12 , machine gun turret
-18 , grenade launcher
-9 , sniper rifle
-15 , SAW
-24 , sandbags
+44 , rocket launcher
+16 , flamethrower
+31 , heavy laser
+32 , machine gun turret
+28 , grenade launcher
+11 , mag grenade launcher
+19 , sniper rifle
+25 , SAW
+34 , sandbags
 21 , transport Warthog
-24 , field officer
+34 , field officer
 18 , infiltration training
-9 , guerrilla training
-21 , Flood experience
+19 , guerrilla training
+31 , Flood experience
 18 , captured plasma grenades
-12 , captured focus rifle
+22 , captured focus rifle
 12 , Pelican dropship
-15 , penal regiment
-24 , fresh from boot camp 
+18 , penal regiment
+34 , fresh from boot camp
+22 , trip mine
+22 , missile pod
+21 , gauss emplacement
+22 , target designator
+22 , railgun
+1 , jump packs
+9 , camoflage gear
+9 , long-term provisions
+9 , portable missile system

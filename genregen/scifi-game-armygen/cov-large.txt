@@ -1,0 +1,22 @@
+12 Hunter pair
+
+15 Jackals x10, carbines
+12 Jackal Sniper x2
+7 Skirmishers x8, needle rifles
+
+15 Heavy Weapons Grunts x8, plasma cannons
+
+33 {eliteother}
+
+15 Elite Field Marshall, plasma sword
+18 Elite Field Marshall, plasma repeater
+
+12 Jump-pack Brutes x8
+12 Infiltrator Brutes x5
+18 Brute Chieftain, gravity hammer
+21 Brute Chieftain, plasma cannon
+
+12 Prophet & retinue of 6 Brutes
+18 Engineer
+
+81 {cov-vehicle}
