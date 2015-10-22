@@ -94,3 +94,17 @@ def is_eodermdrome(string):
 
   # Passed all checks
   return True
+
+def naive_eodermdromes(length=4, filename='/usr/share/dict/words'):
+  eodermdromes = []
+  with open(filename) as file:
+    words = file.read().splitlines()
+    for word in words:
+      if len(word) == length:
+        if is_eodermdrome(word):
+          print(word)
+          eodermdromes.append(word)
+
+  return eodermdromes
+
+results = naive_eodermdromes(4)
