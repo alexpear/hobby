@@ -78,8 +78,12 @@ def is_eodermdrome(string):
     # If we reach last char, we have seen all pairs
     if index == len(string)-1:
       break
-    
-    pair = char + string[index+1]
+
+    nextchar = string[index+1]
+    if char == nextchar:
+      return False
+
+    pair = char + nextchar
     flipped_pair = pair[::-1]  # eg 'TK' -> 'KT'
 
     # TODO: This boolean expression could probably be sped up slightly
