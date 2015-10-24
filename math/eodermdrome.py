@@ -80,10 +80,7 @@ def cleanup(string):
 
 # Accepts '', 'A', 'AS', 'ASIA', etc
 def is_eodermdrome(string):
-  string = string.strip().upper()
-
-  # Remove interior whitespace
-  string = ''.join(char for char in string if char != ' ')
+  string = cleanup(string)
 
   # Trivial cases
   # eg '' or 'R'
