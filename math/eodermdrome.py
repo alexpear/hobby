@@ -95,6 +95,9 @@ def is_eodermdrome(string):
   # Passed all checks
   return True
 
+def is_partial_eodermdrome(string):
+  pass
+
 def naive_eodermdromes(length=4, filename='/usr/share/dict/words'):
   eodermdromes = []
   with open(filename) as file:
