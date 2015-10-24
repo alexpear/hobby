@@ -28,14 +28,55 @@ def uniqueletters(string):
 def uniquetypes(string):
   return len(uniqueletters(string))
 
+# special cases 0 and 2, and (k**2 - k) / 2 + 1 where k is a positive odd integer
+small_eodermdrome_lengths = [0, 1, 2, 4, 11, 22, 37, 56, 79]
+
 def uniques_count_to_eodermdrome_length(uniques_count):
   # vertex_circuit_length = uniques_count
   # circuits_count = uniques_count // 2
   # return vertex_circuit_length * circuits_count + 1
   return (uniques_count**2 - uniques_count) / 2.0 + 1
 
-# special cases 0 and 2, and (k**2 - k) / 2 + 1 where k is a positive odd integer
-small_eodermdrome_lengths = [0, 1, 2, 4, 11, 22, 37, 56, 79]
+# Given a length, returns how many unique symbolss
+# a valid eodermdrome of that length would have.
+def length_to_uniques_count(length):
+  length_to_uniques = {
+    0: 0,
+    1: 1,
+    2: 2,
+    4: 3,
+    11: 5,
+    22: 7,
+    37: 9,
+    56: 11,
+    79: 13
+  }
+
+  # Most cases
+  longest_familiar = small_eodermdrome_lengths[-1]
+  if (length <= longest_familiar and
+    length in length_to_uniques):
+    return length_to_uniques[length]
+
+  # uniques = length_to_uniques[79] + 1
+  uniques = length_to_uniques[longest_familiar]
+  MAX_UNIQUES_WORTH_CONSIDERING = 27
+  while uniques < MAX_UNIQUES_WORTH_CONSIDERING:
+    expectedlength = uniques_count_to_eodermdrome_length(uniques)
+    if expectedlength == length:
+      return uniques
+    elif expectedlength > length:
+      return None
+    # Only consider odd numbers
+    uniques += 2
+
+  # we cant find the uniques count
+  return None
+
+def cleanup(string):
+  string = string.strip().upper()
+  # Remove interior whitespace
+  return ''.join(char for char in string if char != ' ')
 
 # Accepts '', 'A', 'AS', 'ASIA', etc
 def is_eodermdrome(string):
