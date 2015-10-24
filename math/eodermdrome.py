@@ -100,14 +100,9 @@ def is_eodermdrome(string):
       string[0] != string[2] and
       string[0] == string[3])
 
-  # For all except very long strings, throw out everything that isnt one of the known lengths.
-  if (len(string) <= small_eodermdrome_lengths[-1] and
-      len(string) not in small_eodermdrome_lengths):
-    return False
-
-  # TODO: this hurdle probably takes about as long as the main loop. Needed?
-  uniques_count = uniquetypes(string)
-  if len(string) != uniques_count_to_eodermdrome_length(uniques_count):
+  # Throw out everything that isnt one of the known lengths.
+  uniques_count = length_to_uniques_count(len(string))
+  if uniques_count == None:
     return False
 
   # After all the speedup hurdles, check all adjacencies
