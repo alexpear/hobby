@@ -148,4 +148,12 @@ def naive_eodermdromes(length=4, filename='/usr/share/dict/words'):
 
   return eodermdromes
 
-results = naive_eodermdromes(4)
+def completions(partial='', words=[], targetlength=11):
+  pass
+
+def find_eodermdromes(filename='/usr/share/dict/words', targetlength=11):
+  eodermdromes = []
+  with open(filename) as file:
+    words = file.read().splitlines()
+    for word in words:
+      pass
