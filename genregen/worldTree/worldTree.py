@@ -103,6 +103,11 @@ class TreeSpace:
         print('error: structure file not in the expected format. was expecting "0 to 1 personality summary" etc.')
         return
 
+      typeName = ' '.join(words[3:])
+      # Disambiguate aliases.
+      if typeName[0] == '{' and typeName[-1] == '}':
+        typeName = Output(typeName).text
+
       childProfile = {
         'min': int(words[0]),
         'max': int(words[2]),
