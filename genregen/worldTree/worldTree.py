@@ -206,11 +206,11 @@ class TreeExplorer:
 
     indentUnit = '    '
     for i in range(indent):
-      print indentUnit,
+      print(indentUnit, end='')
 
     # Prepend sibling number only for the direct children
     if indent == 1:
-      print(siblingNumber),
+      print('{num} '.format(siblingNumber), end='')
     print(node['description'])
     for childIndex, child in enumerate(node['children']):
       TreeExplorer.printSubtreeRecursor(
