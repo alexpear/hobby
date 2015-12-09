@@ -70,5 +70,5 @@ var denomcombo = function(targetval, solutions) {
 };
 
 var solutions = usd_basecases();
-console.log(denomcombo(7999, solutions));
+console.log(denomcombo(8010, solutions));
 console.log(solutions_to_string(solutions));
