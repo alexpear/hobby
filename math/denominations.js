@@ -4,18 +4,18 @@
 
 var usd_basecases = function() {
   return {
-    1: '.01',
-    5: '.05',
-    10: '.10',
-    25: '.25',
-    50: '.50',
-    100: '1',
-    200: '2',
-    500: '5',
-    1000: '10',
-    2000: '20',
-    5000: '50',
-    10000: '100'
+    1: ['.01'],
+    5: ['.05'],
+    10: ['.10'],
+    25: ['.25'],
+    50: ['.50'],
+    100: ['1'],
+    200: ['2'],
+    500: ['5'],
+    1000: ['10'],
+    2000: ['20'],
+    5000: ['50'],
+    10000: ['100']
   };
 };
 
@@ -26,7 +26,7 @@ var solutions_to_string = function(dict) {
 
   for (var i = 1; i <= maxkey; i++) {
     if (dict[i]) {
-      outstring += i + ': ' + dict[i] + '\n';
+      outstring += i + ': ' + dict[i].join(' ') + '\n';
     }
   }
 
@@ -46,17 +46,23 @@ var denomcombo = function(targetval, solutions) {
 
   // TODO: find neater, non-imperative version
   // Ideally without reducing runspeed.
-  var shortest_length_so_far = 99999;
-  for (var smallpart = 1; smallpart <= targetval/2; smallpart++) {
-    var bigpart = targetval - smallpart;
+  for (var subval = 1; subval < targetval; subval++) {
+    if (! solutions[subval]) {
+      // Recurse to populate the subval entry.
+      // This will only recurse once, since we just checked all the lower entries.
+      denomcombo(subval, solutions);
+    }
 
-    // Always calculate small values before big ones
-    var smallcombo = denomcombo(smallpart, solutions);
-    var bigcombo = denomcombo(bigpart, solutions);
-    var targetcombo = bigcombo + ' ' + smallcombo;
-    if (targetcombo.length < shortest_length_so_far) {
-      var shortest_length_so_far = targetcombo.length;
-      solutions[targetval] = targetcombo;
+    var counterpartval = targetval - subval;
+
+    // If we do not yet have data on both combos, wait till later in the pass.
+    if (!solutions[subval] || !solutions[counterpartval]) { continue; }
+
+    // Now try each combination.
+    var candidate_combo = solutions[subval].concat(solutions[counterpartval]);
+    if (! solutions[targetval] ||
+          solutions[targetval].length > candidate_combo.length) {
+      solutions[targetval] = candidate_combo;
     }
   }
 
