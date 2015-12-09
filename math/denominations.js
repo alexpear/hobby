@@ -59,7 +59,7 @@ var denomcombo = function(targetval, solutions) {
     if (!solutions[subval] || !solutions[counterpartval]) { continue; }
 
     // Now try each combination.
-    var candidate_combo = solutions[subval].concat(solutions[counterpartval]);
+    var candidate_combo = solutions[counterpartval].concat(solutions[subval]);
     if (! solutions[targetval] ||
           solutions[targetval].length > candidate_combo.length) {
       solutions[targetval] = candidate_combo;
