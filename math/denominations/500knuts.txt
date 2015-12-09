@@ -1,0 +1,501 @@
+1: K
+2: K K
+3: K K K
+4: K K K K
+5: K K K K K
+6: K K K K K K
+7: K K K K K K K
+8: K K K K K K K K
+9: K K K K K K K K K
+10: ?
+11: ? K
+12: ? K K
+13: ? K K K
+14: ? K K K K
+15: ? K K K K K
+16: ? K K K K K K
+17: ? K K K K K K K
+18: ? K K K K K K K K
+19: ? K K K K K K K K K
+20: ? ?
+21: ? ? K
+22: ? ? K K
+23: ? ? K K K
+24: ? ? K K K K
+25: ? ? K K K K K
+26: ? ? K K K K K K
+27: ? ? K K K K K K K
+28: ? ? K K K K K K K K
+29: S
+30: S K
+31: S K K
+32: S K K K
+33: S K K K K
+34: S K K K K K
+35: S K K K K K K
+36: S K K K K K K K
+37: S K K K K K K K K
+38: S K K K K K K K K K
+39: S ?
+40: S ? K
+41: S ? K K
+42: S ? K K K
+43: S ? K K K K
+44: S ? K K K K K
+45: S ? K K K K K K
+46: S ? K K K K K K K
+47: S ? K K K K K K K K
+48: S ? K K K K K K K K K
+49: S ? ?
+50: S ? ? K
+51: S ? ? K K
+52: S ? ? K K K
+53: S ? ? K K K K
+54: S ? ? K K K K K
+55: S ? ? K K K K K K
+56: S ? ? K K K K K K K
+57: S ? ? K K K K K K K K
+58: S S
+59: S S K
+60: S S K K
+61: S S K K K
+62: S S K K K K
+63: S S K K K K K
+64: S S K K K K K K
+65: S S K K K K K K K
+66: S S K K K K K K K K
+67: S S K K K K K K K K K
+68: S S ?
+69: S S ? K
+70: S S ? K K
+71: S S ? K K K
+72: S S ? K K K K
+73: S S ? K K K K K
+74: S S ? K K K K K K
+75: S S ? K K K K K K K
+76: S S ? K K K K K K K K
+77: S S ? K K K K K K K K K
+78: S S ? ?
+79: S S ? ? K
+80: S S ? ? K K
+81: S S ? ? K K K
+82: S S ? ? K K K K
+83: S S ? ? K K K K K
+84: S S ? ? K K K K K K
+85: S S ? ? K K K K K K K
+86: S S ? ? K K K K K K K K
+87: S S S
+88: S S S K
+89: S S S K K
+90: S S S K K K
+91: S S S K K K K
+92: S S S K K K K K
+93: S S S K K K K K K
+94: S S S K K K K K K K
+95: S S S K K K K K K K K
+96: S S S K K K K K K K K K
+97: S S S ?
+98: S S S ? K
+99: S S S ? K K
+100: S S S ? K K K
+101: S S S ? K K K K
+102: S S S ? K K K K K
+103: S S S ? K K K K K K
+104: S S S ? K K K K K K K
+105: S S S ? K K K K K K K K
+106: S S S ? K K K K K K K K K
+107: S S S ? ?
+108: S S S ? ? K
+109: S S S ? ? K K
+110: S S S ? ? K K K
+111: S S S ? ? K K K K
+112: S S S ? ? K K K K K
+113: S S S ? ? K K K K K K
+114: S S S ? ? K K K K K K K
+115: S S S ? ? K K K K K K K K
+116: S S S S
+117: S S S S K
+118: S S S S K K
+119: S S S S K K K
+120: S S S S K K K K
+121: S S S S K K K K K
+122: S S S S K K K K K K
+123: S S S S K K K K K K K
+124: S S S S K K K K K K K K
+125: S S S S K K K K K K K K K
+126: S S S S ?
+127: S S S S ? K
+128: S S S S ? K K
+129: S S S S ? K K K
+130: S S S S ? K K K K
+131: S S S S ? K K K K K
+132: S S S S ? K K K K K K
+133: S S S S ? K K K K K K K
+134: S S S S ? K K K K K K K K
+135: S S S S ? K K K K K K K K K
+136: S S S S ? ?
+137: S S S S ? ? K
+138: S S S S ? ? K K
+139: S S S S ? ? K K K
+140: S S S S ? ? K K K K
+141: S S S S ? ? K K K K K
+142: S S S S ? ? K K K K K K
+143: S S S S ? ? K K K K K K K
+144: S S S S ? ? K K K K K K K K
+145: S S S S S
+146: S S S S S K
+147: S S S S S K K
+148: S S S S S K K K
+149: S S S S S K K K K
+150: S S S S S K K K K K
+151: S S S S S K K K K K K
+152: S S S S S K K K K K K K
+153: S S S S S K K K K K K K K
+154: S S S S S K K K K K K K K K
+155: S S S S S ?
+156: S S S S S ? K
+157: S S S S S ? K K
+158: S S S S S ? K K K
+159: S S S S S ? K K K K
+160: S S S S S ? K K K K K
+161: S S S S S ? K K K K K K
+162: S S S S S ? K K K K K K K
+163: S S S S S ? K K K K K K K K
+164: S S S S S ? K K K K K K K K K
+165: S S S S S ? ?
+166: S S S S S ? ? K
+167: S S S S S ? ? K K
+168: S S S S S ? ? K K K
+169: S S S S S ? ? K K K K
+170: S S S S S ? ? K K K K K
+171: S S S S S ? ? K K K K K K
+172: S S S S S ? ? K K K K K K K
+173: S S S S S ? ? K K K K K K K K
+174: S S S S S S
+175: S S S S S S K
+176: S S S S S S K K
+177: S S S S S S K K K
+178: S S S S S S K K K K
+179: S S S S S S K K K K K
+180: S S S S S S K K K K K K
+181: S S S S S S K K K K K K K
+182: S S S S S S K K K K K K K K
+183: S S S S S S K K K K K K K K K
+184: S S S S S S ?
+185: S S S S S S ? K
+186: S S S S S S ? K K
+187: S S S S S S ? K K K
+188: S S S S S S ? K K K K
+189: S S S S S S ? K K K K K
+190: S S S S S S ? K K K K K K
+191: S S S S S S ? K K K K K K K
+192: S S S S S S ? K K K K K K K K
+193: S S S S S S ? K K K K K K K K K
+194: S S S S S S ? ?
+195: S S S S S S ? ? K
+196: S S S S S S ? ? K K
+197: S S S S S S ? ? K K K
+198: S S S S S S ? ? K K K K
+199: S S S S S S ? ? K K K K K
+200: S S S S S S ? ? K K K K K K
+201: S S S S S S ? ? K K K K K K K
+202: S S S S S S ? ? K K K K K K K K
+203: S S S S S S S
+204: S S S S S S S K
+205: S S S S S S S K K
+206: S S S S S S S K K K
+207: S S S S S S S K K K K
+208: S S S S S S S K K K K K
+209: S S S S S S S K K K K K K
+210: S S S S S S S K K K K K K K
+211: S S S S S S S K K K K K K K K
+212: S S S S S S S K K K K K K K K K
+213: S S S S S S S ?
+214: S S S S S S S ? K
+215: S S S S S S S ? K K
+216: S S S S S S S ? K K K
+217: S S S S S S S ? K K K K
+218: S S S S S S S ? K K K K K
+219: S S S S S S S ? K K K K K K
+220: S S S S S S S ? K K K K K K K
+221: S S S S S S S ? K K K K K K K K
+222: S S S S S S S ? K K K K K K K K K
+223: S S S S S S S ? ?
+224: S S S S S S S ? ? K
+225: S S S S S S S ? ? K K
+226: S S S S S S S ? ? K K K
+227: S S S S S S S ? ? K K K K
+228: S S S S S S S ? ? K K K K K
+229: S S S S S S S ? ? K K K K K K
+230: S S S S S S S ? ? K K K K K K K
+231: S S S S S S S ? ? K K K K K K K K
+232: S S S S S S S S
+233: S S S S S S S S K
+234: S S S S S S S S K K
+235: S S S S S S S S K K K
+236: S S S S S S S S K K K K
+237: S S S S S S S S K K K K K
+238: S S S S S S S S K K K K K K
+239: S S S S S S S S K K K K K K K
+240: S S S S S S S S K K K K K K K K
+241: S S S S S S S S K K K K K K K K K
+242: S S S S S S S S ?
+243: S S S S S S S S ? K
+244: S S S S S S S S ? K K
+245: S S S S S S S S ? K K K
+246: S S S S S S S S ? K K K K
+247: S S S S S S S S ? K K K K K
+248: S S S S S S S S ? K K K K K K
+249: S S S S S S S S ? K K K K K K K
+250: S S S S S S S S ? K K K K K K K K
+251: S S S S S S S S ? K K K K K K K K K
+252: S S S S S S S S ? ?
+253: S S S S S S S S ? ? K
+254: S S S S S S S S ? ? K K
+255: S S S S S S S S ? ? K K K
+256: S S S S S S S S ? ? K K K K
+257: S S S S S S S S ? ? K K K K K
+258: S S S S S S S S ? ? K K K K K K
+259: S S S S S S S S ? ? K K K K K K K
+260: S S S S S S S S ? ? K K K K K K K K
+261: S S S S S S S S S
+262: S S S S S S S S S K
+263: S S S S S S S S S K K
+264: S S S S S S S S S K K K
+265: S S S S S S S S S K K K K
+266: S S S S S S S S S K K K K K
+267: S S S S S S S S S K K K K K K
+268: S S S S S S S S S K K K K K K K
+269: S S S S S S S S S K K K K K K K K
+270: S S S S S S S S S K K K K K K K K K
+271: S S S S S S S S S ?
+272: S S S S S S S S S ? K
+273: S S S S S S S S S ? K K
+274: S S S S S S S S S ? K K K
+275: S S S S S S S S S ? K K K K
+276: S S S S S S S S S ? K K K K K
+277: S S S S S S S S S ? K K K K K K
+278: S S S S S S S S S ? K K K K K K K
+279: S S S S S S S S S ? K K K K K K K K
+280: S S S S S S S S S ? K K K K K K K K K
+281: S S S S S S S S S ? ?
+282: S S S S S S S S S ? ? K
+283: S S S S S S S S S ? ? K K
+284: S S S S S S S S S ? ? K K K
+285: S S S S S S S S S ? ? K K K K
+286: S S S S S S S S S ? ? K K K K K
+287: S S S S S S S S S ? ? K K K K K K
+288: S S S S S S S S S ? ? K K K K K K K
+289: S S S S S S S S S ? ? K K K K K K K K
+290: S S S S S S S S S S
+291: S S S S S S S S S S K
+292: S S S S S S S S S S K K
+293: S S S S S S S S S S K K K
+294: S S S S S S S S S S K K K K
+295: S S S S S S S S S S K K K K K
+296: S S S S S S S S S S K K K K K K
+297: S S S S S S S S S S K K K K K K K
+298: S S S S S S S S S S K K K K K K K K
+299: S S S S S S S S S S K K K K K K K K K
+300: S S S S S S S S S S ?
+301: S S S S S S S S S S ? K
+302: S S S S S S S S S S ? K K
+303: S S S S S S S S S S ? K K K
+304: S S S S S S S S S S ? K K K K
+305: S S S S S S S S S S ? K K K K K
+306: S S S S S S S S S S ? K K K K K K
+307: S S S S S S S S S S ? K K K K K K K
+308: S S S S S S S S S S ? K K K K K K K K
+309: S S S S S S S S S S ? K K K K K K K K K
+310: S S S S S S S S S S ? ?
+311: S S S S S S S S S S ? ? K
+312: S S S S S S S S S S ? ? K K
+313: S S S S S S S S S S ? ? K K K
+314: S S S S S S S S S S ? ? K K K K
+315: S S S S S S S S S S ? ? K K K K K
+316: S S S S S S S S S S ? ? K K K K K K
+317: S S S S S S S S S S ? ? K K K K K K K
+318: S S S S S S S S S S ? ? K K K K K K K K
+319: S S S S S S S S S S S
+320: S S S S S S S S S S S K
+321: S S S S S S S S S S S K K
+322: S S S S S S S S S S S K K K
+323: S S S S S S S S S S S K K K K
+324: S S S S S S S S S S S K K K K K
+325: S S S S S S S S S S S K K K K K K
+326: S S S S S S S S S S S K K K K K K K
+327: S S S S S S S S S S S K K K K K K K K
+328: S S S S S S S S S S S K K K K K K K K K
+329: S S S S S S S S S S S ?
+330: S S S S S S S S S S S ? K
+331: S S S S S S S S S S S ? K K
+332: S S S S S S S S S S S ? K K K
+333: S S S S S S S S S S S ? K K K K
+334: S S S S S S S S S S S ? K K K K K
+335: S S S S S S S S S S S ? K K K K K K
+336: S S S S S S S S S S S ? K K K K K K K
+337: S S S S S S S S S S S ? K K K K K K K K
+338: S S S S S S S S S S S ? K K K K K K K K K
+339: S S S S S S S S S S S ? ?
+340: S S S S S S S S S S S ? ? K
+341: S S S S S S S S S S S ? ? K K
+342: S S S S S S S S S S S ? ? K K K
+343: S S S S S S S S S S S ? ? K K K K
+344: S S S S S S S S S S S ? ? K K K K K
+345: S S S S S S S S S S S ? ? K K K K K K
+346: S S S S S S S S S S S ? ? K K K K K K K
+347: S S S S S S S S S S S ? ? K K K K K K K K
+348: S S S S S S S S S S S S
+349: S S S S S S S S S S S S K
+350: S S S S S S S S S S S S K K
+351: S S S S S S S S S S S S K K K
+352: S S S S S S S S S S S S K K K K
+353: S S S S S S S S S S S S K K K K K
+354: S S S S S S S S S S S S K K K K K K
+355: S S S S S S S S S S S S K K K K K K K
+356: S S S S S S S S S S S S K K K K K K K K
+357: S S S S S S S S S S S S K K K K K K K K K
+358: S S S S S S S S S S S S ?
+359: S S S S S S S S S S S S ? K
+360: S S S S S S S S S S S S ? K K
+361: S S S S S S S S S S S S ? K K K
+362: S S S S S S S S S S S S ? K K K K
+363: S S S S S S S S S S S S ? K K K K K
+364: S S S S S S S S S S S S ? K K K K K K
+365: S S S S S S S S S S S S ? K K K K K K K
+366: S S S S S S S S S S S S ? K K K K K K K K
+367: S S S S S S S S S S S S ? K K K K K K K K K
+368: S S S S S S S S S S S S ? ?
+369: S S S S S S S S S S S S ? ? K
+370: S S S S S S S S S S S S ? ? K K
+371: S S S S S S S S S S S S ? ? K K K
+372: S S S S S S S S S S S S ? ? K K K K
+373: S S S S S S S S S S S S ? ? K K K K K
+374: S S S S S S S S S S S S ? ? K K K K K K
+375: S S S S S S S S S S S S ? ? K K K K K K K
+376: S S S S S S S S S S S S ? ? K K K K K K K K
+377: S S S S S S S S S S S S S
+378: S S S S S S S S S S S S S K
+379: S S S S S S S S S S S S S K K
+380: S S S S S S S S S S S S S K K K
+381: S S S S S S S S S S S S S K K K K
+382: S S S S S S S S S S S S S K K K K K
+383: S S S S S S S S S S S S S K K K K K K
+384: S S S S S S S S S S S S S K K K K K K K
+385: S S S S S S S S S S S S S K K K K K K K K
+386: S S S S S S S S S S S S S K K K K K K K K K
+387: S S S S S S S S S S S S S ?
+388: S S S S S S S S S S S S S ? K
+389: S S S S S S S S S S S S S ? K K
+390: S S S S S S S S S S S S S ? K K K
+391: S S S S S S S S S S S S S ? K K K K
+392: S S S S S S S S S S S S S ? K K K K K
+393: S S S S S S S S S S S S S ? K K K K K K
+394: S S S S S S S S S S S S S ? K K K K K K K
+395: S S S S S S S S S S S S S ? K K K K K K K K
+396: S S S S S S S S S S S S S ? K K K K K K K K K
+397: S S S S S S S S S S S S S ? ?
+398: S S S S S S S S S S S S S ? ? K
+399: S S S S S S S S S S S S S ? ? K K
+400: S S S S S S S S S S S S S ? ? K K K
+401: S S S S S S S S S S S S S ? ? K K K K
+402: S S S S S S S S S S S S S ? ? K K K K K
+403: S S S S S S S S S S S S S ? ? K K K K K K
+404: S S S S S S S S S S S S S ? ? K K K K K K K
+405: S S S S S S S S S S S S S ? ? K K K K K K K K
+406: S S S S S S S S S S S S S S
+407: S S S S S S S S S S S S S S K
+408: S S S S S S S S S S S S S S K K
+409: S S S S S S S S S S S S S S K K K
+410: S S S S S S S S S S S S S S K K K K
+411: S S S S S S S S S S S S S S K K K K K
+412: S S S S S S S S S S S S S S K K K K K K
+413: S S S S S S S S S S S S S S K K K K K K K
+414: S S S S S S S S S S S S S S K K K K K K K K
+415: S S S S S S S S S S S S S S K K K K K K K K K
+416: S S S S S S S S S S S S S S ?
+417: S S S S S S S S S S S S S S ? K
+418: S S S S S S S S S S S S S S ? K K
+419: S S S S S S S S S S S S S S ? K K K
+420: S S S S S S S S S S S S S S ? K K K K
+421: S S S S S S S S S S S S S S ? K K K K K
+422: S S S S S S S S S S S S S S ? K K K K K K
+423: S S S S S S S S S S S S S S ? K K K K K K K
+424: S S S S S S S S S S S S S S ? K K K K K K K K
+425: S S S S S S S S S S S S S S ? K K K K K K K K K
+426: S S S S S S S S S S S S S S ? ?
+427: S S S S S S S S S S S S S S ? ? K
+428: S S S S S S S S S S S S S S ? ? K K
+429: S S S S S S S S S S S S S S ? ? K K K
+430: S S S S S S S S S S S S S S ? ? K K K K
+431: S S S S S S S S S S S S S S ? ? K K K K K
+432: S S S S S S S S S S S S S S ? ? K K K K K K
+433: S S S S S S S S S S S S S S ? ? K K K K K K K
+434: S S S S S S S S S S S S S S ? ? K K K K K K K K
+435: S S S S S S S S S S S S S S S
+436: S S S S S S S S S S S S S S S K
+437: S S S S S S S S S S S S S S S K K
+438: S S S S S S S S S S S S S S S K K K
+439: S S S S S S S S S S S S S S S K K K K
+440: S S S S S S S S S S S S S S S K K K K K
+441: S S S S S S S S S S S S S S S K K K K K K
+442: S S S S S S S S S S S S S S S K K K K K K K
+443: S S S S S S S S S S S S S S S K K K K K K K K
+444: S S S S S S S S S S S S S S S K K K K K K K K K
+445: S S S S S S S S S S S S S S S ?
+446: S S S S S S S S S S S S S S S ? K
+447: S S S S S S S S S S S S S S S ? K K
+448: S S S S S S S S S S S S S S S ? K K K
+449: S S S S S S S S S S S S S S S ? K K K K
+450: S S S S S S S S S S S S S S S ? K K K K K
+451: S S S S S S S S S S S S S S S ? K K K K K K
+452: S S S S S S S S S S S S S S S ? K K K K K K K
+453: S S S S S S S S S S S S S S S ? K K K K K K K K
+454: S S S S S S S S S S S S S S S ? K K K K K K K K K
+455: S S S S S S S S S S S S S S S ? ?
+456: S S S S S S S S S S S S S S S ? ? K
+457: S S S S S S S S S S S S S S S ? ? K K
+458: S S S S S S S S S S S S S S S ? ? K K K
+459: S S S S S S S S S S S S S S S ? ? K K K K
+460: S S S S S S S S S S S S S S S ? ? K K K K K
+461: S S S S S S S S S S S S S S S ? ? K K K K K K
+462: S S S S S S S S S S S S S S S ? ? K K K K K K K
+463: S S S S S S S S S S S S S S S ? ? K K K K K K K K
+464: S S S S S S S S S S S S S S S S
+465: S S S S S S S S S S S S S S S S K
+466: S S S S S S S S S S S S S S S S K K
+467: S S S S S S S S S S S S S S S S K K K
+468: S S S S S S S S S S S S S S S S K K K K
+469: S S S S S S S S S S S S S S S S K K K K K
+470: S S S S S S S S S S S S S S S S K K K K K K
+471: S S S S S S S S S S S S S S S S K K K K K K K
+472: S S S S S S S S S S S S S S S S K K K K K K K K
+473: S S S S S S S S S S S S S S S S K K K K K K K K K
+474: S S S S S S S S S S S S S S S S ?
+475: S S S S S S S S S S S S S S S S ? K
+476: S S S S S S S S S S S S S S S S ? K K
+477: S S S S S S S S S S S S S S S S ? K K K
+478: S S S S S S S S S S S S S S S S ? K K K K
+479: S S S S S S S S S S S S S S S S ? K K K K K
+480: S S S S S S S S S S S S S S S S ? K K K K K K
+481: S S S S S S S S S S S S S S S S ? K K K K K K K
+482: S S S S S S S S S S S S S S S S ? K K K K K K K K
+483: S S S S S S S S S S S S S S S S ? K K K K K K K K K
+484: S S S S S S S S S S S S S S S S ? ?
+485: S S S S S S S S S S S S S S S S ? ? K
+486: S S S S S S S S S S S S S S S S ? ? K K
+487: S S S S S S S S S S S S S S S S ? ? K K K
+488: S S S S S S S S S S S S S S S S ? ? K K K K
+489: S S S S S S S S S S S S S S S S ? ? K K K K K
+490: S S S S S S S S S S S S S S S S ? ? K K K K K K
+491: S S S S S S S S S S S S S S S S ? ? K K K K K K K
+492: S S S S S S S S S S S S S S S S ? ? K K K K K K K K
+493: G
+494: G K
+495: G K K
+496: G K K K
+497: G K K K K
+498: G K K K K K
+499: G K K K K K K
+500: G K K K K K K K
+
