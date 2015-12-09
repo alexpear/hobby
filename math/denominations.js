@@ -19,6 +19,14 @@ var usd_basecases = function() {
   };
 };
 
+var wizarding_britain_basecases = function() {
+  return {
+    1: ['K'],
+    29: ['S'],
+    493: ['G']
+  };
+};
+
 var solutions_to_string = function(dict) {
   // Use an idiom to find the highest valued key in the dict.
   var maxkey = Math.max.apply(this, Object.keys(dict).map(Number))
