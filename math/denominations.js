@@ -78,5 +78,6 @@ var denomcombo = function(targetval, solutions) {
 };
 
 var solutions = usd_basecases();
-console.log(denomcombo(8010, solutions));
+solutions[103] = ['1.03'];
+denomcombo(11111, solutions);
 console.log(solutions_to_string(solutions));
