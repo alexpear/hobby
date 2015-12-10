@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://birddecisions.appspot.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body style="background: #236A89; color: #FFFFFF; font-size: 24px"> 
+  <script type="text/javascript">
+    // tableString excludes * but includes name
+    function loadTable(tableString) {
+      var results = [];
+      var lines = tableString.split("\n");
+
+      var tableName = lines[0].trim();
+      // TODO somewhat clumsy checking if it's * output instead of just output for root table
+      if (tableName.slice(0,2) == "* ") {
+        tableName = tableName.slice(1).trim();  // cut off the '*' and trim
+      }
+
+      // iterate over other lines, starting at 1.
+      for (var i = 1; i < lines.length; i++) {
+        var words = lines[i].split(/\s+/);  // regex: one or more Space characters (" ")
+        if (words.length < 2) {
+          continue;  // Skip blank or invalid lines
+        }
+        // ie the tail/rest of 'words', in string form, omitting trailing spaces.
+        var resultText = words.slice(1).join(' ').trim();
+        // anonymous class Result
+        var result = {
+          text: resultText,  
+          lineNumber: i,
+          table: tableName  // for learning later.
+        };
+        // Add result to 'results' weight times (memory-inelegant)
+        var weight = words[0];
+        for (var w = 0; w < weight; w++) {
+          results.push(result);
+        }
+      }
+    
+      // anonymous class Table
+      return { results: results, name: tableName };
+    }
+
+    function tableResult(results) {
+      var resultIndex = Math.floor(Math.random() * results.length);  // random index into 'table'
+      return results[resultIndex].text;
+    }
+
+    function fillBlanks(origString, tables) {
+      // TODO: gender/choice [] brackets
+      // iLeft is the index of first left bracket
+      for (var iLeft = 0; iLeft < origString.length; iLeft++) {
+        if (origString[iLeft] == '{') {
+          // Now find corresponding '}'
+          for (var iRight = iLeft+1; iRight < origString.length; iRight++) {
+            if (origString[iRight] == '{') {
+              alert("syntax error: I'm confused by this { that i found inside a {...} pair.");
+              return origString;
+            }
+            if (origString[iRight] == '}') {
+              var subtableName = origString.slice(iLeft+1, iRight);  // inclusive, exclusive
+              var subtableText = tableResult(tables[subtableName]);
+              // recursively fill out the {} blanks in the new substring.
+              // possibly clumsy
+              subtableText = fillBlanks(subtableText, tables);
+              return ( 
+                origString.slice(0, iLeft) +
+                subtableText +
+                origString.slice(iRight+1, origString.length));
+            }
+          }
+        }
+      }
+
+      return origString;  // if no {...} pair found, just return it unchanged
+    }
+
+
+    function genText() {
+      var fullText = document.getElementById("boxaleph").value;
+
+      // Load into table objects.
+      var tableStrings = fullText.split('\n*');
+      // TODO: don't hardcode 'output' lower down
+      var tables = [];
+      for (var i=0; i < tableStrings.length; i++) {
+        var table = loadTable(tableStrings[i]);
+        tables[table.name] = table.results;
+      }
+
+      // Now roll a result in root table and recurse down.
+      var outputStr = tableResult(tables['output']);
+
+      // BTW: indexOf() is runtime-inefficient for long strings
+      while (outputStr.indexOf('{') != -1) {
+        outputStr = fillBlanks(outputStr, tables);
+      }
+
+      document.getElementById("outputDiv").innerHTML = outputStr;
+    }
+  </script>
+
+  <style>
+    .center * {
+      display: block;
+      margin: 0 auto 0 auto;
+    }
+
+    .center h3 {
+      text-align: center;
+    }
+
+    #generateButton {
+      margin-top: 30px;
+    }
+
+    #outputDiv {
+      width: 700px;
+    }
+
+    #boxaleph {
+      margin-bottom: 100px;
+    }
+  </style>
+
+  <div class="center">
+    <h3 id="title">Customizable Random Fiction Generator</h3>
+    <input id="generateButton" type="button" onclick="genText()" value="Generate a new one!"><br>
+    <div id="outputDiv"></div><br>
+    <textarea id="boxaleph" rows="48" cols="100">GRAMMAR_PLACEHOLDER</textarea>
+  </div>
+
+
+</body></html>
