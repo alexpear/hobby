@@ -1,13 +1,5 @@
 # alternate d&d planescape
 
-'''
-opts
-. Axis objects
- . advantage: normal and fancy adjs?
- . also store its name?
-. tuples ('lawful', 'chaotic')
-'''
-
 class Axis:
   def __init__(self, concepta, conceptb, adja, adjb):
     self.concepta = concepta
@@ -58,18 +50,9 @@ AXES = [
   Axis('young', 'old', 'virginal', 'antediluvian')
 ]
 
-def all_neutrals():
-  return { axis.verbose_name : 'neutral' for axis in AXES }
-
-# example: ysgard.
 class Plane:
   def __init__(self, name, *concepts):
     self.name = name
-
-    # self.adjs = []
-
-    # Start with all axes set to Neutral
-    #self.axes = all_neutrals()\
     self.axes = {}
 
     for concept in concepts:
