@@ -63,6 +63,8 @@ class Plane:
         elif axis.conceptb == concept:
           self.axes[axis.verbose_name] = axis.adjb
           break
+      else:
+        print('note: concept not found on the known axes')
 
   def __str__(self):
     title = 'The Plane of {name}'.format(name=self.name.capitalize())
