@@ -85,6 +85,8 @@ PLANES = [
   Plane('baetor', 'law', 'evil', 'dark', 'fire', 'earth', 'complex', 'self', 'old')
 ]
 
+# run
 for plane in PLANES:
   print(plane)
+  print()
 
