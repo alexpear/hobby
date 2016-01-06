@@ -1,3 +1,21 @@
+
+
+Okay, I finished writing my solution. You can run it with 'python concordance.py' and it will print to console. It requires Python, obviously. I answered the word-frequency challenge, using a trie. I chose this one over the blob puzzle because I had some questions about exactly what types of patterns to look for in that one. 
+
+I included some notes and test code just to make things clearer to the reader. I spent perhaps four hours total working on this puzzle, not counting time spent thinking about it on the train. I decided to prioritize correctness and neatness over development speed.
+
+My program's output omits the 'a. b. c. d.' prefixes in the example, which I assume are not relevant.
+
+I rely on Python's built-in abilities in some normal ways, such as string.split() and dictionary indexing (hash tables). 
+
+I could have achieved a small performance speedup by having each node of the trie cache an ordered list of all letters that follow it, in addition to the dictionary storing these letters in an unordered hash table. I chose to forgo this speedup for the sake of elegance and readability.
+
+My program works well for an input string of n '.'-separated English sentences. It can create odd output for certain non-alphabetical patterns, such as mathematical expressions rendered in ASCII, dashes, dashes represented as hyphens, and emoticons. For this challenge I did not deal with these edge cases.
+
+Thanks! This was a fun one.
+Alex
+
+
 2012 dec 15
 Lovecraftian star-forebears, the Kek, & uAI takeover.
 In the beginning there was Faction BT
