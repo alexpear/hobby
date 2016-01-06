@@ -67,7 +67,7 @@ class Plane:
         print('note: concept not found on the known axes')
 
   def __str__(self):
-    title = 'The Plane of {name}'.format(name=self.name.capitalize())
+    title = '{name}'.format(name=self.name.capitalize())
 
     # TODO: verbose name + adj pairs    
     if len(self.axes) == 0:
