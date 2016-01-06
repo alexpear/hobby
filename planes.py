@@ -1,5 +1,8 @@
 # alternate d&d planescape
 
+# TODO: maybe i should always store traits as eg 'air',
+# & just have a dict that converts to the fancy adjs.
+
 class Axis:
   def __init__(self, concepta, conceptb, adja, adjb):
     self.concepta = concepta
@@ -84,6 +87,20 @@ PLANES = [
   Plane('abyss', 'chaos', 'evil', 'dark', 'earth', 'energy', 'complex', 'birth'),
   Plane('baetor', 'law', 'evil', 'dark', 'fire', 'earth', 'complex', 'self', 'old')
 ]
+
+def planes_with_trait(trait):
+  chosenplanes = []
+  for plane in PLANES:
+    # if trait in plane.axes.values():
+    pass # TODO adj vs trait....
+    chosenplanes.append(plane)
+  return chosenplanes
+
+def planes_with_axis(axisname):
+  pass
+  # TODO store verbose or key names?
+
+
 
 # run
 for plane in PLANES:
