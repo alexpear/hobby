@@ -1,0 +1,90 @@
+petri name mutation whole business (before methodization's been figured out):
+take in old name
+int changes = random between 1 & NAME_MUT_MAX
+for(int i=0; i<changes; i++) {
+//think i shall try giving add swap drop equal chances for now? 
+int roll = random between 0 & 2.99
+if roll < 1, run add code //name = add(name); maybe
+else if roll < 2, run swap code
+else, run drop code
+//the add code:
+...brb
+
+//the swap code:
+start on a random letter in the name
+wait:
+for swap, do i want to do LMR type checks relative to the type of the selected letter, or just do 1 check for v & 1 for c? latter would mean figuring out what to do in impossible situations (random?), but has advantage of having simpler LMR checks ... maybe? let's try:
+latter version LMR checking: //maybe even do 3 checks -- if l & ll are the same type, that type is out, if l & r are the same type, that type is out, etc... boolean v_is_go & boolean c_is_go
+conditional(name.charAt( //come back to this
+
+if [i-1] exists && [i+1] exists, 
+ if(type[i-1] == type[i+1]),
+ if(type[i-1] == 'v'), v_is_go = false;
+ else, c_is_go = false;
+if [i-2] exists,
+ if(type[i-2] == type[i-1]),
+ if(type[i-2] == 'v'), v_is_go = false;
+ else, c_is_go = false;
+if [i+2] exists,
+ "
+ "
+ "
+if(v_is_go && !c_is_go),
+set [i] to random from vowela
+else if(!v_is_go && c_is_go),
+set [i] to random from consoa
+else,
+randomize between v & c
+set [i] to random from appropriate array. 
+//because in impossible swap case it means the word is broken anyway, so may as well randomize in hopes of getting out of it. 
+
+Now for adding & dropping!
+drop:
+//is it possible to have both prohibitionary states apply? yes, if same type. so the 2nd one can't give any new knowledge if the 1st one passes. 
+//4 possibilities, 
+__i__
+__i_
+ _i__
+  i  
+
+for(int i=0; i<chars.length; i++) {
+if([i-2] && [i+1] exist)
+ if(type[i-2] == types[i-1] && type[i-1] == type[i+1])
+  continue;
+if([i+2] && [i-1] exist)
+ if(type[i-1] == type[i+1] && type[i+1] == type[i+2])
+  continue;
+else, create 2 new arrays of length length-1 consisting of [0] to [i-1] concatenated with [i+1] to [length-1]. 
+return;
+}
+
+add:
+//_i__
+for(int i=0; i<chars.length; i++) {
+if([i-1] exists)
+ if(types[i-1] == types[i])
+  if(types[i-1] == 'v') v_is_go = false;
+  else c_is_go = false;
+if([i+1] exists)
+ if(types[i] == types[i+1])
+  if(types[i] == 'v') v_is_go = false;
+  else c_is_go = false;
+ if([i+2] exists)
+  if(types[i+1] == types[i+2])
+   if(types[i] == 'v') v_is_go = false;
+   else c_is_go = false;
+if(!v_is_go && !c_is_go)
+ continue;
+if(v_is_go && c_is_go)
+ randomize between the two & set 1 to false
+if(v_is_go)
+ newletter = vowela[roll];
+else
+ newletter = consoa[roll];
+return new arrays of length+1 consisting of [0] to [i] concat with newletter concat with [i+1] to [length-1]
+
+
+
+
+
+
