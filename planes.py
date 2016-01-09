@@ -133,5 +133,6 @@ def planes_with_axis(axisname):
 # run
 for plane in PLANES:
   print(plane)
-  print()
+  print('')
 
+print(planes_with_axis('reason_energy'))
