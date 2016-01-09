@@ -81,10 +81,10 @@ class Plane:
     for concept in concepts:
       for axis in AXES:
         if axis.concepta == concept:
-          self.axes[axis.verbose_name] = axis.adja
+          self.axes[axis.key] = axis.adja
           break
         elif axis.conceptb == concept:
-          self.axes[axis.verbose_name] = axis.adjb
+          self.axes[axis.key] = axis.adjb
           break
       else:
         print('note: concept not found on the known axes')
