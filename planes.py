@@ -108,6 +108,14 @@ PLANES = [
   Plane('baetor', 'law', 'evil', 'dark', 'fire', 'earth', 'complex', 'self', 'old')
 ]
 
+def axisof(alignment):
+  # TODO: improve this hacky [0] syntax. (not important right now.)
+  return filter(AXES, lambda a: a.concepta == alignment or a.conceptb == alignment)[0]
+
+# This function expects keys like 'fire_ice'
+def alignmentsof(axiskey):
+  return axiskey.split('_')
+
 def planes_with_trait(trait):
   # TODO
   chosenplanes = []
