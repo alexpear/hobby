@@ -2,6 +2,26 @@
 
 # TODO: maybe i should always store traits as eg 'air',
 # & just have a dict that converts to the fancy adjs.
+'''
+opts
+. law_chaos : Axis object
+. law : Axis object
+. law_chaos : law
+ . and a global mapping from 'law' to 'axiomatic'
+ . or law_chaos : Law (a Alignment object)
+  . which stores its adjectives
+. just law (ie list not dict)
+ . and functions have to infer
+
+i think we need to be able to map
+from alignment to axis
+and axis to alignment.
+'''
+
+# haven't decided whether to use this or not.
+class Alignment:
+  def __init__(self, name, *adjs):
+    pass
 
 class Axis:
   def __init__(self, concepta, conceptb, adja, adjb):
@@ -72,7 +92,7 @@ class Plane:
   def __str__(self):
     title = '{name}'.format(name=self.name.capitalize())
 
-    # TODO: verbose name + adj pairs    
+    # TODO: Would be convenient if Planes stored Axis objs
     if len(self.axes) == 0:
       traitlist = 'True Neutral'
     else:
@@ -89,6 +109,7 @@ PLANES = [
 ]
 
 def planes_with_trait(trait):
+  # TODO
   chosenplanes = []
   for plane in PLANES:
     # if trait in plane.axes.values():
