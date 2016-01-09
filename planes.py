@@ -126,8 +126,7 @@ def planes_with_trait(trait):
   return chosenplanes
 
 def planes_with_axis(axisname):
-  pass
-  # TODO store verbose or key names?
+  return [p for p in PLANES if axisname in p.axes]
 
 
 
