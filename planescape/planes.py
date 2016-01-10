@@ -130,10 +130,29 @@ class Plane:
     return '{title}:\n{traitlist}'.format(title=title, traitlist=traitlist)
 
 PLANES = [
-  Plane('ysgard', 'chaos', 'birth', 'good', 'air'),
-  Plane('celestia', 'law', 'good', 'air', 'others', 'reason', 'light', 'fire'),
-  Plane('abyss', 'chaos', 'evil', 'dark', 'earth', 'energy', 'complex', 'birth'),
-  Plane('baetor', 'law', 'evil', 'dark', 'fire', 'earth', 'complex', 'self', 'old')
+  Plane('baetor', 'law', 'evil', 'dark', 'fire', 'earth', 'complex', 'self', 'old', 'static'),
+  Plane('acheron', 'law', 'evil', 'air', 'self', 'energy', 'death', 'simple', 'dynamic'),
+  Plane('mechanicus', 'law', 'air', 'others', 'reason', 'birth', 'young', 'light', 'complex'),
+  Plane('arcadia', 'law', 'good', 'others', 'birth', 'light', 'simple', 'static'),
+  Plane('celestia', 'law', 'good', 'air', 'others', 'reason', 'light', 'fire', 'static'),
+  Plane('bitopia', 'law', 'good', 'self', 'birth', 'earth', 'dark', 'fire', 'young', 'reason', 'dynamic'),
+  Plane('elysium', 'good', 'birth', 'light', 'self', 'simple', 'fire', 'reason', 'static'),
+  Plane('beastlands', 'good', 'chaos', 'dark', 'birth', 'self', 'energy', 'dynamic'),
+  Plane('olympia', 'good', 'chaos', 'birth', 'reason', 'self', 'fire', 'dark', 'dynamic'),
+  Plane('ysgard', 'chaos', 'birth', 'good', 'air', 'dynamic', 'old', 'energy'),
+  Plane('maelstrom', 'chaos', 'birth', 'air', 'dark', 'self', 'energy', 'fire', 'dynamic'),
+  Plane('pandaemonium', 'chaos', 'evil', 'dark', 'earth', 'self', 'energy', 'death', 'ice', 'young', 'static'),
+  Plane('abyss', 'chaos', 'evil', 'dark', 'earth', 'energy', 'complex', 'birth', 'dynamic'),
+  Plane('gehenna', 'chaos', 'evil', 'dark', 'earth', 'fire', 'others', 'death', 'static'),
+  Plane('hades', 'evil', 'dark', 'death', 'earth', 'self', 'reason', 'static'),
+  Plane('carceri', 'evil', 'law', 'dark', 'earth', 'self', 'reason', 'static'),
+
+  Plane('fillory', 'good', 'birth', 'dynamic', 'others', 'energy', 'fire', 'young', 'light', 'chaos'),
+  Plane('earth', 'birth', 'chaos', 'energy', 'dynamic', 'complex', 'self'),
+
+  # This isn't a plane but I'm trying it out here for now
+  Plane('humans', 'death', 'fire', 'law', 'good', 'light', 'reason', 'dynamic', 'fire', 'young'),
+  Plane('elves', 'old', 'reason', 'law', 'good', 'light', 'complex', 'static')
 ]
 
 # Expects 'law' or 'air'
