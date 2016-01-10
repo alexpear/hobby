@@ -52,7 +52,8 @@ AXES = [
   ('reason', 'energy'),
   ('self', 'others'),
   ('simple', 'complex'),
-  ('young', 'old')
+  ('young', 'old'),
+  ('static', 'dynamic')
 ]
 
 alignment_to_adjective = {
@@ -84,7 +85,10 @@ alignment_to_adjective = {
   'complex': 'byzantine', # developed ornate baroque evolved
 
   'young': 'virginal', # new newborn youthful stainless unstained unblemished
-  'old': 'antediluvian' # antique archaic timeworn venerable ancient primeval primordial
+  'old': 'antediluvian', # antique archaic timeworn venerable ancient primeval primordial
+
+  'static': 'stabile',
+  'dynamic': 'mutile'
 }
 
 def adjof(alignment):
