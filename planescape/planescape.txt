@@ -18,9 +18,26 @@ Law & Energy
 Light & Cthonic
  . odd, but vivid. 
 
+-> odd pairings with static and dynamic? +++
 
 
+Law <---> Chaos
 
+Celestial
+^
+|
+v
+Subterranean
+
+
+Celestia                              Maelstrom
+Mechanicus                            Ysgard
+Acheron
+
+Arcadia            Elysium Beastlands Olympia
+
+Baetor     Bitopia Hades   Gehenna    Abyss
+           Carceri                    Pandaemonium
 
 
 
