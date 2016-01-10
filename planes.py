@@ -21,6 +21,9 @@ from alignment to axis
 and axis to alignment.
 '''
 
+def prettyprintlist(list):
+  print('\n\n'.join(map(str, list)))
+
 # haven't decided whether to use this or not.
 class Alignment:
   def __init__(self, name, *adjs):
