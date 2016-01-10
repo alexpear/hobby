@@ -12,6 +12,9 @@ opts
   . which stores its adjectives
 . just law (ie list not dict)
  . and functions have to infer
+. (law, chaos) : law in plane.axes
+ . with map from law : axiomatic
+ . AXES contains 2-tuples
 
 i think we need to be able to map
 from alignment to axis
@@ -92,7 +95,6 @@ class Plane:
   def __str__(self):
     title = '{name}'.format(name=self.name.capitalize())
 
-    # TODO: Would be convenient if Planes stored Axis objs
     if len(self.axes) == 0:
       traitlist = 'True Neutral'
     else:
