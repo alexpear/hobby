@@ -40,57 +40,73 @@ class Axis:
 # & call .capitalize() when showing to user.
 
 AXES = [
-  # axiomatic immaculate elemental
-  Axis('law', 'chaos', 'lawful', 'chaotic'),
-  
-  # virile natal lethal fatal
-  Axis('birth', 'death', 'fertile', 'entropic'),
-  
-  # ignic
-  Axis('fire', 'ice', 'igneous', 'cryonic'),
-  
-  # luminescent occulted obscure
-  Axis('light', 'dark', 'luminous', 'occult'),
-  
-  # terran aetheric aetherial celestial
-  Axis('earth', 'air', 'cthonic', 'zephyric'),
-  
-  # logical apollonian
-  # vigorous flourishing robust dionysian
-  Axis('reason', 'energy', 'rational', 'vital'),
-  
-  # united vs divided
-  # selfish defecting cooperating
-  Axis('self', 'others', 'individual', 'communal'),
-  
-  # beatific virtuous
-  # diabolical
-  Axis('good', 'evil', 'beatific', 'diabolical'),
-  
-  # axiomatic naive virginal inviolate immaculate
-  # developed ornate baroque evolved
-  Axis('simple', 'complex', 'elemental', 'byzantine'),
-
-  # new newborn youthful stainless unstained unblemished 
-  # antique archaic timeworn venerable ancient primeval primordial
-  Axis('young', 'old', 'virginal', 'antediluvian')
+  ('law', 'chaos'),
+  ('good', 'evil'),
+  ('birth', 'death'),
+  ('fire', 'ice'),
+  ('light', 'dark'),
+  ('earth', 'air'),
+  ('reason', 'energy'),
+  ('self', 'others'),
+  ('simple', 'complex'),
+  ('young', 'old')
 ]
+
+alignment_to_adjective = {
+  'law': 'lawful', # axiomatic immaculate
+  'chaos': 'chaotic', # entropic elemental
+
+  'birth': 'fertile', # virile natal
+  'death': 'entropic', # lethal fatal
+
+  'fire': 'igneous', # ignic
+  'ice': 'cryonic',
+
+  'light': 'luminous', # luminescent
+  'dark': 'occult', # occulted obscure
+
+  'earth': 'cthonic', # subterranean terran
+  'air': 'aetheric', # aetherial celestial zephyric
+
+  'reason': 'rational', # intellectual logical appolonian
+  'energy': 'vital', # vigorous flourishing robust dionysian
+
+  'self': 'individual', # divided selfish defecting
+  'others': 'communal', # united cooperating
+
+  'good': 'good', # beatific virtuous
+  'evil': 'evil', # diabolical
+
+  'simple': 'elemental', # axiomatic naive virginal inviolate immaculate
+  'complex': 'byzantine', # developed ornate baroque evolved
+
+  'young': 'virginal', # new newborn youthful stainless unstained unblemished
+  'old': 'antediluvian' # antique archaic timeworn venerable ancient primeval primordial
+}
+
+def adjof(alignment):
+  return alignment_to_adjective[alignment]
+
+def axis_verbose(atuple):
+  return '{a} vs {b}'.format(a=atuple[0].capitalize(), b=atuple[1].capitalize())
+
+def axis_as_adjective_string(atuple):
+  return '{a} vs {b}'.format(
+    a=adjof( atuple[0] ).capitalize(),
+    b=adjof( atuple[1] ).capitalize())
+
+def axisof(alignment):
+  # TODO: improve this hacky [0] syntax. (not important right now.)
+  return filter(lambda axis: alignment in axis, AXES)[0]
 
 class Plane:
   def __init__(self, name, *concepts):
     self.name = name
     self.axes = {}
 
-    for concept in concepts:
-      for axis in AXES:
-        if axis.concepta == concept:
-          self.axes[axis.key] = axis.adja
-          break
-        elif axis.conceptb == concept:
-          self.axes[axis.key] = axis.adjb
-          break
-      else:
-        print('note: concept not found on the known axes')
+    for alignment in alignments:
+      # axis = filter((lambda axis: alignment in axis), AXES)[0]
+      self.axes[axisof(alignment)] = alignment
 
   def __str__(self):
     title = '{name}'.format(name=self.name.capitalize())
@@ -98,7 +114,10 @@ class Plane:
     if len(self.axes) == 0:
       traitlist = 'True Neutral'
     else:
-      traits = [ '  '+name+': '+adj.capitalize() for name,adj in self.axes.items() ]
+      traits = [
+        '  ' + axis_verbose(atuple) + ': ' + adjof(alignment).capitalize()
+          for atuple, alignment in self.axes.items()
+      ]
       traitlist = '\n'.join(traits)
 
     return '{title}:\n{traitlist}'.format(title=title, traitlist=traitlist)
@@ -110,22 +129,9 @@ PLANES = [
   Plane('baetor', 'law', 'evil', 'dark', 'fire', 'earth', 'complex', 'self', 'old')
 ]
 
-def axisof(alignment):
-  # TODO: improve this hacky [0] syntax. (not important right now.)
-  return filter(AXES, lambda a: a.concepta == alignment or a.conceptb == alignment)[0]
-
-# This function expects keys like 'fire_ice'
-def alignmentsof(axiskey):
-  return axiskey.split('_')
-
-def planes_with_trait(trait):
-  # TODO
-  chosenplanes = []
-  for plane in PLANES:
-    # if trait in plane.axes.values():
-    pass # TODO adj vs trait....
-    chosenplanes.append(plane)
-  return chosenplanes
+# Expects 'law' or 'air'
+def planes_with_alignment(alignment):
+  return [p for p in PLANES if alignment in p.axes.values()]
 
 def planes_with_axis(axisname):
   return [p for p in PLANES if axisname in p.axes]
