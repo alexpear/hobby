@@ -103,7 +103,7 @@ def axisof(alignment):
   return filter(lambda axis: alignment in axis, AXES)[0]
 
 class Plane:
-  def __init__(self, name, *concepts):
+  def __init__(self, name, *alignments):
     self.name = name
     self.axes = {}
 
