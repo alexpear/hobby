@@ -139,11 +139,5 @@ def planes_with_alignment(alignment):
 def planes_with_axis(axisname):
   return [p for p in PLANES if axisname in p.axes]
 
-
-
 # run
-for plane in PLANES:
-  print(plane)
-  print('')
-
-print(planes_with_axis('reason_energy'))
+prettyprintlist(planes_with_alignment('dark'))
