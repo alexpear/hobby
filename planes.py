@@ -127,7 +127,7 @@ class Plane:
 
 PLANES = [
   Plane('ysgard', 'chaos', 'birth', 'good', 'air'),
-  Plane('celestia', 'law', 'good', 'air', 'communal', 'reason', 'light', 'fire'),
+  Plane('celestia', 'law', 'good', 'air', 'others', 'reason', 'light', 'fire'),
   Plane('abyss', 'chaos', 'evil', 'dark', 'earth', 'energy', 'complex', 'birth'),
   Plane('baetor', 'law', 'evil', 'dark', 'fire', 'earth', 'complex', 'self', 'old')
 ]
