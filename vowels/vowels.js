@@ -105,11 +105,15 @@ function withVarietyDensityOver(strings, minVarietyDensity) {
 var wordsPath = '/usr/share/dict/words';
 fs.readFile(wordsPath, 'utf8', function (err, words) {
   if (err) { return console.log(err); }
+  words = words.split('\n');
 
-  var varietousWords = withEnoughVowels(words.split('\n'), 4);
+  var coolWords = withEnoughVowels(words, 6);
+  coolWords = coolWords.sort(function(a,b) { return b.length - a.length; });
 
-  varietousWords.forEach(function(word) {
+  coolWords.forEach(function(word) {
     console.log(word);
   });
+
+  console.log(coolWords.length);
 });
 
