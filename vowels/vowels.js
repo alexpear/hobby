@@ -80,11 +80,11 @@ function isYVowel(yIndex, str) {
   else {
     return false;
   }
-};
+}
 
 function isCoreConsonant (char) {
   return _.contains(ALWAYS_CONSONANTS, char);
-};
+}
 
 function isCoreVowel(char) {
   return _.contains(ALWAYS_VOWELS, char);
