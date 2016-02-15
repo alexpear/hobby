@@ -16,11 +16,11 @@ function withEnoughVowels(strings, minVowelVariety) {
   return strings.filter(function(str) {
     return vowelVariety(str) >= minVowelVariety;
   });
-};
+}
 
 function vowelVariety(str) {
   return vowelTypesIn(str).length;
-};
+}
 
 function vowelTypesIn(str) {
   str = str.toUpperCase();
@@ -34,7 +34,7 @@ function vowelTypesIn(str) {
   } else {
     return presentVowels;
   }
-};
+}
 
 function containsYVowel(str) {
   str = str.toUpperCase();
