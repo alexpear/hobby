@@ -1,0 +1,16 @@
+{
+  "name": "vowels",
+  "version": "1.0.0",
+  "description": "categorizing natural language words by the vowels they contain",
+  "main": "vowels.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "language",
+    "vowel",
+    "consonant"
+  ],
+  "author": "alex pear",
+  "license": "ISC"
+}
