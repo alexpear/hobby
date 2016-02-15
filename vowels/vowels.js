@@ -88,7 +88,17 @@ function isCoreConsonant (char) {
 
 function isCoreVowel(char) {
   return _.contains(ALWAYS_VOWELS, char);
-};
+}
+
+function vowelTypesPerLetter(str) {
+  return vowelVariety(str) / str.length;
+}
+
+function withVarietyDensityOver(strings, minVarietyDensity) {
+  return strings.filter(function(str) {
+    return vowelTypesPerLetter(str) >= minVarietyDensity;
+  });
+}
 
 
 // run
