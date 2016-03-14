@@ -5,7 +5,7 @@
 
 var phrases = {};
 
-// Downside of this scheme: can't easily iterate over the word2s.
+// TODO Downside of this scheme: can't easily iterate over the word2s.
 function addPhrase (word1, word2, weight) {
     weight = weight || 6;
 
