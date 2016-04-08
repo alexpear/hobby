@@ -46,12 +46,64 @@ def primefactors(n):
   while(True):
     if isprime(candidatefactor):
       if n % candidatefactor == 0:
-        return [candidatefactor, primefactors(n / candidatefactor)]
+        return flatten([candidatefactor, primefactors(n / candidatefactor)])
     candidatefactor += 1
 
-i = 9
-while True:
-  time.sleep(12)
-  print ("%3d " % i) + str(flatten(primefactors(i)))
-  i += 10
+def arraytostring(array):
+  return ' '.join(
+    map(str, array)
+  )
 
+# meditate on factors of 9, 19, 29, 39...
+def niners():
+  i = 9
+  while True:
+    time.sleep(12)
+    print ("%3d " % i) + str(primefactors(i))
+    i += 10
+
+# find numbers with many prime factors
+def factorynumbers(max):
+  factorisations = [[0], [1]]
+  i = 2
+  while i <= max:
+    factorisations.append(primefactors(i))
+    i += 1
+
+  return factorisations
+
+def print_factorisations(factorisations):
+  for i, factorlist in enumerate(factorisations):
+    print ('{i} has {fs}'.format(i=i, fs=arraytostring(factorlist)))
+
+def variety(numbers):
+  uniques = []
+  for n in numbers:
+    if n not in uniques:
+      uniques.append(n)
+  return len(uniques)
+
+def print_manyfactors(max):
+  factorisations = factorynumbers(max)
+  MIN_FACTORS = 10
+  longpairs = [[i, factorlist] for i, factorlist in enumerate(factorisations) if len(factorlist) >= MIN_FACTORS]
+  longstrs = map(
+    lambda (longpair): str(longpair[0]) + ' has ' + arraytostring(longpair[1]),
+    longpairs
+  )
+  print ('\n'.join(longstrs))
+
+# TODO: number of factors, prime or otherwise, of a number
+# ie combos of primes too
+
+def variousnums(max = 10080):
+  factorisations = factorynumbers(max)
+  MIN_VARIETY = 6
+  variouspairs = [[i, factorlist] for i, factorlist in enumerate(factorisations) if variety(factorlist) >= MIN_VARIETY]
+  longstrs = map(
+    lambda (pair): str(pair[0]) + ' has ' + arraytostring(pair[1]),
+    variouspairs
+  )
+  print ('\n'.join(longstrs))
+
+variousnums(100800)
