@@ -17,11 +17,10 @@ function run () {
 		console.log('usage: node kaprekar.js <integer>');
 	} else {
 		var curNum = process.argv[2];
-		console.log(curNum);
 		var successors = {};
 		while (! successors[curNum]) {
+			console.log(curNum);
 			successors[curNum] = kaprekar.next(curNum);
-			console.log(successors[curNum]);
 			curNum = successors[curNum];
 		}
 	}
