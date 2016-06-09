@@ -18,11 +18,29 @@ function lineAsArray (lineString, separator) {
     }
 }
 
-function headerAsArray (headerString) {
+function lineAsObject (csvLine, headerStrings, separator) {
+    separator = separator || DEFAULT_SEPARATOR;
 
+    var csvCells = lineAsArray(csvLine);
+    if (headerStrings.length !== csvCells.length) {
+        console.log('ERROR: bad header length passed to lineAsObject()');
+        return;
+    }
+
+    var output = {};
+    for (var i = 0; i < headerStrings.length; i++) {
+        output[headerStrings[i]] = csvCells[i];
+    }
+
+    return output;
 }
 
-function lineAsObject (csvLine, headerInSomeFormat, separator) {
-    separator = separator || defaultSeparator;
+function csvStringAsObject (fileString, separator) {
+    separator = separator || DEFAULT_SEPARATOR;
 
+    var lines = fileString.split('\n');
+    var header = lineAsArray(lines[0]);
+    return lines.slice(1).map(function (line) {
+        return lineAsObject(line);
+    });
 }
