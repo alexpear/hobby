@@ -39,8 +39,8 @@ function csvStringAsObject (fileString, separator) {
     separator = separator || DEFAULT_SEPARATOR;
 
     var lines = fileString.split('\n');
-    var header = lineAsArray(lines[0]);
+    var headerStrings = lineAsArray(lines[0]);
     return lines.slice(1).map(function (line) {
-        return lineAsObject(line);
+        return lineAsObject(line, headerStrings, separator);
     });
 }
