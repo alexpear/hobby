@@ -44,3 +44,27 @@ function csvStringAsObject (fileString, separator) {
         return lineAsObject(line, headerStrings, separator);
     });
 }
+
+function csvFileAsJson (csvFilename, separator) {
+    separator = separator || DEFAULT_SEPARATOR;
+
+}
+
+function stringified(input, indenter) {
+    indenter = indenter || '  ';
+    return JSON.stringify(input, null, indenter);
+}
+
+
+// Test.
+var fileStr = [exampleHeader, exampleLine, exampleLine].join('\n');
+var fileAsObject = csvStringAsObject(fileStr);
+console.log(stringified(fileAsObject));
+
+
+
+
+
+
+
+
