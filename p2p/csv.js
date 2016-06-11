@@ -21,7 +21,7 @@ function lineAsArray (lineString, separator) {
 function lineAsObject (csvLine, headerStrings, separator) {
     separator = separator || DEFAULT_SEPARATOR;
 
-    var csvCells = lineAsArray(csvLine);
+    var csvCells = lineAsArray(csvLine, separator);
     if (headerStrings.length !== csvCells.length) {
         console.log('ERROR: bad header length passed to lineAsObject()');
         return;
