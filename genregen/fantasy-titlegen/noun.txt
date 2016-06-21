@@ -1,0 +1,237 @@
+24 Human
+12 Man
+115 Elf
+21 Drow
+30 Half-Elf
+
+24 Half-Orc
+36 Orc
+15 Goblin
+13 Hobgoblin
+15 Half-giant
+28 Halfling
+38 Ogre
+30 Gnoll
+33 Troglodyte 
+
+102 Dwarf
+
+63 Vampire
+6 Undead
+30 Ghost
+
+8 Sphynx
+1 Naga
+1 Yuan-Ti
+
+25 Gnome
+16 Dryad
+
+11 Werewolf
+
+4 Lizardfolk
+15 Catfolk
+32 Tiefling
+16 Dragonborn
+12 Ratling
+
+51 Golem
+30 Warforged 
+11 Elemental
+
+51 fighter
+21 guard
+43 ranger
+27 adventurer
+30 dragonslayer
+22 sellsword
+12 swindler
+6 mercenary
+19 bandit
+10 outlaw
+19 marshal
+34 commander
+17 general
+25 admiral
+54 knight
+12 blackguard
+9 death knight
+1 dragon-tamer
+4 dragon rider
+15 hunter
+
+12 wizard
+12 sorcerer
+33 mage
+21 spellsword
+41 warmage
+34 battlemage
+13 hexmage
+27 witch 
+
+14 bard
+41 troubador 
+
+34 rogue
+18 thief
+29 scoundrel
+16 pirate
+15 assassin
+
+24 cleric
+24 priest
+24 bishop
+25 monk
+2 invoker
+15 cultist
+33 paladin
+45 healer
+28 druid
+
+33 noble
+18 peasant
+42 farmer
+18 merchant
+27 artisan
+11 traveler
+11 wanderer
+11 vagabond
+27 artificer
+25 explorer
+7 prospector
+41 official
+35 apprentice
+9 journeyman
+7 guild master
+
+14 nobleborn
+11 vizier
+14 fool
+
+3 Forest
+3 Deep Forest
+3 Pine Forest
+3 Rainforest
+2 Jungle
+12 Grassland
+9 Plains
+12 Lake
+9 Tundra
+9 Snowplains
+9 Marsh
+12 Wetland
+15 Desert
+12 Wasteland
+15 Valley
+9 Riverbank
+9 Delta
+9 Farmland
+28 dune
+
+104 city
+22 town
+39 village
+18 hamlet
+2 manor
+9 farm
+12 clans
+12 tribes
+9 den
+4 fiefdoms
+3 baronies
+
+44 kingdom
+
+14 birth
+14 death
+23 fall
+36 prophecy
+33 fate
+33 doom
+44 rise
+
+11 summer
+11 autumn
+11 winter
+11 spring
+11 dusk
+14 dawn
+11 midnight
+11 noon
+
+22 sun
+25 moon
+53 star
+
+11 music
+11 song
+
+36 time
+50 age
+14 aeon
+28 years
+44 day
+78 night
+
+11 flight
+22 victory
+25 justice
+
+42 cavern
+25 mountain
+22 peak
+11 hills
+11 valley
+11 vale
+14 aerie
+11 lake
+33 river
+11 well
+
+47 sea
+47 ocean
+11 continent
+
+58 stone
+50 ring
+22 amulet
+22 talisman
+11 belt
+102 sword
+61 spear
+61 knife
+11 helm
+11 hood
+11 cowl
+25 robe
+58 shield
+61 throne
+
+91 castle
+47 spire
+100 tower
+11 home
+11 hearth
+
+22 fist
+39 hand
+11 heel
+114 crown
+
+15 matriarchy
+12 theocracy
+22 republic
+22 magocracy
+28 plutocracy
+25 monarchy
+25 hivemind
+28 cult
+25 upheaval
+22 council
+34 court
+31 imperium
+
+31 army
+25 legion
+21 warband
+14 band

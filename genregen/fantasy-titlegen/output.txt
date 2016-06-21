@@ -1,0 +1,8 @@
+28 {noun}
+28 The {noun}
+111 The {adj} {noun}
+66 The {noun} {noun}
+15 A {noun} of {noun}
+87 {noun} of the {noun}
+24 The {noun} of the {noun}
+75 To {verb} a {noun}
