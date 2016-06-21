@@ -62,6 +62,12 @@ var fileAsObject = csvStringAsObject(fileStr);
 console.log(stringified(fileAsObject));
 
 
+/* TODO
+Interact with large files as streams
+Combine and append
+Sort and maintain sortedness
+Read
+*/
 
 
 
