@@ -33,8 +33,10 @@ class Result:
 class Table:
   def __init__(self, filename): 
     self.results = []
+
     with open(filename) as file:
       lines = file.read().splitlines()
+
       for linenum, line in enumerate(lines):
         words = line.split()
         if len(words) == 1 and words[0].isdigit():
