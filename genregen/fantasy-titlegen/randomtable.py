@@ -73,6 +73,7 @@ class Output:
     self.text = textin
     self.results = []
     self.fillblanks()
+    self.text = ' '.join(self.text.split())
     self.text = titlecaps(self.text)
 
   # Reward the Output, ie all its rolls. 
