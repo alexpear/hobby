@@ -48,8 +48,9 @@ profiles.HER_CAPTAIN_AMERICA = new Cape({
         'Handheld vibranium shield',
         'Uses shield as a thrown weapon. Capable of ricocheting into multiple targets.',
         'Uses small arms weapons',
-        'Uses spycraft',
+        'Spycraft training',
         'Close combat training',
+        'SHIELD agent',
         'Born in 1919, cryogenically preserved 1945-2011',
         'World\'s first superhero'
     ]
