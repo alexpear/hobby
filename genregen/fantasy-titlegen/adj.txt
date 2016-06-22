@@ -1,4 +1,4 @@
-61 dark
+64 dark
 22 dark brown
 28 fair
 29 brown
@@ -6,7 +6,7 @@
 17 night-black
 8 paper-white
 43 green
-60 blue
+63 blue
 3 pink
 11 Ash-Grey
 12 iridescent
@@ -32,7 +32,7 @@
 14 turquoise
 42 purple
 4 violet
-48 white
+51 white
 1 beige
 1 light grey
 40 steel
@@ -40,9 +40,9 @@
 12 gunmetal
 7 chrome
 19 bronze
-84 grey
+87 grey
 7 dark grey
-99 black
+102 black
 36 brown
 1 tan
 14 olive
@@ -57,7 +57,7 @@
 12 secret
 15 empty
 9 bountiful
-19 arcane
+22 arcane
 9 axiomatic
 9 chaotic
 9 lawful
@@ -65,19 +65,19 @@
 9 evil
 22 infernal
 28 divine
-31 lost
+37 lost
 22 forgotten
 
 9 cthonic
 15 buried
 11 cursed
-30 holy
+36 holy
 14 peerless
 11 unparalleled
 11 dauntless
 11 indefatigable
 
-25 ice
+28 ice
 25 fire
-22 water
+25 water
 22 air

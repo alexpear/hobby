@@ -6,7 +6,7 @@
 14 spy
 14 conquer
 15 marry
-17 hide
+20 hide
 12 train
 11 outwit
 11 steal

@@ -1,6 +1,6 @@
 24 Human
 12 Man
-136 Elf
+139 Elf
 30 Drow
 30 Half-Elf
 
@@ -46,9 +46,15 @@
 22 daemon
 25 devil
 22 spirit
+11 siren
+11 chimera
+11 medusa
+11 minotaur
+11 centaur
+11 satyr
 
 54 fighter
-24 guard
+30 guard
 52 ranger
 25 warrior
 27 adventurer
@@ -62,7 +68,7 @@
 34 commander
 20 general
 28 admiral
-63 knight
+66 knight
 12 blackguard
 9 death knight
 1 dragon-tamer
@@ -115,7 +121,7 @@
 7 guild master
 33 king
 33 queen
-22 prince
+25 prince
 25 princess
 11 duke
 22 scion
@@ -124,14 +130,41 @@
 22 heir
 39 child
 14 nobleborn
-11 vizier
+14 vizier
 14 fool
 25 lady
 11 woman
 11 girl
 11 guildsmen
 22 master
-22 masters
+25 masters
+
+33 horse
+22 snake
+22 serpent
+33 lion
+33 tiger
+11 panther
+11 bear
+11 dog
+11 cat
+11 elephant
+11 mouse
+11 imp
+22 tree
+11 fish
+11 crab
+11 toad
+11 flies
+22 rat
+22 rats
+22 spider
+11 spiders
+22 hawk
+22 owl
+11 swan
+22 beast
+22 beasts
 
 3 Forest
 3 Deep Forest
@@ -187,7 +220,7 @@
 66 book
 33 game
 36 fate
-36 doom
+39 doom
 47 rise
 22 grace
 22 mercy
@@ -206,14 +239,14 @@
 28 moon
 65 star
 72 shadow
-55 fire
+58 fire
 22 ice
 11 grass
 47 waters
 
 11 music
 17 song
-39 dance
+42 dance
 22 oath
 11 promise
 25 curse
@@ -232,7 +265,7 @@
 25 victory
 11 conquest
 28 justice
-25 line
+28 line
 11 circle
 
 42 cavern
@@ -259,11 +292,11 @@
 11 purgatory
 
 58 stone
-50 ring
+53 ring
 28 amulet
 25 talisman
 11 belt
-111 sword
+114 sword
 73 spear
 67 knife
 14 helm
@@ -284,12 +317,12 @@
 11 house
 11 hearth
 
-22 fist
+25 fist
 42 hand
 11 heel
-123 crown
+129 crown
 11 finger
-44 heart
+47 heart
 
 15 matriarchy
 12 theocracy
