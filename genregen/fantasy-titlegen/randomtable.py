@@ -39,18 +39,16 @@ class Table:
 
       for linenum, line in enumerate(lines):
         words = line.split()
-        if len(words) == 1 and words[0].isdigit():
-          # case where result is empty string / whitespace
-          # could reduce amount of duplicated code TODO
-          tempresult = Result('', filename, linenum)
-          weight = int(words[0])
-          for i in range(weight):
-            self.results.append(tempresult)
-          continue
-        elif len(words) < 2:
+
+        if len(words) == 0 or not words[0].isdigit():
           # invalid or blank lines
           continue
-        text = ' '.join(words[1:])
+        elif len(words) == 1:
+          # case where result is empty string / whitespace
+          text = ''
+        else:
+          text = ' '.join(words[1:])
+
         tempresult = Result(text, filename, linenum)
         weight = int(words[0])
         for i in range(weight):
