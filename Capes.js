@@ -3,6 +3,8 @@
 // Superhero fiction classification functions
 // Basically a for-fun library about fictional characters
 
+var _ = require('underscore');
+
 var Allegiance = module.exports.Allegiance = {
     HERO: 'HER',
     ROGUE: 'ROG',
@@ -11,11 +13,23 @@ var Allegiance = module.exports.Allegiance = {
 }
 
 var Cape = class Cape {
-    constructor (name, ratings, allegiance, notes) {
-        this.name = name || 'Unidentified Metahuman';
-        this.ratings = ratings || {};
-        this.allegiance = allegiance || Allegiance.UNKNOWN;
-        this.notes = notes || [];
+    constructor (info) {
+        this.name = info.name || 'Unidentified Metahuman';
+        this.ratings = info.ratings || {};
+        this.allegiance = info.allegiance || Allegiance.UNKNOWN;
+        this.notes = info.notes || [];
+    }
+
+    toString () {
+        // TODO this could be more neat.
+        var ratings = this.ratings;
+        var ratingsString = Object.keys(this.ratings)
+            .map(function (ratingType) {
+                // TODO capitalize ratingType.
+                return ratingType + ' ' + ratings[ratingType];
+            })
+            .join(', ');
+        return this.name + ': ' + ratingsString;
     }
 }
 module.exports.Cape = Cape;
@@ -39,8 +53,22 @@ profiles.HER_CAPTAIN_AMERICA = new Cape(
         'Born in 1919, cryogenically preserved 1945-2011',
         'World\'s first superhero.'
     ]
-);
+});
+
+function sortByType (ratingType) {
+    return _.sortBy(profiles, function (cape) {
+        return cape.ratings[ratingType];
+    });
+}
+
+function printCapes (capes) {
+    capes.forEach(function (cape) {
+        console.log(cape.toString());
+    });
+}
 
 console.log(JSON.stringify(exports, null, '  '));
 
+console.log();
+printCapes(sortByType('blaster'));
 
