@@ -98,7 +98,7 @@ function printCapes (capes) {
     });
 }
 
-console.log(JSON.stringify(exports, null, '  '));
+console.log(JSON.stringify(exports, null, '    '));
 
 console.log();
 printCapes(sortByType('blaster'));
