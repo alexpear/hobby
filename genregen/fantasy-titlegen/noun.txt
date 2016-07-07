@@ -16,7 +16,7 @@
 
 105 Dwarf
 
-69 Vampire
+72 Vampire
 6 Undead
 33 Ghost
 11 zombie
@@ -110,7 +110,7 @@
 21 merchant
 27 artisan
 11 traveler
-17 wanderer
+23 wanderer
 11 vagabond
 27 artificer
 25 explorer
@@ -184,7 +184,7 @@
 9 Riverbank
 9 Delta
 9 Farmland
-34 dune
+37 dune
 22 island
 22 isle
 
@@ -206,7 +206,7 @@
 36 land
 47 empire
 33 ruins
-39 dust
+42 dust
 
 24 birth
 44 death
@@ -222,8 +222,8 @@
 36 fate
 39 doom
 47 rise
-22 grace
-22 mercy
+25 grace
+25 mercy
 25 peace
 
 11 summer
@@ -239,10 +239,10 @@
 28 moon
 65 star
 72 shadow
-58 fire
+61 fire
 22 ice
 11 grass
-47 waters
+50 waters
 
 11 music
 17 song
@@ -291,12 +291,12 @@
 22 tartarus
 11 purgatory
 
-58 stone
+61 stone
 53 ring
 28 amulet
 25 talisman
 11 belt
-114 sword
+117 sword
 73 spear
 67 knife
 14 helm
@@ -320,7 +320,7 @@
 25 fist
 42 hand
 11 heel
-129 crown
+132 crown
 11 finger
 47 heart
 
@@ -339,6 +339,6 @@
 31 imperium
 
 34 army
-28 legion
+31 legion
 21 warband
 14 band

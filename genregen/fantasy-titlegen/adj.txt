@@ -1,11 +1,11 @@
-64 dark
+67 dark
 22 dark brown
 28 fair
 29 brown
 16 auburn
 17 night-black
 8 paper-white
-43 green
+46 green
 63 blue
 3 pink
 11 Ash-Grey
@@ -42,7 +42,7 @@
 19 bronze
 87 grey
 7 dark grey
-102 black
+105 black
 36 brown
 1 tan
 14 olive
@@ -60,11 +60,11 @@
 22 arcane
 9 axiomatic
 9 chaotic
-9 lawful
+12 lawful
 12 good
 9 evil
 22 infernal
-28 divine
+31 divine
 37 lost
 22 forgotten
 
@@ -77,7 +77,7 @@
 11 dauntless
 11 indefatigable
 
-28 ice
+31 ice
 25 fire
 25 water
 22 air

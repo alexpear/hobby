@@ -1,11 +1,11 @@
-102 {maybearticle} {noun}
-176 {maybearticle} {adj} {noun}
+108 {maybearticle} {noun}
+182 {maybearticle} {adj} {noun}
 90 {maybearticle} {noun} {noun}
-107 {maybearticle} {noun} of {maybearticle} {noun}
-177 {maybearticle} {noun} of the {adj}
-108 To {verb} {article} {noun}
+113 {maybearticle} {noun} of {maybearticle} {noun}
+189 {maybearticle} {noun} of the {adj}
+111 To {verb} {article} {noun}
 53 {maybearticle} {verb}ing
-53 The {verb}ing
+56 The {verb}ing
 59 {maybearticle} {noun}'s {noun}
 11 {maybearticle} {noun}'s {adj} {noun}
 11 {maybearticle} {noun}'s {noun} {noun}
