@@ -101,8 +101,6 @@ function numberName (number) {
             return (unitDigit === 0) ? (decadeName) : (decadeName + '-' + leafNames[unitDigit]);
         }
     }
-
-    return 'cthulhu is flaggin';
 }
 
 function indexOfSecondTriplet (digitCount) {
