@@ -28,7 +28,7 @@ var leafNames = {
     // 60: 'sixty',
     // 70: 'seventy',
     80: 'eighty',
-    // 90
+    // 90: 'ninety'
 };
 
 // Test.
@@ -65,8 +65,9 @@ function numberName (number) {
         return leafNames[number];
     }
 
-    // TODO: undecided whether to recurse on Number or String representations.
+    // TODO: could be less clumsy to recurse on String representations.
     // TODO performance, elegance.
+    // TODO: bug with very large numbers and scientific notation.
     var digitCount = number.toString().length;
     if (digitCount > 3) {
         // Pluck off leftmost 1-3 digits.
