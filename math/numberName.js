@@ -82,7 +82,7 @@ function numberName (number) {
             // Calculating the decade name is perverse but amusing.
             // More practically, we could encode all decade names as leaves.
             var decadeName = leafNames[tensDigit * 10] || (leafNames[tensDigit] + 'ty');
-            name += (unitDigit === 0) ? decadeName : decadeName + '-' + leafNames[unitDigit];
+            name += (unitDigit === 0) ? (decadeName) : (decadeName + '-' + leafNames[unitDigit]);
         }
     }
 
