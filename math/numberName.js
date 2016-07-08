@@ -1,11 +1,5 @@
 
 
-var trial = numberName(410782635);
-var works = (trail === 'four hundred and ten million, seven hundred and eighty-two thousand, six hundred and thirty-five');
-console.log(trial);
-console.log(works);
-
-
 var leafNames = {
     0: 'zero',
     1: 'one',
@@ -36,6 +30,18 @@ var leafNames = {
     80: 'eighty',
     // 90
 };
+
+// Test.
+var trial = numberName(410782635);
+var desired = 'four hundred and ten million, seven hundred and eighty-two thousand, six hundred and thirty-five';
+var works = (trial === desired);
+console.log(trial);
+console.log(desired);
+console.log(works);
+
+// var large = 9871365235891240579760316295120398561902365012975610925601293471092356;
+// console.log(large);
+// console.log(numberName(large));
 
 function numberName (number) {
     // TODO: Extra-robust input hurdles.
