@@ -111,7 +111,7 @@ function indexOfSecondTriplet (digitCount) {
 function sliceDigits (number, first, lastExclusive) {
     var numberString = number.toString();
     var slicedString = numberString.slice(first, lastExclusive);
-    return parseNumber(slicedString);
+    return parseInt(slicedString);
 }
 
 function tripletName (digitCount) {
