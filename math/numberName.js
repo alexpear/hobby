@@ -59,7 +59,7 @@ function numberName (number) {
         var leftDigits = sliceDigits(number, 0, prefixIndex);
         var rightDigits = sliceDigits(number, prefixIndex, digitCount);
         name += numberName(leftDigits) + ' '
-            + tripletName(placeholder(digitCount)) + ', '
+            + tripletName(digitCount) + ', '
             + numberName(rightDigits);
     }
     else if (digitCount === 3) {
@@ -89,10 +89,6 @@ function numberName (number) {
     return name;
 }
 
-function placeholder () {
-    return null;
-}
-
-// function nameOfSingleDigitNumber (number) {
-
+// function numberStringName (numberString) {
+//
 // }
