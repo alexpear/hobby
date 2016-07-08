@@ -39,7 +39,7 @@ var leafNames = {
 
 function numberName (number) {
     // TODO: Extra-robust input hurdles.
-    // Integral. Negative...
+    // Integral.
     if (isNaN(number)) {
         return 'NaN';
     }
