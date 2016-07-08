@@ -115,11 +115,20 @@ function sliceDigits (number, first, lastExclusive) {
 }
 
 function tripletName (digitCount) {
-    var tripletNames = {
+    var tripletNames = [
+        'thousand',
+        'million',
+        'billion',
+        'trillion',
+        'quadrillion',
+        'quintillion'
+    ];
 
+    // Slow, more readable (?) way.
+    var nameIndex = 0;
+    while (nameIndex < tripletNames.length && 3 * (nameIndex + 2) < digitCount) {
+        nameIndex++;
     }
-}
 
-// function numberStringName (numberString) {
-//
-// }
+    return tripletNames[nameIndex] || 'innumerillion';
+}
