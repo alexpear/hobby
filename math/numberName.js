@@ -33,7 +33,9 @@ var leafNames = {
 
 // Test.
 var trial = numberName(410792617);
-var desired = 'four hundred and ten million, seven hundred and ninety-two thousand, six hundred and seventeen';
+var desired = 'four hundred and ten million, '
+    + 'seven hundred and ninety-two thousand, '
+    + 'six hundred and seventeen';
 console.log(trial);
 console.log(desired);
 console.log((trial === desired) ? 'Success' : 'Failure');
