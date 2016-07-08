@@ -43,8 +43,6 @@ console.log((trial === desired) ? 'Success' : 'Failure');
 // console.log(numberName(large));
 
 function numberName (number) {
-    // TODO: Extra-robust input hurdles.
-    // Integral.
     if (isNaN(number)) {
         return 'NaN';
     }
@@ -64,7 +62,8 @@ function numberName (number) {
         return leafNames[number];
     }
 
-    // TODO: could be less clumsy to recurse on String representations.
+    // TODO: could recurse on String representations.
+
     // TODO performance, elegance.
     // TODO: bug with very large numbers and scientific notation.
     var digitCount = number.toString().length;
@@ -94,7 +93,7 @@ function numberName (number) {
         else {
             // 20 thru 99
 
-            // Calculating the decade name is perverse but amusing.
+            // NOTE: Calculating the decade name is perverse but amusing.
             // More practically, we could encode all decade names as leaves.
             var decadeName = leafNames[tensDigit * 10] || (leafNames[tensDigit] + 'ty');
             return (unitDigit === 0) ? (decadeName) : (decadeName + '-' + leafNames[unitDigit]);
