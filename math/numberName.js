@@ -124,11 +124,7 @@ function tripletName (digitCount) {
         'quintillion'
     ];
 
-    // Slow, more readable (?) way.
-    var nameIndex = 0;
-    while (nameIndex < tripletNames.length && 3 * (nameIndex + 2) < digitCount) {
-        nameIndex++;
-    }
-
+    // Cryptic formula that gives 'thousand' for 4 5 6, 'million' for 7 8 9, etc.
+    var nameIndex = Math.trunc((digitCount - 1) / 3) - 1;
     return tripletNames[nameIndex] || 'innumerillion';
 }
