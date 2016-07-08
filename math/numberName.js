@@ -32,12 +32,11 @@ var leafNames = {
 };
 
 // Test.
-var trial = numberName(410782635);
-var desired = 'four hundred and ten million, seven hundred and eighty-two thousand, six hundred and thirty-five';
-var works = (trial === desired);
+var trial = numberName(410792617);
+var desired = 'four hundred and ten million, seven hundred and ninety-two thousand, six hundred and seventeen';
 console.log(trial);
 console.log(desired);
-console.log(works);
+console.log((trial === desired) ? 'Success' : 'Failure');
 
 // var large = 9871365235891240579760316295120398561902365012975610925601293471092356;
 // console.log(large);
