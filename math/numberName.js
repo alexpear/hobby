@@ -1,6 +1,9 @@
 
 
-
+var trial = numberName(410782635);
+var works = (trail === 'four hundred and ten million, seven hundred and eighty-two thousand, six hundred and thirty-five');
+console.log(trial);
+console.log(works);
 
 
 var leafNames = {
