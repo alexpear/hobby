@@ -51,10 +51,12 @@ function numberName (number) {
     }
 
     // TODO replace with return 'negative ' + numberName(Math.abs(number))
-    var name = (number < 0) ? 'negative ' : '';
+    if (number < 0) {
+        return 'negative ' + numberName(Math.abs(number));
+    }
 
     if (number in leafNames) {
-        return name + leafNames[number];
+        return leafNames[number];
     }
 
     // TODO: undecided whether to recurse on Number or String representations.
@@ -65,14 +67,14 @@ function numberName (number) {
         var prefixIndex = indexOfSecondTriplet(digitCount);
         var leftDigits = sliceDigits(number, 0, prefixIndex);
         var rightDigits = sliceDigits(number, prefixIndex, digitCount);
-        name += numberName(leftDigits) + ' '
+        return numberName(leftDigits) + ' '
             + tripletName(digitCount) + ', '
             + numberName(rightDigits);
     }
     else if (digitCount === 3) {
         var firstDigit = sliceDigits(number, 0, 1);
         var last2Digits = sliceDigits(number, 1, 3);
-        name += leafNames[firstDigit] + ' hundred and '
+        return leafNames[firstDigit] + ' hundred and '
             + numberName(last2Digits);
     }
     else if (digitCount === 2) {
@@ -81,7 +83,7 @@ function numberName (number) {
         if (number <= 19) {
             // Note that we already passed the leafNames hurdle,
             // which includes 0-12 and irregular teens.
-            name += numberName(unitDigit) + 'teen';
+            return numberName(unitDigit) + 'teen';
         }
         else {
             // 20 thru 99
@@ -89,7 +91,7 @@ function numberName (number) {
             // Calculating the decade name is perverse but amusing.
             // More practically, we could encode all decade names as leaves.
             var decadeName = leafNames[tensDigit * 10] || (leafNames[tensDigit] + 'ty');
-            name += (unitDigit === 0) ? (decadeName) : (decadeName + '-' + leafNames[unitDigit]);
+            return (unitDigit === 0) ? (decadeName) : (decadeName + '-' + leafNames[unitDigit]);
         }
     }
 
