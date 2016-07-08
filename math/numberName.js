@@ -95,7 +95,7 @@ function numberName (number) {
         }
     }
 
-    return name;
+    return 'cthulhu is flaggin';
 }
 
 function indexOfSecondTriplet (digitCount) {
