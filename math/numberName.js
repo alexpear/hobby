@@ -62,7 +62,7 @@ function numberName (number) {
     var digitCount = number.toString().length;
     if (digitCount > 3) {
         // Pluck off leftmost 1-3 digits.
-        var prefixIndex = findRemainderOfThrees(digitCount);
+        var prefixIndex = indexOfSecondTriplet(digitCount);
         var leftDigits = sliceDigits(number, 0, prefixIndex);
         var rightDigits = sliceDigits(number, prefixIndex, digitCount);
         name += numberName(leftDigits) + ' '
@@ -94,6 +94,23 @@ function numberName (number) {
     }
 
     return name;
+}
+
+function indexOfSecondTriplet (digitCount) {
+    var smallestTripletSize = digitCount % 3;
+    return smallestTripletSize || 3;  // Correct 0 to 3.
+}
+
+function sliceDigits (number, first, lastExclusive) {
+    var numberString = number.toString();
+    var slicedString = numberString.slice(first, lastExclusive);
+    return parseNumber(slicedString);
+}
+
+function tripletName (digitCount) {
+    var tripletNames = {
+
+    }
 }
 
 // function numberStringName (numberString) {
