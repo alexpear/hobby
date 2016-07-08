@@ -44,6 +44,13 @@ function numberName (number) {
         return 'NaN';
     }
 
+    if (number % 1 !== 0) {
+        // TODO could render non integers properly.
+        var remainder = number % 1;
+        return numberName(Math.trunc(number)) + ' plus ' + remainder.toString();
+    }
+
+    // TODO replace with return 'negative ' + numberName(Math.abs(number))
     var name = (number < 0) ? 'negative ' : '';
 
     if (number in leafNames) {
