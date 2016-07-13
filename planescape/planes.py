@@ -19,6 +19,11 @@ opts
 i think we need to be able to map
 from alignment to axis
 and axis to alignment.
+
+Wishlist:
+* Find rarest traits
+* Find disused axes
+* Find rarest intersections, most common intersections
 '''
 
 def prettyprintlist(list):
