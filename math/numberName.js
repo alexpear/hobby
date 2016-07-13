@@ -121,7 +121,22 @@ function tripletName (digitCount) {
         'billion',
         'trillion',
         'quadrillion',
-        'quintillion'
+        'quintillion',
+        'sextillion',
+        'septillion',
+        'octillion',
+        'nonillion',
+        'decillion',
+        'undecillion',
+        'duodecillion',
+        'tredecillion',
+        'quadecillion',
+        'quindecillion',
+        'sexodecillion',
+        'septodecillion',
+        'octodecillion',
+        'nondecillion',
+        'venillion'
     ];
 
     // Cryptic formula that gives 'thousand' for 4 5 6, 'million' for 7 8 9, etc.
