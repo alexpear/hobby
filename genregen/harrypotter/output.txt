@@ -1,1 +1,1 @@
-12 {name} is a {age} {house} who {firstsentence}. {visualsentence}. {classessentence}. 
+15 {name} is a {age} {house} who {firstsentence}. {visualsentence}. {classessentence}. 

@@ -3,6 +3,6 @@
 9 black
 9 raven-black
 4 white
-12 red
+15 red
 9 brown
 9 dyed
