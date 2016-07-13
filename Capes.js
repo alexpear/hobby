@@ -25,8 +25,7 @@ var Cape = class Cape {
         var ratings = this.ratings;
         var ratingsString = Object.keys(this.ratings)
             .map(function (ratingType) {
-                // TODO capitalize ratingType.
-                return ratingType + ' ' + ratings[ratingType];
+                return capitalize(ratingType) + ' ' + ratings[ratingType];
             })
             .join(', ');
         return this.name + ': ' + ratingsString;
@@ -96,6 +95,10 @@ function printCapes (capes) {
     capes.forEach(function (cape) {
         console.log(cape.toString());
     });
+}
+
+function capitalize (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 console.log(JSON.stringify(exports, null, '    '));
