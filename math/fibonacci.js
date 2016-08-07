@@ -19,10 +19,24 @@ function expandSeriesUpTo (cache, max) {
     if (! cache || cache.length < 2) {
         cache = [0, 1, 1];
     }
+
+    while (cache[cache.length - 1] < max) {
+        var next = cache[cache.length - 2] + cache[cache.length - 1];
+        cache.push(next);
+    }
 }
 
 function biggestNumberUnder (cache, n) {
-    
+    if (cache[cache.length - 1] < n) {
+        expandSeriesUpTo(cache, n);
+    }
+
+    var i = cache.length - 1;
+    while (0 < i) {
+
+
+        i--;
+    }
 }
 
 /* Notes
