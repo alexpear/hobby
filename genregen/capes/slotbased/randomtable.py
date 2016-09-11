@@ -75,9 +75,12 @@ def presenttouser():
     outputs = []
     for i in range(outputscount):
       outputs.append(Output('{output}'))
+      print('')
       print i+1, outputs[i].text
     # we also have a none of the above:
+    print('')
     print (outputscount+1), 'None of the above'
+    print('')
     # wait for input 
     chosen = int(input('Which is the best? '))
     if chosen <= 0:
