@@ -7,7 +7,7 @@
 24 orange
 8 yellow
 1 lemon yellow
-21 green
+27 green
 1 lime green
 1 lime
 1 bright green
@@ -16,14 +16,14 @@
 5 sky blue
 1 aquamarine
 1 turquoise
-21 purple
+27 purple
 1 violet
 15 white
 1 beige
 1 light grey
 7 steel
 9 gunmetal
-7 gunmetal grey
+10 gunmetal grey
 4 chrome
 13 bronze
 30 grey
@@ -32,6 +32,6 @@
 18 brown
 1 tan
 1 olive
-18 silver 
+21 silver
 1 opal
 12 gold

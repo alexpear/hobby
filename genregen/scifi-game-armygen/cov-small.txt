@@ -1,6 +1,6 @@
 82 Lance of 8
 39 Lance of 7 w/ Grunt Major
-40 Jackals x6
+43 Jackals x6
 14 Skirmishers x6, carbines
 11 Skirmishers x8, energy bracers
 

@@ -13,7 +13,7 @@
 
 12 Jump-pack Brutes x8
 12 Infiltrator Brutes x5
-18 Brute Chieftain, gravity hammer
+21 Brute Chieftain, gravity hammer
 21 Brute Chieftain, plasma cannon
 
 12 Prophet & retinue of 6 Brutes

@@ -1,2 +1,2 @@
-18 light plasteel shoulder armor
-18 bulky durasteel pauldrons
+21 light plasteel shoulder armor
+24 bulky durasteel pauldrons
