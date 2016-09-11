@@ -85,11 +85,11 @@ def presenttouser():
     for i in range(outputscount):
       outputs.append(Output('{output}'))
       print('')
-      outstring = '{choice} {text}'.format(choice=(i+1), text=outputs[i].text)
+      outstring = '{choice}\n {text}'.format(choice=(i+1), text=outputs[i].text)
       print(outstring.replace('\\n', '\n'))
     # we also have a none of the above:
     print('')
-    print(str(outputscount+1) + ' None of the above')
+    print(str(outputscount+1) + '\n None of the above')
     print('')
     # wait for input
     chosen = int(input('Which is the best? '))
