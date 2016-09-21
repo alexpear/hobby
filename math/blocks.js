@@ -34,6 +34,7 @@ class Piece {
     }
 
     boundingBox () {
+        var positions = this.getPositions();
 
     }
 }
