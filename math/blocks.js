@@ -110,3 +110,16 @@ function equalPos(a, b) {
 
     return true;
 }
+
+function examplePiece () {
+    return new Piece(
+        [
+            [0, 0, 0],
+            [0, 0, 1],
+            [0, 1, 0],
+            [0, 1, 1]
+        ],
+        new Quaternion(3, 4, 5, 0),
+        -1
+    );
+}
