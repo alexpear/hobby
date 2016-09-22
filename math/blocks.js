@@ -176,6 +176,18 @@ class Arrangement {
     }
 }
 
+// TODO Utils module?
+var COLORS = [
+    '1;37;40m',
+    '1;37;41m',
+    '1;30;42m',
+    '1;37;43m',
+    '1;37;44m',
+    '1;37;45m',
+    '1;30;46m',
+    '1;30;47m'
+];
+
 function equalPos (a, b) {
     for (var i = 0; i < a.length; i++) {
         if (a[i] !== b[i]) {
