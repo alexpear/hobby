@@ -38,25 +38,21 @@ class Piece {
     }
 
     boundingBox () {
-        var minCorner = [999, 999, 999];
-        var maxCorner = [-999, =999, -999];
+        var box = newBoundingBox();
 
         this.getPositions().forEach(function (cube) {
-            for (var d = 0; d < minCorner.length; d++) {
+            for (var d = 0; d < box.min.length; d++) {
                 var dimensionCoordinate = cube[d];
-                if (dimensionCoordinate < minCorner[d]) {
-                    minCorner[d] = dimensionCoordinate;
+                if (dimensionCoordinate < box.min[d]) {
+                    box.min[d] = dimensionCoordinate;
                 }
-                if (maxCorner[d] < dimensionCoordinate) {
-                    maxCorner[d] = dimensionCoordinate;
+                if (box.max[d] < dimensionCoordinate) {
+                    box.max[d] = dimensionCoordinate;
                 }
             }
         });
 
-        return {
-            min: minCorner,
-            max: maxCorner
-        };
+        return box;
     }
 }
 
@@ -130,6 +126,15 @@ function equalPos (a, b) {
     }
 
     return true;
+}
+
+// TODO write class BoundingBox
+// with function engulf(other)
+function newBoundingBox () {
+    return {
+        min: [999, 999, 999],
+        max: [-999, -999, -999]
+    };
 }
 
 function examplePiece () {
