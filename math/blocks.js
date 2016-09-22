@@ -4,6 +4,9 @@
 
 var _ = require('underscore');
 
+// If Quats get too weird, could probably express rotation as pair of rotations:
+// Point the Piece's axis in one of the 6 directions,
+// Then rotate it 0-3 increments around that axis.
 class Quaternion {
     constructor (x, y, z, rotation) {
         this.x = x;
@@ -19,6 +22,7 @@ class Quaternion {
 
 class Piece {
     constructor (cubes, quaternion, id) {
+        // Cubes are arrays like [z, y, x]. They represent 1x1x1 cubes.
         this.cubes = cubes;
         this.quaternion = quaternion;
         this.id = id;
@@ -76,7 +80,7 @@ class Arrangement {
     }
 
     remove (id) {
-
+        // todo
     }
 
     render () {
