@@ -123,3 +123,9 @@ function examplePiece () {
         -1
     );
 }
+
+
+// Test calls
+var p = examplePiece();
+
+console.log(JSON.stringify(p, null, '    '));
