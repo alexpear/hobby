@@ -95,11 +95,11 @@ class Arrangement {
         // todo
     }
 
-    render () {
-        this.renderAsLayers();
+    toString () {
+        this.asLayerString();
     }
 
-    renderAsLayers () {
+    asLayerString () {
         // TODO: take quaternion into account.
         // Get bounding box
         // Set up ascii grid buffers...
