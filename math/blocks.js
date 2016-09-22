@@ -34,8 +34,25 @@ class Piece {
     }
 
     boundingBox () {
-        var positions = this.getPositions();
+        var minCorner = [999, 999, 999];
+        var maxCorner = [-999, =999, -999];
 
+        this.getPositions().forEach(function (cube) {
+            for (var d = 0; d < minCorner.length; d++) {
+                var dimensionCoordinate = cube[d];
+                if (dimensionCoordinate < minCorner[d]) {
+                    minCorner[d] = dimensionCoordinate;
+                }
+                if (maxCorner[d] < dimensionCoordinate) {
+                    maxCorner[d] = dimensionCoordinate;
+                }
+            }
+        });
+
+        return {
+            min: minCorner,
+            max: maxCorner
+        };
     }
 }
 
