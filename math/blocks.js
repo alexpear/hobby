@@ -101,10 +101,52 @@ class Arrangement {
 
     asLayerString () {
         // TODO: take quaternion into account.
-        // Get bounding box
+        var box = this.boundingBox();
+
         // Set up ascii grid buffers...
-        // or something.
+        var grids = [];
+        for (var z = box.min[0]; z <= box.max[0]; z++) {
+            grids.push([]);
+            for (var y = box.min[1]; y <= box.max[1]; y++) {
+                // TODO: difference between box-relative and absolute coords.
+                // grids[z].push([]);
+                // for (var x = box.min[2]; x <= box.max[2]; x++) {
+                //     grids[z][y].push(' ');
+                // }
+            }
+        }
+
+        this.pieces.forEach(function (piece) {
+
+        });
+
+        return grids;
+
+        function relativeToBox (coord, box) {
+            var relCoord = [0, 0, 0];
+            for (var d = 0; d < coord.length; d++) {
+                // relCoord[d] = relativeValue(...);
+            }
+        }
     }
+
+// var EXAMPLE_GRIDS = [
+//     [
+//         [' ', ' ', ' '],
+//         [' ', ' ', ' '],
+//         [' ', ' ', ' ']
+//     ],
+//     [
+//         [' ', ' ', ' '],
+//         [' ', ' ', ' '],
+//         [' ', ' ', ' ']
+//     ],
+//     [
+//         [' ', ' ', ' '],
+//         [' ', ' ', ' '],
+//         [' ', ' ', ' ']
+//     ]
+// ];
 
     collisions () {
         // TODO Could be optimized in neatness and runspeed.
