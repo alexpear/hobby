@@ -74,11 +74,39 @@ class Arrangement {
     }
 
     collisions () {
-        // TODO
-        return [];
+        // TODO Could be optimized in neatness and runspeed.
+        var collisions = [];
+
+        for (var pa = 0; pa < this.pieces.length; pa++) {
+            // Note: The pb index is always ahead of the pa index.
+            for (var pb = pa + 1; pb < this.pieces.length; pb++) {
+                var cubesA = this.pieces[pa].getPositions();
+                var cubesB = this.pieces[pb].getPositions();
+
+                for (var ca = 0; ca < cubesA.length; ca++) {
+                    for (var cb = 0; cb < cubesB.length; cb++) {
+                        if (equalPos(cubesA[ca], cubesB[cb])) {
+                            collisions.push(cubesA[ca]);
+                        }
+                    }
+                }
+            }
+        }
+
+        return collisions;
     }
 
     valid () {
         return this.collisions().length === 0;
     }
+}
+
+function equalPos(a, b) {
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) {
+            return false;
+        }
+    }
+
+    return true;
 }
