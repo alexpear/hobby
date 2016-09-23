@@ -177,18 +177,6 @@ class Arrangement {
     }
 }
 
-// TODO Utils module?
-var COLORS = [
-    '1;37;40m',
-    '1;37;41m',
-    '1;30;42m',
-    '1;37;43m',
-    '1;37;44m',
-    '1;37;45m',
-    '1;30;46m',
-    '1;30;47m'
-];
-
 class BoundingBox {
     constructor (min, max) {
         if (! min && ! max) {
