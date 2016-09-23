@@ -210,6 +210,10 @@ function newBoundingBox () {
     };
 }
 
+// class BoundingBox {
+//     constructor ()
+// }
+
 function examplePiece () {
     return new Piece(
         [
