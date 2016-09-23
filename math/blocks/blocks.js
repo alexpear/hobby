@@ -229,8 +229,10 @@ function examplePiece () {
 
 // Test calls
 var p = examplePiece();
-
 console.log(JSON.stringify(p, null, '    '));
+
+var bb = p.boundingBox();
+console.log(JSON.stringify(bb, null, '    '));
 
 
 
