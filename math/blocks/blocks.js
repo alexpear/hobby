@@ -39,18 +39,22 @@ class Piece {
         var box = newBoundingBox();
 
         this.getPositions().forEach(function (cube) {
-            for (var d = 0; d < box.min.length; d++) {
-                var dimensionCoordinate = cube[d];
-                if (dimensionCoordinate < box.min[d]) {
-                    box.min[d] = dimensionCoordinate;
-                }
-                if (box.max[d] < dimensionCoordinate) {
-                    box.max[d] = dimensionCoordinate;
-                }
-            }
+            // for (var d = 0; d < box.min.length; d++) {
+            //     var dimensionCoordinate = cube[d];
+            //     if (dimensionCoordinate < box.min[d]) {
+            //         box.min[d] = dimensionCoordinate;
+            //     }
+            //     if (box.max[d] < dimensionCoordinate) {
+            //         box.max[d] = dimensionCoordinate;
+            //     }
+            // }
         });
 
         return box;
+    }
+
+    toString () {
+        // todo
     }
 }
 
@@ -71,14 +75,14 @@ class Arrangement {
             })
             .reduce(
                 function (accumulatedBox, pieceBox) {
-                    for (var d = 0; d < pieceBox.min.length; d++) {
-                        if (pieceBox.min[d] < accumulatedBox.min[d]) {
-                            accumulatedBox.min[d] = pieceBox.min[d];
-                        }
-                        if (accumulatedBox.max[d] < pieceBox.max[d]) {
-                            accumulatedBox.max[d] = pieceBox.max[d];
-                        }
-                    }
+                    // for (var d = 0; d < pieceBox.min.length; d++) {
+                    //     if (pieceBox.min[d] < accumulatedBox.min[d]) {
+                    //         accumulatedBox.min[d] = pieceBox.min[d];
+                    //     }
+                    //     if (accumulatedBox.max[d] < pieceBox.max[d]) {
+                    //         accumulatedBox.max[d] = pieceBox.max[d];
+                    //     }
+                    // }
                 },
                 newBoundingBox()
             );
