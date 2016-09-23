@@ -100,33 +100,40 @@ class Arrangement {
         this.asLayerString();
     }
 
-    asLayerString () {
-        // TODO: take quaternion into account.
-        var box = this.boundingBox();
+    makeRelative (otherCoord) {
+        return otherCoord.minus(this.boundingBox().min);
+    }
 
-        // Set up ascii grid buffers...
-        var grids = [];
-        for (var z = box.min[0]; z <= box.max[0]; z++) {
-            grids.push([]);
-            for (var y = box.min[1]; y <= box.max[1]; y++) {
-                // TODO: difference between box-relative and absolute coords.
-                // grids[z].push([]);
-                // for (var x = box.min[2]; x <= box.max[2]; x++) {
-                //     grids[z][y].push(' ');
-                // }
-            }
-        }
+    asLayerString () {
+        var BLANK_CHAR = '.';
+        var CUBE_CHAR = 'O';
+        var arrangement = this;
+        var layers = blankLayers();
 
         this.pieces.forEach(function (piece) {
-
+            piece.getPositions().forEach(function (cube) {
+                // TODO: Give each piece a color based on its id.
+                layers[cube.z][cube.y][cube.x] = CUBE_CHAR;
+            });
         });
 
-        return grids;
+        return layers;
 
-        // box.min -> [0, 0, 0]
-        // box.min [11, 12, 13] & coord [16, 15, 14] -> relCoord [5, 3, 1]
-        function relativeToBox (coord, box) {
-            return coord.minus(box.min);
+        function blankLayers () {
+            var layers = [];
+            var boxVector = this.boundingBox().vector();
+
+            for (var z = 0; z <= boxVector.z; z++) {
+                layers.push([]);
+                for (var y = 0; y <= boxVector.y; y++) {
+                    layers[z].push([]);
+                    for (var x = 0; x <= boxVector.x; x++) {
+                        layers[z][y].push(BLANK_CHAR);
+                    }
+                }
+            }
+
+            return layers;
         }
     }
 
@@ -212,6 +219,10 @@ class BoundingBox {
         return this
             .plusPoint(newBox.min)
             .plusPoint(newBox.max);
+    }
+
+    vector () {
+        return this.max.minus(this.min);
     }
 }
 
