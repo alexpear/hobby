@@ -36,21 +36,15 @@ class Piece {
     }
 
     boundingBox () {
-        var box = newBoundingBox();
+        var box = new BoundingBox();
 
-        this.getPositions().forEach(function (cube) {
-            // for (var d = 0; d < box.min.length; d++) {
-            //     var dimensionCoordinate = cube[d];
-            //     if (dimensionCoordinate < box.min[d]) {
-            //         box.min[d] = dimensionCoordinate;
-            //     }
-            //     if (box.max[d] < dimensionCoordinate) {
-            //         box.max[d] = dimensionCoordinate;
-            //     }
-            // }
-        });
-
-        return box;
+        return this.getPositions()
+            .reduce(
+                function (boxSoFar, cube) {
+                    return boxSoFar.plusPoint(cube);
+                },
+                new BoundingBox()
+            );
     }
 
     toString () {
