@@ -74,14 +74,7 @@ class Arrangement {
             })
             .reduce(
                 function (accumulatedBox, pieceBox) {
-                    // for (var d = 0; d < pieceBox.min.length; d++) {
-                    //     if (pieceBox.min[d] < accumulatedBox.min[d]) {
-                    //         accumulatedBox.min[d] = pieceBox.min[d];
-                    //     }
-                    //     if (accumulatedBox.max[d] < pieceBox.max[d]) {
-                    //         accumulatedBox.max[d] = pieceBox.max[d];
-                    //     }
-                    // }
+                    return accumulatedBox.plusBox(pieceBox);
                 },
                 new BoundingBox()
             );
