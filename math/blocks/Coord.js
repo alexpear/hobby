@@ -2,11 +2,21 @@
 
 var Util = require('./Util.js');
 
+var DIMENSION_NUMBERING = [ 'x', 'y', 'z' ];
+
 module.exports = class Coord {
     constructor (x, y, z) {
         this.x = Util.default(x, 0);
         this.y = Util.default(y, 0);
         this.z = Util.default(z, 0);
+    }
+
+    getDim (dimensionNumber) {
+        return this[DIMENSION_NUMBERING[dimensionNumber]];
+    }
+
+    setDim (dimensionNumber, newVal) {
+        this[DIMENSION_NUMBERING[dimensionNumber]] = newVal;
     }
 
     equals (other) {
