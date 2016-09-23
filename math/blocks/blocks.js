@@ -4,6 +4,8 @@
 
 var _ = require('underscore');
 
+var Util = require('./Util.js');
+
 class Quaternion {
     constructor (x, y, z, rotation) {
         this.x = x;
