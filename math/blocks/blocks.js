@@ -239,9 +239,16 @@ function examplePiece () {
 
 // Test calls
 var p = examplePiece();
-console.log(JSON.stringify(p, null, '    '));
+var a = new Arrangement();
+a.add(p);
+console.log('--------------------');
+console.log(JSON.stringify(a, null, '    '));
+
+console.log('--------------------');
+console.log(a.toString());
 
 var bb = p.boundingBox();
+console.log('--------------------');
 console.log(JSON.stringify(bb, null, '    '));
 
 
