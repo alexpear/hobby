@@ -60,7 +60,7 @@ class Piece {
 // A set of rotated and positioned Pieces
 class Arrangement {
     constructor (pieces) {
-        this.pieces = pieces;
+        this.pieces = Util.default(pieces, []);
     }
 
     ids () {
