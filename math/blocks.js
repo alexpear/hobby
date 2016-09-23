@@ -122,11 +122,17 @@ class Arrangement {
 
         return grids;
 
+        // box.min -> [0, 0, 0]
+        // box.min [11, 12, 13] & coord [16, 15, 14] -> relCoord [5, 3, 1]
         function relativeToBox (coord, box) {
             var relCoord = [0, 0, 0];
+
+            // TODO: Replace with Coord.minus() later.
             for (var d = 0; d < coord.length; d++) {
-                // relCoord[d] = relativeValue(...);
+                relCoord[d] = coord[d] - box.min[d];
             }
+
+            return relCoord;
         }
     }
 
