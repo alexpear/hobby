@@ -8,10 +8,8 @@ var Coord = require('./Coord.js');
 var Util = require('./Util.js');
 
 class Quaternion {
-    constructor (x, y, z, rotation) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+    constructor (vector, rotation) {
+        this.vector = vector;
         this.rotation = rotation;  // Name may change.
     }
 
@@ -125,14 +123,7 @@ class Arrangement {
         // box.min -> [0, 0, 0]
         // box.min [11, 12, 13] & coord [16, 15, 14] -> relCoord [5, 3, 1]
         function relativeToBox (coord, box) {
-            var relCoord = [0, 0, 0];
-
-            // TODO: Replace with Coord.minus() later.
-            for (var d = 0; d < coord.length; d++) {
-                relCoord[d] = coord[d] - box.min[d];
-            }
-
-            return relCoord;
+            return coord.minus(box.min);
         }
     }
 
@@ -166,7 +157,7 @@ class Arrangement {
 
                 for (var ca = 0; ca < cubesA.length; ca++) {
                     for (var cb = 0; cb < cubesB.length; cb++) {
-                        if (equalPos(cubesA[ca], cubesB[cb])) {
+                        if (cubesA[ca].equals(cubesB[cb])) {
                             collisions.push(cubesA[ca]);
                         }
                     }
@@ -194,38 +185,49 @@ var COLORS = [
     '1;30;47m'
 ];
 
-function equalPos (a, b) {
-    for (var i = 0; i < a.length; i++) {
-        if (a[i] !== b[i]) {
-            return false;
+class BoundingBox {
+    constructor (min, max) {
+        if (! min && ! max) {
+            this.min = new Coord(999, 999, 999);
+            this.max = new Coord(-999, -999, -999);
+        } else {
+            this.min = min;
+            this.max = max;
         }
     }
 
-    return true;
-}
+    plusPoint (newPoint) {
+        var outBox = new BoundingBox();
+        outBox.min.x = this.min.x <= newPoint.x ? this.min.x : newPoint.x;
+        outBox.min.y = this.min.y <= newPoint.y ? this.min.y : newPoint.y;
+        outBox.min.z = this.min.z <= newPoint.z ? this.min.z : newPoint.z;
 
-// TODO write class BoundingBox
-// with function engulf(other)
-function newBoundingBox () {
-    return {
-        min: [999, 999, 999],
-        max: [-999, -999, -999]
-    };
-}
+        outBox.max.x = newPoint.x <= this.max.x ? this.max.x : newPoint.x;
+        outBox.max.y = newPoint.y <= this.max.y ? this.max.y : newPoint.y;
+        outBox.max.z = newPoint.z <= this.max.z ? this.max.z : newPoint.z;
 
-// class BoundingBox {
-//     constructor ()
-// }
+        return outBox;
+    }
+
+    plusBox (newBox) {
+        return this
+            .plusPoint(newBox.min)
+            .plusPoint(newBox.max);
+    }
+}
 
 function examplePiece () {
     return new Piece(
         [
-            [0, 0, 0],
-            [0, 0, 1],
-            [0, 1, 0],
-            [0, 1, 1]
+            new Coord (0, 0, 0),
+            new Coord (0, 0, 1),
+            new Coord (0, 1, 0),
+            new Coord (0, 1, 1)
         ],
-        new Quaternion(3, 4, 5, 0),
+        new Quaternion(
+            new Coord(3, 4, 5),
+            0
+        ),
         -1
     );
 }
