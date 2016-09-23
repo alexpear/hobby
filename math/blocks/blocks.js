@@ -115,7 +115,7 @@ class Arrangement {
 
         function blankLayers () {
             var layers = [];
-            var boxVector = this.boundingBox().vector();
+            var boxVector = arrangement.boundingBox().vector();
 
             for (var z = 0; z <= boxVector.z; z++) {
                 layers.push([]);
