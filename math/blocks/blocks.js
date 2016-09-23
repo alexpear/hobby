@@ -4,6 +4,7 @@
 
 var _ = require('underscore');
 
+var Coord = require('./Coord.js');
 var Util = require('./Util.js');
 
 class Quaternion {
