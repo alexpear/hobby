@@ -4,9 +4,6 @@
 
 var _ = require('underscore');
 
-// If Quats get too weird, could probably express rotation as pair of rotations:
-// Point the Piece's axis in one of the 6 directions,
-// Then rotate it 0-3 increments around that axis.
 class Quaternion {
     constructor (x, y, z, rotation) {
         this.x = x;
@@ -231,3 +228,11 @@ function examplePiece () {
 var p = examplePiece();
 
 console.log(JSON.stringify(p, null, '    '));
+
+
+
+// Notes
+// If Quats get too weird, could probably express rotation as pair of rotations:
+// Point the Piece's axis in one of the 6 directions,
+// then rotate it 0-3 increments around that axis.
+// In other words, (0/1/2/3 around Z axis OR 1/3 around Y axis) THEN 0/1/2/3 around the now-moved X axis.
