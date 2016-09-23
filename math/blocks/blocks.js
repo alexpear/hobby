@@ -188,15 +188,23 @@ class BoundingBox {
         }
     }
 
-    plusPoint (newPoint) {
+    plusPoint (otherPoint) {
         var outBox = new BoundingBox();
-        outBox.min.x = this.min.x <= newPoint.x ? this.min.x : newPoint.x;
-        outBox.min.y = this.min.y <= newPoint.y ? this.min.y : newPoint.y;
-        outBox.min.z = this.min.z <= newPoint.z ? this.min.z : newPoint.z;
+        for (var d = 0; d < 3; d++) {
+            var existingMin = this.min.getDim(d);
+            var existingMax = this.max.getDim(d);
+            var otherCoordinate = otherPoint.getDim(d);
 
-        outBox.max.x = newPoint.x <= this.max.x ? this.max.x : newPoint.x;
-        outBox.max.y = newPoint.y <= this.max.y ? this.max.y : newPoint.y;
-        outBox.max.z = newPoint.z <= this.max.z ? this.max.z : newPoint.z;
+            var newMin = (existingMin <= otherCoordinate)
+                ? existingMin
+                : otherCoordinate;
+            var newMax = (existingMax <= otherCoordinate)
+                ? otherCoordinate
+                : existingMax;
+
+            outBox.min.setDim(d, newMin);
+            outBox.max.setDim(d, newMax);
+        }
 
         return outBox;
     }
