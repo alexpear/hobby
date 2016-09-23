@@ -78,7 +78,7 @@ class Arrangement {
                     //     }
                     // }
                 },
-                newBoundingBox()
+                new BoundingBox()
             );
     }
 
