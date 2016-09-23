@@ -27,9 +27,9 @@ module.exports = class Coord {
 
     minus (other) {
         return new Coord(
-            this.x + other.x,
-            this.y + other.y,
-            this.z + other.z,
+            this.x - other.x,
+            this.y - other.y,
+            this.z - other.z
         );
     }
 
