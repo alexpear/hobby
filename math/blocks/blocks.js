@@ -250,14 +250,14 @@ function examplePiece () {
 var p = examplePiece();
 var a = new Arrangement();
 a.add(p);
-console.log('--------------------');
+console.log('-------------------- v json stringify a v');
 console.log(JSON.stringify(a, null, '    '));
 
-console.log('--------------------');
+console.log('-------------------- v Arrangement.toString() v');
 console.log(a.toString());
 
-var bb = p.boundingBox();
-console.log('--------------------');
+console.log('-------------------- v a.boundingBox() v');
+var bb = a.boundingBox();
 console.log(JSON.stringify(bb, null, '    '));
 
 
