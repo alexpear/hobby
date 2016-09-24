@@ -48,7 +48,7 @@ class Piece {
     }
 
     toString () {
-        // todo
+        return new Arrangement([this]).toString();
     }
 }
 
