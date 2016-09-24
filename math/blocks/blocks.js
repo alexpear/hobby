@@ -107,7 +107,7 @@ class Arrangement {
             piece.getPositions().forEach(function (cube) {
                 // TODO: Give each piece a color based on its id.
                 var relative = arrangement.makeRelative(cube);
-                layers[relative.z][relative.y][relative.x] = CUBE_CHAR;
+                layers[relative.z][relative.y][relative.x] = piece.id;
             });
         });
 
