@@ -90,7 +90,7 @@ class Arrangement {
     }
 
     toString () {
-        this.asLayerString();
+        return this.asLayerString();
     }
 
     makeRelative (otherCoord) {
