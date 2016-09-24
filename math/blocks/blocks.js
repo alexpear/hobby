@@ -98,7 +98,7 @@ class Arrangement {
     }
 
     asLayerString () {
-        var BLANK_CHAR = '.';
+        var BLANK_CHAR = '-';
         var CUBE_CHAR = 'O';
         var arrangement = this;
         var layers = blankLayers();
