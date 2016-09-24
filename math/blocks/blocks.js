@@ -111,7 +111,16 @@ class Arrangement {
             });
         });
 
-        return layers;
+        var outString = layers
+            .map(function (layer) {
+                return layer.map(function (row) {
+                    return row.join(' ');
+                })
+                .join('\n');
+            })
+            .join('\n\n');
+
+        return outString;
 
         function blankLayers () {
             var layers = [];
