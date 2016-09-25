@@ -1,7 +1,7 @@
 'use strict';
 
 // BevelledPlains.js
-// There is a planet far from here, woven from earth and steel in strange patterns. 
+// There is a planet far from here, woven from earth and steel in strange patterns.
 // Over the empty surface the wind winds peacefully between the trees
 // and the standby lights blink.
 
