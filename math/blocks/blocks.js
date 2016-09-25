@@ -5,6 +5,7 @@
 var _ = require('underscore');
 
 var Coord = require('./Coord.js');
+var Shapes = require('./Shapes.js');
 var Util = require('./Util.js');
 
 class Quaternion {
@@ -59,8 +60,18 @@ class Piece {
 
 // A set of rotated and positioned Pieces
 class Arrangement {
-    constructor (pieces) {
-        this.pieces = Util.default(pieces, []);
+    constructor (shapes) {
+        // Shapes are 'dehydrated' templates from Shapes.js
+        var id = 0;
+        this.pieces = shapes.map(function (shape) {
+            return new Piece(
+                shape.map(function (cube) {
+                    return new Coord(cube[0], cube[1], cube[2]);
+                }),
+                new Quaternion(),
+                id++
+            );
+        });
     }
 
     ids () {
@@ -247,9 +258,8 @@ function examplePiece () {
 
 
 // Test calls
-var p = examplePiece();
-var a = new Arrangement();
-a.add(p);
+var a = new Arrangement(Shapes.pinks);
+
 console.log('-------------------- v json stringify a v');
 console.log(JSON.stringify(a, null, '    '));
 
