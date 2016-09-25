@@ -2,7 +2,7 @@
 9 short
 9 chin-length
 9 very short
-12 curly
+15 curly
 9 sleek
 9 braided
 9 unruly

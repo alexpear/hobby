@@ -12,6 +12,16 @@ from random import choice
 outputscount = 2
 rewardsize = 3
 
+def titlecaps(str):
+  uncapitalized = ['of', 'the', 'and', 'to', 'with']
+
+  return ' '.join(
+    map(
+      lambda word: word.capitalize(),
+      str.split(' ')
+    )
+  )
+
 class Result:
   def __init__(self, text, filename, linenum):
     self.text = text
@@ -23,22 +33,22 @@ class Result:
 class Table:
   def __init__(self, filename): 
     self.results = []
+
     with open(filename) as file:
       lines = file.read().splitlines()
+
       for linenum, line in enumerate(lines):
         words = line.split()
-        if len(words) == 1 and words[0].isdigit():
-          # case where result is empty string / whitespace
-          # could reduce amount of duplicated code TODO
-          tempresult = Result('', filename, linenum)
-          weight = int(words[0])
-          for i in range(weight):
-            self.results.append(tempresult)
-          continue
-        elif len(words) < 2:
+
+        if len(words) == 0 or not words[0].isdigit():
           # invalid or blank lines
           continue
-        text = ' '.join(words[1:])
+        elif len(words) == 1:
+          # case where result is empty string / whitespace
+          text = ''
+        else:
+          text = ' '.join(words[1:])
+
         tempresult = Result(text, filename, linenum)
         weight = int(words[0])
         for i in range(weight):
@@ -63,6 +73,8 @@ class Output:
     self.text = textin
     self.results = []
     self.fillblanks()
+    self.text = ' '.join(self.text.split())
+    self.text = titlecaps(self.text)
 
   # Reward the Output, ie all its rolls. 
   def reward(self):
@@ -85,11 +97,11 @@ def presenttouser():
     for i in range(outputscount):
       outputs.append(Output('{output}'))
       print('')
-      outstring = '{choice}\n {text}'.format(choice=(i+1), text=outputs[i].text)
+      outstring = '{choice} {text}'.format(choice=(i+1), text=outputs[i].text)
       print(outstring.replace('\\n', '\n'))
     # we also have a none of the above:
     print('')
-    print(str(outputscount+1) + '\n None of the above')
+    print(str(outputscount+1) + ' None of the above')
     print('')
     # wait for input
     chosen = int(input('Which is the best? '))

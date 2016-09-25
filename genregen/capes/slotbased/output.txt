@@ -1,2 +1,2 @@
-105 This {charadj} {clade} female usually suits up with {chest}, {back}, {head}, {shoulders}, {arms}, and {legs}. She carries {weapon}. Her gear is mostly {color}, with {color} trim. 
-111 This {charadj} {clade} male usually suits up with {chest}, {back}, {head}, {shoulders}, {arms}, and {legs}. He carries {weapon}. His gear is mostly {color}, with {color} trim. 
+111 This {charadj} {clade} female usually suits up with {chest}, {back}, {head}, {shoulders}, {arms}, and {legs}. She carries {weapon}. Her gear is mostly {color}, with {color} trim.
+114 This {charadj} {clade} male usually suits up with {chest}, {back}, {head}, {shoulders}, {arms}, and {legs}. He carries {weapon}. His gear is mostly {color}, with {color} trim.

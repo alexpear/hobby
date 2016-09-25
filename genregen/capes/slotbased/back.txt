@@ -1,5 +1,5 @@
-12 a jetpack
-9 a jump pack
+18 a jetpack
+12 a jump pack
 12 a parachute
 9 expandable gliding wings
 12 a billowing cape

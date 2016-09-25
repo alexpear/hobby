@@ -4,4 +4,4 @@
 0 78 {unsc-troops} \n {unsc-troops} \n {unsc-other} \n {unsc-other}
 
 25 {unsc-big} \n {unsc-small}
-31 {unsc-small} \n {unsc-small} \n {unsc-small}
+34 {unsc-small} \n {unsc-small} \n {unsc-small}

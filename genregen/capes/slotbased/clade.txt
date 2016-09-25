@@ -1,11 +1,11 @@
 19 human
-22 baseline
-19 turian
+25 baseline
+22 turian
 22 jilrahinae
 22 eldar
 9 asari
 9 posthuman
-25 synthetic
+28 synthetic
 9 synthmorph
 12 cyborg
 9 exhuman

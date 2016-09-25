@@ -1,9 +1,9 @@
 9 combat boots
-21 orbital fatigues
+24 orbital fatigues
 1 navy blue jeans
-12 lacquered greaves
+15 lacquered greaves
 9 carbon-fiber kneepads
 9 spiked climbing boots
 9 steel-toed boots
 8 jump boots
-12 plasteel leg armor
+15 plasteel leg armor

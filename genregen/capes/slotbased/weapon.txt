@@ -5,11 +5,11 @@
 19 a rifle
 9 a longrifle
 9 an assault rifle
-9 a shotgun
+12 a shotgun
 19 a pistol
-27 a machine gun
-12 a knife
-18 an axe
+30 a machine gun
+15 a knife
+21 an axe
 12 a hand axe
 12 a spear
 15 a glaive

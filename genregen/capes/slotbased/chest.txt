@@ -6,6 +6,6 @@
 9 archaic plate armor
 12 molded carbon-fiber armor
 15 very little clothing
-9 heavy robes
-9 a silk doublet
-9 a simple tunic
+12 heavy robes
+12 a silk doublet
+12 a simple tunic

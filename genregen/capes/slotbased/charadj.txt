@@ -61,7 +61,7 @@
 9 lonely
 9 hunted
 12 outlaw
-28 exiled
+31 exiled
 9 famous
 9 wealthy
 9 poor
@@ -92,14 +92,14 @@
 9 tough
 9 brave
 9 cowardly
-9 mischievous
+12 mischievous
 12 callous
 9 scholarly
 12 bookish
 9 stooped
 9 plump
 9 sexy
-12 pretty
+15 pretty
 9 ugly
 9 homely
 9 rather plain

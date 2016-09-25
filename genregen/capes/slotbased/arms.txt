@@ -1,6 +1,6 @@
-15 segmented gauntlets
+21 segmented gauntlets
 9 a wrist-mounted energy shield
-9 a forearm-mounted {weapon}
+12 a forearm-mounted {weapon}
 12 sturdy bracers
 9 a bionic arm
 9 a waterproof wristwatch

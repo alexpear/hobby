@@ -19,6 +19,11 @@ opts
 i think we need to be able to map
 from alignment to axis
 and axis to alignment.
+
+Wishlist:
+* Find rarest traits
+* Find disused axes
+* Find rarest intersections, most common intersections
 '''
 
 def prettyprintlist(list):
@@ -53,7 +58,8 @@ AXES = [
   ('self', 'others'),
   ('simple', 'complex'),
   ('young', 'old'),
-  ('static', 'dynamic')
+  ('static', 'dynamic'),
+  ('material', 'magical')
 ]
 
 alignment_to_adjective = {
@@ -88,7 +94,10 @@ alignment_to_adjective = {
   'old': 'antediluvian', # antique archaic timeworn venerable ancient primeval primordial
 
   'static': 'stabile',
-  'dynamic': 'mutile'
+  'dynamic': 'mutile',
+
+  'material': 'material',
+  'magical': 'thaumaturgical'
 }
 
 def adjof(alignment):
