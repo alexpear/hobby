@@ -9,8 +9,8 @@ var Util = require('./Util.js');
 
 class Quaternion {
     constructor (vector, rotation) {
-        this.vector = vector;
-        this.rotation = rotation;  // Name may change.
+        this.vector = Util.default(vector, new Coord());
+        this.rotation = Util.default(rotation, 0);  // Name may change.
     }
 
     add (otherQuat) {
@@ -21,9 +21,9 @@ class Quaternion {
 class Piece {
     constructor (cubes, quaternion, id) {
         // Cubes are arrays like [z, y, x]. They represent 1x1x1 cubes.
-        this.cubes = cubes;
-        this.quaternion = quaternion;
-        this.id = id;
+        this.cubes = Util.default(cubes, []);
+        this.quaternion = Util.default(quaternion, new Quaternion());
+        this.id = Util.default(id, 0);
     }
 
     rotate (otherQuat) {
