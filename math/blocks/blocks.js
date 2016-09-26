@@ -37,8 +37,6 @@ class Piece {
     }
 
     boundingBox () {
-        var box = new BoundingBox();
-
         return this.getPositions()
             .reduce(
                 function (boxSoFar, cube) {
