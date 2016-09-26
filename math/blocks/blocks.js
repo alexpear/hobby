@@ -51,7 +51,7 @@ class Piece {
     }
 }
 
-// TODO: Need to re-think how to store Piece translations.
+// TODO: Next step: Need to re-think how to store Piece translations.
 // Store each piece in its own 0,0,0-relative space, plus quat + translation?
 // Or store each piece as a set of cubes with already-transformed cubes,
 // relative to the Arrangement's origin?
@@ -168,7 +168,7 @@ class Arrangement {
 // ];
 
     collisions () {
-        // TODO Could be optimized in neatness and runspeed.
+        // LATER: Could be optimized in neatness and runspeed.
         var collisions = [];
 
         for (var pa = 0; pa < this.pieces.length; pa++) {
