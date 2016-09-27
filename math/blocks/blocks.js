@@ -28,6 +28,12 @@ class Piece {
         this.id = Util.default(id, 0);
     }
 
+    translate (vector) {
+        this.cubes = this.cubes.map(function (cube) {
+            return cube.plus(vector);
+        });
+    }
+
     rotate (otherQuat) {
         this.quaternion.add(otherQuat);
     }
