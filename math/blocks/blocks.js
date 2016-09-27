@@ -79,7 +79,7 @@ class Piece {
 
 // A set of rotated and positioned Pieces
 class Arrangement {
-    constructor (shapes) {
+    constructor (shapes, intendedSideLength) {
         // Shapes are 'dehydrated' templates from Shapes.js
         var id = 0;
         this.pieces = shapes.map(function (shape) {
@@ -91,6 +91,7 @@ class Arrangement {
                 id++
             );
         });
+        this.intendedSideLength = Util.default(intendedSideLength, 4);
     }
 
     ids () {
@@ -108,6 +109,17 @@ class Arrangement {
                 },
                 new BoundingBox()
             );
+    }
+
+    cubicVolume () {
+        return new BoundingBox(
+            new Coord(0, 0, 0),
+            new Coord(
+                this.intendedSideLength,
+                this.intendedSideLength,
+                this.intendedSideLength
+            )
+        );
     }
 
     add (newPiece) {
@@ -209,6 +221,14 @@ class Arrangement {
         }
 
         return collisions;
+    }
+
+    outOfBoundsCubes () {
+        var volume = this.cubicVolume();
+        return this.cubes()
+            .filter(function (cube) {
+                return ! volume.contains(cube);
+            });
     }
 
     valid () {
