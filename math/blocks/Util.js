@@ -21,6 +21,10 @@ Util.default = function (input, defaultValue) {
     }
 };
 
+Util.inRange = function (value, min, max) {
+    return min <= value && value < max;
+};
+
 Util.randomIntBetween = function (minInclusive, maxExclusive) {
     if (!minInclusive || !maxExclusive) {
         console.log('error: Util.randomIntBetween() called with missing parameters.');
