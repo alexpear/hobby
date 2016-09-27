@@ -215,12 +215,12 @@ class Arrangement {
 
 class BoundingBox {
     constructor (min, max) {
-        if (! min && ! max) {
-            this.min = new Coord(999, 999, 999);
-            this.max = new Coord(-999, -999, -999);
-        } else {
+        if (min || max) {
             this.min = min;
             this.max = max;
+        } else {
+            this.min = new Coord(999, 999, 999);
+            this.max = new Coord(-999, -999, -999);
         }
     }
 
