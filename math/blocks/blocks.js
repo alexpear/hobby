@@ -22,6 +22,7 @@ class Quaternion {
 class Piece {
     constructor (cubes, quaternion, id) {
         // Cubes are arrays like [z, y, x]. They represent 1x1x1 cubes.
+        // Coordinates are relative to the Arrangement's origin.
         this.cubes = Util.default(cubes, []);
         this.quaternion = Util.default(quaternion, new Quaternion());
         this.id = Util.default(id, 0);
@@ -50,11 +51,6 @@ class Piece {
         return new Arrangement([this]).toString();
     }
 }
-
-// TODO: Next step: Need to re-think how to store Piece translations.
-// Store each piece in its own 0,0,0-relative space, plus quat + translation?
-// Or store each piece as a set of cubes with already-transformed cubes,
-// relative to the Arrangement's origin?
 
 // A set of rotated and positioned Pieces
 class Arrangement {
