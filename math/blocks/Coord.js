@@ -43,6 +43,10 @@ module.exports = class Coord {
         );
     }
 
+    difference (other) {
+        return minus(other);
+    }
+
     distanceTo (other) {
         return Math.sqrt(
             Math.pow(this.x - other.x, 2) +
