@@ -56,17 +56,20 @@ class Piece {
     // The original version of this puzzle fits in a 4x4x4 volume.
     inVolume (sideLength) {
         sideLength = Util.default(sideLength, 4);
-        var volume = new BoundingBox(
-            new Coord(0, 0, 0),
-            new Coord(sideLength, sideLength, sideLength)
-        );
 
-        return this.getPositions().reduce(
-            function (allInside, cube) {
-                return allInside && volume.contains(cube);
-            },
-            true
-        );
+        var cubes = this.getPositions();
+        for (var i = 0; i < cubes.length; i++) {
+            var cube = cubes[i];
+            var okay = Util.inRange(cube.x(), 0, sideLength)
+                && Util.inRange(cube.y(), 0, sideLength)
+                && Util.inRange(cube.z(), 0, sideLength);
+
+            if (! okay) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     toString () {
