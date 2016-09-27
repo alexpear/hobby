@@ -53,6 +53,22 @@ class Piece {
             );
     }
 
+    // The original version of this puzzle fits in a 4x4x4 volume.
+    inVolume (sideLength) {
+        sideLength = Util.default(sideLength, 4);
+        var volume = new BoundingBox(
+            new Coord(0, 0, 0),
+            new Coord(sideLength, sideLength, sideLength)
+        );
+
+        return this.getPositions().reduce(
+            function (allInside, cube) {
+                return allInside && volume.contains(cube);
+            },
+            true
+        );
+    }
+
     toString () {
         return new Arrangement([this]).toString();
     }
@@ -233,6 +249,20 @@ class BoundingBox {
         return this
             .plusPoint(newBox.min)
             .plusPoint(newBox.max);
+    }
+
+    contains (coord) {
+        for (var d = 0; d < 3; d++) {
+            var min = this.min.getDim(d);
+            var c = c.getDim(d);
+            var max = this.max.getDim(d);
+
+            if (c < min || max < c) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     vector () {
