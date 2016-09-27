@@ -183,23 +183,89 @@ class Arrangement {
         }
     }
 
-// var EXAMPLE_GRIDS = [
-//     [
-//         [' ', ' ', ' '],
-//         [' ', ' ', ' '],
-//         [' ', ' ', ' ']
-//     ],
-//     [
-//         [' ', ' ', ' '],
-//         [' ', ' ', ' '],
-//         [' ', ' ', ' ']
-//     ],
-//     [
-//         [' ', ' ', ' '],
-//         [' ', ' ', ' '],
-//         [' ', ' ', ' ']
-//     ]
-// ];
+    // var EXAMPLE_GRIDS = [
+    //     [
+    //         [' ', ' ', ' '],
+    //         [' ', ' ', ' '],
+    //         [' ', ' ', ' ']
+    //     ],
+    //     [
+    //         [' ', ' ', ' '],
+    //         [' ', ' ', ' '],
+    //         [' ', ' ', ' ']
+    //     ],
+    //     [
+    //         [' ', ' ', ' '],
+    //         [' ', ' ', ' '],
+    //         [' ', ' ', ' ']
+    //     ]
+    // ];
+
+    cubes () {
+        return this.pieces
+            .reduce(
+                function (cubes, piece) {
+                    return cubes.concat(piece.cubes);
+                },
+                []
+            );
+    }
+
+    occupied (coord) {
+        for (var pi = 0; pi < this.pieces.length; pi++) {
+            var piece = this.pieces[pi];
+            for (var ci = 0; ci < piece.cubes.length; ci++) {
+                if (piece.cubes[ci].equals(coord)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    empties () {
+        var side = this.intendedSideLength;
+        var volume = this.cubicVolume();
+        var occupiedCells = cubeBuffer(side, false);
+
+        this.cubes().forEach(function (cube) {
+            if (volume.contains(cube)) {
+                occupiedCells[cube.x][cube.y][cube.z] = true;
+            }
+        });
+
+        var empties = [];
+        for (var x = 0; x < side; x++) {
+            for (var y = 0; y < side; y++) {
+                for (var z = 0; z < side; z++) {
+                    if (! occupiedCells[x][y][z]) {
+                        empties.push(new Coord(x, y, z));
+                    }
+                }
+            }
+        }
+
+        return empties;
+    }
+
+    cubeBuffer (sideLength, initValue) {
+        sideLength = Util.default(sideLength, this.intendedSideLength);
+        initValue = Util.default(initValue, false);
+
+        var buffer = [];
+        for (var x = 0; x < sideLength; x++) {
+            buffer.push([]);
+            for (var y = 0; y < sideLength; y++) {
+                buffer.push([]);
+                for (var z = 0; z < sideLength; z++) {
+                    buffer.push(initValue);
+                }
+            }
+        }
+
+        return buffer;
+    }
 
     collisions () {
         // LATER: Could be optimized in neatness and runspeed.
