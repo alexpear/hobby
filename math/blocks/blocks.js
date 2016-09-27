@@ -397,6 +397,9 @@ console.log(JSON.stringify(a, null, '    '));
 console.log('-------------------- v Arrangement.toString() v');
 console.log(a.toString());
 
+console.log('\n');
+console.log(a.collisions().length + ' collisions in a');
+
 console.log('-------------------- v a.boundingBox() v');
 var bb = a.boundingBox();
 console.log(JSON.stringify(bb, null, '    '));
