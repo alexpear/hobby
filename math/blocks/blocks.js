@@ -164,6 +164,7 @@ class Arrangement {
 
         return outString;
 
+        // LATER can functionize with cubeBuffer()
         function blankLayers () {
             var layers = [];
             var boxVector = arrangement.boundingBox().vector();
