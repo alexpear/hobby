@@ -410,4 +410,34 @@ console.log(JSON.stringify(bb, null, '    '));
 // If Quats get too weird, could probably express rotation as pair of rotations:
 // Point the Piece's axis in one of the 6 directions,
 // then rotate it 0-3 increments around that axis.
-// In other words, (0/1/2/3 around Z axis OR 1/3 around Y axis) THEN 0/1/2/3 around the now-moved X axis.
+// In other words,
+// ([0 or 1 or 2 or 3] around Z axis OR [1 or 3] around Y axis),
+// THEN ([0 or 1 or 2 or 3] around the now-moved X axis).
+
+/*
+What is my brute force alg?
+Naive:
+Add the pieces to the volume, tracking those present in a stack.
+
+or wait
+Random?
+Consider each piece's .cubes[0] to be its 'core'.
+Fit all 13 pieces' cores into the volume.
+Find a set of rotations that makes it work?
+Enumerate all positions and iterate?
+Evolve?
+Minimizing collisions or wasted space could work?
+Evolve by enumerating each arrangement-state as a string / genome?
+
+Evolving or rather greedy searching could work.
+Start with random state (all cores inside volume)
+Score the state via weighted sum:
+  collisions + out of bounds cubes + empty volume cells + random_hunch()
+Mutation is moving the core to a random empty cell, or random rotation
+Not exactly GA, more like annealing:
+  Each step, evaluate ~twelve mutations of a random piece
+  Also include the thirteenth option: No change
+  Choose the best of the 13 options
+  (note there is a small chance a bad option will be chosen,
+  to get out of local minima)
+*/
