@@ -299,7 +299,18 @@ class Arrangement {
     }
 
     valid () {
-        return this.collisions().length === 0;
+        return this.collisions().length === 0
+            && this.outOfBoundsCubes().length === 0;
+    }
+
+    badness (collisionCost, emptyCost, outOfBoundsCost) {
+        collisionCost   = Util.default(collisionCost,   1);
+        emptyCost       = Util.default(emptyCost,       1);
+        outOfBoundsCost = Util.default(outOfBoundsCost, 1);
+
+        return this.collisions().length * collisionCost
+            + this.empties().length * emptyCost
+            + this.outOfBoundsCubes().length * outOfBoundsCost;
     }
 }
 
