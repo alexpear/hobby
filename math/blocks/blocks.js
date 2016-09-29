@@ -457,7 +457,7 @@ Evolve by enumerating each arrangement-state as a string / genome?
 Evolving or rather greedy searching could work.
 Start with random state (all cores inside volume)
 Score the state via weighted sum:
-  collisions + out of bounds cubes + empty volume cells + random_hunch()
+  collisions + out of bounds cubes + empty volume cells - random_hunch()
 Mutation is moving the core to a random empty cell, or random rotation
 Not exactly GA, more like annealing:
   Each step, evaluate ~twelve mutations of a random piece
@@ -465,4 +465,24 @@ Not exactly GA, more like annealing:
   Choose the best of the 13 options
   (note there is a small chance a bad option will be chosen,
   to get out of local minima)
+
+Options for mutation
+  Always the same: the piece's core goes to a random empty cell,
+    and is given a random rotation
+  One of: just translation or just rotation
+    But do either of those correlate with useful operations?
+
+Maybe the core should be cubes[2] not cubes[0]
+  So that rotation is around a more central point (?)
+Am i certain a quat can summarize any rotational transformation?
+  Yes, right?
+
+Alternative to 12 trial mutations:
+  First consider one random mutation
+    Perhaps by making a copy of the Arrangement
+      that points to n-1 of the same Pieces and one new copied & moved Piece
+  If this lowers badness(), just adopt it right away and go back to top of loop
+  Else, try another mutation
+    Probably on the same Piece, not sure
+  After MAX (eg 12) attempted mutations, give up and make no change.
 */
