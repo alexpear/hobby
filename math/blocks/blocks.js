@@ -315,9 +315,16 @@ class Arrangement {
             });
     }
 
-    valid () {
-        return this.collisions().length === 0
-            && this.outOfBoundsCubes().length === 0;
+    tweak () {
+        var probationPiece = this.randomPiece();
+    }
+
+    randomPiece () {
+
+    }
+
+    mutate (targetPiece) {
+
     }
 
     badness (collisionCost, emptyCost, outOfBoundsCost) {
