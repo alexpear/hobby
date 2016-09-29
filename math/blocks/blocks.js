@@ -17,6 +17,10 @@ class Quaternion {
     add (otherQuat) {
         // TODO
     }
+
+    clone () {
+        return new Quaternion(this.vector.clone(), this.rotation);
+    }
 }
 
 class Piece {
@@ -74,6 +78,16 @@ class Piece {
 
     toString () {
         return new Arrangement([this]).toString();
+    }
+
+    clone () {
+        return new Piece(
+            this.cubes.map(function (origCube) {
+                return origCube.clone();
+            }),
+            this.quaternion.clone(),
+            this.id
+        );
     }
 }
 
@@ -368,6 +382,10 @@ class BoundingBox {
 
     vector () {
         return this.max.minus(this.min);
+    }
+
+    clone () {
+        return new BoundingBox(this.min.clone(), this.max.clone());
     }
 }
 

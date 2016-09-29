@@ -62,4 +62,8 @@ module.exports = class Coord {
     toString () {
         return '[' + this.x + ',' + this.y + ',' + this.z + ']';
     }
+
+    clone () {
+        return new Coord(this.x, this.y, this.z);
+    }
 };
