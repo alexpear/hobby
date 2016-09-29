@@ -218,14 +218,26 @@ class Arrangement {
     //     ]
     // ];
 
-    cubes () {
-        return this.pieces
-            .reduce(
-                function (cubes, piece) {
-                    return cubes.concat(piece.cubes);
-                },
-                []
-            );
+    tweak () {
+        var probationPiece = this.randomPiece();
+    }
+
+    randomPiece () {
+
+    }
+
+    mutate (targetPiece) {
+
+    }
+
+    badness (collisionCost, emptyCost, outOfBoundsCost) {
+        collisionCost   = Util.default(collisionCost,   1);
+        emptyCost       = Util.default(emptyCost,       1);
+        outOfBoundsCost = Util.default(outOfBoundsCost, 1);
+
+        return this.collisions().length * collisionCost
+            + this.empties().length * emptyCost
+            + this.outOfBoundsCubes().length * outOfBoundsCost;
     }
 
     occupied (coord) {
@@ -284,6 +296,16 @@ class Arrangement {
         return buffer;
     }
 
+    cubes () {
+        return this.pieces
+            .reduce(
+                function (cubes, piece) {
+                    return cubes.concat(piece.cubes);
+                },
+                []
+            );
+    }
+
     collisions () {
         // LATER: Could be optimized in neatness and runspeed.
         var collisions = [];
@@ -313,28 +335,6 @@ class Arrangement {
             .filter(function (cube) {
                 return ! volume.contains(cube);
             });
-    }
-
-    tweak () {
-        var probationPiece = this.randomPiece();
-    }
-
-    randomPiece () {
-
-    }
-
-    mutate (targetPiece) {
-
-    }
-
-    badness (collisionCost, emptyCost, outOfBoundsCost) {
-        collisionCost   = Util.default(collisionCost,   1);
-        emptyCost       = Util.default(emptyCost,       1);
-        outOfBoundsCost = Util.default(outOfBoundsCost, 1);
-
-        return this.collisions().length * collisionCost
-            + this.empties().length * emptyCost
-            + this.outOfBoundsCubes().length * outOfBoundsCost;
     }
 
     hunch () {
