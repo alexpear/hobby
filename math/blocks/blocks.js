@@ -9,7 +9,7 @@ var Shapes = require('./Shapes.js');
 var Util = require('./Util.js');
 
 var MAX_HUNCH = 3;
-var MOVES_TO_CONSIDER = 12;
+var ATTEMPTS_PER_PIECE = 12;
 
 class Quaternion {
     constructor (vector, rotation) {
@@ -218,8 +218,19 @@ class Arrangement {
     //     ]
     // ];
 
-    tweak () {
+    optimize () {
+        // while badness() > 0,
+        //     become this.findImprovement() somehow;
+        //     log progress
+    }
+
+    findImprovement () {
         var probationPiece = this.randomPiece();
+        var testArrangement = this.clone();
+        for (var attempt = 0; attempt < ATTEMPTS_PER_PIECE; attempt++) {
+            testArrangement.mutate(probationPiece);
+
+        }
     }
 
     randomPiece () {
