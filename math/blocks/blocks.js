@@ -8,6 +8,9 @@ var Coord = require('./Coord.js');
 var Shapes = require('./Shapes.js');
 var Util = require('./Util.js');
 
+var MAX_HUNCH = 3;
+var MOVES_TO_CONSIDER = 12;
+
 class Quaternion {
     constructor (vector, rotation) {
         this.vector = Util.default(vector, new Coord());
@@ -325,6 +328,10 @@ class Arrangement {
         return this.collisions().length * collisionCost
             + this.empties().length * emptyCost
             + this.outOfBoundsCubes().length * outOfBoundsCost;
+    }
+
+    hunch () {
+        return Math.random() * MAX_HUNCH;
     }
 }
 
