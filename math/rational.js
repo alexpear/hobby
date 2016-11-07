@@ -13,6 +13,14 @@ class Rational {
         return this.numerator / this.denomenator; 
     }
 
+    simplified () {
+
+    }
+
+    plus (other) {
+
+    }
+
     // TODO: mutators
 }
 
