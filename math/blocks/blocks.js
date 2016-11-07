@@ -248,7 +248,8 @@ class Arrangement {
 
         return this.collisions().length * collisionCost
             + this.empties().length * emptyCost
-            + this.outOfBoundsCubes().length * outOfBoundsCost;
+            + this.outOfBoundsCubes().length * outOfBoundsCost
+            - this.hunch();
     }
 
     occupied (coord) {
