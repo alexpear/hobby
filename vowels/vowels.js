@@ -71,7 +71,7 @@ function isYVowel(yIndex, str) {
     return true;
   }
 
-  // Tricky case. CYAN NYET UNYOKED NONYELLOW... Assume vowel.
+  // Tricky case. CYAN NYET UNYOKED NONYELLOW AMY... Assume vowel.
   else if (isCoreConsonant(prevChar)) {
     return true;
   }
