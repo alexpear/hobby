@@ -238,7 +238,8 @@ class Arrangement {
     }
 
     mutate (targetPiece) {
-
+        // Move to a random spot?
+        // But requires an official origin to know the official bounding coordinates
     }
 
     badness (collisionCost, emptyCost, outOfBoundsCost) {
