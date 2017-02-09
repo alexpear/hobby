@@ -1,7 +1,7 @@
-63 SMGs
+66 SMGs
 83 assault rifles
-85 battle rifles
-45 DMRs
+88 battle rifles
+51 DMRs
 39 shotguns
 1 sniper rifles
-22 heavy pistol
+25 heavy pistol
