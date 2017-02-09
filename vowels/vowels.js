@@ -58,8 +58,13 @@ false: [vowel] Y [vowel]
 false: Y [vowel]
 */
 function isYVowel(yIndex, str) {
-  var prevChar = str[yIndex - 1];
-  var nextChar = str[yIndex + 1];
+  var prevChar = str[yIndex - 1].toUpperCase();
+  var curChar = str[yIndex].toUpperCase();
+  var nextChar = str[yIndex + 1].toUpperCase();
+
+  if (curChar !== 'Y') {
+    return false;
+  }
 
   // Consonant Ys are always followed by AEIOU.
   if (! isCoreVowel(nextChar)) {
