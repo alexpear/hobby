@@ -122,6 +122,39 @@ function printVoweliciousWords () {
   });
 }
 
+function isVowel (i, string) {
+  var c = string[i].toUpperCase();
+  return isCoreVowel(c) || isYVowel(i, string);
+}
+
+function isConsonant (i, string) {
+  var c = string[i].toUpperCase();
+  return isCoreConsonant(c) || (c === 'Y' && ! isYVowel(i, string));
+}
+
+function vcPattern (string) {
+  var vcString = '';
+  for (var i = 0; i < string.length; i++) {
+    if (isConsonant(i, string)) {
+      vcString += 'C';
+    } else if (isVowel(i, string)) {
+      vcString += 'V';
+    } else {
+      vcString += ' ';
+    }
+  }
+
+  return vcString;
+}
+
+function syllableCount (inString) {
+  var string = inString.toUpperCase();
+  return vcPattern(string)
+    .split(/[C\s]/)
+    .length;
+}
+
+console.log(syllableCount('embarrassment'));
 
 
 
