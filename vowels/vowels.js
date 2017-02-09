@@ -105,20 +105,23 @@ function withVarietyDensityOver(strings, minVarietyDensity) {
   });
 }
 
+function printVoweliciousWords () {
+  var wordsPath = '/usr/share/dict/words';
+  fs.readFile(wordsPath, 'utf8', function (err, words) {
+    if (err) { return console.log(err); }
+    words = words.split('\n');
 
-// run
-var wordsPath = '/usr/share/dict/words';
-fs.readFile(wordsPath, 'utf8', function (err, words) {
-  if (err) { return console.log(err); }
-  words = words.split('\n');
+    var coolWords = withEnoughVowels(words, 6);
+    coolWords = coolWords.sort(function(a,b) { return b.length - a.length; });
 
-  var coolWords = withEnoughVowels(words, 6);
-  coolWords = coolWords.sort(function(a,b) { return b.length - a.length; });
+    coolWords.forEach(function(word) {
+      console.log(word);
+    });
 
-  coolWords.forEach(function(word) {
-    console.log(word);
+    console.log(coolWords.length);
   });
+}
 
-  console.log(coolWords.length);
-});
+
+
 
