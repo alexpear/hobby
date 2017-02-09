@@ -77,7 +77,7 @@ function isYVowel(yIndex, str) {
   }
 
   // In rare case of adjacent Ys, count both as vowels.
-  else if ('Y' == prevChar) {
+  else if ('Y' === prevChar) {
     return true;
   }
 
