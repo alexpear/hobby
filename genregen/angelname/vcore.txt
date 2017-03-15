@@ -1,7 +1,7 @@
-87 a
-63 e
+96 a
+81 e
 48 i
-27 o
-66 u
+30 o
+69 u
 
-51 {doublevowel}
+60 {doublevowel}

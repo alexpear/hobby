@@ -8,7 +8,7 @@
 13 cr
 12 cth
 
-39 d
+45 d
 5 dr
 1 dy
 
@@ -16,7 +16,7 @@
 5 fl
 9 fr
 
-15 g
+21 g
 3 gh
 2 gl
 5 gr
@@ -33,24 +33,24 @@
 30 m
 2 mn
 
-33 n
+36 n
 
 12 p
-67 ph
+82 ph
 13 pl
 7 pr
 
 1 q
-37 qu
+43 qu
 
-48 r
+51 r
 
 15 s
 14 sh
 8 sl
 
-18 t
-48 th
+21 t
+51 th
 1 tl
 8 tr
 
@@ -60,6 +60,6 @@
 4 wh
 7 wr
 
-30 x
+33 x
 21 y
-39 z
+42 z

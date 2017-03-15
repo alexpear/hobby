@@ -1,5 +1,5 @@
 2 aa
-15 ae
+18 ae
 2 ai
 2 au
 
@@ -11,12 +11,12 @@
 
 31 ia
 4 ie
-16 io
+19 io
 1 iu
 
 1 oa
 1 oe
-1 oi
+4 oi
 2 oo
 5 ou
 

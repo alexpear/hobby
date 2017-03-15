@@ -1,2 +1,2 @@
-301 {vcore}
-17 {vcore}{colorer}
+340 {vcore}
+20 {vcore}{colorer}
