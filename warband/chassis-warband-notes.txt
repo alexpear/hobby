@@ -1,0 +1,248 @@
+
+
+
+
+# allowed relationships between nodes
+# maybe assume each thing here is a node unless it ends in -category
+hierarchy:
+  - halo-category:
+    - unsc-force:
+      - marine-infantry:
+        # This is double-nesting. Do i want it flatter?
+        - marine:
+            min: 3
+            max: 20
+        - special-weapon-marine:
+            max: 2
+        - comms-marine:
+            max: 1
+        - officer:
+            max: 1
+      - transport-warthog-squad:
+        - transport-warthog
+        - marine:
+            min: 3
+            max: 5
+      - odst-infantry:
+        - odst:
+            min: 2
+            max: 15
+      - spartan-squad
+        - spartan:
+            min: 1
+            max: 6
+      - warthog:
+        - warthog
+        - marine:
+            min: 2
+            max: 3
+    - marine
+
+
+# Flatter version with comments separating sections
+hierarchy:
+  - halo-category:
+
+    # UNSC
+    # Warband nodes
+    - unsc-force:
+      - marine-infantry-squad
+      - transport-warthog-squad
+      - odst-infantry
+      - spartan-squad
+      - warthog
+    - oni-force:
+      - marine-infantry-squad
+      - odst-infantry-squad
+      - oni-wasp
+      - oni-warthog
+
+    # Squad nodes
+    - marine-infantry-squad:
+      - marine:
+          min: 3
+          max: 20
+      - special-weapon-marine:
+          max: 2
+      - comms-marine:
+          max: 1
+      - officer:
+          max: 1
+    - transport-warthog-squad:
+      - transport-warthog
+      - marine:
+          min: 3
+          max: 5
+    - odst-infantry:
+      - odst:
+          min: 2
+          max: 15
+    - spartan-squad:
+      - spartan:
+          min: 1
+          max: 6
+    - warthog:
+      - warthog
+      - marine:
+          min: 2
+          max: 3
+
+    # Individual nodes
+    - marine:
+      - unsc-armory-set
+    - odst:
+      - unsc-full-armory-set
+    - crewmate:
+      - pistol
+      - smg
+
+    # Covenant
+    # Warband nodes
+    - covenant-force:
+      - elite-lance
+      - brute-lance
+      - ghost
+
+    # Squad nodes
+    - elite-lance:
+      - elite
+          min: 1
+          max: 2
+      - grunt
+          min: 4
+          max: 14
+
+    # Individual nodes
+    - grunt: 
+      - plasma-pistol
+      - needler
+      - plasma-grenade
+    - grunt-major:
+      - plasma-pistol
+      - needler
+      - plasma-rifle
+      - plasma-grenade
+    - elite:
+      - plasma-pistol
+      - needler
+      - plasma-rifle
+      - plasma-grenade
+      - storm-rifle
+      - carbine
+      - beam-rifle
+      - focus-rifle
+      - covenant-armory-set
+
+    # ...
+
+    # Set definitions
+    - covenant-standard-small-arms-set
+      - plasma pistol
+      - needler
+      - plasma rifle
+
+
+Notes on hierarchy yaml
+* Tempting to make squadrons of vehicles, like 3 wasps, 5 mongeese, etc
+* However i think i will ignore that until later on the MRB path
+* 1 vehicle = 1 decision making unit is probably fine for the first draft of the simulation
+* 40k is like this (during the game)
+* Transport vehicles in 40k are more like 'templates' of squad-nodes: You pick the template and get 2 squad nodes: the infantry and the transport vehicle.
+* 40k does have vehicle squadrons for cheap light vehicles
+* But idk if i really _need_ mongoose squads to maintain squad coherency. They don't in the Halo games.
+* I think hyphen-style is more readable, but i think camelCase everywhere might be more consistent
+  * But will have to find a good way to write assaultRifleMA5B
+  * assaultRifleHeavy? assaultRifleRuggedized?
+* Maybe drop some hyphen bullets and just make those hashes. Can finalize that later.
+* i guess the hierarchy maybe isnt exhaustive: components that are built-in to the template might be implied.
+  * Example: A warthog might have a implied chaingun turret component.
+* i could also do namespacing just by having long ids/names
+  * halo-unsc-standard-small-arms-category
+  * halo-oni-comms-marine
+* See scifi-game-armygen for a randomTable stab at this same topic
+  * I dont go into details of mixed squads tho.
+  * Maybe i shouldnt for MRB. Wont affect gameplay much.
+  * Same with dedicated transports, disembarkings
+
+
+# namespaces and templates
+arsenal:
+  - halo-namespace:
+    - unsc-namespace:
+      - 
+
+arsenal:
+  - halo-category:
+    - unsc-category:
+      - 
+
+arsenal:
+  - halo-category:
+    - weaps-category:
+      - unsc-category:
+        - battleRifle
+        - assaultRifleMa5b
+
+arsenal:
+  - haloCategory:
+    - weapsCategory:
+      - unscCategory:
+        - battleRifle
+        - assaultRifleMa5b
+
+arsenal:
+  - halo-category:
+    - weaps-category:
+      - unsc-category:
+
+        # Individual Nodes
+        marine:
+          template: human
+          components:
+            - unscBasicTraining
+
+        # Item Nodes
+        battle-rifle:
+          tags:
+            - firearm
+          size: 2          
+        assault-rifle-ma5b:
+          tags:
+            - firearm
+
+
+
+
+
+
+
+
+
+
+armyTemplates:
+  - components:
+    - Requiem Veteran Infantry:
+        components:
+          - type: multiple
+            quantity: 5
+            copySet:
+              - chassis: human
+                components:
+                  - chassis: battleRifle # Would prefer namespacing, eg unsc/weaps/battleRifle
+                    components:
+                      - morphSight
+                      - kineticBolts
+                  - unscInfantryTraining
+                  - flakArmor
+                  - pulseGrenade
+
+exampleNodes:
+  - chassisName
+  - chassis: chassisName
+  - chassis: chassisName
+    components:
+      - chassis2Name
+  - type: multiple
+    quantity: 2
+    copySet:
+      - chassisName
