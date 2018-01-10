@@ -1,0 +1,110 @@
+{
+    "armyTemplates": [
+        {
+            "squads": [
+                {
+                    "name": "Requiem Veteran Infantry",
+                    "individuals": [
+                        {
+                            "type": "multiple",
+                            "quantity": 5,
+                            "copySet": [
+                                {
+                                    "chassis": {
+                                        "id": "human"
+                                        // Type: individual
+                                    },
+                                    // These components props are useful for 'if' statements, but i could consider them optional in input files.
+                                    "components": [ // This could just be a array of id strings
+                                        {
+                                            "chassis": {
+                                                // ... or maybe these represent pointers to template instances.
+                                                // Technically not a circular reference, just a shared reference.
+                                                "id": "unscInfantryTraining" // Camel case so can be easily used as keys?
+                                                // Type: experience
+                                            },
+                                            "components": []
+                                        },
+                                        {
+                                            "chassis": {
+                                                "id": "flakArmor"
+                                                // Type: item, wearable, armor
+                                            },
+                                            "components": []
+                                        },
+                                        {
+                                            "chassis": {
+                                                "id": "battleRifle" // Possibly more specific or variants or something
+                                                // Type: item, weapon
+                                            },
+                                            "components": [
+                                                {
+                                                    "chassis": {
+                                                        "id": "kineticBolts"
+                                                        // Type: weaponMod
+                                                    },
+                                                    "components": []
+                                                },
+                                                {
+                                                    "chassis": {
+                                                        "id": "morphSight"
+                                                        // Type: weaponMod
+                                                    },
+                                                    "components": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "chassis": {
+                                                "id": "pulseGrenade"
+                                                // Type: item, weapon
+                                            },
+                                            "components": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        // This ^ is the expanded version, which is how this v might look after being loaded into memory.
+        // Compact, human-data-entry version of the above:
+        {
+            "squads": [
+                {
+                    "name": "Requiem Veteran Infantry",
+                    "individuals": [
+                        {
+                            "type": "multiple",
+                            "quantity": 5,
+                            "copySet": [
+                                {
+                                    "chassis": "human",
+                                    "components": [
+                                        {
+                                            "chassis": "battleRifle",
+                                            "components": [
+                                                "morphSight",
+                                                "kineticBolts"
+                                            ]
+                                        },
+                                        "unscInfantryTraining",
+                                        "flakArmor",
+                                        "pulseGrenade"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+                                    // All nodes are entered here as either:
+                                    // * A full node, with chassis and components props
+                                    // * Just a string, representing a unmodified chassis with no component nodes
+                                    // * Or a multiple node

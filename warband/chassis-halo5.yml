@@ -1,0 +1,65 @@
+armyTemplates:
+  - components:
+    - Requiem Veteran Infantry:
+        components:
+          - type: multiple
+            quantity: 5
+            copySet:
+              - chassis: human
+                components:
+                  - chassis: battleRifle # Would prefer namespacing, eg unsc/weaps/battleRifle
+                    components:
+                      - morphSight
+                      - kineticBolts
+                  - unscInfantryTraining
+                  - flakArmor
+                  - pulseGrenade
+
+exampleNodes:
+  - chassisName
+  - chassis: chassisName
+  - chassis: chassisName
+    components:
+      - chassis2Name
+  - type: multiple
+    quantity: 2
+    copySet:
+      - chassisName
+
+# Could also add less game-relevant stuff like color, sprite, etc
+Noble Team:
+  components:
+    - name: Carter
+      template: spartan # a template includes a chassis (eg human) and some components (eg mjolnirArmor, training, etc)
+      components:
+        - battleRifle
+        - rankCaptain
+    # I suppose we could always use the template keyword in these files instead of chassis...
+    - name: Kat
+      template: spartan
+      components:
+        - chassis: heavyPistol
+          components:
+            - scope2x
+        - prostheticArm
+        - skillNetworkSecurity
+    - name: Jorge
+      template: spartan
+      components:
+        - chainGun
+        - bioModSpartan2
+    - name: Jun
+      template: spartan
+      components:
+        - sniperRifle
+        - vegetationCamoCape
+    - name: Emile
+      template: spartan
+      components:
+        - shotgun
+        - combatKnife
+    - name: Noble-6
+      template: spartan
+      components:
+        - smg
+        - hologram
