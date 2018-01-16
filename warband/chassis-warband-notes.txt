@@ -1,6 +1,36 @@
 
 
 
+notes:
+- i know omitting 40k's army list restrictions (troops, elites, fast attack) can lead to cheese (homogenous) warbands. 
+- But if i do implement this clash of clans model that might mitigate it.
+- ie you have to post a defense warband to a region and have it hold out (with ressurections between battles) against several unknown Attack Warbands. You can't anticipate your foes.
+- Also i think the ability to field 6 Wasps is flavorful and sim-ish in a cool way.
+- I am however tempted to put a maximum on the number of squads per 500 points, etc. I like the idea of being able to field a 3-person infiltration squad, but i dont want to see 99 marines in 33 squads, if that doesnt fit the story.
+
+
+
+yaml syntax wishlist:
+- Shorthand for a commonly-repeated set of items in a hierarchy (like armories)
+- Shorthand for variant templates and templates with common elements. Something like subclasses or inheritance.
+- Syntax in hierarchies for slots. 'One of the following', 'n of the following', etc:
+  - Maybe a field componentRequirements: 'slots'
+- Syntax in hierarchies for homogenous individuals. Like a multi node with a flexible quantity:
+  marineSquad:
+    template: squadNode
+    min: 3
+    max: 20
+    components:
+      - marine:
+          special: homogenous
+      - officer:
+          max: 1
+      - specialWeaponMarine:
+          max: 2
+
+
+
+
 
 # allowed relationships between nodes
 # maybe assume each thing here is a node unless it ends in -category
@@ -132,6 +162,20 @@ hierarchy:
       - beam-rifle
       - focus-rifle
       - covenant-armory-set
+    - jackal:
+      - plasma-pistol
+      - needler
+      - plasma-rifle
+      - brute-plasma-rifle
+      - jackal-shield
+      - carbine
+      - storm-rifle
+      - spiker
+      - mauler
+      - boltshot
+      - pistol
+      - beam-rifle
+      - focus-rifle
 
     # ...
 
