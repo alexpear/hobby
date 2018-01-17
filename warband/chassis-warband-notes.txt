@@ -6,7 +6,11 @@ notes:
 - But if i do implement this clash of clans model that might mitigate it.
 - ie you have to post a defense warband to a region and have it hold out (with ressurections between battles) against several unknown Attack Warbands. You can't anticipate your foes.
 - Also i think the ability to field 6 Wasps is flavorful and sim-ish in a cool way.
-- I am however tempted to put a maximum on the number of squads per 500 points, etc. I like the idea of being able to field a 3-person infiltration squad, but i dont want to see 99 marines in 33 squads, if that doesnt fit the story.
+- I am however tempted to put a maximum on the number of squads per 500 points, etc. I like the idea of being able to field a 3-person infiltration squad, but i dont want to see 99 marines in 33 squads, if that doesnt fit the story:
+  - A alternate solution to that problem would be to make small squads impractical for numbers-tactics, ideally in whichever way they are impractical in story:
+    - Maybe it weakens morale
+    - Maybe it makes them too unwieldy to command quickly
+    - Maybe there is some overhead per-squad
 
 
 
@@ -27,6 +31,12 @@ yaml syntax wishlist:
           max: 1
       - specialWeaponMarine:
           max: 2
+- Syntax for namespaces:
+  - i would like to be able to call the squad node for a squad representing a warthog 'warthog' in the yaml.
+  - i would also like to call the node for the individual 'warthog'
+  - When it is ambigious, i would like to be able to say squads/warthog or individuals/warthog or something.
+  - i would ideally like to just specify one tag or namespace, not all of them (halo/unsc/templates/individuals/warthog is inferior to halo/warthog if the halo category is the part that distinguishes it locally).
+  - As a mrb short term solution, i could just make the names long, like warthogSquad...
 
 
 
