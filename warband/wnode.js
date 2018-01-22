@@ -25,6 +25,7 @@ class WNode {
 
     static jsonToWNodes(json) {
         // Later: Convert top-levels and each element in each components array to a WNode.
+        // TODO try inputting the output of exampleJsonExpandedWithoutStats()
     }
 }
 
@@ -67,6 +68,7 @@ const NODES = {
         }
     },
     halo: {
+        // Later: The unsc namespace might be redundant here.
         unsc: {
             // Squads
 
@@ -126,6 +128,20 @@ const NODES = {
                 blast: 10,
                 effectType: 'explosive'
             }
+        },
+        forerunner: {
+            pulseGrenade: {
+                name: 'Pulse Grenade',
+                size: 0,
+                durability: 10,
+                type: 'grenade',
+                damage: 20,
+                blast: 10,
+                effectType: 'hardlight',
+                special: {
+                    duration: 2
+                }
+            }
         }
     }
 }
@@ -157,7 +173,7 @@ function exampleJsonExpandedWithoutStats() {
                 },
                 NODES.halo.unsc.dogTags,
                 NODES.halo.unsc.flakArmor,
-                NODES.halo.unsc.fragGrenade
+                NODES.halo.forerunner.pulseGrenade
             ]
         }
     }
