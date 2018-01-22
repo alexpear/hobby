@@ -12,6 +12,24 @@ notes:
     - Maybe it makes them too unwieldy to command quickly
     - Maybe there is some overhead per-squad
 
+Future scenario ideas:
+- Tip of the Spear battles (Reach)
+- Pillar of Autumn 
+  - Grid of narrow corridors mostly
+- Halo (H1 level)
+- Two Betrayals:
+  - Requires casualty tracking because of interaction with Flood pods (Halo 3 style)
+  - Requires more than 2 factions (small UNSC presence too)
+- Keyes (level)
+- Blood Gulch BTB inspired battles
+- New Mombasa Metropolis Scarab vs Scorpions battle
+- 4-faction Quarantine Zone battles
+- Gravemind (level) battle of champions in the gardens of High Charity
+- High Charity 3-faction battle with Flood
+- Uprising land battle between Elite and Brute champions
+- The Storm (H3) with Scarab, anti-air tower, and longsword aircraft trying to get past
+- The Ark (H3) desert battle outside the Cartographer, with tanks and Scarab
+- The Covenant (H3) snow battle against 2 Scarabs, with light Flood presence
 
 
 yaml syntax wishlist:
