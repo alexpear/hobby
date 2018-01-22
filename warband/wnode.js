@@ -1,61 +1,6 @@
 'use strict';
 
-
-
-/*
-properties
-.name
-.type
-.chassis or .template maybe
-.size
-.durability
-.components
-*/
-
-
-class WNode {
-    constructor(template, name) {
-        this.name = name || 'Unknown';
-
-        // Later: Safety checks, logging
-        if (template) {
-            Object.assign(this, template);
-        }
-    }
-
-    static jsonToWNodes(json) {
-        // Later: Convert top-levels and each element in each components array to a WNode.
-        // TODO try inputting the output of exampleJsonExpandedWithoutStats()
-    }
-}
-
-function exampleJsonFromTerseFile() {
-    return {
-        'Requiem Veteran Infantry': {
-            components: {
-                type: multiple,
-                quantity: 5,
-                copySet: [
-                    {
-                        template: 'marine',  // Later: Namespace as 'halo/unsc/marine' or something
-                        components: [
-                            {
-                                template: 'battleRifle',
-                                components: [
-                                    'morphSight',
-                                    'kineticBolts'
-                                ]
-                            },
-                            'pulseGrenade'
-                        ]
-                        // TODO finish this func
-                    }
-                ]
-            }
-        }
-    }
-}
-
+const MAX_DURABILITY = 9999999999;
 // Later this object might be defined by and read in from a Arsenal file.
 const NODES = {
     general: {
@@ -65,6 +10,12 @@ const NODES = {
             durability: 10,
             speed: 10,
             decisions: true
+        },
+        squad: {
+            name: 'Squad',
+            size: 0,
+            durability: MAX_DURABILITY,
+            type: 'abstract'
         }
     },
     halo: {
@@ -73,6 +24,15 @@ const NODES = {
             // Squads
 
             // Individuals
+            marine: {
+                name: 'Marine',
+                template: 'human',
+                components: [
+                    'dogTags',
+                    'flakArmor'
+                    // 'pistol'
+                ]
+            },
 
             // Items
             battleRifle: {
@@ -129,7 +89,12 @@ const NODES = {
                 effectType: 'explosive'
             }
         },
+        covenant: {
+
+        },
         forerunner: {
+
+            // Items
             pulseGrenade: {
                 name: 'Pulse Grenade',
                 size: 0,
@@ -144,6 +109,166 @@ const NODES = {
             }
         }
     }
+};
+
+class WNode {
+    constructor(template, name) {
+        // Later: Safety checks, logging
+        this.components = [];
+
+        if (template) {
+            // Adopt each property of the template.
+            Object.assign(this, template);
+            // this.components = template.components.map(templateComponent => new WNode(templateComponent));
+            this.components = nodesFromTerseArray(template.components);
+        }
+
+        if (name) {
+            this.name = name;
+        }
+    }
+
+    static jsonToWNodes(jsoNode) {
+        // Later: Convert top-levels and each element in each components array to a WNode.
+
+        // For now, we require this func's input to represent a root node.
+        // Later, this can be a parser that is more flexible about its input.
+
+    }
+
+    deepCopy() {
+        let clone = new WNode();
+        Object.assign(clone, this);
+
+        clone.components = this.components.map(component => component.deepCopy());
+        return clone;
+    }
+
+    toString() {
+        return JSON.stringify(this, undefined, '    ');
+    }
+}
+
+function testJsonReading() {
+    const nodeTree = exampleNodesFromTerseJson();
+    const stringified = nodeTree.toString();
+    console.log('\n testJsonReading() sees ' + stringified);
+}
+
+// run test
+testJsonReading();
+
+
+
+function exampleNodesFromTerseJson() {
+    // This is a little hardcoded and example-y
+    const jso = exampleJsonFromTerseFile();
+    const squadName = 'Requiem Veteran Infantry';
+    const rootJso = jso[squadName];
+    const rootNode = new WNode(NODES.general.squad, squadName);
+    if (rootJso.components) {
+        rootNode.components = nodesFromTerseArray(rootJso.components);
+    }
+
+    return rootNode;
+}
+
+function nodesFromTerseArray(terseArray) {
+    if (!terseArray || !terseArray.length) {
+        return [];
+    }
+
+    return terseArray.reduce(
+        (
+            (componentNodes, jsoComponent) =>
+                // TODO There is a bug somewhere where a string is being put into concat()
+                // instead of a array.
+                componentNodes.concat(
+                    nodesFromTerseJsonIterator(jsoComponent)
+                )
+        ),
+        []
+    );
+}
+
+// Returns a array (because type-multiple nodes require this).
+function nodesFromTerseJsonIterator(jso) {
+    if (jso.type === 'multiple') {
+        let nodes = [];
+        for (let i = 0; i < jso.quantity; i++) {
+            const newNodes = nodesFromTerseArray(jso.copySet);
+            nodes = nodes.concat(newNodes);
+        }
+
+        return nodes;
+    }
+    else if (jso.template || jso.chassis) {
+        const templateInput = findTemplate(jso.template || jso.chassis);
+        let localRootNode = new WNode(templateInput, jso.name);
+
+        if (jso.components) {
+            const childComponents = nodesFromTerseArray(jso.components);
+            localRootNode.components = localRootNode.components.concat(childComponents);
+        }
+
+        return localRootNode;
+    }
+    else if (typeof jso === 'string') {
+        const template = findTemplate(jso);
+        return [
+            new WNode(template)
+        ];
+    }
+    else {
+        // Later: Logging func
+        console.log('ERROR in nodesFromTerseJsonIterator(): could not read node: ' + JSON.stringify(jso));
+    }
+}
+
+function findTemplate(templateUri) {
+    // Later: Devise and implement simple search syntax
+    // Later: We are currently conflating templates of multiple nodes (eg marine)
+    // and and templates of 1 node (eg human).
+    const template = NODES.general[templateUri] ||
+        NODES.halo.unsc[templateUri] ||
+        NODES.halo.covenant[templateUri] ||
+        NODES.halo.forerunner[templateUri];
+
+    if (!template) {
+        console.log('ERROR Template not found in findTemplate(): ' + templateUri);
+        return NODES.general.human;
+    }
+
+    return template;
+}
+
+function exampleJsonFromTerseFile() {
+    return {
+        'Requiem Veteran Infantry': {
+            components: [
+                {
+                    type: 'multiple',
+                    quantity: 3,
+                    copySet: [
+                        {
+                            // TODO store this in NODES somewhere.
+                            template: 'marine',  // Later: Namespace as 'halo/unsc/marine' or something
+                            components: [
+                                {
+                                    template: 'battleRifle',
+                                    components: [
+                                        'morphSight',
+                                        'kineticBolts'
+                                    ]
+                                },
+                                'pulseGrenade'
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    };
 }
 
 // Note: this intermediate might not actually appear in the real flow
@@ -175,6 +300,6 @@ function exampleJsonExpandedWithoutStats() {
                 NODES.halo.unsc.flakArmor,
                 NODES.halo.forerunner.pulseGrenade
             ]
-        }
+        };
     }
 }
