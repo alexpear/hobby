@@ -56,25 +56,25 @@ function exampleJsonFromTerseFile() {
 }
 
 // Later this object might be defined by and read in from a Arsenal file.
-// Later: Standardize CONSTANTS_STYLE vs camelCaseStyle
 const NODES = {
-    GENERAL: {
-        HUMAN: {
-            name: 'human',
+    general: {
+        human: {
+            name: 'Human',
             size: 10,
             durability: 10,
             speed: 10,
             decisions: true
         }
     },
-    HALO: {
-        UNSC: {
+    halo: {
+        unsc: {
             // Squads
 
             // Individuals
 
             // Items
-            BATTLE_RIFLE: {
+            battleRifle: {
+                // later during parsing, maybe 'name' can be implied as a simple camel case to caps conversion.
                 name: 'Battle Rifle',
                 size: 2,
                 durability: 20,
@@ -84,7 +84,7 @@ const NODES = {
                 damage: 10,
                 effectType: 'bullet'
             },
-            KINETIC_BOLTS: {
+            kineticBolts: {
                 name: 'Kinetic Bolts',
                 size: 0,
                 durability: 20,
@@ -93,7 +93,7 @@ const NODES = {
                     effectType: 'hardlight'
                 }
             },
-            MORPH_SIGHT: {
+            morphSight: {
                 name: 'Morph Sight',
                 size: 0,
                 durability: 20,
@@ -101,7 +101,7 @@ const NODES = {
                     accuracy: 0.1
                 }
             },
-            DOG_TAGS: {
+            dogTags: {
                 name: 'Dog Tags',
                 size: 0,
                 durability: 20,
@@ -109,7 +109,7 @@ const NODES = {
                     cqc: 5
                 }
             },
-            FLAK_ARMOR: {
+            flakArmor: {
                 name: 'Flak Armor',
                 size: 5,
                 durability: 15,
@@ -117,7 +117,7 @@ const NODES = {
                     durability: 10
                 }
             },
-            FRAG_GRENADE: {
+            fragGrenade: {
                 name: 'Frag Grenade',
                 size: 0,
                 durability: 10,
@@ -146,18 +146,18 @@ function exampleJsonExpandedWithoutStats() {
 
     function makeExampleMarine() {
         return {
-            chassis: NODES.GENERAL.HUMAN,
+            chassis: NODES.general.human,
             components: [
                 {
-                    chassis: NODES.HALO.UNSC.BATTLE_RIFLE,
+                    chassis: NODES.halo.unsc.battleRifle,
                     components: [
-                        NODES.HALO.UNSC.MORPH_SIGHT,
-                        NODES.HALO.UNSC.KINETIC_BOLTS
+                        NODES.halo.unsc.morphSight,
+                        NODES.halo.unsc.kineticBolts
                     ]
                 },
-                NODES.HALO.UNSC.DOG_TAGS,
-                NODES.HALO.UNSC.FLAK_ARMOR,
-                NODES.HALO.UNSC.FRAG_GRENADE
+                NODES.halo.unsc.dogTags,
+                NODES.halo.unsc.flakArmor,
+                NODES.halo.unsc.fragGrenade
             ]
         }
     }
