@@ -12,7 +12,7 @@ class Replay {
         this.armies = []; // ArmyTemplate instances
         this.terrainGrid = [[]]; // Terrain instances
         this.steps = []; // Step instances
-        // NOTE: I have not yet decided whether deployment is random or what. 
+        // NOTE: I have not yet decided whether deployment is random or what.
         // MRB: Defenders have fortifications, attackers positioned as if they just arrived.
     }
 
