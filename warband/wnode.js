@@ -1,5 +1,8 @@
 'use strict';
 
+const json2yaml = require('json2yaml');
+
+
 const MAX_DURABILITY = 9999999999;
 // Later this object might be defined by and read in from a Arsenal file.
 const NODES = {
@@ -147,11 +150,15 @@ class WNode {
     toString() {
         return JSON.stringify(this, undefined, '    ');
     }
+
+    toYaml() {
+        return json2yaml.stringify(this);
+    }
 }
 
 function testJsonReading() {
     const nodeTree = exampleNodesFromTerseJson();
-    const stringified = nodeTree.toString();
+    const stringified = nodeTree.toYaml();
     console.log('\n testJsonReading() sees ' + stringified);
 }
 
