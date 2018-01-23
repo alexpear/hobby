@@ -118,7 +118,10 @@ const NODES = {
 class WNode {
     constructor(template, name) {
         // Later: Safety checks, logging
-        this.components = [];
+
+        if (name) {
+            this.name = name;
+        }
 
         if (template) {
             // Adopt each property of the template.
@@ -126,9 +129,8 @@ class WNode {
             // this.components = template.components.map(templateComponent => new WNode(templateComponent));
             this.components = nodesFromTerseArray(template.components);
         }
-
-        if (name) {
-            this.name = name;
+        else {
+            this.components = [];
         }
     }
 
