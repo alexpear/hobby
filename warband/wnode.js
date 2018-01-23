@@ -4,6 +4,7 @@ const json2yaml = require('json2yaml');
 
 
 const MAX_DURABILITY = 9999999999;
+
 // Later this object might be defined by and read in from a Arsenal file.
 const NODES = {
     general: {
@@ -162,11 +163,12 @@ function testJsonReading() {
     console.log('\n testJsonReading() sees ' + stringified);
 }
 
+
 // run test
 testJsonReading();
 
 
-
+// Later: Reorder functions more intuitively
 function exampleNodesFromTerseJson() {
     // This is a little hardcoded and example-y
     const jso = exampleJsonFromTerseFile();
