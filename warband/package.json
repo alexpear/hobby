@@ -1,0 +1,26 @@
+{
+  "name": "warband",
+  "version": "0.1.0",
+  "description": "Warband Chassis Waffle game",
+  "main": "replay.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexpear/hobby.git"
+  },
+  "keywords": [
+    "game",
+    "procedural",
+    "wargame",
+    "2d",
+    "engine"
+  ],
+  "author": "alexpear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexpear/hobby/issues"
+  },
+  "homepage": "https://github.com/alexpear/hobby#readme"
+}
