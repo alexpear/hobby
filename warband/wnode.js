@@ -8,14 +8,14 @@ const MAX_DURABILITY = 9999999999;
 const NODES = {
     general: {
         human: {
-            name: 'Human',
+            templateName: 'Human',
             size: 10,
             durability: 10,
             speed: 10,
             decisions: true
         },
         squad: {
-            name: 'Squad',
+            templateName: 'Squad',
             size: 0,
             durability: MAX_DURABILITY,
             type: 'abstract'
@@ -28,7 +28,7 @@ const NODES = {
 
             // Individuals
             marine: {
-                name: 'Marine',
+                templateName: 'Marine',
                 template: 'human',
                 components: [
                     'dogTags',
@@ -40,7 +40,7 @@ const NODES = {
             // Items
             battleRifle: {
                 // later during parsing, maybe 'name' can be implied as a simple camel case to caps conversion.
-                name: 'Battle Rifle',
+                templateName: 'Battle Rifle',
                 size: 2,
                 durability: 20,
                 type: 'gun',
@@ -50,7 +50,7 @@ const NODES = {
                 effectType: 'bullet'
             },
             kineticBolts: {
-                name: 'Kinetic Bolts',
+                templateName: 'Kinetic Bolts',
                 size: 0,
                 durability: 20,
                 modification: {
@@ -59,7 +59,7 @@ const NODES = {
                 }
             },
             morphSight: {
-                name: 'Morph Sight',
+                templateName: 'Morph Sight',
                 size: 0,
                 durability: 20,
                 modification: {
@@ -67,7 +67,7 @@ const NODES = {
                 }
             },
             dogTags: {
-                name: 'Dog Tags',
+                templateName: 'Dog Tags',
                 size: 0,
                 durability: 20,
                 modification: {
@@ -75,7 +75,7 @@ const NODES = {
                 }
             },
             flakArmor: {
-                name: 'Flak Armor',
+                templateName: 'Flak Armor',
                 size: 5,
                 durability: 15,
                 modification: {
@@ -83,7 +83,7 @@ const NODES = {
                 }
             },
             fragGrenade: {
-                name: 'Frag Grenade',
+                templateName: 'Frag Grenade',
                 size: 0,
                 durability: 10,
                 type: 'grenade',
@@ -99,7 +99,7 @@ const NODES = {
 
             // Items
             pulseGrenade: {
-                name: 'Pulse Grenade',
+                templateName: 'Pulse Grenade',
                 size: 0,
                 durability: 10,
                 type: 'grenade',
