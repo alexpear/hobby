@@ -125,8 +125,9 @@ class WNode {
 
         if (template) {
             // Adopt each property of the template.
+            // Later: I would like leaf nodes to involve either pointers to templates
+            // or WNodes created based on the modifications described in the templates.
             Object.assign(this, template);
-            // this.components = template.components.map(templateComponent => new WNode(templateComponent));
             this.components = nodesFromTerseArray(template.components);
         }
         else {
