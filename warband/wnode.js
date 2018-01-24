@@ -40,7 +40,7 @@ const NODES = {
 
             // Items
             battleRifle: {
-                // later during parsing, maybe 'name' can be implied as a simple camel case to caps conversion.
+                // later during parsing, maybe 'templateName' can be implied as a simple camel case to caps conversion.
                 templateName: 'Battle Rifle',
                 size: 2,
                 durability: 20,
@@ -193,8 +193,6 @@ function nodesFromTerseArray(terseArray) {
     return terseArray.reduce(
         (
             (componentNodes, jsoComponent) =>
-                // TODO There is a bug somewhere where a string is being put into concat()
-                // instead of a array.
                 componentNodes.concat(
                     nodesFromTerseJsonIterator(jsoComponent)
                 )
@@ -263,7 +261,6 @@ function exampleJsonFromTerseFile() {
                     quantity: 3,
                     copySet: [
                         {
-                            // TODO store this in NODES somewhere.
                             template: 'marine',  // Later: Namespace as 'halo/unsc/marine' or something
                             components: [
                                 {
