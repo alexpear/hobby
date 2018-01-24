@@ -135,14 +135,6 @@ class WNode {
         }
     }
 
-    static jsonToWNodes(jsoNode) {
-        // Later: Convert top-levels and each element in each components array to a WNode.
-
-        // For now, we require this func's input to represent a root node.
-        // Later, this can be a parser that is more flexible about its input.
-
-    }
-
     deepCopy() {
         let clone = new WNode();
         Object.assign(clone, this);
