@@ -53,6 +53,32 @@ class WNode {
         }
     }
 
+    receiveModifications() {
+        for (let component of this.components) {
+            component.receiveModifications();
+
+            const mod = component.modification;
+            if (! mod) {
+                continue;
+            }
+
+            for (const tweakedProp in mod) {
+                if (
+                    Util.exists(this[tweakedProp]) &&
+                    Util.isNumber(this[tweakedProp]) &&
+                    Util.isNumber(mod[tweakedProp])
+                ) {
+                    this[tweakedProp] += mod[tweakedProp];
+                }
+                else {
+                    this[tweakedProp] = mod[tweakedProp];
+                }
+            }
+
+            delete component.modification;
+        }
+    }
+
     deepCopy() {
         let clone = new WNode();
         Object.assign(clone, this);
@@ -91,6 +117,8 @@ function exampleNodesFromTerseJson() {
     if (rootJso.components) {
         rootNode.components = nodesFromTerseArray(rootJso.components);
     }
+
+    rootNode.receiveModifications();
 
     return rootNode;
 }
