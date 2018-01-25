@@ -114,8 +114,9 @@ function exampleNodesFromTerseJson() {
     const squadName = 'Requiem Veteran Infantry';
     const rootJso = jso[squadName];
     const rootNode = new WNode(NODES.general.squad, squadName);
-    if (rootJso.components) {
-        rootNode.components = nodesFromTerseArray(rootJso.components);
+    const terseComponents = rootJso.components;
+    if (terseComponents) {
+        rootNode.components = nodesFromTerseArray(terseComponents);
     }
 
     rootNode.receiveModifications();
