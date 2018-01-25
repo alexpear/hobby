@@ -4,7 +4,7 @@ const fs = require('fs');
 // const Util = require('util.js');
 const Yaml = require('js-yaml');
 
-const NODES = Yaml.safeLoad(fs.readFileSync('./arsenal.yml', 'utf8'));
+const ARSENAL = Yaml.safeLoad(fs.readFileSync('./arsenal.yml', 'utf8'));
 
 const MAX_DURABILITY = 9999999999;
 
@@ -113,7 +113,7 @@ function exampleNodesFromTerseJson() {
     const jso = exampleJsonFromTerseFile();
     const squadName = 'Requiem Veteran Infantry';
     const rootJso = jso[squadName];
-    const rootNode = new WNode(NODES.general.squad, squadName);
+    const rootNode = new WNode(ARSENAL.general.squad, squadName);
     const terseComponents = rootJso.components;
     if (terseComponents) {
         rootNode.components = nodesFromTerseArray(terseComponents);
@@ -178,14 +178,14 @@ function findTemplate(templateUri) {
     // Later: Devise and implement simple search syntax
     // Later: We are currently conflating templates of multiple nodes (eg marine)
     // and and templates of 1 node (eg human).
-    const template = NODES.general[templateUri] ||
-        NODES.halo.unsc[templateUri] ||
-        NODES.halo.covenant[templateUri] ||
-        NODES.halo.forerunner[templateUri];
+    const template = ARSENAL.general[templateUri] ||
+        ARSENAL.halo.unsc[templateUri] ||
+        ARSENAL.halo.covenant[templateUri] ||
+        ARSENAL.halo.forerunner[templateUri];
 
     if (!template) {
         console.log('ERROR Template not found in findTemplate(): ' + templateUri);
-        return NODES.general.human;
+        return ARSENAL.general.human;
     }
 
     return template;
@@ -235,18 +235,18 @@ function exampleJsonExpandedWithoutStats() {
 
     function makeExampleMarine() {
         return {
-            chassis: NODES.general.human,
+            chassis: ARSENAL.general.human,
             components: [
                 {
-                    chassis: NODES.halo.unsc.battleRifle,
+                    chassis: ARSENAL.halo.unsc.battleRifle,
                     components: [
-                        NODES.halo.unsc.morphSight,
-                        NODES.halo.unsc.kineticBolts
+                        ARSENAL.halo.unsc.morphSight,
+                        ARSENAL.halo.unsc.kineticBolts
                     ]
                 },
-                NODES.halo.unsc.dogTags,
-                NODES.halo.unsc.flakArmor,
-                NODES.halo.forerunner.pulseGrenade
+                ARSENAL.halo.unsc.dogTags,
+                ARSENAL.halo.unsc.flakArmor,
+                ARSENAL.halo.forerunner.pulseGrenade
             ]
         };
     }
