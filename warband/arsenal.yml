@@ -1,0 +1,75 @@
+---
+  general: 
+    human: 
+      templateName: "Human"
+      size: 10
+      durability: 10
+      speed: 10
+      decisions: true
+    squad: 
+      templateName: "Squad"
+      size: 0
+      durability: 9999999999
+      type: "abstract"
+  halo: 
+    unsc: 
+      marine: 
+        templateName: "Marine"
+        template: "human"
+        components: 
+          - "dogTags"
+          - "flakArmor"
+      battleRifle: 
+        templateName: "Battle Rifle"
+        size: 2
+        durability: 20
+        type: "gun"
+        shots: 1
+        accuracy: 0.5
+        damage: 10
+        effectType: "bullet"
+      kineticBolts: 
+        templateName: "Kinetic Bolts"
+        size: 0
+        durability: 20
+        modification: 
+          damage: 3
+          effectType: "hardlight"
+      morphSight: 
+        templateName: "Morph Sight"
+        size: 0
+        durability: 20
+        modification: 
+          accuracy: 0.1
+      dogTags: 
+        templateName: "Dog Tags"
+        size: 0
+        durability: 20
+        modification: 
+          cqc: 5
+      flakArmor: 
+        templateName: "Flak Armor"
+        size: 5
+        durability: 15
+        modification: 
+          durability: 10
+      fragGrenade: 
+        templateName: "Frag Grenade"
+        size: 0
+        durability: 10
+        type: "grenade"
+        damage: 20
+        blast: 10
+        effectType: "explosive"
+    covenant: {}
+    forerunner: 
+      pulseGrenade: 
+        templateName: "Pulse Grenade"
+        size: 0
+        durability: 10
+        type: "grenade"
+        damage: 20
+        blast: 10
+        effectType: "hardlight"
+        special: 
+          duration: 2

@@ -1,119 +1,14 @@
 'use strict';
 
-const json2yaml = require('json2yaml');
+const fs = require('fs');
+// const Util = require('util.js');
+const Yaml = require('js-yaml');
 
+const NODES = Yaml.safeLoad(fs.readFileSync('./arsenal.yml', 'utf8'));
 
 const MAX_DURABILITY = 9999999999;
 
-// Later this object might be defined by and read in from a Arsenal file.
-const NODES = {
-    general: {
-        human: {
-            templateName: 'Human',
-            size: 10,
-            durability: 10,
-            speed: 10,
-            decisions: true
-        },
-        squad: {
-            templateName: 'Squad',
-            size: 0,
-            durability: MAX_DURABILITY,
-            type: 'abstract'
-        }
-    },
-    halo: {
-        // Later: The unsc namespace might be redundant here.
-        unsc: {
-            // Squads
 
-            // Individuals
-            marine: {
-                templateName: 'Marine',
-                template: 'human',
-                components: [
-                    'dogTags',
-                    'flakArmor'
-                    // 'pistol'
-                ]
-            },
-
-            // Items
-            battleRifle: {
-                // later during parsing, maybe 'templateName' can be implied as a simple camel case to caps conversion.
-                templateName: 'Battle Rifle',
-                size: 2,
-                durability: 20,
-                type: 'gun',
-                shots: 1,
-                accuracy: 0.5,
-                damage: 10,
-                effectType: 'bullet'
-            },
-            kineticBolts: {
-                templateName: 'Kinetic Bolts',
-                size: 0,
-                durability: 20,
-                modification: {
-                    damage: 3,
-                    effectType: 'hardlight'
-                }
-            },
-            morphSight: {
-                templateName: 'Morph Sight',
-                size: 0,
-                durability: 20,
-                modification: {
-                    accuracy: 0.1
-                }
-            },
-            dogTags: {
-                templateName: 'Dog Tags',
-                size: 0,
-                durability: 20,
-                modification: {
-                    cqc: 5
-                }
-            },
-            flakArmor: {
-                templateName: 'Flak Armor',
-                size: 5,
-                durability: 15,
-                modification: {
-                    durability: 10
-                }
-            },
-            fragGrenade: {
-                templateName: 'Frag Grenade',
-                size: 0,
-                durability: 10,
-                type: 'grenade',
-                damage: 20,
-                blast: 10,
-                effectType: 'explosive'
-            }
-        },
-        covenant: {
-
-        },
-        forerunner: {
-
-            // Items
-            pulseGrenade: {
-                templateName: 'Pulse Grenade',
-                size: 0,
-                durability: 10,
-                type: 'grenade',
-                damage: 20,
-                blast: 10,
-                effectType: 'hardlight',
-                special: {
-                    duration: 2
-                }
-            }
-        }
-    }
-};
 
 class WNode {
     constructor(template, name) {
@@ -148,7 +43,7 @@ class WNode {
     }
 
     toYaml() {
-        return json2yaml.stringify(this);
+        return Yaml.dump(this);
     }
 }
 
