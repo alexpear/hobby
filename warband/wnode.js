@@ -1,37 +1,12 @@
 'use strict';
 
 const fs = require('fs');
-// const Util = require('util.js');
+const Util = require('./util.js');
 const Yaml = require('js-yaml');
 
 const ARSENAL = Yaml.safeLoad(fs.readFileSync('./arsenal.yml', 'utf8'));
 
 const MAX_DURABILITY = 9999999999;
-
-// Later move to own file
-class Util {
-    static exists (x) {
-        return x !== undefined &&
-            x !== null &&
-            x !== [];
-    }
-
-    static isNumber (x) {
-        return typeof x === 'number';
-    }
-
-    static stringify (x) {
-        return JSON.stringify(
-            x,
-            undefined,
-            '    '
-        );
-    }
-
-    // static sum (array) {}
-
-    // static log (foo) {}
-}
 
 class WNode {
     constructor(template, name) {
