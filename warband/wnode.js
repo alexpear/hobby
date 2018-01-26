@@ -144,8 +144,11 @@ function nodesFromTerseJsonIterator(jso) {
         ];
     }
     else {
-        // Later: Logging func
-        console.log('ERROR in nodesFromTerseJsonIterator(): could not read node: ' + JSON.stringify(jso));
+        Util.logError({
+            context: 'nodesFromTerseJsonIterator()',
+            error: 'could not read node',
+            jsoNode: jso
+        });
     }
 }
 
@@ -159,7 +162,10 @@ function findTemplate(templateUri) {
         ARSENAL.halo.forerunner[templateUri];
 
     if (!template) {
-        console.log('ERROR Template not found in findTemplate(): ' + templateUri);
+        Util.logError({
+            error: 'Template not found in findTemplate()',
+            templateUri: templateUri
+        });
         return ARSENAL.general.human;
     }
 

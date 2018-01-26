@@ -1,5 +1,7 @@
 'use strict';
 
+const moment = require('moment');
+
 module.exports = class Util {
     static exists (x) {
         return x !== undefined &&
@@ -9,6 +11,10 @@ module.exports = class Util {
 
     static isNumber (x) {
         return typeof x === 'number';
+    }
+
+    static isString (x) {
+        return typeof x === 'string';
     }
 
     static stringify (x) {
@@ -21,5 +27,13 @@ module.exports = class Util {
 
     // static sum (array) {}
 
-    // static log (foo) {}
+    static logError (input) {
+        const dateTime = moment().format('YYYY MMM D hh:mm:ss.S');
+        const info = Util.isString(input) ?
+            input :
+            Util.stringify(input);
+
+        // Later: Red text
+        console.log(`  ERROR (${ dateTime }) ${ info }\n`);
+    }
 };
