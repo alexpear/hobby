@@ -2,42 +2,47 @@
 
 const moment = require('moment');
 
-module.exports = class Util {
-    static exists (x) {
-        return x !== undefined &&
-            x !== null &&
-            x !== [];
-    }
+let Util = module.exports;
 
-    static isNumber (x) {
-        return typeof x === 'number';
-    }
+Util.exists = function (x) {
+    return x !== undefined &&
+        x !== null &&
+        x !== [];
+};
 
-    static isString (x) {
-        return typeof x === 'string';
-    }
+Util.isNumber = function (x) {
+    return typeof x === 'number';
+};
 
-    static stringify (x) {
-        return JSON.stringify(
-            x,
-            undefined,
-            '    '
-        );
-    }
+Util.isString = function (x) {
+    return typeof x === 'string';
+};
 
-    // static sum (array) {}
+Util.stringify = function (x) {
+    return JSON.stringify(
+        x,
+        undefined,
+        '    '
+    );
+};
 
-    static log (input, tag) {
-        const dateTime = moment().format('YYYY MMM D hh:mm:ss.S');
-        const info = Util.isString(input) ?
-            input :
-            Util.stringify(input);
+Util.colored = function (str, color) {
+    const BALANCE = '\e[0m';
+    const COLORFORM = '\e[34m';
+};
 
-        // Later: Red error and beacon text
-        console.log(`  ${tag} (${ dateTime }) ${ info }\n`);
-    }
+// Util.sum = function (array) {}
 
-    static logError (input) {
-        Util.log(input, 'ERROR');
-    }
+Util.log = function (input, tag) {
+    const dateTime = moment().format('YYYY MMM D hh:mm:ss.S');
+    const info = Util.isString(input) ?
+        input :
+        Util.stringify(input);
+
+    // Later: Red error and beacon text
+    console.log(`  ${tag} (${ dateTime }) ${ info }\n`);
+};
+
+Util.logError = function (input) {
+    Util.log(input, 'ERROR');
 };
