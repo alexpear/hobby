@@ -27,13 +27,17 @@ module.exports = class Util {
 
     // static sum (array) {}
 
-    static logError (input) {
+    static log (input, tag) {
         const dateTime = moment().format('YYYY MMM D hh:mm:ss.S');
         const info = Util.isString(input) ?
             input :
             Util.stringify(input);
 
-        // Later: Red text
-        console.log(`  ERROR (${ dateTime }) ${ info }\n`);
+        // Later: Red error and beacon text
+        console.log(`  ${tag} (${ dateTime }) ${ info }\n`);
+    }
+
+    static logError (input) {
+        Util.log(input, 'ERROR');
     }
 };
