@@ -34,21 +34,33 @@ Util.COLORS = {
     blue: '\x1b[1;37;44m',
     purple: '\x1b[1;37;45m',
     grey: '\x1b[1;30;47m',
-    black: '\x1b[1;37;40m'
+    black: '\x1b[1;37;40m',
+    balance: '\x1b[0m'
 };
 
 Util.colored = function (str, color) {
-    const BALANCE = '\x1b[0m';
     const colorStart = Util.COLORS[color] || Util.COLORS.purple;
-    return colorStart + str + BALANCE;
+    return colorStart + str + Util.COLORS.balance;
 };
 
 // Util.sum = function (array) {}
 
+Util.LOG_LEVELS = {
+    error: true,
+    warn: true,
+    beacon: true,
+    event: true,
+    debug: true,
+    noisy: true
+};
+
 Util.log = function (input, tag) {
     const TAG_COLORS = {
         error: 'red',
-        beacon: 'yellow'
+        warn: 'yellow',
+        beacon: 'purple',
+        event: 'blue'
+        // Omitted: noisy, debug
     };
 
     const tagColor = TAG_COLORS[tag.toLowerCase()];
@@ -66,6 +78,38 @@ Util.log = function (input, tag) {
     console.log(`  ${tagStr} (${ dateTime }) ${ info }\n`);
 };
 
+Util.logDebug = function (input) {
+    if (Util.LOG_LEVELS.debug) {
+        Util.log(input, 'debug');
+    }
+};
+
+Util.logEvent = function (input) {
+    if (Util.LOG_LEVELS.event) {
+        Util.log(input, 'event');
+    }
+};
+
+Util.logNoisy = function (input) {
+    if (Util.LOG_LEVELS.noisy) {
+        Util.log(input, 'noisy');
+    }
+};
+
+Util.logWarn = function (input) {
+    if (Util.LOG_LEVELS.warn) {
+        Util.log(input, 'warn');
+    }
+};
+
 Util.logError = function (input) {
-    Util.log(input, 'ERROR');
+    if (Util.LOG_LEVELS.error) {
+        Util.log(input, 'ERROR');
+    }
+};
+
+Util.logBeacon = function (input) {
+    if (Util.LOG_LEVELS.beacon) {
+        Util.log(input, 'BEACON');
+    }
 };
