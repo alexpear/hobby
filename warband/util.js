@@ -7,7 +7,9 @@ let Util = module.exports;
 Util.exists = function (x) {
     return x !== undefined &&
         x !== null &&
-        x !== [];
+        x !== NaN &&
+        x !== '';
+        // x !== [];
 };
 
 Util.isNumber = function (x) {
