@@ -13,23 +13,81 @@ notes:
     - Maybe there is some overhead per-squad
 
 
-scenarios:
+haloScenarios:
 - forerunnerFloodWarGroundBattle:
     notes:
     - Requires casualty tracking because of interaction with Flood pods (Halo 3 style)
     - Requires tagging nodes (or individuals at least) as either biological (ie potential flood vector) vs mechanical (eg vehicles, Prometheans) (vs Hunters, Johnson etc)
 - tipOfTheSpearReach:
     factions:
-    - unsc
-    - covenant
+    - unsc:
+        squads:
+        - elephant
+        - warthogWithKatAndNoble6
+        - falconWithJorge
+        # Alt: just include all 'nobleTeam' on foot, for fun
+        - warthog:
+            multi: 30
+        - warthogGauss:
+            multi: 10
+        - warthogRocket:
+            multi: 10
+        - falcon:
+            multi: 20
+        - scorpion:
+            multi: 20
+        - frigate:
+            multi: 3
+        - aiDot
+    - covenant:
+        squads:
+#        - x2:
+#          - scarab
+#        - x10:
+#          - wraith
+#        - x15:
+#          - banshee
+
+        - scarab:
+            multi: 2
+        - aaTower:
+            multi: 2
+        - wraith:
+            multi: 10
+        - banshee:
+            multi: 20
+        - ghost:
+            multi: 20
+        - lance:
+            multi: 20
+        - zealots
     notes:
     - Would be very cool to model a large grid with 30 Scorpions, 5 Scarabs, Longswords, Phantoms, 50 Warthogs, etc
+
 - pillarOfAutumnH1:
     notes:
     - Grid of narrow corridors mostly
 - haloLifeboats
 - silentCartographerH1
 - guiltySparkH1:
+    factions:
+    - covenant:
+        squads:
+        - jackals:
+            multi: 3
+        - lance:
+            multi: 5
+    - unsc:
+        squads:
+        - masterChief
+        - keyesSquad
+        - marines:
+            multi: 5
+        - marinesShotguns
+    - flood:
+        squads:
+        - pods:
+            multi: 5
     notes:
     - Maybe starts before the Flood are unleashed, and they might never be. Might just be a unsc vs cov skirmish.
     - Dynamic: a risk of unleashing or feeding a 3rd Flood faction
@@ -84,6 +142,20 @@ scenarios:
     - Also Warzone Assault inspired
     - Theme around Spartan War Games simulations
 - awakeningTheNightmareHW2
+
+starWarsScenarios:
+- geonosisArenaEp2
+- geonosisRetreatEp2
+- scarifR1
+- hothEp5
+
+warhammer40kScenarios:
+- CadianDefense
+- eldarRaid
+- fallOfUltramar
+- necronsAwakening
+- tauCrusade
+
 
 
 yaml syntax wishlist:
