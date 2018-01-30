@@ -156,6 +156,36 @@ warhammer40kScenarios:
 - necronsAwakening
 - tauCrusade
 
+sunlightScenarios:
+- academyArmies
+
+
+haloRandomDropshipContents:
+- phantom or spirit dropship:
+  - Categorize as Vehicle, Small, and Large squads:
+    - S takes up half the hold's volume
+    - empty, S, SS, L, V, VS, VSS, VL
+    - Alternately, disallow L and call that just 2 Ss.
+    - Phantom can hold 0-1 vehicle (up to 2 ghosts) and 0-2 squads
+  - wraiths:
+    - various types (ultra, AA)
+    - various crew (elites, brutes, grunt gunner)
+  - 1 to 2 ghosts:
+    - various types and drivers
+  - spectre, prowler, revenant, chopper
+  - locust i guess
+  - lances (S or L):
+    - leader can be elite, brute, grunt officer, jackal officer
+  - heavy weapons grunts
+  - ranger squad
+  - jackal patrol:
+    - leader can be jackal, elite, brute
+  - hunter pair (S) plus something else
+  - elite squad:
+    - conventional, rangers, stealth, spec ops, command, zealot, honor guard, vip
+  - brute squad:
+    - can include chieftain
+  - drone swarm (S or L)
 
 
 yaml syntax wishlist:
