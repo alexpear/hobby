@@ -39,8 +39,11 @@ class Squad {
     }
 
     quantity () {
-        // Later, exclude casualties
-        return this.components.length;
+        const remainingComponents = this.components.filter(
+            c => c.status !== WNode.Status.JUNKED
+        );
+
+        return remainingComponents ? remainingComponents.length : 0;
     }
 
     shoot (target) {
