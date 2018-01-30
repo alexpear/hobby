@@ -69,13 +69,23 @@ class Squad {
       - const shotDifficulty = (considerCover(squadArea, terrain) + individual.getAccuracy()) / (100 * (distance(shooter, target) + 1));
       - // Where random() is in the range 0 to 1
       - return random() < shotDifficulty;
+      - // Disadvantage of the above: High accuracy and squadArea can push the chance over 1.
+      - // Could try a more sigmoid style:
+        - squadArea * accuracy / (squadArea * accuracy + distance + 1)
+        - Or something
+        - In terms of d this is still:
+          - f(d) = 1/d
+        - But in terms of squadArea and accuracy (saa) this is a diminishing returns or logoid func.
+          - f(saa) = saa / (saa + k)
+        - So saa provides diminishing returns.
 
     - A hit does damage if:
-      - const damageDiff = shot.damage - victim.durability; // Can be negative, zero, or positive.
+      - const damageDiff = shot.damage - victim.durability + getDamageModifier(); // Can be negative, zero, or positive.
       - const SCALING = 0.5; // Or something, to make the probabilities feel right
       - const exponentiated = Math.pow(2, SCALING * damageDiff);
       - // quasi sigmoid probability curve between 0 and 1.
       - const damageChance = exponentiated / (exponentiated + 1);
-      - random() < damageChance
+      - return random() < damageChance;
+    - Damage for now means the individual (victim) is converted from a combatant to a casualty.
     */
 }
