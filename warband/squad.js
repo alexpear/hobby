@@ -1,5 +1,6 @@
 'use strict';
 
+// Todo: const foo = require('./foo.js'); etc
 
 
 // opts
@@ -21,7 +22,23 @@
 // when a transport vehicle drops off its passengers.
 
 class Squad {
-    
+    constructor (coord) {
+        this.components = [];
+        // this.coord = new Coord(0,0);
+
+        // Later these will be assigned by Replay.
+        // Later a team can have more than one ascii color value
+        this.asciiSprite = '?';
+    }
+
+    quantity () {
+        // Later, exclude casualties
+        return this.components.length;
+    }
+
+    shoot (target) {
+
+    }
 
     /*
     Shooting outline
@@ -88,4 +105,15 @@ class Squad {
       - return random() < damageChance;
     - Damage for now means the individual (victim) is converted from a combatant to a casualty.
     */
+
+    static exampleMarines () {
+        let sq = new Squad();
+        const squadNode = WNode.exampleNodesFromTerseJson();
+
+        // For now, discard the squadNode and take its components.
+        sq.components = squadNode.components;
+
+
+        return sq;
+    }
 }
