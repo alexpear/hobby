@@ -5,6 +5,12 @@
 
 // opts
 // - class Squad extends class WNode
+//   - Could still have fancy methods...
+//   - Would have to be informal inheritance (JS).
+//   - Maybe Squad lacks the 'class Squad {...}' syntax
+//   - Instead let Squad = module.exports = {...}; ie a object.
+//   - Squad.new() instead of a constructor. It contains 'return new WNode('squad');'
+//   - or Squad.make(), Squad.makeSquad(), Squad.construct() etc
 // - class Squad wraps a WNode which represents a squad
 // - class Squad wraps a array of WNode individuals
 //   - In this system all WNodes are corporeal objects
@@ -28,6 +34,7 @@ class Squad {
 
         // Later these will be assigned by Replay.
         // Later a team can have more than one ascii color value
+        // (eg blue and green vs red and orange)
         this.asciiSprite = '?';
     }
 

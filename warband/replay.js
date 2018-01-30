@@ -42,7 +42,9 @@ class Replay {
         // MRB: Defenders have fortifications, attackers positioned as if they just arrived.
     }
 
-
+    // Later add a event history. Any node can declare a event has happened and tag it.
+    // This gets saved in a array in the Replay and can be accessed centrally.
+    // This permits 'Whenever a human dies, vampires get a bonus' effects.
 }
 
 
