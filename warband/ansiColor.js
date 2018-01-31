@@ -35,7 +35,7 @@ AnsiColor.startTag4Bit = function (textCode, backgroundCode, brightnessCode) {
     return tag + 'm';
 };
 
-AnsiColor.startTag8Bit = function (backgroundCode, foregroundCode) {
+AnsiColor.startTag8Bit = function (foregroundCode, backgroundCode) {
     if (foregroundCode === undefined) {
         // foregroundCode = backgroundCode % 32 < 16 ?
         //     15:
@@ -53,6 +53,11 @@ AnsiColor.textWithColor = function (text, colorTag, balanceNeeded) {
     return balanceNeeded === false ?
         output :
         output + AnsiColor.BALANCE;
+};
+
+AnsiColor.textWith8BitColor = function (text, foregroundCode, backgroundCode) {
+    const tag = AnsiColor.startTag8Bit(foregroundCode, backgroundCode);
+    return AnsiColor.textWithColor(text, tag, true);
 };
 
 // 8 bit
@@ -319,8 +324,8 @@ AnsiColor.FOREGROUND_FOR_BACKGROUND = {
 AnsiColor.manyColorTests = function () {
     let tags = [];
     for (let bg = 0; bg < 256; bg++) {
-        let blackWord = AnsiColor.textWithColor(bg + ', 0', AnsiColor.startTag8Bit(bg, 0));
-        let whiteWord = AnsiColor.textWithColor(bg + ',15', AnsiColor.startTag8Bit(bg, 15));
+        let blackWord = AnsiColor.textWithColor(bg + ', 0', AnsiColor.startTag8Bit(0, bg));
+        let whiteWord = AnsiColor.textWithColor(bg + ',15', AnsiColor.startTag8Bit(15, bg));
 
         tags.push(blackWord + ' ' + whiteWord);
     }
@@ -334,8 +339,8 @@ AnsiColor.manyColorDemo = function () {
         let demoWord = AnsiColor.textWithColor(
             bg,
             AnsiColor.startTag8Bit(
-                bg,
-                AnsiColor.FOREGROUND_FOR_BACKGROUND[bg]
+                AnsiColor.FOREGROUND_FOR_BACKGROUND[bg],
+                bg
             )
         );
 
@@ -343,6 +348,16 @@ AnsiColor.manyColorDemo = function () {
     }
 
     console.log(tags.join('\n'));
-}
+};
 
-AnsiColor.manyColorDemo();
+AnsiColor.blackBackgroundTest = function() {
+    let words = [];
+    for (let fg = 0; fg < 256; fg++) {
+        words.push(AnsiColor.textWith8BitColor(` ${fg} `, fg, 0));
+    }
+
+    console.log(words.join('\n'));
+};
+
+AnsiColor.blackBackgroundTest();
+// AnsiColor.manyColorDemo();
