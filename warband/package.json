@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/alexpear/hobby#readme",
   "dependencies": {
+    "chalk": "^2.3.0",
     "fs": "0.0.1-security",
     "js-yaml": "^3.10.0",
     "moment": "^2.20.1"
