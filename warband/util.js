@@ -1,5 +1,6 @@
 'use strict';
 
+const chalk = require('chalk');
 const moment = require('moment');
 
 let Util = module.exports;
@@ -66,6 +67,7 @@ Util.log = function (input, tag) {
         // Omitted: noisy, debug
     };
 
+    tag = tag || 'event';
     const tagColor = TAG_COLORS[tag.toLowerCase()];
     const tagStr = tagColor ?
         Util.colored(tag.toUpperCase(), tagColor) :

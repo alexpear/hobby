@@ -41,7 +41,7 @@ unactivated Squads than it does.
 class Replay {
     constructor() {
         // TODO These are dummy initializations. Generate and/or parameterize.
-        this.armies = []; // ArmyTemplate instances
+        this.armyTemplates = []; // ArmyTemplate instances
         this.terrainGrid = [[]]; // Terrain instances
         this.steps = []; // Step instances
         // NOTE: I have not yet decided whether deployment is random or what.
