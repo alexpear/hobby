@@ -42,6 +42,8 @@ module.exports = class GameState {
 
         // Later, consider adding 40k restriction about being tempted to choose closest enemy target
 
+        const squadArea = targetSquad.squadArea();
+
         /*
         Shooting outline
         - <trimmed>

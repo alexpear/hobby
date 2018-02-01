@@ -46,6 +46,15 @@ class Squad {
         return remainingComponents ? remainingComponents.length : 0;
     }
 
+    squadArea (terrain) {
+        const effectiveSizes = this.components.map(
+            component => component.getEffectiveSize(terrain)
+        );
+
+        return Util.sum(effectiveSizes);
+    }
+
+
     static exampleMarines () {
         let sq = new Squad();
         const squadNode = WNode.exampleNodesFromTerseJson();
