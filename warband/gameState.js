@@ -30,7 +30,13 @@ module.exports = class GameState {
     }
 
     this.terrainAt(coord) {
-        return this.terrainGrid[coord.x][coord.y];
+        return this.inBounds(coord) ?
+            this.terrainGrid[ coord.x ][ coord.y ] :
+            undefined;
+    }
+
+    inBounds (coord) {
+        return Util.inBox(coord, new Coord(0, 0), new Coord(xMax, yMax));
     }
 
     los (aCoord, bCoord) {

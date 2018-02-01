@@ -76,6 +76,19 @@ Util.sum = function (array) {
     );
 };
 
+Util.inBox = function (input, minCoord, maxCoord) {
+    const coordInQuestion = input.x && input.y ?
+        input :
+        input.coord;
+
+    if (! coordInQuestion) {
+        Util.logError('Util.inBox() called with mysterious input');
+        return;
+    }
+
+    return coordInQuestion.inBox(minCoord, maxCoord);
+};
+
 Util.LOG_LEVELS = {
     error: true,
     warn: true,

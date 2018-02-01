@@ -46,6 +46,11 @@ module.exports = class Coord {
         return 0.9 < distance && distance < 1.5;
     }
 
+    inBox (minCoord, maxCoord) {
+        return minCoord.x <= this.x && this.x <= maxCoord.x &&
+            minCoord.y <= this.y && this.y <= maxCoord.y;
+    }
+
     toString () {
         return '(' + this.x + ',' + this.y + ')';
     }
