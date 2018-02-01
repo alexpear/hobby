@@ -1,7 +1,6 @@
 'use strict';
 
-// Todo: const foo = require('./foo.js'); etc
-
+const Coord = require('./coord.js');
 
 // opts
 // - class Squad extends class WNode
@@ -30,7 +29,7 @@
 class Squad {
     constructor (coord) {
         this.components = [];
-        // this.coord = new Coord(0,0);
+        this.coord = coord || new Coord(0, 0);
 
         // Later these will be assigned by Replay.
         // Later a team can have more than one ascii color value
