@@ -14,7 +14,8 @@ However, it should be possible to make later variants in which
 some of the automated decisions are made by a human player instead.
 - The atomic playing piece is the Squad. Each faction has n Squads.
 - At the start of each round, all squads on both sides are not yet activated.
-- Each faction has a ArmyCommander. For now it is a bot but it could be a player in future.
+- Each faction has a ArmyCommander. A concept, not a game piece.
+  - For now it is a bot but it could be a player in future.
 - Alternating turns.
 - On its turn, a ArmyCommander chooses one of its Squads that is not yet activated
 and activates it.
@@ -29,6 +30,11 @@ unactivated Squads than it does.
     - eg move to a preset optimal range from enemy Squads
     - and attack the closest target that seems likely to take substantial damage.
 - The squad's action is performed and saved in the Replay along with its stochastic result.
+  - Most squads can only move a short distance (1 to 2 squares) per activation.
+  - However aircraft might be able to move 6 or more.
+  - This could cause distortion and leapfrogging. Later we will probably have to
+    introduce opportunity attacks or reaction/overwatch fire to handle that.
+    Wouldnt want a flyer to be able to jump over anti-air squads without consequence.
 - Once the last squad has activated, the round is over and all squads are set to unactivated again.
 */
 

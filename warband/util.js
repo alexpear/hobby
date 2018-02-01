@@ -57,6 +57,7 @@ Util.LOG_LEVELS = {
 };
 
 Util.log = function (input, tag) {
+    // TODO: Use chalk functions instead.
     const TAG_COLORS = {
         error: 'red',
         warn: 'yellow',
