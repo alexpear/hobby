@@ -48,7 +48,7 @@ class Squad {
 
     squadArea (terrain) {
         const effectiveSizes = this.components.map(
-            component => component.getEffectiveSize(terrain)
+            component => component.effectiveSize(terrain)
         );
 
         return Util.sum(effectiveSizes);

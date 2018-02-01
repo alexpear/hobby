@@ -66,7 +66,7 @@ let WNode = class WNode {
         return clone;
     }
 
-    getEffectiveSize (terrain) {
+    effectiveSize (terrain) {
         // Ex: A human has size 10. Sparse forest has a cover value of 0.1 (scale from 0 to 1).
         // The terrainModifier will be 0.9. The humans effective size will be 9.
         const size = this.size || 0;
