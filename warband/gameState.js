@@ -57,7 +57,7 @@ module.exports = class GameState {
 
     shoot (shootingSquad, targetSquad) {
         if (! this.canShoot(shootingSquad, targetSquad)) {
-            Util.log('shoot() was called while canShoot() was false', 'error');
+            Util.logError('shoot() was called while canShoot() was false');
             return;
         }
 

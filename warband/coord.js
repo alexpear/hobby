@@ -57,7 +57,7 @@ module.exports = class Coord {
 
     static random (xCount, yCount) {
         if (!xCount || !yCount) {
-            Util.log('Coord.random() called without arguments', 'error');
+            Util.logError('Coord.random() called without arguments');
             return new Coord(-1, -1);
             // TODO throw exception, make supervisor reboot, et cetera.
         }
