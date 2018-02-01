@@ -19,12 +19,26 @@ Util.default = function (input, defaultValue) {
         defaultValue;
 };
 
+Util.array = function (x) {
+    return Util.isArray(x) ?
+        x :
+        [x];
+};
+
 Util.isNumber = function (x) {
     return typeof x === 'number';
 };
 
 Util.isString = function (x) {
     return typeof x === 'string';
+};
+
+Util.isArray = function (x) {
+    // Later make this more sophisticated, or use a library.
+    return x &&
+        typeof x.length === 'number' &&
+        x.length >= 0 &&
+        (x.length === 0 || x[0] !== undefined);
 };
 
 Util.stringify = function (x) {
@@ -52,7 +66,15 @@ Util.colored = function (str, color) {
     return colorStart + str + Util.COLORS.balance;
 };
 
-// Util.sum = function (array) {}
+Util.sum = function (array) {
+    return Util.array(array).reduce(
+        (sumSoFar, element) => {
+            const n = Number(element) || 0;
+            return sumSoFar + n;
+        },
+        0
+    );
+};
 
 Util.LOG_LEVELS = {
     error: true,
