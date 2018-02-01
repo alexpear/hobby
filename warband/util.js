@@ -13,6 +13,12 @@ Util.exists = function (x) {
         // x !== [];
 };
 
+Util.default = function (input, defaultValue) {
+    return Util.exists(input) ?
+        input :
+        defaultValue;
+};
+
 Util.isNumber = function (x) {
     return typeof x === 'number';
 };
