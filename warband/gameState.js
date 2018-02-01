@@ -8,12 +8,20 @@ const Squad = require('./squad.js');
 const Util = require('./util.js');
 
 module.exports = class GameState {
-    constructor () {
-        this.factions = [];
+    constructor (stepCount) {
+        this.stepCount = stepCount || 0;
+        // Opts
+        // - gameState has .factions which themselves have .squads
+        // - gamestate has .squads, which each has a .faction (pointer or id) field
+        this.squads = [];
+        this.terrainGrid = exampleTerrainGrid();
+        this.xMax = this.terrainGrid.length;
+        this.yMax = this.terrainGrid[0].length;
     }
 
     getFaction (squad) {
         // Later might make use of a id or circular reference.
+        // This might be obsolete later.
         return this.factions.find(
             faction => faction.squads.find(
                 candidateSquad => candidateSquad === squad
@@ -21,7 +29,11 @@ module.exports = class GameState {
         );
     }
 
-    los (a, b) {
+    this.terrainAt(coord) {
+        return this.terrainGrid[coord.x][coord.y];
+    }
+
+    los (aCoord, bCoord) {
         // Later, actually look at terrain, size, etc
         return true;
     }
@@ -32,6 +44,9 @@ module.exports = class GameState {
             // Later maybe return { canShoot: false, reason: 'los' }
             return false;
         }
+
+        // Later, consider the case of cover that completely obscures target and prevents shooting.
+        // Eg hills, walls, etc.
     }
 
     shoot (shootingSquad, targetSquad) {
@@ -42,17 +57,14 @@ module.exports = class GameState {
 
         // Later, consider adding 40k restriction about being tempted to choose closest enemy target
 
-        const squadArea = targetSquad.squadArea();
+        // Later, will also need to look at the intervening terrain. Also altitude: hills/towers.
+        const squadArea = targetSquad.squadArea(
+            this.terrainAt(targetSquad.coord)
+        );
 
         /*
         Shooting outline
         - <trimmed>
-        - Probably as part of the same calculation, check cover
-          - Intervening and from the terrain type in the target's square
-          - Later figure out the rules for soft cover (occludes but does not block shots).
-            - For now just consider it weaker hard cover
-          - The effect of cover is probably:
-            - Treat the target individuals as if they had smaller .size values.
         - Instantiate shotSet consisting of n Shots from each shooting weapon
         - Roll for the accuracy of each Shot
           - params that increase likelihood it will hit a individual in the target squad:
@@ -105,6 +117,22 @@ module.exports = class GameState {
           - return random() < damageChance;
         - Damage for now means the individual (victim) is converted from a combatant to a casualty.
         */
+    }
+
+    exampleTerrainGrid () {
+        const xs = 30;
+        const ys = 20;
+
+        let grid = [];
+        for (let x = 0; x < xs; x++) {
+            grid.push([]);
+
+            for (let y = 0; y < ys; y++) {
+                grid[x].push(Terrain.exampleTerrain());
+            }
+        }
+
+        return grid;
     }
 
 
