@@ -1,6 +1,8 @@
 'use strict';
 
 const Coord = require('./coord.js');
+const WNode = require('./wnode.js');
+const Util = require('./util.js');
 
 // opts
 // - class Squad extends class WNode
@@ -53,6 +55,13 @@ class Squad {
         return Util.sum(effectiveSizes);
     }
 
+    shoot () {
+        return this.components.reduce(
+            (shots, component) => shots.concat(component.shoot()),
+            []
+        );
+    }
+
 
     static exampleMarines () {
         let sq = new Squad();
@@ -64,4 +73,11 @@ class Squad {
 
         return sq;
     }
+
+    static testShots () {
+        const shots = Squad.exampleMarines().shoot();
+        Util.logDebug(shots);
+    }
 }
+
+// Squad.testShots();
