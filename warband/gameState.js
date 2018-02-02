@@ -70,8 +70,10 @@ module.exports = class GameState {
 
         // Later, consider adding 40k restriction about being tempted to choose closest enemy target
 
+        const distance = shootingSquad.distanceTo(targetSquad);
+
         // Later, will also need to look at the intervening terrain. Also altitude: hills/towers.
-        const squadArea = targetSquad.squadArea(
+        const targetArea = targetSquad.squadArea(
             this.terrainAt(targetSquad.coord)
         );
 
@@ -108,25 +110,6 @@ module.exports = class GameState {
         - Later, morale rules.
           - Maybe the test is taken right before the damaged squad's next activation
           - Requires the squad to remember how many casualties it took recently.
-
-        - A shot hits if:
-          - // A human is size 10
-          - const squadArea = <sum of the sizes of each individual>;
-          - // This formula is arbitrary but similar to f(dist) = 1/dist
-          - // The +1 to distance is to get a hit rate of around 0.5 at a range of 1 square.
-          - // The 100 on the bottom is the squad area of a squad of 10 humans. Balances out the numerator.
-          - const shotDifficulty = (considerCover(squadArea, terrain) + individual.getAccuracy()) / (100 * (distance(shooter, target) + 1));
-          - // Where random() is in the range 0 to 1
-          - return random() < shotDifficulty;
-          - // Disadvantage of the above: High accuracy and squadArea can push the chance over 1.
-          - // Could try a more sigmoid style:
-            - squadArea * accuracy / (squadArea * accuracy + distance + 1)
-            - Or something
-            - In terms of d this is still:
-              - f(d) = 1/d
-            - But in terms of squadArea and accuracy (saa) this is a diminishing returns or logoid func.
-              - f(saa) = saa / (saa + k)
-            - So saa provides diminishing returns.
 
         - A hit does damage if:
           - const damageDiff = shot.damage - victim.durability + getDamageModifier(); // Can be negative, zero, or positive.
