@@ -88,6 +88,13 @@ module.exports = class GameState {
         /*
         Shooting outline
         - <trimmed>
+        - 2 options for how we will do shot distribution
+          - Sim: Each shot hits a random individual, proportional to its modified size
+            - Accidental overkill is possible: 2 lethal shots hit the same soldier
+            - With this, i might have to add rules for a survivor automatically
+              picking up the flamer after the flamer-carrier is shot.
+          - 40k: Each shot hits 1 individual, hitting the least-points ones first
+            - Leaves the officers and special equipment soldiers last
         - Roll for the accuracy of each Shot
           - params that increase likelihood it will hit a individual in the target squad:
             - .accuracy of the weapon
@@ -97,13 +104,6 @@ module.exports = class GameState {
             - distance between shooter and target
               - Maybe in the same proportions as a circle-arc / radius-area sim, etc
           - preferably quasi sigmoid: hitting and missing are always both possible.
-        - 2 options for how we will do shot distribution
-          - Sim: Each shot hits a random individual, proportional to its modified size
-            - Accidental overkill is possible: 2 lethal shots hit the same soldier
-            - With this, i might have to add rules for a survivor automatically
-              picking up the flamer after the flamer-carrier is shot.
-          - 40k: Each shot hits 1 individual, hitting the least-points ones first
-            - Leaves the officers and special equipment soldiers last
         - Roll for damage i guess
           - For now, each individual is either healthy or a casualty
           - Later, individuals can get Damage debuffs such as Limping
