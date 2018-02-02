@@ -32,6 +32,8 @@ class Squad {
     constructor (coord) {
         this.components = [];
         this.coord = coord || new Coord(0, 0);
+        this.name = 'Unknown';
+        // Later some unique ID so i can log / event about identical squads.
 
         // Later these will be assigned by Replay.
         // Later a team can have more than one ascii color value
@@ -45,6 +47,10 @@ class Squad {
         );
 
         return remainingComponents ? remainingComponents.length : 0;
+    }
+
+    prettyName () {
+        return `${this.name} (${this.asciiSprite})`;
     }
 
     squadArea (terrain) {
