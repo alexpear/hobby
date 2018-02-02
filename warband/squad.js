@@ -61,6 +61,11 @@ class Squad {
         return Util.sum(effectiveSizes);
     }
 
+    distanceTo (destination) {
+        destination = destination.x ? destination : destination.coord;
+        return this.coord.distanceTo(destination);
+    }
+
     shoot () {
         return this.components.reduce(
             (shots, component) => shots.concat(component.shoot()),
