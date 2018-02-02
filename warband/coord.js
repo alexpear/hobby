@@ -35,6 +35,22 @@ module.exports = class Coord {
         );
     }
 
+    // Like distanceTo, but can be off by ~1.
+    // Similar to D&D 3.5e diagonals.
+    // First measure a 45 degree diagonal (ie NE, NW, SW, or SE) component vector of the desired vector. Measure the longest one that will fit. Then add on a orthagonal (N, W, S, or E) vector. Sum the lengths of those 2 vectors. Assume that is similar to the desired vector (ie to the length of the vector-sum of those vectors).
+    // More performant, for Monte Carlo simulations etc.
+    approximateDistanceTo (other) {
+        const ROOT_TWO = 1.414213562; // TODO double check this
+
+        const xDistance = Math.abs(this.x - other.x);
+        const yDistance = Math.abs(this.y - other.y);
+
+        const orthagonalComponent = Math.abs(xDistance - yDistance);
+        const diagonalComponent = Math.min(xDistance, yDistance) * ROOT_TWO;
+
+        return orthagonalComponent + diagonalComponent;
+    }
+
     magnitude () {
         return this.distanceTo(new Coord(0, 0));
     }
