@@ -1,10 +1,12 @@
 'use strict';
 
 const fs = require('fs');
-const Util = require('./util.js');
 const Yaml = require('js-yaml');
 
 const ARSENAL = Yaml.safeLoad(fs.readFileSync('./arsenal.yml', 'utf8'));
+const Shot = require('./shot.js');
+const Util = require('./util.js');
+
 
 // Waffle Node
 // WAFFLE is a game engine related to the novel 'You' by Austen Grossman.
@@ -80,6 +82,14 @@ let WNode = module.exports = class WNode {
         return size * terrainModifier;
     }
 
+    // recalculateTraits () {}
+
+    shoot () {
+        // Later we will address multiple ways to shoot
+        // and deciding between those.
+        return WNode.exampleShots() || [];
+    }
+
     toString() {
         return JSON.stringify(this, undefined, '    ');
     }
@@ -97,7 +107,12 @@ WNode.Status = {
 
 WNode.MAX_DURABILITY = 9999999999;
 
-
+WNode.exampleShots = function () {
+    return [
+        new Shot('bullet', 0.80, 20),
+        new Shot('bullet', 0.80, 20)
+    ];
+}
 
 
 function testJsonReading() {
