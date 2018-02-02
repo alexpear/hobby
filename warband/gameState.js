@@ -17,6 +17,7 @@ module.exports = class GameState {
         this.terrainGrid = exampleTerrainGrid();
         this.xMax = this.terrainGrid.length;
         this.yMax = this.terrainGrid[0].length;
+        this.eventHistory = [];
     }
 
     getFaction (squad) {
@@ -55,6 +56,12 @@ module.exports = class GameState {
         // Eg hills, walls, etc.
     }
 
+    announceEvent (info) {
+        const event = new Event(info);
+        this.eventHistory.push(event);
+        // Later decide whether eventHistory will be on GameState or Replay.
+    }
+
     shoot (shootingSquad, targetSquad) {
         if (! this.canShoot(shootingSquad, targetSquad)) {
             Util.logError('shoot() was called while canShoot() was false');
@@ -68,10 +75,17 @@ module.exports = class GameState {
             this.terrainAt(targetSquad.coord)
         );
 
+        this.announceEvent({
+            type: Events.SHOOT,
+            shootingSquad: shootingSquad,
+            targetSquad: targetSquad
+        });
+
+        const shotSet = shootingSquad.shoot();
+
         /*
         Shooting outline
         - <trimmed>
-        - Instantiate shotSet consisting of n Shots from each shooting weapon
         - Roll for the accuracy of each Shot
           - params that increase likelihood it will hit a individual in the target squad:
             - .accuracy of the weapon
