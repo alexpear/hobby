@@ -159,3 +159,16 @@ Util.logBeacon = function (input) {
         Util.log(input, 'BEACON');
     }
 };
+
+// Later consider replacing with other JS enum patterns.
+// input: ['GOOD', 'BAD']
+// output: { GOOD: 'GOOD', BAD: 'BAD' }
+Util.makeEnum = function (values) {
+    let enumoid = {};
+    for (let id = 0; id < values.length; id++) {
+        const possibility = values[id];
+        enumoid[possibility] = possibility;
+    }
+
+    return enumoid;
+};
