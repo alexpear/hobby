@@ -34,6 +34,7 @@ let Shot = module.exports = class Shot {
         - But in terms of squadArea and accuracy (saa) this is a diminishing returns or logoid func.
           - f(saa) = saa / (saa + k)
         - So saa provides diminishing returns.
+    - hits() should maybe report both the boolean outcome and the shotDifficulty.
     */
     hits (distance, targetArea) {
 
