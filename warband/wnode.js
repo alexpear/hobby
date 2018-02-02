@@ -10,7 +10,9 @@ const ARSENAL = Yaml.safeLoad(fs.readFileSync('./arsenal.yml', 'utf8'));
 // WAFFLE is a game engine related to the novel 'You' by Austen Grossman.
 // A person, creature, component, or thing is represented here
 // by a WNode or a tree of WNodes.
-let WNode = class WNode {
+
+// Later find out whether both the let and the class name are needed.
+let WNode = module.exports = class WNode {
     constructor(template, name) {
         // Later: Safety checks, logging
 
@@ -87,8 +89,6 @@ let WNode = class WNode {
     }
 };
 
-module.exports = WNode;
-
 // Constants
 WNode.Status = {
     FINE: 'fine',
@@ -101,18 +101,14 @@ WNode.MAX_DURABILITY = 9999999999;
 
 
 function testJsonReading() {
-    const nodeTree = exampleNodesFromTerseJson();
+    const nodeTree = WNode.exampleNodesFromTerseJson();
     const stringified = nodeTree.toYaml();
     console.log('\n testJsonReading() sees ' + stringified);
 }
 
 
-// run test
-testJsonReading();
-
-
 // Later: Reorder functions more intuitively
-function exampleNodesFromTerseJson() {
+WNode.exampleNodesFromTerseJson = function () {
     // This is a little hardcoded and example-y
     const jso = exampleJsonFromTerseFile();
     const squadName = 'Requiem Veteran Infantry';
@@ -261,3 +257,8 @@ function exampleJsonExpandedWithoutStats() {
         };
     }
 }
+
+
+
+// run test
+// testJsonReading();
