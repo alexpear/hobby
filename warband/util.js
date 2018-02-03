@@ -25,6 +25,10 @@ Util.array = function (x) {
         [x];
 };
 
+Util.contains = function (array, fugitive) {
+    return array.indexOf(fugitive) >= 0;
+};
+
 Util.isNumber = function (x) {
     return typeof x === 'number';
 };
@@ -47,6 +51,24 @@ Util.stringify = function (x) {
         undefined,
         '    '
     );
+};
+
+Util.repeat = function (str, n) {
+    let outStr = '';
+    for (let i = 0; i < n; i++) {
+        outStr += str;
+    }
+
+    return outStr;
+}
+
+Util.formatProp = function (object, propName) {
+    if (! object[propName]) {
+        return '';
+    }
+
+    // Later handle special and modification objects better.
+    return `${ propName }: ${ object[propName] }`;
 };
 
 Util.COLORS = {
