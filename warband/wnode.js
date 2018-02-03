@@ -23,16 +23,55 @@ let WNode = module.exports = class WNode {
 
         this.status = WNode.Status.FINE;
 
-        if (template) {
+        this.components = [];
+
+        if (typeof template === 'object') {
+            this.applyTemplates(template);
+        }
+    }
+
+    applyTemplates(firstTemplate) {
+        const templates = WNode.collectTemplates(firstTemplate);
+
+        // Apply the templates backwards (starting with eg human)
+        // so that the more specific ones have the opportunity to overwrite the more generic ones.
+        // Later make sure this doesnt cause modification objects to be overwritten.
+        for (let ti = templates.length - 1; ti >= 0; ti--) {
+            const currentTemplate = templates[ti];
+
+            // Later make sure we're handling 'multiple' nodes properly in templates.
+            const NONTRANSFERRED_PROPS = [
+                'components',
+                'template'
+            ];
+
             // Adopt each property of the template.
-            // Later: I would like leaf nodes to involve either pointers to templates
-            // or WNodes created based on the modifications described in the templates.
-            Object.assign(this, template);
-            this.components = nodesFromTerseArray(template.components);
+            for (let prop in currentTemplate) {
+                if (Util.contains(NONTRANSFERRED_PROPS, prop)) {
+                    continue;
+                }
+
+                this[prop] = currentTemplate[prop];
+            }
+
+            this.components = this.components.concat(nodesFromTerseArray(currentTemplate.components));
         }
-        else {
-            this.components = [];
+
+        // Remove the 'template' prop itself from the WNode.
+        delete this.template;
+    }
+
+    static collectTemplates (template) {
+        const uuid = Math.round(Math.random() * 1000);
+
+        let templates = [template];
+        if (template.template) {
+            const parentTemplate = findTemplate(template.template);
+            const ancestorTemplates = WNode.collectTemplates(parentTemplate);
+            templates = templates.concat(ancestorTemplates);
         }
+
+        return templates;
     }
 
     receiveModifications() {
