@@ -19,7 +19,7 @@ let Event = module.exports = class Event {
 
     log () {
         if (this.type === Event.Types.SHOOT) {
-            Util.logEvent(`${this.shootingSquad.prettyName()} is firing at ${this.targetSquad.prettyName()}`);
+            Util.logEvent(`${this.shootingSquad} is firing at ${this.targetSquad}`);
         }
         else {
             Util.logEvent(`${Util.stringify(this)}`);
