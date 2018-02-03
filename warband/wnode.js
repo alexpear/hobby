@@ -327,40 +327,6 @@ function exampleJsonFromTerseFile() {
     };
 }
 
-// Note: this intermediate might not actually appear in the real flow
-function exampleJsonExpandedWithoutStats() {
-    let json = {
-        'Requiem Veteran Infantry': {
-            components: []
-        }
-    };
-
-    for (let i = 0; i < 5; i++) {
-        json['Requiem Veteran Infantry'].components.push(makeExampleMarine());
-    }
-
-    return json;
-
-    function makeExampleMarine() {
-        return {
-            chassis: ARSENAL.general.human,
-            components: [
-                {
-                    chassis: ARSENAL.halo.unsc.battleRifle,
-                    components: [
-                        ARSENAL.halo.unsc.morphSight,
-                        ARSENAL.halo.unsc.kineticBolts
-                    ]
-                },
-                ARSENAL.halo.unsc.dogTags,
-                ARSENAL.halo.unsc.flakArmor,
-                ARSENAL.halo.forerunner.pulseGrenade
-            ]
-        };
-    }
-}
-
-
 
 // run test
 // testJsonReading();
