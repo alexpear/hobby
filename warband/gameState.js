@@ -88,6 +88,19 @@ let GameState = module.exports = class GameState {
         });
 
         const shotSet = shootingSquad.shoot();
+        Util.logDebug({
+            context: 'gameState.shoot()',
+            shots: shotSet.length
+        });
+
+        const hits = shotSet.filter(
+            shot => shot.hits(distance, targetArea)
+        );
+
+        Util.logDebug({
+            context: 'gameState.shoot()',
+            hits: hits.length
+        });
 
         /*
         Shooting outline
@@ -126,7 +139,27 @@ let GameState = module.exports = class GameState {
         */
     }
 
-    exampleTerrainGrid () {
+
+    static testShooting () {
+        let gameState = new GameState();
+        gameState.squads = [
+            Squad.exampleMarines(),
+            Squad.exampleMarines()
+        ];
+
+        gameState.squads[0].name = 'unscSquad';
+        gameState.squads[0].naiveClaimSprite();
+        gameState.squads[1].name = 'innieSquad';
+        gameState.squads[1].naiveClaimSprite();
+        gameState.squads[1].coord = new Coord(10, 0);
+
+        gameState.shoot(
+            gameState.squads[0],
+            gameState.squads[1]
+        );
+    }
+
+    static exampleTerrainGrid () {
         const xs = 30;
         const ys = 20;
 
@@ -144,3 +177,8 @@ let GameState = module.exports = class GameState {
 
 
 };
+
+
+
+GameState.testShooting();
+
