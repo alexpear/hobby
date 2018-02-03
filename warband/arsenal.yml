@@ -4,6 +4,7 @@
       templateName: "Human"
       size: 10
       durability: 10
+      cqc: 5
       speed: 10
       decisions: true
     squad: 
