@@ -57,6 +57,7 @@ let GameState = module.exports = class GameState {
 
         // Later, consider the case of cover that completely obscures target and prevents shooting.
         // Eg hills, walls, etc.
+        return true;
     }
 
     announceEvent (info) {
