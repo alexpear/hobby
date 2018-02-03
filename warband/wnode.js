@@ -13,7 +13,6 @@ const Util = require('./util.js');
 // A person, creature, component, or thing is represented here
 // by a WNode or a tree of WNodes.
 
-// Later find out whether both the let and the class name are needed.
 let WNode = module.exports = class WNode {
     constructor(template, name) {
         // Later: Safety checks, logging
@@ -99,6 +98,11 @@ let WNode = module.exports = class WNode {
     }
 };
 
+// TODO put these above the class
+// ie: let WNode = module.exports
+// then constant static fields
+// then the class
+
 // Constants
 WNode.Status = {
     FINE: 'fine',
@@ -179,6 +183,7 @@ function nodesFromTerseJsonIterator(jso) {
     }
     else if (typeof jso === 'string') {
         const template = findTemplate(jso);
+
         return [
             new WNode(template)
         ];
@@ -195,7 +200,7 @@ function nodesFromTerseJsonIterator(jso) {
 function findTemplate(templateUri) {
     // Later: Devise and implement simple search syntax
     // Later: We are currently conflating templates of multiple nodes (eg marine)
-    // and and templates of 1 node (eg human).
+    // and templates of 1 node (eg human).
     const template = ARSENAL.general[templateUri] ||
         ARSENAL.halo.unsc[templateUri] ||
         ARSENAL.halo.covenant[templateUri] ||
