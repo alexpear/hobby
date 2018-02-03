@@ -132,7 +132,50 @@ let WNode = module.exports = class WNode {
         return JSON.stringify(this, undefined, '    ');
     }
 
-    toYaml() {
+    // Format that looks like informal YAML but with props above components.
+    toPrettyString (indent) {
+        indent = Util.default(indent, 0);
+
+        let outString = furtherLine(Util.formatProp(this, 'name'));
+        outString += furtherLine(Util.formatProp(this, 'templateName'));
+
+        const SPECIAL_PROPS = [
+            'name',
+            'templateName',
+            'components'
+        ];
+
+        for (let prop in this) {
+            if (! prop || Util.contains(SPECIAL_PROPS, prop)) {
+                continue;
+            }
+
+            outString += furtherLine(Util.formatProp(this, prop));
+        }
+
+        if (this.components.length === 0) {
+            outString += furtherLine('components: []');
+        }
+        else {
+            outString += furtherLine('components:');
+            for (let component of this.components) {
+                outString += component.toPrettyString(indent + 2);
+                outString += '\n';
+            }
+
+            // outString += furtherLine(']');
+        }
+
+        return outString;
+
+        function furtherLine (text/*, indent*/) {
+            return text ?
+                Util.repeat(' ', indent) + text + '\n' :
+                '';
+        }
+    }
+
+    toYaml () {
         return Yaml.dump(this);
     }
 };
@@ -160,8 +203,8 @@ WNode.exampleShots = function () {
 
 function testJsonReading() {
     const nodeTree = WNode.exampleNodesFromTerseJson();
-    const stringified = nodeTree.toYaml();
-    console.log('\n testJsonReading() sees ' + stringified);
+    const stringified = nodeTree.toPrettyString();
+    console.log('\ntestJsonReading() sees: \n\n' + stringified);
 }
 
 
