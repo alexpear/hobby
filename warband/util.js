@@ -99,7 +99,7 @@ Util.sum = function (array) {
 };
 
 Util.inBox = function (input, minCoord, maxCoord) {
-    const coordInQuestion = input.x && input.y ?
+    const coordInQuestion = Util.exists(input.x) && Util.exists(input.y) ?
         input :
         input.coord;
 
