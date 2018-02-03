@@ -3,18 +3,21 @@
 const chalk = require('chalk');
 
 const Coord = require('./coord.js');
+const Event = require('./event.js');
 const Faction = require('./faction.js');
 const Squad = require('./squad.js');
+const Terrain = require('./terrain.js');
 const Util = require('./util.js');
 
-module.exports = class GameState {
+// Educational note: The name of the class does not reach this file's scope.
+let GameState = module.exports = class GameState {
     constructor (stepCount) {
         this.stepCount = stepCount || 0;
         // Opts
         // - gameState has .factions which themselves have .squads
         // - gamestate has .squads, which each has a .faction (pointer or id) field
         this.squads = [];
-        this.terrainGrid = exampleTerrainGrid();
+        this.terrainGrid = GameState.exampleTerrainGrid();
         this.xMax = this.terrainGrid.length;
         this.yMax = this.terrainGrid[0].length;
         this.eventHistory = [];
@@ -30,14 +33,14 @@ module.exports = class GameState {
         );
     }
 
-    this.terrainAt(coord) {
+    terrainAt (coord) {
         return this.inBounds(coord) ?
             this.terrainGrid[ coord.x ][ coord.y ] :
             undefined;
     }
 
     inBounds (coord) {
-        return Util.inBox(coord, new Coord(0, 0), new Coord(xMax, yMax));
+        return Util.inBox(coord, new Coord(0, 0), new Coord(this.xMax, this.yMax));
     }
 
     los (aCoord, bCoord) {
@@ -78,9 +81,9 @@ module.exports = class GameState {
         );
 
         this.announceEvent({
-            type: Events.SHOOT,
-            shootingSquad: shootingSquad,
-            targetSquad: targetSquad
+            type: Event.Types.SHOOT,
+            shootingSquad: shootingSquad.prettyName(),
+            targetSquad: targetSquad.prettyName()
         });
 
         const shotSet = shootingSquad.shoot();
