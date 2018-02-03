@@ -28,17 +28,20 @@ const Util = require('./util.js');
 // However, Squads can split up / bud into 2 Squads, for example
 // when a transport vehicle drops off its passengers.
 
-class Squad {
-    constructor (coord) {
+let Squad = module.exports = class Squad {
+    constructor (coord, name) {
         this.components = [];
         this.coord = coord || new Coord(0, 0);
-        this.name = 'Unknown';
+        this.name = name || 'Unknown';
         // Later some unique ID so i can log / event about identical squads.
 
         // Later these will be assigned by Replay.
         // Later a team can have more than one ascii color value
         // (eg blue and green vs red and orange)
-        this.asciiSprite = '?';
+    }
+
+    naiveClaimSprite () {
+        this.asciiSprite = this.name[0].toUpperCase();
     }
 
     quantity () {
@@ -75,7 +78,7 @@ class Squad {
 
 
     static exampleMarines () {
-        let sq = new Squad();
+        let sq = new Squad(new Coord(11, 11), 'Requiem Veteran Infantry');
         const squadNode = WNode.exampleNodesFromTerseJson();
 
         // For now, discard the squadNode and take its components.
