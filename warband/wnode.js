@@ -128,7 +128,7 @@ let WNode = module.exports = class WNode {
         return WNode.exampleShots() || [];
     }
 
-    toString() {
+    toString () {
         return JSON.stringify(this, undefined, '    ');
     }
 
