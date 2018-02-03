@@ -34,10 +34,21 @@ let Shot = module.exports = class Shot {
         - But in terms of squadArea and accuracy (saa) this is a diminishing returns or logoid func.
           - f(saa) = saa / (saa + k)
         - So saa provides diminishing returns.
-    - hits() should maybe report both the boolean outcome and the shotDifficulty.
+    - hits() should maybe report both the boolean outcome and the shotDifficulty. Well at least log it.
     */
     hits (distance, targetArea) {
+        const advantage = targetArea * this.accuracy;
+        const shotDifficulty = advantage / (advantage + distance + 1);
+        Util.logDebug({
+            context: `shot.hits()`,
+            distance: distance,
+            targetArea: targetArea,
+            advantage: advantage,
+            distance: distance,
+            shotDifficulty: shotDifficulty
+        });
 
+        return Math.random() < shotDifficulty;
     }
 };
 
