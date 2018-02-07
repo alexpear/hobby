@@ -110,6 +110,15 @@ let GameState = module.exports = class GameState {
             - Accidental overkill is possible: 2 lethal shots hit the same soldier
             - With this, i might have to add rules for a survivor automatically
               picking up the flamer after the flamer-carrier is shot.
+            - What is the computationally quickest way to calc that?
+            - Tournament array: Set up a array with 1 element per size point per
+              individual in the target squad.
+            - Then assign each shot (after rolling if it hits, i think) to a
+              random individual using this 'weighted array'.
+            - This is basically spending space to save time.
+            - This should be cheap, because squads have < 20 individuals
+              and because the array is garbage collected after each shot pool.
+            - We could probably optimize that. Basically set up any data structure
           - 40k: Each shot hits 1 individual, hitting the least-points ones first
             - Leaves the officers and special equipment soldiers last
         - Roll for the accuracy of each Shot

@@ -39,6 +39,7 @@ let Shot = module.exports = class Shot {
     hits (distance, targetArea) {
         const advantage = targetArea * this.accuracy;
         const shotDifficulty = advantage / (advantage + distance + 1);
+
         Util.logDebug({
             context: `shot.hits()`,
             distance: distance,
