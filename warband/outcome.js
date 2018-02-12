@@ -3,6 +3,7 @@
 // A Replay stores Outcomes to track what happened
 // during stochastic events.
 
+// Later could consider making this part of or a superclass of Shot.
 let Outcome = module.exports = class Outcome {
     constructor (shot, victim, attacker) {
         // Later there will be more types.

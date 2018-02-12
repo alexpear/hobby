@@ -16,7 +16,7 @@ let GameState = module.exports = class GameState {
         this.stepCount = stepCount || 0;
         // Opts
         // - gameState has .factions which themselves have .squads
-        // - gamestate has .squads, which each has a .faction (pointer or id) field
+        // - gameState has .squads, which each has a .faction (pointer or id) field
         this.squads = [];
         this.terrainGrid = GameState.exampleTerrainGrid();
         this.xMax = this.terrainGrid.length;
