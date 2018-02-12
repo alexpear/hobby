@@ -116,14 +116,26 @@ let GameState = module.exports = class GameState {
             }
         }
 
-        Util.logDebug({
-            context: 'gameState.shoot()',
-            outcomesLength: outcomes.length
-        });
+        // Util.logDebug({
+        //     context: 'gameState.shoot()',
+        //     outcomesLength: outcomes.length
+        // });
+
+        // Just for logging
+        let injuries = {};
+        for (let outc of outcomes) {
+            const vid = outc.victim.id;
+            if (injuries[vid]) {
+                injuries[vid] += 1;
+            }
+            else {
+                injuries[vid] = 1;
+            }
+        }
 
         Util.logDebug({
             context: 'gameState.shoot()',
-            outcomes: outcomes
+            injuries: injuries
         });
 
 
