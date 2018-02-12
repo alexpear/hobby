@@ -92,20 +92,17 @@ let GameState = module.exports = class GameState {
             targetSquad: targetSquad.prettyName()
         });
 
+        // Later could rename this func to shots()
         const shotSet = shootingSquad.shoot();
-        Util.logDebug({
-            context: 'gameState.shoot()',
+        let shootingSummary = {
             shots: shotSet.length
-        });
+        };
 
         const hits = shotSet.filter(
             shot => shot.hits(distance, targetArea)
         );
 
-        Util.logDebug({
-            context: 'gameState.shoot()',
-            hits: hits.length
-        });
+        shootingSummary.hits = hits.length;
 
         let outcomes = [];
         for (let shot of hits) {
@@ -116,13 +113,9 @@ let GameState = module.exports = class GameState {
             }
         }
 
-        // Util.logDebug({
-        //     context: 'gameState.shoot()',
-        //     outcomesLength: outcomes.length
-        // });
-
         // Just for logging
         let injuries = {};
+        let newCasualties = 0;
         for (let outc of outcomes) {
             const vid = outc.victim.id;
             if (injuries[vid]) {
@@ -130,12 +123,16 @@ let GameState = module.exports = class GameState {
             }
             else {
                 injuries[vid] = 1;
+                newCasualties += 1;
             }
         }
 
+        shootingSummary.injuries = Object.values(injuries);
+        shootingSummary.casualties = newCasualties;
+
         Util.logDebug({
             context: 'gameState.shoot()',
-            injuries: injuries
+            summary: shootingSummary
         });
 
         // Later we will need a way to get a WNode from a id.
