@@ -138,6 +138,10 @@ let GameState = module.exports = class GameState {
             let assignmentRoll = Math.random() * squadArea;
             let victim = targetSquad.components[0];
             for (let targetIndividual of targetSquad.components) {
+                if (targetIndividual.isJunked()) {
+                    continue;
+                }
+
                 // We use iterative subtraction as a quick way to find which member
                 // is indicated by the assignmentRoll.
                 assignmentRoll -= targetIndividual.size;

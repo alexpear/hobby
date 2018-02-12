@@ -45,11 +45,14 @@ let Squad = module.exports = class Squad {
     }
 
     quantity () {
-        const remainingComponents = this.components.filter(
-            c => c.status !== WNode.Status.JUNKED
-        );
+        let quantity = this.components.length;
+        for (let component of this.components) {
+            if (component.status === WNode.Status.JUNKED) {
+                quantity -= 1;
+            }
+        }
 
-        return remainingComponents ? remainingComponents.length : 0;
+        return quantity;
     }
 
     prettyName () {

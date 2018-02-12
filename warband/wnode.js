@@ -112,7 +112,15 @@ let WNode = module.exports = class WNode {
         return clone;
     }
 
+    isJunked () {
+        return this.status === WNode.Status.JUNKED;
+    }
+
     effectiveSize (terrain) {
+        if (this.isJunked()) {
+            return 0;
+        }
+
         // Ex: A human has size 10. Sparse forest has a cover value of 0.1 (scale from 0 to 1).
         // The terrainModifier will be 0.9. The humans effective size will be 9.
 
@@ -129,7 +137,10 @@ let WNode = module.exports = class WNode {
     shoot () {
         // Later we will address multiple ways to shoot
         // and deciding between those.
-        return WNode.exampleShots() || [];
+        const shots = WNode.exampleShots() || [];
+        return this.isJunked() ?
+            [] :
+            shots;
     }
 
     toString () {
