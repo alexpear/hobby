@@ -17,6 +17,10 @@ let WNode = module.exports = class WNode {
     constructor(template, name) {
         // Later: Safety checks, logging
 
+        // Later we might want GameState to have a centralized
+        // hash table of all ids.
+        this.id = Util.newId();
+
         if (name) {
             this.name = name;
         }

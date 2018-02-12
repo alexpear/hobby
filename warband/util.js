@@ -53,6 +53,20 @@ Util.stringify = function (x) {
     );
 };
 
+Util.newId = function () {
+    // Later research the most performant way to run this.
+    const ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const ID_LENGTH = 50;
+
+    let id = '';
+    for (let i = 0; i < ID_LENGTH; i++) {
+        const index = Math.floor( Math.random() * ALPHABET.length );
+        id += ALPHABET[index];
+    }
+
+    return id;
+};
+
 Util.repeat = function (str, n) {
     let outStr = '';
     for (let i = 0; i < n; i++) {
