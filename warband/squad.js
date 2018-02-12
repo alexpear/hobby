@@ -77,9 +77,9 @@ let Squad = module.exports = class Squad {
     }
 
 
-    static exampleMarines () {
+    static exampleMarines (quantity) {
         let sq = new Squad(new Coord(11, 11), 'Requiem Veteran Infantry');
-        const squadNode = WNode.exampleNodesFromTerseJson();
+        const squadNode = WNode.exampleNodesFromTerseJson(quantity || 10);
 
         // For now, discard the squadNode and take its components.
         sq.components = squadNode.components;

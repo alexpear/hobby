@@ -206,16 +206,16 @@ WNode.exampleShots = function () {
 
 
 function testJsonReading() {
-    const nodeTree = WNode.exampleNodesFromTerseJson();
+    const nodeTree = WNode.exampleNodesFromTerseJson(3);
     const stringified = nodeTree.toPrettyString();
     console.log('\ntestJsonReading() sees: \n\n' + stringified);
 }
 
 
 // Later: Reorder functions more intuitively
-WNode.exampleNodesFromTerseJson = function () {
+WNode.exampleNodesFromTerseJson = function (quantity) {
     // This is a little hardcoded and example-y
-    const jso = exampleJsonFromTerseFile();
+    const jso = exampleJsonFromTerseFile(quantity);
     const squadName = 'Requiem Veteran Infantry';
     const rootJso = jso[squadName];
     const rootNode = new WNode(ARSENAL.general.squad, squadName);
@@ -303,13 +303,15 @@ function findTemplate(templateUri) {
     return template;
 }
 
-function exampleJsonFromTerseFile() {
+function exampleJsonFromTerseFile(quantity) {
+    quantity = quantity || 3;
+
     return {
         'Requiem Veteran Infantry': {
             components: [
                 {
                     type: 'multiple',
-                    quantity: 3,
+                    quantity: quantity,
                     copySet: [
                         {
                             template: 'marine',  // Later: Namespace as 'halo/unsc/marine' or something
