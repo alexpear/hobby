@@ -246,7 +246,9 @@ let GameState = module.exports = class GameState {
         unscSquad.naiveClaimSprite();
         innieSquad.name = 'innieSquad';
         innieSquad.naiveClaimSprite();
-        innieSquad.coord = new Coord(10, 0);
+        innieSquad.coord = new Coord(20, 0);
+
+        console.log('\n\n\n');
 
         while (gameState.canShoot(unscSquad, innieSquad)) {
             gameState.shoot(
