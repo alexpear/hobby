@@ -40,14 +40,14 @@ let Shot = module.exports = class Shot {
         const advantage = targetArea * this.accuracy;
         const shotProbability = advantage / (advantage + distance + 1);
 
-        Util.logDebug({
-            context: `shot.hits()`,
-            distance: distance,
-            targetArea: targetArea,
-            advantage: advantage,
-            distance: distance,
-            shotDifficulty: shotDifficulty
-        });
+        // Util.logDebug({
+        //     context: `shot.hits()`,
+        //     distance: distance,
+        //     targetArea: targetArea,
+        //     advantage: advantage,
+        //     distance: distance,
+        //     shotProbability: shotProbability
+        // });
 
         return Math.random() < shotProbability;
     }
