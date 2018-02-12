@@ -56,6 +56,10 @@ let GameState = module.exports = class GameState {
             return false;
         }
 
+        if (shootingSquad.quantity() === 0 || targetSquad.quantity() === 0) {
+            return false;
+        }
+
         // Later, consider the case of cover that completely obscures target and prevents shooting.
         // Eg hills, walls, etc.
         return true;
