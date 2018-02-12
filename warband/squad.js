@@ -30,10 +30,10 @@ const Util = require('./util.js');
 
 let Squad = module.exports = class Squad {
     constructor (coord, name) {
+        this.name = name || 'Unknown squad';
+        this.id = Util.newId();
         this.components = [];
         this.coord = coord || new Coord(0, 0);
-        this.name = name || 'Unknown';
-        // Later some unique ID so i can log / event about identical squads.
 
         // Later these will be assigned by Replay.
         // Later a team can have more than one ascii color value
