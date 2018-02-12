@@ -236,21 +236,53 @@ let GameState = module.exports = class GameState {
 
     static testShooting () {
         let gameState = new GameState();
+        // Later a param for custom quantity.
+        let unscSquad = Squad.exampleMarines(10);
+        let innieSquad = Squad.exampleMarines(15);
+
         gameState.squads = [
-            Squad.exampleMarines(),
-            Squad.exampleMarines()
+            unscSquad,
+            innieSquad
         ];
 
-        gameState.squads[0].name = 'unscSquad';
-        gameState.squads[0].naiveClaimSprite();
-        gameState.squads[1].name = 'innieSquad';
-        gameState.squads[1].naiveClaimSprite();
-        gameState.squads[1].coord = new Coord(10, 0);
+        unscSquad.name = 'unscSquad';
+        unscSquad.naiveClaimSprite();
+        innieSquad.name = 'innieSquad';
+        innieSquad.naiveClaimSprite();
+        innieSquad.coord = new Coord(10, 0);
 
-        gameState.shoot(
-            gameState.squads[0],
-            gameState.squads[1]
-        );
+        while (gameState.canShoot(unscSquad, innieSquad)) {
+            gameState.shoot(
+                unscSquad,
+                innieSquad
+            );
+
+            Util.logBeacon({
+                unscQuantity: unscSquad.quantity(),
+                innieQuantity: innieSquad.quantity()
+            });
+
+            if (! gameState.canShoot(innieSquad, unscSquad)) {
+                break;
+            }
+
+            gameState.shoot(
+                innieSquad,
+                unscSquad
+            );
+
+            Util.logBeacon({
+                unscQuantity: unscSquad.quantity(),
+                innieQuantity: innieSquad.quantity()
+            });
+        }
+
+        if (unscSquad.quantity() > 0) {
+            Util.logEvent('UNSC Wins');
+        }
+        else {
+            Util.logEvent('Innies Win');
+        }
     }
 
     static exampleTerrainGrid () {
