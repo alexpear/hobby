@@ -22,9 +22,9 @@ let Shot = module.exports = class Shot {
       - // This formula is arbitrary but similar to f(dist) = 1/dist
       - // The +1 to distance is to get a hit rate of around 0.5 at a range of 1 square.
       - // The 100 on the bottom is the squad area of a squad of 10 humans. Balances out the numerator.
-      - const shotDifficulty = (considerCover(squadArea, terrain) + individual.getAccuracy()) / (100 * (distance(shooter, target) + 1));
+      - const shotProbability = (considerCover(squadArea, terrain) + individual.getAccuracy()) / (100 * (distance(shooter, target) + 1));
       - // Where random() is in the range 0 to 1
-      - return random() < shotDifficulty;
+      - return random() < shotProbability;
       - // Disadvantage of the above: High accuracy and squadArea can push the chance over 1.
       - // Could try a more sigmoid style:
         - squadArea * accuracy / (squadArea * accuracy + distance + 1)
@@ -34,11 +34,11 @@ let Shot = module.exports = class Shot {
         - But in terms of squadArea and accuracy (saa) this is a diminishing returns or logoid func.
           - f(saa) = saa / (saa + k)
         - So saa provides diminishing returns.
-    - hits() should maybe report both the boolean outcome and the shotDifficulty. Well at least log it.
+    - hits() should maybe report both the boolean outcome and the shotProbability. Well at least log it.
     */
     hits (distance, targetArea) {
         const advantage = targetArea * this.accuracy;
-        const shotDifficulty = advantage / (advantage + distance + 1);
+        const shotProbability = advantage / (advantage + distance + 1);
 
         Util.logDebug({
             context: `shot.hits()`,
@@ -49,7 +49,7 @@ let Shot = module.exports = class Shot {
             shotDifficulty: shotDifficulty
         });
 
-        return Math.random() < shotDifficulty;
+        return Math.random() < shotProbability;
     }
 };
 
