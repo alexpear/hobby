@@ -2,6 +2,7 @@
 
 const moment = require('moment');
 
+const Outcome = require('./outcome.js');
 const Util = require('./util.js');
 
 let Event = module.exports = class Event {
@@ -13,6 +14,9 @@ let Event = module.exports = class Event {
         if (! this.type) {
             Util.logError(`Event constructed with no recognized type. info is: ${Util.stringify(info)}`);
         }
+
+        // Figure out how to init this later.
+        this.outcomes = [];
 
         this.log();
     }
