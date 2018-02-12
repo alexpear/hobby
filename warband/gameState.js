@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const Coord = require('./coord.js');
 const Event = require('./event.js');
 const Faction = require('./faction.js');
+const Outcome = require('./outcome.js');
 const Squad = require('./squad.js');
 const Terrain = require('./terrain.js');
 const Util = require('./util.js');
@@ -102,6 +103,68 @@ let GameState = module.exports = class GameState {
             hits: hits.length
         });
 
+        let outcomes = [];
+        for (let i = 0; i < hits.length; i++) {
+            const shot = hits[i];
+            const victim = nextVictim(targetSquad, targetArea);
+            if (damages(shot, victim)) {
+                // Later track who the attacker (firer) of the shot was, somehow.
+                outcomes.push(new Outcome(shot, victim));
+            }
+        }
+
+        Util.logDebug({
+            context: 'gameState.shoot()',
+            outcomesLength: outcomes.length
+        });
+
+        Util.logDebug({
+            context: 'gameState.shoot()',
+            outcomes: outcomes
+        });
+
+
+        // This could become a member of class Squad.
+        // However, note that it will later also take input about homing and careful aim.
+        function nextVictim (targetSquad, squadArea) {
+            squadArea = squadArea || targetSquad.squadArea();
+
+            // The shot is assigned to a random victim in the squad.
+            // Squad members are weighted by their size.
+            // The assginmentRoll indicates which one is hit.
+            let assignmentRoll = Math.random() * squadArea;
+            let victim = targetSquad.components[0];
+            for (let targetIndividual of targetSquad.components) {
+                // We use iterative subtraction as a quick way to find which member
+                // is indicated by the assignmentRoll.
+                assignmentRoll -= targetIndividual.size;
+                if (assignmentRoll < 0) {
+                    victim = targetIndividual;
+                    break;
+                }
+            }
+
+            return victim;
+        }
+
+        // This function could be moved later.
+        function damages (shot, victim) {
+            // Damage for now means the individual (victim) is converted from a combatant to a casualty.
+            const damageDiff = shot.damage - victim.durability + getDamageModifier(shot, victim);
+            const SCALING = 0.5; // To make the probabilities feel right
+
+            // quasi sigmoid probability curve between 0 and 1.
+            const exponentiated = Math.pow(2, SCALING * damageDiff);
+            const damageChance = exponentiated / (exponentiated + 1);
+            return Math.random() < damageChance;
+        }
+
+        // Dummy function.
+        // Later move to Gamestate, Squad, or WNode
+        function getDamageModifier (shot, victim) {
+            return 0;
+        }
+
         /*
         Shooting outline
         - <trimmed>
@@ -136,15 +199,6 @@ let GameState = module.exports = class GameState {
         - Later, morale rules.
           - Maybe the test is taken right before the damaged squad's next activation
           - Requires the squad to remember how many casualties it took recently.
-
-        - A hit does damage if:
-          - const damageDiff = shot.damage - victim.durability + getDamageModifier(); // Can be negative, zero, or positive.
-          - const SCALING = 0.5; // Or something, to make the probabilities feel right
-          - const exponentiated = Math.pow(2, SCALING * damageDiff);
-          - // quasi sigmoid probability curve between 0 and 1.
-          - const damageChance = exponentiated / (exponentiated + 1);
-          - return random() < damageChance;
-        - Damage for now means the individual (victim) is converted from a combatant to a casualty.
         */
     }
 
