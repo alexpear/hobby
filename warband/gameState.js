@@ -108,8 +108,7 @@ let GameState = module.exports = class GameState {
         });
 
         let outcomes = [];
-        for (let i = 0; i < hits.length; i++) {
-            const shot = hits[i];
+        for (let shot of hits) {
             const victim = nextVictim(targetSquad, targetArea);
             if (damages(shot, victim)) {
                 // Later track who the attacker (firer) of the shot was, somehow.
