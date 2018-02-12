@@ -138,6 +138,18 @@ let GameState = module.exports = class GameState {
             injuries: injuries
         });
 
+        // Later we will need a way to get a WNode from a id.
+        for (let outcome of outcomes) {
+            let victim = outcome.victim;
+            // Later there will be debuffs possible too.
+            targetSquad.takeCasualty(victim);
+        }
+
+        // Util.logBeacon({
+        //     context: 'gameState.shoot()',
+        //     targetQuantityRemaining: targetSquad.quantity()
+        // });
+
 
         // This could become a member of class Squad.
         // However, note that it will later also take input about homing and careful aim.

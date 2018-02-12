@@ -79,6 +79,20 @@ let Squad = module.exports = class Squad {
         );
     }
 
+    takeCasualty (victim) {
+        if (victim.isJunked()) {
+            return;
+        }
+
+        // Util.logEvent({
+        //     context: 'Squad.takeCasualty()',
+        //     squad: this.id,
+        //     victim: victim.id
+        // });
+
+        victim.status = WNode.Status.JUNKED;
+    }
+
 
     static exampleMarines (quantity) {
         let sq = new Squad(new Coord(11, 11), 'Requiem Veteran Infantry');
