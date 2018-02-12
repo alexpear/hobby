@@ -74,7 +74,7 @@ Util.repeat = function (str, n) {
     }
 
     return outStr;
-}
+};
 
 Util.formatProp = function (object, propName) {
     if (! object[propName]) {
