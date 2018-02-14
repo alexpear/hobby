@@ -76,6 +76,18 @@ Util.repeat = function (str, n) {
     return outStr;
 };
 
+Util.leftPad = function (str, minLength) {
+    str = Util.isString(str) ?
+        str :
+        str + '';
+
+    if (str.length >= minLength) {
+        return str;
+    }
+
+    return Util.repeat(' ', minLength - str.length) + str;
+};
+
 Util.formatProp = function (object, propName) {
     if (! object[propName]) {
         return '';
