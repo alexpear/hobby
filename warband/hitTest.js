@@ -67,12 +67,17 @@ class HitTestBlock {
         let output = '';
         output += `${this.grid[0][0].testsRun} tests each\n`;
         output += '  accuracy ->\n';
-        output += `v dist ${ this.accuracies.join('  ') }\n`;
+        const accuracyHeader = this.accuracies.map(
+            acc => Util.leftPad(acc, 5)
+        )
+        .join('');
+
+        output += `v dist${ accuracyHeader }\n`;
         for (let di = 0; di < this.grid.length; di++) {
-            output += Util.leftPad(this.distances[di], 2) + '   ';
+            output += Util.leftPad(this.distances[di], 2) + '    ';
 
             for (let ai = 0; ai < this.grid[di].length; ai++) {
-                output += `  ${ this.grid[di][ai].percentString() }`;
+                output += Util.leftPad(this.grid[di][ai].percentString(), 5);
             }
 
             output += '\n';
