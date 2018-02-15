@@ -37,7 +37,9 @@ let Shot = module.exports = class Shot {
     - hits() should maybe report both the boolean outcome and the shotProbability. Well at least log it.
     */
     hits (distance, targetArea) {
-        const advantage = targetArea * this.accuracy;
+        // SCALING calibrates which accuracy stats are normal.
+        const SCALING = 200;
+        const advantage = targetArea * this.accuracy / SCALING;
         const shotProbability = advantage / (advantage + distance + 1);
 
         // Util.logDebug({
