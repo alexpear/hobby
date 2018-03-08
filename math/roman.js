@@ -76,7 +76,44 @@ class Roman {
         return decimal;
     }
 
-    static test() {
+    static allUpTo(max) {
+        max = max === undefined ? 3999 : max;
+        let array = [];
+        for (let index = 0; index <= max; index++) {
+            array.push(Roman.fromDecimal(index));
+        }
+
+        return array;
+    }
+
+    static byHeterogeneity() {
+        let numeralsByHeterogeneity = {};
+        for (let index = 0; index <= 3999; index++) {
+            const numeral = Roman.fromDecimal(index);
+            const prettyNumeral = `${ index } ~ ${ numeral }`;
+            const heterogeneity = Roman.heterogeneity(numeral);
+            if (numeralsByHeterogeneity[heterogeneity]) {
+                numeralsByHeterogeneity[heterogeneity].push(prettyNumeral);
+            }
+            else {
+                numeralsByHeterogeneity[heterogeneity] = [prettyNumeral];
+            }
+        }
+
+        return numeralsByHeterogeneity;
+    }
+
+    // XXXI has 2 symbols and thus a heterogeneity of 2
+    static heterogeneity(str) {
+        let symbols = {};
+        str.split('').forEach(symbol => {
+            symbols[symbol] = true;
+        });
+
+        return Object.keys(symbols).length;
+    }
+
+    static basicTest() {
         for (let index = 0; index <= 3999; index++) {
             const romanized = Roman.fromDecimal(index);
             const rearabicized = Roman.toDecimal(romanized);
@@ -86,6 +123,16 @@ class Roman {
                 throw new Error('asymmetric');
             }
         }
+    }
+
+    static test() {
+        console.log(
+            JSON.stringify(
+                Roman.byHeterogeneity(),
+                undefined,
+                '    '
+            )
+        );
     }
 }
 
