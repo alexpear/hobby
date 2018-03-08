@@ -75,6 +75,18 @@ class Roman {
 
         return decimal;
     }
+
+    static test() {
+        for (let index = 0; index <= 3999; index++) {
+            const romanized = Roman.fromDecimal(index);
+            const rearabicized = Roman.toDecimal(romanized);
+            const difference = index - rearabicized;
+            console.log(`${ index } ~ ${ romanized } ${ difference === 0 ? '' : ' ~ ' + difference }`);
+            if (difference !== 0) {
+                throw new Error('asymmetric');
+            }
+        }
+    }
 }
 
 Roman.Values = {
@@ -122,17 +134,4 @@ Roman.Patterns = {
     3000: 'MMM'
 };
 
-
-function test() {
-    for (let index = 0; index <= 3999; index++) {
-        const romanized = Roman.fromDecimal(index);
-        const rearabicized = Roman.toDecimal(romanized);
-        const difference = index - rearabicized;
-        console.log(`${ index } ~ ${ romanized } ${ difference === 0 ? '' : ' ~ ' + difference }`);
-        if (difference !== 0) {
-            throw new Error('asymmetric');
-        }
-    }
-}
-
-test();
+Roman.test();
