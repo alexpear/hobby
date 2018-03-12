@@ -125,10 +125,23 @@ class Roman {
         }
     }
 
+    static numeralsFor1999() {
+        return [
+            'MCMXCIX',
+            'MDMID',
+            'MCMIC',
+            'MLMXLIX',
+            'MLMIL',
+            'MXMIX',
+            'MVMIV',
+            'MIM',
+        ];
+    }
+
     static test() {
         console.log(
             JSON.stringify(
-                Roman.byHeterogeneity(),
+                Roman.numeralsFor1999().map(num => Roman.toDecimal(num)),
                 undefined,
                 '    '
             )
