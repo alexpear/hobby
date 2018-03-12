@@ -138,16 +138,104 @@ class Roman {
         ];
     }
 
+    static allNumerals(maxLength) {
+        let allRaw = Roman.allNumeralsRaw(maxLength);
+        let allByValue = {};
+
+        for (let numeral of allRaw) {
+            const value = Roman.toDecimal(numeral);
+
+            if (allByValue[value] === undefined) {
+                allByValue[value] = [numeral];
+            }
+            // Censor non-shortest numerals
+            else if (allByValue[value][0].length >= numeral.length) {
+                allByValue[value].push(numeral);
+            }
+        }
+
+        return allByValue;
+    }
+
+    static allNumeralsRaw(maxLength) {
+        let all = Roman.extensionsOf('');
+        let previousBatch = all;
+
+        for (let i = 2; i <= maxLength; i++) {
+            // TODO: Could speedup by checking each new numeral here
+            // against the memoized obj allByValue.
+            const newNumerals = previousBatch.reduce(
+                (soFar, prevNumeral) => soFar.concat(
+                    Roman.extensionsOf(prevNumeral)
+                ),
+                []
+            );
+
+            all = all.concat(newNumerals);
+            previousBatch = newNumerals;
+        }
+
+        return all;
+    }
+
+    static extensionsOf(numeral) {
+        return Roman.ALPHABET
+            .map(symbol => numeral + symbol)
+            // Censor the 'dumb' conflicted ones.
+            .filter(numeral => ! Roman.hasInternalConflict(numeral));
+    }
+
+    // A numeral has internal conflict if it contains both a additive instance and a subtractive instance of the same symbol.
+    static hasInternalConflict(numeral) {
+        let additives = {};
+        let subtractives = {};
+        for (let i = 0; i < numeral.length; i++) {
+            const curSymbol = numeral[i];
+            const curValue = Roman.Values[curSymbol];
+            const nextValue = (i === numeral.length - 1) ?
+                0 :
+                Roman.Values[numeral[i + 1]];
+            if (curValue >= nextValue) {
+                // Found a additive instance of this symbol.
+                if (subtractives[curSymbol]) {
+                    return true;
+                }
+
+                additives[curSymbol] = true;
+            }
+            else {
+                // Found a subtractive instance of this symbol.
+                if (additives[curSymbol]) {
+                    return true;
+                }
+
+                subtractives[curSymbol] = true;
+            }
+        }
+
+        return false;
+    }
+
     static test() {
         console.log(
             JSON.stringify(
-                Roman.numeralsFor1999().map(num => Roman.toDecimal(num)),
+                Roman.allNumerals(6),
                 undefined,
                 '    '
             )
         );
     }
 }
+
+Roman.ALPHABET = [
+    'I',
+    'V',
+    'X',
+    'L',
+    'C',
+    'D',
+    'M'
+];
 
 Roman.Values = {
     N: 0,
