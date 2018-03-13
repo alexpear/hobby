@@ -6,8 +6,14 @@ const NULLUS = 'NVLLVS';
 
 class Roman {
     static fromDecimal (decimal) {
-        if (decimal < 0 || 3999 < decimal || decimal % 1 !== 0) {
-            throw new Error('stick to commonplace roman symbols pls');
+        if (decimal < 0) {
+            throw new Error('only non-negative numbers are supported.');
+        }
+        else if (99999 < decimal) {
+            throw new Error('this functions input is too large to represent with this alphabet.');
+        }
+        else if (decimal % 1 !== 0) {
+            throw new Error('non-integers are not supported.');
         }
 
         if (decimal === 0) {
@@ -138,18 +144,36 @@ class Roman {
         ];
     }
 
+    static standardForm(numeral) {
+        return Roman.fromDecimal(Roman.toDecimal(numeral));
+    }
+
+    static anagrams(a, b) {
+        return a.split('').sort().join('') === b.split('').sort().join('');
+    }
+
     static allNumerals(maxLength) {
         let allRaw = Roman.allNumeralsRaw(maxLength);
         let allByValue = {};
 
         for (let numeral of allRaw) {
             const value = Roman.toDecimal(numeral);
+            const standardForm = Roman.fromDecimal(value);
 
-            if (allByValue[value] === undefined) {
+            // Skip boring, standard-form numerals, their anagrams, and non-shortest numerals.
+            if (numeral === standardForm ||
+                Roman.anagrams(numeral, standardForm) ||
+                numeral.length > standardForm.length) {
+
+                continue;
+            }
+            else if (allByValue[value] === undefined) {
                 allByValue[value] = [numeral];
             }
-            // Censor non-shortest numerals
-            else if (allByValue[value][0].length >= numeral.length) {
+            // Skip non-shortest numerals and anagrams.
+            else if (allByValue[value][0].length >= numeral.length &&
+                ! Roman.anagrams(numeral, allByValue[value][0])) {
+
                 allByValue[value].push(numeral);
             }
         }
