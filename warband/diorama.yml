@@ -1,0 +1,26 @@
+---
+  battle: 
+    armies:
+      - templateId: "humanGarrison"
+        has:
+          - templateId: "rifleSquad"
+            quantity: 10
+            # In this diorama format we specify quantity;
+            # in-memory this will be expanded to 10 warrior nodes.
+          - templateId: "rifleSquad"
+            quantity: 10
+          - templateId: "shockSquad"
+            quantity: 5
+      - templateId: "covenantPatrol"
+        has:
+          - templateId: "longRangeLance"
+            quantity: 12
+          - templateId: "longRangeLance"
+            quantity: 12
+          - templateId: "ghostSquad"
+            quantity: 3
+
+
+
+
+

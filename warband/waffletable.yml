@@ -1,0 +1,121 @@
+---
+  # randomtable-inspired Waffle grammar format
+  # yaml if i can
+  # randomtable is a set of tables
+  # each table has rows of a number and a string
+  # the string contains pointers to other tables
+  output:
+    # exactly 2 armies (of patrol size)
+    # exactly 1 terrain node
+    # exactly 1 time of day node
+    children:
+      - army
+      - army
+      - terrain
+      - time
+  terrain:
+    type:  # type may be too vague a word. Basically it's the value of the terrain node.
+    # 'variety' maybe, or 'version', 'strain'...
+      - desert
+      - forest
+      - jungle
+      - coast
+      - mountain
+      - ruins
+      - wasteland
+      - cathedral
+      - fort
+      - snow
+      # this example is about Warhammer 40k so it's very gothic n_n
+  time:
+    type:
+      - dawn
+      - morning
+      - noon
+      - evening
+      - sunset
+      - midnight
+      - predawn
+  army:
+    # this format can specify that one of these top-level table names functions as a alias.
+    # this format can also specify that Armies always have exactly 3 children,
+    # each of which is a Squad node.
+    children:
+      - squad
+      - squad
+      - squad
+  squad:
+    # i guess i'm saying every army is the same faction for now
+    # later maybe tables like 'igSquad', 'igHq', 'igHeavySupport', etc.
+    # involves some duplication...
+    alias:
+      - troops
+      - hq
+    # alias simply replaces the current node with the newly drawn node.
+    # in this case i want the Waffle output to remember that it will be both a hq node and a squad node. 
+    # like polymorphism.
+    # not sure how to specify this now. Is that default behavior, or will i sometimes _not_ want that?
+  troops:
+    alias:
+      - militia
+      - stormtroopers
+  hq:
+    alias:
+      - inquisitor
+      - sanctionedProphet
+  # ...
+
+
+# and output might look like:
+output:
+  nodeType: battle
+  has:
+    - nodeType: army
+      has:
+        - nodeType: stormtroopers
+          quantity: 10
+        - nodeType: stormtroopers
+          quantity: 10
+        - nodeType: sanctionedProphet
+          quantity: 1
+    - nodeType: army
+      has:
+        - nodeType: militia
+          quantity: 15
+        - nodeType: militia
+          quantity: 15
+        - nodeType: sanctionedProphet
+          quantity: 1
+    - nodeType: terrain
+      variety: snow
+    - nodeType: time
+      variety: dawn
+
+# hmm. I would kindof like the children of the Battle node to be in special fields instead of a homogenized array .... maybe later. 
+
+# one nice thing about randomtable was that you could intuitively specify either aliases or zooming-in details with very similar syntax. A alias is when the table's entire output is pointers to other tables. 
+# A zooming-in detail system is when the output is text framing pointers to other tables. 
+# Can the same be done for the Waffle-tree-output syntax? 
+# alternate alias syntax for hq table:
+hq:
+  inquisitor: 9
+  sanctionedProphet: 7
+# another alternate, designed to be more readable:
+# (we could probably support both)
+hq:
+  alias:
+    inquisitor: 9
+    sanctionedProphet: 7
+# i like that last one pretty well, actually.
+
+# so maybe every table has 1 of 3 possible children:
+# alias:
+# variety:, or
+# chilren: (or it could be has:, for consistency with output)
+
+# i still haven't explored how to specify a random quantity of something.
+# hmm, my old armygen had that. Maxima and minima for each element
+
+
+
+

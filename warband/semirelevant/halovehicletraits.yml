@@ -1,0 +1,151 @@
+---
+mongoose:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+gungoose:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+scoutWarthog:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+transportWarthog:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+warthog:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+rocketWarthog:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+gaussWarthog:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+wasp:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+hannibalWasp:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+scorpion:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+hannibalScorpion:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+lightHornet:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+heavyHornet:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+elephant:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
+mantis:
+  faction: "unsc"
+  hp: 0
+  speed: 0
+  flight: 0
+  seats: 0
+  spawnPoint: 0
+  damage: 0
+  range: 0
+  projectileVelocity: 0
