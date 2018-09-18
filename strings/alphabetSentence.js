@@ -30,25 +30,28 @@ function analysis (sentence) {
     return {
         input: sentence,
         inefficiency: cleanSentence.length - ALPHABET.length,
-        missing: missing(cleanSentence),
+        missing: missing(cleanSentence) || 'Nothing missing.',
         duplicates: prettyDuplicates(cleanSentence)
     };
 }
 
+// Returns string
 function missing (sentence) {
     return ALPHABET.split('')
         .filter(
             letter => sentence.indexOf(letter) === -1
         )
-        .join('') || 'Nothing missing.';
+        .join('');
 }
 
+// Returns string
 function prettyDuplicates (str) {
     return duplicates(str)
         .sort()
         .join(' ') || 'No duplicates.';
 }
 
+// Returns string[]
 function duplicates (str) {
     let instancesOf = {};
     for (let i = 0; i < str.length; i++) {
@@ -97,6 +100,7 @@ function consonantfulWords () {
     );
 }
 
+// High is usually bad i think.
 function consonantRatio (word) {
     word = word.toUpperCase();
 
@@ -157,7 +161,56 @@ function notContaining (words, blacklist) {
 
 // Score a word based on a weighted sum of its impact to the sentence's missings, duplicates, and vowel ratio among the missings.
 function suitability(word, sentence) {
-    // TODO
-    return 0;
+    word = word.toUpperCase();
+    sentence = sentence.toUpperCase();
+    const combined = sentence + ' ' + word;
+
+    const intersect = intersection(word, sentence);
+    const duplicateScore = -1 * intersect.length;
+
+    const oldMissing = missing(sentence);
+    const newMissing = missing(combined);
+    const missingReduction = uniqueIntersection(oldMissing, word).length;
+    const missingScore = 1 * missingReduction;
+
+    const oldMissingRatio = consonantRatio(oldMissing);
+    const newMissingRatio = consonantRatio(newMissing);
+    const consonantRatioScore = 1 * (oldMissingRatio - newMissingRatio);
+
+    const suit = duplicateScore + missingScore + consonantRatioScore;
+
+    console.log(`word: ${word}, sentence: ${sentence}`);
+    console.log(`duplicateScore: ${duplicateScore}, missingScore: ${missingScore}, consonantRatioScore: ${consonantRatioScore}`);
+    console.log(`...total suitability: ${suit}`);
+
+    return suit;
 }
+
+// Params string, string
+// Ignores duplicates within each word
+function uniqueIntersection (a, b) {
+    const aSet = new Set(a.split(''));
+    const bSet = new Set(b.split(''));
+
+    const intersect = new Set(
+        [...aSet].filter(
+            e => bSet.has(e)
+        )
+    );
+
+    return [...intersect].join('');
+}
+
+// Params string, string
+function intersection (a, b) {
+    const intersect = a.split('')
+        .filter(
+            e => b.indexOf(e) >= 0
+        )
+        .join('');
+
+    return intersect;
+}
+
+console.log(suitability('I QUANT', 'MR SPLOTCH'))
 
