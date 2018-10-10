@@ -1,0 +1,151 @@
+* output
+4 The two worlds of {worldname} and {worldname}.
+
+* worldname
+4 -= {word} =-
+4 -= {word} {word} =-
+
+* word
+4 {V}{c}
+2 {C}{v}
+4 {start}{end}
+6 {start}{syllables}{end}
+
+* vblock
+4 {v}
+1 {v}{vfriend}
+
+* Vblock
+4 {V}
+1 {V}{vfriend}
+
+* v
+4 a
+4 e
+4 i
+4 o
+4 u
+2 y
+
+* vfriend
+2 l
+2 n
+4 r
+2 s
+
+* V
+4 A
+4 E
+4 I
+4 O
+4 U
+3 Y
+
+* c
+4 b
+3 c
+1 ch
+4 d
+4 f
+4 g
+3 h
+3 j
+3 k
+1 kh
+4 l
+4 m
+4 n
+4 p
+1 ph
+1 q
+3 qu
+4 r
+3 s
+2 sh
+1 sch
+2 t
+2 th
+4 v
+3 w
+4 x
+2 y
+3 z
+0 {doublec}
+
+* C
+4 B
+3 C
+1 Ch
+4 D
+4 F
+4 G
+3 H
+4 J
+3 K
+1 Kh
+4 L
+4 M
+4 N
+4 P
+2 Ph
+1 Q
+3 Qu
+4 R
+3 S
+2 Sh
+1 Sch
+2 T
+2 Th
+4 V
+3 W
+4 X
+2 Y
+3 Z
+
+* doublec
+4 bb
+3 cc
+4 dd
+4 ff
+4 gg
+2 jj
+2 kk
+4 ll
+4 mm
+4 nn
+3 pp
+1 qq
+4 rr
+4 ss
+4 tt
+1 vv
+1 ww
+1 xx
+1 yy
+3 zz
+
+* start
+4 {V}
+4 {C}{v}
+
+* syllables
+5 {syllable}
+5 {syllable}{syllable}
+1 {syllable}{syllable}{syllable}
+0 {syllable}{syllable}{syllable}{syllable}
+
+* syllable
+9 {c}{v}
+
+* end
+4 {c}{endv}
+4 {c}
+4 {syllable}
+
+* endv
+11 ia
+11 a
+8 ium
+7 ion
+6 {v}n
+6 {v}s
