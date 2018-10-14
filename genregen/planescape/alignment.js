@@ -3,6 +3,7 @@
 // Multi-axis alignment system for fantasy fiction
 // In the style of Dungeons & Dragons and Planescape
 
+// TODO: Add support for mildly-aligned and strongly-aligned. +1 and +2 perhaps.
 const ALIGNMENTS = {
     Celestia: {
         evilGood: 1,
