@@ -1,0 +1,180 @@
+* output
+1 {regionGlimpse}
+
+* regionGlimpse
+4 {AreaPhrase}, {number} {groupAdj} {groups} {groupAction}. Within them, {species} are the {role}, {connector} {species} are the {role}. {OutsideThreat}.
+
+* AreaPhrase
+4 On a sparkling coast
+4 Deep in the moors of thunder
+4 In a beautiful desert
+4 In the fey-touched jungle
+4 In a wasteland that does not know magic
+4 In the ashes of dragonfire
+4 In the twilight of the Underdark
+
+* number
+4 two
+4 three
+4 four
+4 five
+4 six
+4 seven
+4 eight
+4 nine
+4 ten
+1 eleven
+4 twelve
+4 thirteen
+4 several
+4 a handful of
+4 many
+4 dozens of
+4 hundreds of
+4 innumerable
+
+* groupAdj
+4 well-fortified
+4 wary
+4 enchanted
+2 invisible
+4 concealed
+4 little-known
+4 wealthy
+4 struggling
+4 pious
+4 humble
+4 long-bearded
+4 crumbling
+4 rapidly growing
+
+* groups
+4 castles
+4 fortresses
+4 towns
+4 villages
+4 cavern cities
+4 cities
+4 caravans
+4 tribes
+4 guilds
+4 temples
+4 shrines
+4 monasteries
+4 convents
+4 abbeys
+4 towers
+4 spires
+4 pit-villages
+4 treehouses
+
+* groupAction
+4 lie hidden
+4 stand proudly
+4 sparkle in the sun
+4 remember the last Age
+4 have appeared
+4 are growing
+
+* species
+4 humans
+4 high elves
+4 wood elves
+4 drow
+4 dwarves
+4 goblins
+4 halflings
+4 fairies
+4 djinni
+2 efreeti
+3 elementals
+4 dragons
+4 minotaurs
+2 ogres
+4 giants
+3 trolls
+4 gnolls
+4 naga
+4 lizardfolk
+4 merfolk
+4 werewolves
+4 driders
+4 liches
+3 zombies
+3 skeletons
+1 mummies
+4 golems
+
+* role
+4 royalty
+4 aristocrats
+4 overseers
+4 viziers
+4 archmages
+4 demigods
+4 tyrants
+4 clan leaders
+4 masterminds
+4 movers and shakers
+4 talk of the town
+4 heroes
+4 protectors
+4 champions
+4 figureheads
+4 intelligentsia
+4 elite
+4 matchmakers
+4 elders
+4 thieves
+4 second class citizens
+4 slaves
+4 laborers
+4 bulk of the population
+4 criminals
+4 community's heart
+4 historians
+4 scientists
+4 arcanists
+4 inventors
+4 clergy
+4 explorers
+4 scouts
+4 builders
+4 architects
+4 soldiers
+4 outcasts
+4 revolutionaries
+
+* connector
+2 and
+2 while
+1 but
+1 yet
+1 even while
+
+* OutsideThreat
+4 As summer blooms, {outsideRole} {species} are approaching
+4 Every year, the {threats} get worse
+
+* outsideRole
+4 fleeing
+4 barbarian
+4 warrior
+4 armies of
+4 merchant
+4 insidious
+4 hostile
+4 wealthy
+4 lackadaisical
+4 the prophesized
+
+* threats
+4 summers
+4 storms
+4 blizzards
+4 raiders
+4 barbarians
+4 disease outbreaks
+4 food shortages
+4 attempts at rebellion
+4 portents
