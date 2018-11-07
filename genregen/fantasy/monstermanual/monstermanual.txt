@@ -1,0 +1,270 @@
+* output
+4 {CreatureEntry}
+0 {RegionEntry}
+0 {PhenomenonEntry}
+
+* CreatureEntry
+1 {Name} - A {size} {alignment} {category} {inRegion}. 
+
+* Name
+4 {medWord}
+2 {word}-{word}
+
+* size
+4 tiny
+4 small
+10 medium
+4 large
+4 huge
+1 gargantuan
+
+* alignment
+1 {lawChaos} {evilGood}
+
+* lawChaos
+1 lawful
+1 neutral
+1 chaotic
+
+* evilGood
+1 evil
+1 neutral
+1 good
+
+* category
+5 humanoid
+3 goblinoid
+4 aberration
+4 outsider
+4 elemental
+4 spirit
+4 beast
+
+* inRegion
+2 {foundIn} {regionAdj} {region}
+
+* foundIn
+1 found in
+1 native to
+1 common in
+1 endemic to
+1 that has been sighted in
+1 that is legendary in
+1 that is an important cultural symbol in
+
+* regionAdj
+1 the {directional}
+1 many of the world's
+
+* directional
+1 northern
+1 northeastern
+1 eastern
+1 southeastern
+1 southern
+1 southwestern
+1 western
+1 northwestern
+1 central
+
+* region
+1 deserts
+1 forests
+1 rainforests
+1 jungles
+2 dungeons
+1 seas
+1 plains
+1 grasslands
+1 mountains
+1 polar regions
+1 battlefields
+1 wastelands
+1 cities
+
+* word
+1 {V}{c}
+1 {C}{v}
+15 {medWord}
+
+* medWord
+6 {start}{end}
+9 {start}{syllables}{end}
+
+* vblock
+4 {v}
+1 {v}{vfriend}
+
+* Vblock
+4 {V}
+1 {V}{vfriend}
+
+* v
+4 a
+4 e
+4 i
+4 o
+4 u
+1 y
+1 {vAccent}
+
+* vAccent
+1 á
+1 é
+1 í
+1 ó
+1 ú
+1 â
+1 ê
+1 î
+1 ô
+1 û
+1 ä
+1 ë
+1 ï
+1 ö
+1 û
+
+* VAccent
+1 Á
+1 É
+1 Í
+1 Ó
+1 Ú
+1 Â
+1 Ê
+1 Î
+1 Ô
+1 Û
+1 Ä
+1 Ë
+1 Ï
+1 Ö
+1 Ü
+
+* vfriend
+2 l
+2 n
+4 r
+2 s
+
+* V
+4 A
+4 E
+4 I
+4 O
+4 U
+3 Y
+1 {VAccent}
+
+* c
+4 b
+3 c
+1 ç
+1 ch
+4 d
+4 f
+4 g
+3 h
+3 j
+3 k
+1 kh
+4 l
+4 m
+4 n
+1 ñ
+4 p
+1 ph
+1 q
+3 qu
+4 r
+3 s
+2 sh
+1 sch
+2 t
+2 th
+4 v
+3 w
+2 x
+1 y
+3 z
+0 {doublec}
+
+* C
+4 B
+3 C
+1 Ch
+4 D
+4 F
+4 G
+3 H
+4 J
+3 K
+1 Kh
+4 L
+4 M
+4 N
+4 P
+2 Ph
+1 Q
+3 Qu
+4 R
+3 S
+2 Sh
+1 Sch
+2 T
+2 Th
+4 V
+3 W
+4 X
+2 Y
+3 Z
+
+* doublec
+4 bb
+3 cc
+4 dd
+4 ff
+4 gg
+2 jj
+2 kk
+4 ll
+4 mm
+4 nn
+3 pp
+1 qq
+4 rr
+4 ss
+4 tt
+1 vv
+1 ww
+1 xx
+1 yy
+3 zz
+
+* start
+4 {V}
+4 {C}{v}
+
+* syllables
+5 {syllable}
+5 {syllable}{syllable}
+1 {syllable}{syllable}{syllable}
+0 {syllable}{syllable}{syllable}{syllable}
+
+* syllable
+9 {c}{v}
+
+* end
+4 {c}{endv}
+4 {c}
+4 {syllable}
+
+* endv
+11 ia
+11 a
+8 ium
+7 ion
+6 {v}n
+6 {v}s
+
