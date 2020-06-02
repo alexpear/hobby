@@ -1,8 +1,8 @@
-20 This {place} contains mostly {mainrace}, plus a few {rarerace}. 
-7 This {place} is inhabited mostly by {mainrace}, plus a few {rarerace}. 
+23 This {place} contains mostly {mainrace}, plus a few {rarerace}. 
+13 This {place} is inhabited mostly by {mainrace}, plus a few {rarerace}. 
 4 {mainrace} dominate this {place}, but a few {rarerace} are also present. 
 19 {mainrace} are common in this {place}, but a few {rarerace} are also present. 
-23 This {placeadj} {place} contains mostly {mainrace}, plus a few {rarerace}. 
+26 This {placeadj} {place} contains mostly {mainrace}, plus a few {rarerace}. 
 17 This {placeadj} {place} is inhabited mostly by {mainrace}, plus a few {rarerace}. 
 20 {mainrace} dominate this {placeadj} {place}, but a few {rarerace} are also present. 
-18 {mainrace} are common in this {placeadj} {place}, but a few {rarerace} are also present. 
+21 {mainrace} are common in this {placeadj} {place}, but a few {rarerace} are also present. 

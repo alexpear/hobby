@@ -1,5 +1,5 @@
-182 humans
-64 elves
+185 humans
+67 elves
 18 drow
 6 half-elves
 
@@ -15,7 +15,7 @@
 
 42 dwarves
 
-30 vampires
+33 vampires
 9 undead
 12 zombies
 21 skeletons
@@ -28,7 +28,7 @@
 1 liches
 
 2 sphynxes
-5 dragons
+8 dragons
 
 6 gnomes
 3 dryads
@@ -37,7 +37,7 @@
 
 4 lizardfolk
 2 catfolk
-26 tieflings
+29 tieflings
 19 dragonborn
 2 ratlings
 

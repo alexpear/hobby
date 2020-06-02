@@ -6,7 +6,7 @@
 18 half-orcs
 15 orcs
 9 goblins
-10 hobgoblins
+13 hobgoblins
 5 half-giants
 8 halflings
 23 ogres
@@ -37,13 +37,13 @@
 
 4 lizardfolk
 2 catfolk
-26 tieflings
+29 tieflings
 13 dragonborn
 4 ratlings
 
-48 golems
+51 golems
 4 warforged 
-29 elementals
+32 elementals
 
 5 statues
 6 tombs
@@ -58,7 +58,7 @@
 9 rats
 7 lions
 7 tigers
-9 bears
+12 bears
 5 lizards
 9 birds
 9 rocks

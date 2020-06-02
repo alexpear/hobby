@@ -1,5 +1,5 @@
 24 Human
-12 Man
+15 Man
 139 Elf
 30 Drow
 30 Half-Elf
@@ -10,7 +10,7 @@
 13 Hobgoblin
 15 Half-giant
 31 Halfling
-38 Ogre
+41 Ogre
 33 Gnoll
 33 Troglodyte 
 
@@ -41,7 +41,7 @@
 54 Golem
 30 Warforged 
 11 Elemental
-33 angel
+36 angel
 36 demon
 22 daemon
 25 devil
@@ -49,7 +49,7 @@
 11 siren
 11 chimera
 11 medusa
-11 minotaur
+14 minotaur
 11 centaur
 11 satyr
 
@@ -59,17 +59,17 @@
 25 warrior
 27 adventurer
 30 dragonslayer
-22 sellsword
-12 swindler
+31 sellsword
+15 swindler
 6 mercenary
 25 bandit
 10 outlaw
 19 marshal
-34 commander
+37 commander
 20 general
-28 admiral
-66 knight
-12 blackguard
+31 admiral
+69 knight
+15 blackguard
 9 death knight
 1 dragon-tamer
 4 dragon rider
@@ -79,22 +79,22 @@
 12 sorcerer
 36 mage
 21 spellsword
-44 warmage
+47 warmage
 34 battlemage
 16 hexmage
-39 witch 
+42 witch 
 11 magician
 
 14 bard
 44 troubador 
 
-37 rogue
+40 rogue
 18 thief
 29 scoundrel
 16 pirate
-15 assassin
+18 assassin
 
-30 cleric
+33 cleric
 27 priest
 27 bishop
 25 monk
@@ -102,13 +102,13 @@
 15 cultist
 36 paladin
 48 healer
-28 druid
+31 druid
 
 33 noble
 18 peasant
 45 farmer
 21 merchant
-27 artisan
+30 artisan
 11 traveler
 23 wanderer
 11 vagabond
@@ -121,27 +121,27 @@
 7 guild master
 33 king
 33 queen
-25 prince
+28 prince
 25 princess
 11 duke
 22 scion
 36 son
-33 daughter
-22 heir
+39 daughter
+25 heir
 39 child
 14 nobleborn
 14 vizier
 14 fool
-25 lady
+28 lady
 11 woman
 11 girl
 11 guildsmen
 22 master
 25 masters
 
-33 horse
+36 horse
 22 snake
-22 serpent
+28 serpent
 33 lion
 33 tiger
 11 panther
@@ -166,7 +166,7 @@
 22 beast
 22 beasts
 
-3 Forest
+6 Forest
 3 Deep Forest
 3 Pine Forest
 3 Rainforest
@@ -184,11 +184,11 @@
 9 Riverbank
 9 Delta
 9 Farmland
-37 dune
-22 island
+40 dune
+25 island
 22 isle
 
-128 city
+137 city
 22 town
 42 village
 18 hamlet
@@ -202,14 +202,14 @@
 11 guild
 11 guilds
 
-47 kingdom
-36 land
-47 empire
+53 kingdom
+39 land
+50 empire
 33 ruins
-42 dust
+51 dust
 
 24 birth
-44 death
+47 death
 26 fall
 22 sundering
 22 breaking
@@ -218,45 +218,45 @@
 25 chronicle
 22 annals
 66 book
-33 game
-36 fate
-39 doom
+36 game
+39 fate
+42 doom
 47 rise
 25 grace
-25 mercy
+28 mercy
 25 peace
 
 11 summer
 14 autumn
 14 winter
-11 spring
+14 spring
 11 dusk
 14 dawn
 11 midnight
 14 noon
 
-28 sun
-28 moon
+31 sun
+31 moon
 65 star
-72 shadow
+75 shadow
 61 fire
 22 ice
 11 grass
-50 waters
+53 waters
 
 11 music
 17 song
 42 dance
 22 oath
 11 promise
-25 curse
-25 memory
+28 curse
+28 memory
 25 breath
 
 36 time
 56 age
 14 aeon
-37 years
+40 years
 50 day
 90 night
 50 void
@@ -276,28 +276,28 @@
 14 valley
 11 vale
 20 aerie
-11 lake
+14 lake
 36 river
 11 well
 
 56 sea
 53 ocean
-11 continent
+14 continent
 
 25 heaven
 25 earth
-22 abyss
+28 abyss
 22 hell
 22 tartarus
 11 purgatory
 
-61 stone
+67 stone
 53 ring
 28 amulet
 25 talisman
 11 belt
-117 sword
-73 spear
+123 sword
+76 spear
 67 knife
 14 helm
 11 hood
@@ -305,11 +305,11 @@
 25 robe
 25 cloak
 64 shield
-64 throne
+67 throne
 11 device
 22 mechanism
 
-94 castle
+97 castle
 47 spire
 109 tower
 22 sanctum
@@ -322,7 +322,7 @@
 11 heel
 132 crown
 11 finger
-47 heart
+50 heart
 
 15 matriarchy
 12 theocracy
