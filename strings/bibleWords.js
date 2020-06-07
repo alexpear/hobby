@@ -46,8 +46,17 @@ class BibleWords {
 
         // console.log(`end of loop`)
 
-        const capitalizedVocab = Object.keys(capitalizedDictionary).sort().join(', ');
-        const vocab = Object.keys(dictionary).sort().join(', ');
+        const capitalizedVocab = Object.keys(
+            BibleWords.withoutConjugations(capitalizedDictionary)
+        )
+        .sort()
+        .join(', ');
+
+        const vocab = Object.keys(
+            BibleWords.withoutConjugations(dictionary)
+        )
+        .sort()
+        .join(', ');
 
         console.log(capitalizedVocab + '\n\n' + vocab);
     }
@@ -57,7 +66,35 @@ class BibleWords {
     }
 
     static alphanumericOnly (string) {
-        return string.replace(/[^\w\s]|_/g, '');
+        return string.replace(/[^\w\s]|_/g, ' ');
+    }
+
+    static withoutConjugations (dictionary) {
+        const newDictionary = {};
+
+        for (let word in dictionary) {
+            // if (dictionary[words + 's'])
+
+            if (word.endsWith('s') && dictionary[word.slice(0, -1)]) {
+                // Skip plurals
+                console.log(`skipping ${word} because we already have ${word.slice(0, -1)}`);
+                continue;
+            }
+
+            if ((word.endsWith('es') || word.endsWith('ed')) && dictionary[word.slice(0, -2)]) {
+                console.log(`skipping ${word} because we already have ${word.slice(0, -2)}`);
+                continue;
+            }
+
+            if (word.endsWith('ing') && dictionary[word.slice(0, -3)]) {
+                console.log(`skipping ${word} because we already have ${word.slice(0, -3)}`);
+                continue;                
+            }
+
+            newDictionary[word] = true;
+        }
+
+        return newDictionary;
     }
 }
 
