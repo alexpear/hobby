@@ -83,9 +83,9 @@ class DominionCard {
             0
         );
 
+        const rounded = Math.round(sum)
+        this.price = Math.max(rounded, 0);
 
-
-        this.price = Math.max(sum, 0);
         return this.price;
     }
 
@@ -266,12 +266,14 @@ DominionCard.LINE_TYPES = {
     },
     drawTo: { // Library
         maxParam: 7,
-        cost: 2
+        cost: 0.5
     },
     reduceCosts: { // Bridge
         maxParam: 2,
         cost: 2
     },
+    // Boon
+    // Hex
     treasure: { // Copper
         maxParam: 5,
         cost: 2
