@@ -42,7 +42,7 @@ class DominionCard {
         }
         while (this.lines[newType]);
 
-        const maxParam = DominionCard.LINE_TYPES[newType];
+        const maxParam = DominionCard.LINE_TYPES[newType].maxParam;
         this.lines[newType] = DominionCard.randomUpTo(maxParam);
 
         if (newType === 'treasure' || newType === 'victory' || newType === 'duration') {
@@ -62,7 +62,30 @@ class DominionCard {
     }
 
     price () {
-        this.price = 0; // todo
+        const prices = Object.keys(
+            this.lines
+        ).map(
+            key => {
+                const costRate = DominionCard.LINE_TYPES[key].cost;
+
+                const lineParam = this.lines[key];
+
+                if (typeof costRate === 'number') {
+                    return costRate * lineParam;
+                }
+
+                return costRate(lineParam);
+            }
+        );
+
+        const sum = prices.reduce(
+            (total, subPrice) => total + subPrice,
+            0
+        );
+
+
+
+        this.price = Math.max(sum, 0);
         return this.price;
     }
 
@@ -122,6 +145,7 @@ class DominionCard {
             output += `While this is in play, cards cost ${this.lines.reduceCosts} less, but not less than 0.\n`;
         }
         if (this.lines.treasure) {
+            // LATER replace all '2 money' with '$2'
             output += `Worth ${this.lines.treasure} money.\n`;
         }
         if (this.lines.victory) {
@@ -172,27 +196,90 @@ class DominionCard {
 
 // Values represent the maximum parameter for this line. The minimum is 1.
 DominionCard.LINE_TYPES = {
-    card: 4, // Market
-    action: 3, // Market
-    money: 5, // Market
-    buy: 2, // Market
-    coffer: 2, // Baker
-    villager: 2, // Patron
-    vpToken: 1, // Temple
-    discardTo: 5, // Militia (high numbers are less effective)
-    enemiesCurse: 1, // Witch
-    gainFromSupply: 6, // Workshop
-    gainSilver: 1, // Scrap
-    horse: 1, // Stampede (gain a Horse)
-    mayTrash: 4, // Chapel
-    trashGain: 3, // Remodel
-    trashThis: 1, // Feast
-    playAnother: 3, // Throne Room (1 means 'You may play an Action card from your hand 1 time', similar to +1 Action)
-    duration: 1, // Wharf (ie, perform same effect at start of next turn)
-    drawTo: 7, // Library
-    reduceCosts: 2, // Bridge
-    treasure: 5, // Copper
-    victory: 10 // Estate
+    card: { // Market
+        maxParam: 4,
+        cost: 1
+    },
+    action: { // Market
+        maxParam: 3,
+        cost: 1
+    },
+    money: { // Market
+        maxParam: 5,
+        cost: 1
+    },
+    buy: { // Market
+        maxParam: 4,
+        cost: 0.5
+    },
+    coffer: { // Baker
+        maxParam: 2,
+        cost: 1.2
+    },
+    villager: { // Patron
+        maxParam: 2,
+        cost: 1.2
+    },
+    vpToken: { // Temple
+        maxParam: 1,
+        cost: 2
+    },
+    discardTo: { // Militia (high numbers are less effective)
+        maxParam: 5,
+        cost: p => (0.5 * (6 - p))
+    },
+    enemiesCurse: { // Witch
+        maxParam: 1,
+        cost: 3
+    },
+    gainFromSupply: { // Workshop
+        maxParam: 6,
+        cost: 0.5
+    },
+    gainSilver: { // Scrap
+        maxParam: 1,
+        cost: 2
+    },
+    horse: { // Stampede (gain a Horse)
+        maxParam: 1,
+        cost: 1
+    },
+    mayTrash: { // Chapel
+        maxParam: 4,
+        cost: 0.5
+    },
+    trashGain: { // Remodel
+        maxParam: 3,
+        cost: 2.2
+    },
+    trashThis: { // Feast
+        maxParam: 1,
+        cost: -2
+    },
+    playAnother: { // Throne Room (1 means 'You may play an Action card from your hand 1 time', similar to +1 Action)
+        maxParam: 3,
+        cost: 2.2
+    },
+    duration: { // Wharf (ie, perform same effect at start of next turn)
+        maxParam: 1,
+        cost: 2.5
+    },
+    drawTo: { // Library
+        maxParam: 7,
+        cost: 2
+    },
+    reduceCosts: { // Bridge
+        maxParam: 2,
+        cost: 2
+    },
+    treasure: { // Copper
+        maxParam: 5,
+        cost: 2
+    },
+    victory: { // Estate
+        maxParam: 10,
+        cost: 1.5
+    }
 };
 
 module.exports = DominionCard;
