@@ -19,7 +19,7 @@ class DominionCard {
         const lineCount = DominionCard.randomUpTo(4);
         // console.log(`lineCount is ${lineCount}`)
 
-        for (let i = 0; i < lineCount; i++) {
+        for (let i = 0; i < lineCount && this.getPrice() < 6; i++) {
             // console.log(`in fill(), i is ${i}`)
 
             this.addLine();
@@ -61,7 +61,7 @@ class DominionCard {
         return DominionCard.randomOf(Object.keys(DominionCard.LINE_TYPES));
     }
 
-    price () {
+    getPrice () {
         const prices = Object.keys(
             this.lines
         ).map(
@@ -139,7 +139,7 @@ class DominionCard {
             output += `You may trash up to ${this.lines.mayTrash} cards from your hand.\n`;
         }
         if (this.lines.drawTo) {
-            output += `Draw until you have ${this.lines.drawTo} cards in hand.\n`;
+            output += `Draw until you have at least ${this.lines.drawTo} cards in hand.\n`;
         }
         if (this.lines.reduceCosts) {
             output += `While this is in play, cards cost ${this.lines.reduceCosts} less, but not less than 0.\n`;
@@ -172,7 +172,7 @@ class DominionCard {
         )
         .join(' - ');
 
-        output += `\n-- $${this.price()} ${types} --`;
+        output += `\n-- $${this.getPrice()} ${types} --`;
 
         return output;
         // return JSON.stringify(this, undefined, '    ');
@@ -202,15 +202,17 @@ DominionCard.LINE_TYPES = {
     },
     action: { // Market
         maxParam: 3,
-        cost: 1
+        cost: 1,
+        words: ['village', 'town'] // TODO
     },
     money: { // Market
         maxParam: 5,
         cost: 1
     },
     buy: { // Market
-        maxParam: 4,
-        cost: 0.5
+        maxParam: 2,
+        cost: 0.5,
+        words: ['market']
     },
     coffer: { // Baker
         maxParam: 2,
