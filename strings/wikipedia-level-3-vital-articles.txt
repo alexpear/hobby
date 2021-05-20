@@ -1,0 +1,998 @@
+Sargon of Akkad
+Hammurabi
+Hatshepsut
+Ramesses II
+Cyrus the Great
+Alexander the Great
+Ashoka
+Qin Shi Huang
+Julius Caesar
+Augustus
+Charlemagne
+Genghis Khan
+Joan of Arc
+Suleiman the Magnificent
+Elizabeth I
+Catherine the Great
+George Washington
+Napoleon
+Simón Bolívar
+Abraham Lincoln
+Mahatma Gandhi
+Vladimir Lenin
+Winston Churchill
+Joseph Stalin
+Adolf Hitler
+Mao Zedong
+Nelson Mandela
+Abraham
+Moses
+Laozi
+Gautama Buddha
+Jesus
+Paul the Apostle
+Muhammad
+Adi Shankara
+Martin Luther
+Marco Polo
+Ibn Battuta
+Zheng He
+Christopher Columbus
+Vasco da Gama
+Ferdinand Magellan
+James Cook
+Roald Amundsen
+Confucius
+Herodotus
+Socrates
+Plato
+Aristotle
+Avicenna
+Thomas Aquinas
+Ibn Khaldun
+René Descartes
+John Locke
+Adam Smith
+Immanuel Kant
+Mary Wollstonecraft
+Karl Marx
+Friedrich Nietzsche
+Sigmund Freud
+Homer
+Sappho
+Sophocles
+Virgil
+Li Bai
+Abu Nuwas
+Murasaki Shikibu
+Dante Alighieri
+Miguel de Cervantes
+William Shakespeare
+Voltaire
+Johann Wolfgang von Goethe
+Jane Austen
+Charles Dickens
+Fyodor Dostoevsky
+Leo Tolstoy
+Mark Twain
+Rabindranath Tagore
+James Joyce
+Franz Kafka
+Johann Sebastian Bach
+Wolfgang Amadeus Mozart
+Ludwig van Beethoven
+Richard Wagner
+Louis Armstrong
+Elvis Presley
+The Beatles
+Hippocrates
+Jabir ibn Hayyan
+Shen Kuo
+Johannes Gutenberg
+Nicolaus Copernicus
+Galileo Galilei
+Isaac Newton
+Benjamin Franklin
+Carl Linnaeus
+Antoine Lavoisier
+Michael Faraday
+Charles Darwin
+Louis Pasteur
+James Clerk Maxwell
+Dmitri Mendeleev
+Thomas Edison
+Nikola Tesla
+Marie Curie
+Albert Einstein
+Niels Bohr
+Archimedes
+Euclid
+Muhammad ibn Musa al-Khwarizmi
+Leonhard Euler
+Pierre-Simon Laplace
+Carl Friedrich Gauss
+Emmy Noether
+Kurt Gödel
+Alan Turing
+Leonardo da Vinci
+Michelangelo
+Rembrandt
+Hokusai
+Claude Monet
+Vincent van Gogh
+Pablo Picasso
+Frida Kahlo
+Charlie Chaplin
+Walt Disney
+Henry Ford
+History
+Human history
+Civilization
+Archaeology
+History of Africa
+History of Asia
+History of East Asia
+History of India
+History of the Middle East
+History of Europe
+History of North America
+History of Oceania
+History of South America
+History of art
+History of science
+History of agriculture
+History of architecture
+History of film
+History of literature
+History of mathematics
+History of medicine
+History of music
+History of technology
+Military history
+Prehistory
+Stone Age
+Early human migrations
+Neolithic Revolution
+Ancient history
+Bronze Age
+Ancient Egypt
+Indus Valley Civilisation
+Mesopotamia
+Sumer
+Assyria
+Iron Age
+Ancient Greece
+Ancient Rome
+Achaemenid Empire
+Gupta Empire
+Han dynasty
+Silk Road
+Pre-Columbian era
+Andean civilizations
+Mesoamerica
+Maya civilization
+Post-classical history
+Aztecs
+Inca Empire
+Islamic Golden Age
+Middle Ages
+Black Death
+Byzantine Empire
+Crusades
+Holy Roman Empire
+Viking Age
+Mongol Empire
+Ottoman Empire
+Tang dynasty
+Early modern period
+Renaissance
+Age of Discovery
+European colonization of the Americas
+Reformation
+Mughal Empire
+Scientific Revolution
+Age of Enlightenment
+Late modern period
+Industrial Revolution
+French Revolution
+Abolitionism
+Scramble for Africa
+British Empire
+Decolonization
+World War I
+Soviet Union
+Great Depression
+World War II
+Cold War
+Space Race
+Geography
+Continent
+Africa
+Antarctica
+Asia
+Europe
+North America
+South America
+Arctic
+Middle East
+Oceania
+City
+Beijing
+Cairo
+Delhi
+Hong Kong
+Istanbul
+Jakarta
+Jerusalem
+Lagos
+London
+Mecca
+Mexico City
+Moscow
+Mumbai
+New York City
+Paris
+Rome
+São Paulo
+Singapore
+Tokyo
+Country
+Argentina
+Australia
+Bangladesh
+Brazil
+Canada
+China
+Colombia
+Democratic Republic of the Congo
+Egypt
+Ethiopia
+France
+Germany
+India
+Indonesia
+Iran
+Israel
+Italy
+Japan
+Kenya
+Mexico
+Myanmar
+Nigeria
+Pakistan
+Philippines
+Poland
+Russia
+Saudi Arabia
+South Africa
+South Korea
+Spain
+Taiwan
+Tanzania
+Thailand
+Turkey
+United Kingdom
+United States
+Vietnam
+Sea
+Arctic Ocean
+Atlantic Ocean
+Mediterranean Sea
+Indian Ocean
+Pacific Ocean
+Great Barrier Reef
+Lake
+Caspian Sea
+Great Lakes
+Lake Victoria
+River
+Amazon River
+Ganges
+Mississippi River
+Nile
+Yangtze
+Land
+Desert
+Sahara
+Forest
+Amazon rainforest
+Glacier
+Grassland
+Island
+Mountain
+Alps
+Andes
+Himalayas
+Rocky Mountains
+Grand Canyon
+The arts
+Art
+Prehistoric art
+Museum
+Abstract art
+Modernism
+Realism (arts)
+Romanticism
+Architecture
+Great Pyramid of Giza
+Great Wall of China
+Literature
+English literature
+Fiction
+Novel
+Short story
+Fairy tale
+Poetry
+Epic poetry
+Music
+Musical instrument
+Singing
+Classical music
+Folk music
+Jazz
+Pop music
+Rock music
+Performing arts
+Dance
+Opera
+Orchestra
+Theatre
+Visual arts
+Film
+Animation
+Calligraphy
+Comics
+Design
+Drawing
+Painting
+Photography
+Pottery
+Sculpture
+Philosophy
+Philosophy of science
+Aesthetics
+Epistemology
+Knowledge
+Belief
+Reason
+Truth
+Ethics
+Good and evil
+Logic
+Metaphysics
+Free will
+Ontology
+Eastern philosophy
+Confucianism
+Western philosophy
+Ancient Greek philosophy
+Contemporary philosophy
+Religion
+Afterlife
+Deity
+God
+Meditation
+Myth
+New religious movement
+Prayer
+Ritual
+Shamanism
+Soul
+Spirituality
+Western esotericism
+Secularism
+Atheism
+Buddhism
+Mahayana
+Theravada
+Christianity
+Bible
+Catholic Church
+Eastern Orthodox Church
+Protestantism
+Hinduism
+Vedas
+Bhagavad Gita
+Islam
+Shia Islam
+Sunni Islam
+Quran
+Jainism
+Judaism
+Talmud
+Shinto
+Sikhism
+Taoism
+Clothing
+Home
+Furniture
+Jewellery
+Ethnic group
+Family
+Adult
+Old age
+Adolescence
+Child
+Infant
+Marriage
+Parenting
+Friendship
+Human sexuality
+Sexual orientation
+Gender
+Man
+Woman
+Cooking
+Food
+Bread
+Cereal
+Wheat
+Maize
+Rice
+Cheese
+Fruit
+Nut (fruit)
+Meat
+Salt
+Spice
+Sugar
+Vegetable
+Potato
+Soybean
+Drink
+Alcoholic drink
+Coffee
+Drinking water
+Milk
+Tea
+Entertainment
+Play (activity)
+Game
+Board game
+Card game
+Gambling
+Video game
+Sport
+Association football
+Sport of athletics
+Olympic Games
+Toy
+Martial arts
+Swimming
+Tourism
+Culture
+Folklore
+Festival
+Oral tradition
+Popular culture
+Society
+Community
+Power (social and political)
+Social class
+Communication
+Social science
+Anthropology
+Sociology
+Politics
+Political party
+Political science
+Colonialism
+Imperialism
+Government
+Democracy
+Dictatorship
+Monarchy
+Theocracy
+Ideology
+Anarchism
+Capitalism
+Communism
+Conservatism
+Fascism
+Liberalism
+Nationalism
+Socialism
+State (polity)
+Diplomacy
+Military
+European Union
+International Red Cross and Red Crescent Movement
+NATO
+United Nations
+International Monetary Fund
+World Health Organization
+World Trade Organization
+Genocide
+Peace
+Terrorism
+War
+Education
+School
+Library
+Business
+Corporation
+Management
+Marketing
+Retail
+Trade union
+Economics
+Trade
+Employment
+Finance
+Bank
+Money
+Market (economics)
+Supply and demand
+Tax
+Economy
+Agriculture
+Manufacturing
+Construction
+Fishing
+Hunting
+Mining
+Abortion
+Disability
+Discrimination
+Racism
+Sexism
+Environmentalism
+Pollution
+Famine
+Feminism
+Women's suffrage
+Globalization
+Human migration
+Human rights
+Liberty
+Privacy
+Slavery
+Social equality
+Indigenous peoples
+Poverty
+Welfare
+Law
+Crime
+Constitution
+Justice
+Police
+Property
+Psychology
+Emotion
+Anger
+Fear
+Happiness
+Humour
+Love
+Mind
+Consciousness
+Dream
+Memory
+Thought
+Human behavior
+Intelligence
+Learning
+Personality
+Language
+Arabic
+Indo-European languages
+Bengali language
+English language
+French language
+German language
+Greek language
+Hindustani language
+Latin
+Portuguese language
+Russian language
+Spanish language
+Chinese language
+Japanese language
+Linguistics
+Grammar
+Word
+Personal name
+Speech
+Writing
+Alphabet
+Arabic alphabet
+Brahmic scripts
+Cyrillic script
+Greek alphabet
+Latin script
+Chinese characters
+Mass media
+Broadcasting
+Journalism
+News
+Publishing
+Disease
+Allergy
+Asthma
+Cancer
+Cardiovascular disease
+Stroke
+Diabetes
+Gastroenteritis
+Infection
+Common cold
+Influenza
+Malaria
+Pneumonia
+Sexually transmitted infection
+HIV/AIDS
+Smallpox
+Tuberculosis
+Mental disorder
+Injury
+Medicine
+Dentistry
+Hospital
+Surgery
+Ageing
+Exercise
+Health
+Hygiene
+Sanitation
+Nutrition
+Obesity
+Drug
+Medication
+Anesthesia
+Antibiotic
+Birth control
+Vaccine
+Addiction
+Alcoholism
+Smoking
+Science
+Scientific method
+Measurement
+International System of Units
+Nature
+Astronomy
+Universe
+Solar System
+Sun
+Mercury (planet)
+Venus
+Earth
+Moon
+Mars
+Jupiter
+Saturn
+Uranus
+Neptune
+Asteroid
+Big Bang
+Black hole
+Comet
+Galaxy
+Milky Way
+Natural satellite
+Orbit
+Outer space
+Physical cosmology
+Planet
+Star
+Supernova
+Physics
+Energy
+Time
+Day
+Year
+Classical mechanics
+Mass
+Momentum
+Motion
+Newton's laws of motion
+Force
+Electromagnetism
+Gravity
+Strong interaction
+Weak interaction
+Magnetism
+Matter
+State of matter
+Particle physics
+Standard Model
+Subatomic particle
+Electron
+Neutron
+Photon
+Proton
+Quantum mechanics
+Radioactive decay
+Space
+Vacuum
+Thermodynamics
+Heat
+Temperature
+Theory of relativity
+Wave
+Electromagnetic radiation
+Light
+Color
+Optics
+Speed of light
+Sound
+Biology
+Life
+Cell (biology)
+Death
+Suicide
+Abiogenesis
+Evolution
+Human evolution
+Natural selection
+Organism
+Animal
+Zoology
+Amphibian
+Arthropod
+Insect
+Bird
+Fish
+Mammal
+Cat
+Cattle
+Dog
+Horse
+Primate
+Human
+Rodent
+Reptile
+Dinosaur
+Plant
+Botany
+Flower
+Seed
+Tree
+Algae
+Archaea
+Bacteria
+Eukaryote
+Fungus
+Virus
+Anatomy
+Human body
+Circulatory system
+Blood
+Heart
+Lung
+Digestion
+Liver
+Immune system
+Skin
+Muscle
+Nervous system
+Brain
+Ear
+Eye
+Sense
+Skeleton
+Ecology
+Biodiversity
+Ecosystem
+Extinction
+Genetics
+DNA
+Gene
+Heredity
+RNA
+Metabolism
+Molecular biology
+Protein
+Paleontology
+Photosynthesis
+Reproduction
+Sex
+Pregnancy
+Sleep
+Taxonomy (biology)
+Species
+Chemistry
+Biochemistry
+Inorganic chemistry
+Organic chemistry
+Physical chemistry
+Chemical element
+Atom
+Periodic table
+Aluminium
+Carbon
+Copper
+Gold
+Hydrogen
+Iron
+Nitrogen
+Oxygen
+Silicon
+Silver
+Chemical compound
+Water
+Carbon dioxide
+Chemical bond
+Molecule
+Chemical reaction
+Acid-base reaction
+Catalysis
+Redox
+Metal
+Alloy
+Bronze
+Steel
+Earth science
+History of Earth
+Atmosphere of Earth
+Structure of Earth
+Season
+Flood
+Climate
+Climate change
+Weather
+Cloud
+Rain
+Snow
+Tornado
+Tropical cyclone
+Wind
+Geology
+Earthquake
+Erosion
+Mineral
+Plate tectonics
+Rock (geology)
+Soil
+Volcano
+Technology
+Engineering
+Civil engineering
+Mechanical engineering
+Electricity
+Electric battery
+Fire
+Explosive
+Gunpowder
+Fossil fuel
+Coal
+Natural gas
+Petroleum
+Gasoline
+Nuclear power
+Renewable energy
+Hydropower
+Solar energy
+Wind power
+Animal husbandry
+Domestication
+Biotechnology
+Genetic engineering
+Fertilizer
+Food preservation
+Garden
+Medical imaging
+Refrigeration
+Stove
+Weapon
+Armour
+Bow and arrow
+Firearm
+Knife
+Nuclear weapon
+Tool
+Simple machine
+Wheel
+Engine
+Electric motor
+Internal combustion engine
+Jet engine
+Steam engine
+Robotics
+Printing
+Book
+Mail
+Telecommunication
+Internet
+Radio
+Telephone
+Mobile phone
+Video
+Television
+Computer science
+Computer
+Artificial intelligence
+Cryptography
+Electronics
+Electric light
+Integrated circuit
+Semiconductor device
+Rocket
+Satellite
+Space exploration
+Spaceflight
+Space station
+Transport
+Aircraft
+Bicycle
+Car
+Rail transport
+Ship
+Navigation
+Compass
+Map
+Radar
+Calendar
+Clock
+Fortification
+Infrastructure
+Bridge
+Canal
+Dam
+Road
+Concrete
+Glass
+Masonry
+Metallurgy
+Natural rubber
+Paper
+Plastic
+Textile
+Wood
+Camera
+Laser
+Lens
+Microscope
+Telescope
+Mathematics
+Algorithm
+Mathematical proof
+Set (mathematics)
+Function (mathematics)
+Combinatorics
+Number
+Real number
+E (mathematical constant)
+Pi
+Fraction
+Integer
+0
+Natural number
+Complex number
+Number theory
+Prime number
+Algebra
+Equation
+Variable (mathematics)
+Linear algebra
+Mathematical analysis
+Calculus
+Infinity
+Limit (mathematics)
+Series (mathematics)
+Arithmetic
+Addition
+Subtraction
+Multiplication
+Division (mathematics)
+Exponentiation
+Logarithm
+Nth root
+Geometry
+Angle
+Trigonometry
+Area
+Volume
+Dimension
+Line (geometry)
+Plane (geometry)
+Shape
+Conic section
+Circle
+Polygon
+Triangle
+Polyhedron
+Sphere
+Topology
+Probability
+Statistics

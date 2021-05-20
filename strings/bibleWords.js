@@ -91,6 +91,11 @@ class BibleWords {
                 continue;                
             }
 
+            // Screen out to a small number of results.
+            if (Math.random() > 0.04) {
+                continue;
+            }
+
             newDictionary[word] = true;
         }
 
