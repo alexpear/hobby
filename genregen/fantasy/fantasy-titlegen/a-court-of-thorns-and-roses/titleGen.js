@@ -20,36 +20,57 @@ class TitleGen {
             kingdom
             cult
             clan
+            peerage
+            college
+            university
+            pedigree
+            inheritance
+            gift
 
             palace
+            garden
             city
             castle
+            fortress
             tower
             tomb
             prison
             chapel
             vault
+            staircase
+            room
+            chamber
             temple
+            labyrinth
 
             king
             queen
             empress
+            caliph
             princess
             prince
             lady
             lord
-            daughters
-            sons
+            tyrant
+            daughter
+            son
             girl
             boy
             child
-            children
             legion
+
             champion
             knight
+            warrior
+            conqueror
             merchant
             master
+            oracle
             weaver
+            servant
+            worshiper
+            acolyte
+            mastermind
 
             god 
             goddess
@@ -63,6 +84,8 @@ class TitleGen {
             island
             land
             world
+            planet
+            universe
             mountain
             forest
 
@@ -74,27 +97,38 @@ class TitleGen {
             throne
 
             path
+            road
             life
+            lifetime
+            tyranny
             riddle
-            essense
+            interrogation
+            aspect
             marriage
             wisdom
             knowledge
             game
             gauntlet
+            test
             tournament
             dance
             music
-            constancy
-            immutability
+
             tragedy
+            comedy
+            fate
+            curse
+            plague
             triumph
-            glory
             war
             battle
             fall
             conquest
+            rescue
+            harvest
+            history
             story
+            theatre
             myth
             legend
             creation
@@ -107,8 +141,6 @@ class TitleGen {
             ecstasy
             sorrow
             terror
-            mercy
-            grace
             love
             fury
             beauty
@@ -128,6 +160,7 @@ class TitleGen {
             beauty
             fortune
             omens
+            doom
             dreams
             danger
             perils
@@ -136,9 +169,13 @@ class TitleGen {
 
             wings
             feathers
+            fur
             fingers
             teeth
             claws
+            talons
+            fangs 
+            hooves
             horns
             antlers
             bone
@@ -146,6 +183,7 @@ class TitleGen {
             skulls
             skeletons
             eyes
+            hearts
             heartbeats
             blood
             tears
@@ -178,6 +216,8 @@ class TitleGen {
 
             wax
             silk
+            spiderwebs
+            cobwebs
             cotton
             linen
             lace
@@ -187,16 +227,21 @@ class TitleGen {
 
             spiders
             scorpions
+            sharks
+            leeches
             salamanders
+            newts
             snakes
+            serpents
             dragons
             birds
+            songbirds
             ravens
             crows
             doves
             eagles
-            monsters
-            beasts
+            falcons
+            hawks
 
             lions
             wolves
@@ -206,6 +251,19 @@ class TitleGen {
             cats
             dogs
             horses
+            asses
+            apes
+
+            monsters
+            beasts
+            gargoyles
+            spirits
+            ghosts
+            wraiths
+            phantoms
+            demons
+            devils
+            angels
 
             silver
             gold
@@ -215,7 +273,8 @@ class TitleGen {
             iron
             stone
             marble
-            mercury
+            crystal
+            quicksilver
 
             jewels
             gems
@@ -223,58 +282,84 @@ class TitleGen {
             emeralds
             sapphires
             rubies
+            amethyst
             amber
             pearls
+            jade
             opal
+            treasure
 
             hills
-            battlements
+            precipices
+            caverns
             spires
+            ships
+            galleons
 
             daggers
             knives
+            blades
             scimitars
+            scythes
             spears
             arms
+            fists
             poison
+            potions
             venom
             arrows
             crossbows
             needles
             thimbles
             veils
+            earrings
+            brooches
             crowns
             gloves
             chains
             manacles
 
+            coins
             keys
             locks
             doors
             windows
+            battlements
             candles
+            rope
             lanterns
+            trumpets
+            kettle-drums
+            violins
             hallways
+            alleys
             tunnels
-            stairs
+            streets
             shrines
+            fountains
             statues
             mirrors
+            puppets
 
             flames
             fire
             water
+            tides
             soil
             air
+            wind
 
             light
             shadow
             darkness
+            oblivion
             void
             twilight
             dawn
             dusk
             starlight
+            moonlight
+            stars 
 
             sky
             ice
@@ -287,24 +372,40 @@ class TitleGen {
             lightning
             storms
             hurricanes
+            vortices
             earthquakes
 
             spells
 
             song
+            ballad
             whispers
             screams
             wails
+            howling
             sounds
             silence
             perfume
 
             secrets
             lies
+            treachery
+            treason
             truth
             promises
+            cruelty
+            valor
+            honor
+            flattery
             words
+            questions
+            symbols
+            footprints
             kisses
+
+            constancy
+            immutability
+            invisibility
 
             hopes
             desire
@@ -312,41 +413,66 @@ class TitleGen {
             horror
             terror
             fear
-            mercy
-            grace
+            dread
+            madness
             love
             hatred
+            malice
             fury
             sorrow
             rage
             wrath
+
             glory
+            piety
+            dignity
+            honesty
+            confusion
+            mercy
+            grace
+            sin
+            transgression
+            arson
+            murder
+            service
 
             guilds
 
-            emperors
             sisters
             brothers
             wives
             lovers
+            friends
+            enemies
+            rivals
+            peers
+
+            emperors
+            sultans
+            sailors
             thieves
             corpses
             mortals
             killers
+            wanderers
+            scavengers
+            marauders
+            criminals
+            sinners
+            nobility
+            heroes
 
             witches
             wizards
             mages
             sorcerers
             alchemists
+            vampires
             giants
             titans
+            goblins
+            gremlins
             elves
-            ghosts
-            wraiths
-            demons
-            devils
-            angels
         `;
 
         const FIRST_ONLY = `
@@ -355,15 +481,35 @@ class TitleGen {
 
         const SECOND_ONLY = `
             damnation
+            the Lost
+            the Forgotten
+            the Damned
+            the Dead
             despair
+            evil
+            annihilation
         `;
 
         const UNUSED = `
+            springtime
+            summer
+            autumn
+            winter
             keep
             fort
-            the lost
-            the forgotten
-            the damned
+            clash
+            nature
+            essense
+            clues
+            gate
+            quest
+            voyage
+            journey
+            crusade
+            ministry
+            pyramids
+            cubes
+            sphere
         `;
 
         const nouns = this.cleanArray(NOUNS);
@@ -377,9 +523,13 @@ class TitleGen {
     }
 
     next () {
-        const article = _.sample(TitleGen.articles);
+        let article = _.sample(TitleGen.articles);
         const subject = _.sample(TitleGen.subjects);
         const noun1 = _.sample(TitleGen.firstNouns);
+
+        if (article === 'A' && 'AEIOU'.includes(subject[0])) {
+            article = 'An';
+        }
 
         // console.log(`noun1 is ${noun1}`)
 
@@ -397,7 +547,17 @@ class TitleGen {
         return rawStr.trim()
             .split('\n')
             .map(
-                s => Util.capitalized(s.trim())
+                s => {
+                    s = s.trim();
+                    if (s.includes(' ')) {
+                        if (s.startsWith('the ')) {
+                            // 'the' phrases need to do their own capitalization currently.
+                            return s;
+                        }
+                    }
+
+                    return Util.capitalized(s.trim())
+                }
             )
             .filter(
                 s => s
