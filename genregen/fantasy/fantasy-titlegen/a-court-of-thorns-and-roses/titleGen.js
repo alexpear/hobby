@@ -571,7 +571,7 @@ class TitleGen {
         console.log(`  ${this.next()}\n`);
     }
 
-    /* LATER: Print vertically with centered text, like a book cover:
+    /* LATER: Could print vertically with centered text, like a book cover:
 
              a
            CHILD
@@ -587,21 +587,59 @@ class TitleGen {
              &
            ANGELS
 
-            the 
+            the
            ORACLE
-             of 
+             of
            FLAMES
              &
             FUR
+
+        The
+        ORACLE
+        of
+        FLAMES
+        &
+        FUR
+
+        THE
+        ORACLE
+        OF
+        FLAMES
+        &
+        FUR
+
+        The
+        Oracle
+        of
+        Flames
+        &
+        the
+        Forgotten
     */
+
+    printVertical () {
+        const title = this.next();
+
+        const lines = title.toUpperCase()
+            .split(' ')
+            .map(
+                word => '  ' + word
+            );
+
+        lines[0] = lines[0].toLowerCase();
+        lines[2] = lines[2].toLowerCase();
+
+        console.log(lines.join('\n') + '\n');
+    }
 
     static test () {
         console.log();
 
         const gen = new TitleGen();
 
-        for (let i = 0; i < 21; i++) {
-            gen.printFancyNext();
+        // for (let i = 0; i < 21; i++) {
+        for (let i = 0; i < 6; i++) {
+            gen.printVertical();
         }
     }
 }
