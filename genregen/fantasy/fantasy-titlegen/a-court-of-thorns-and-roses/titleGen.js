@@ -105,6 +105,10 @@ class TitleGen {
             interrogation
             aspect
             marriage
+            wedding
+            wedlock
+            bride
+            husband
             wisdom
             knowledge
             game
@@ -122,7 +126,6 @@ class TitleGen {
             triumph
             war
             battle
-            fall
             conquest
             rescue
             harvest
@@ -440,7 +443,6 @@ class TitleGen {
 
             sisters
             brothers
-            wives
             lovers
             friends
             enemies
@@ -510,6 +512,7 @@ class TitleGen {
             pyramids
             cubes
             sphere
+            wives
         `;
 
         const nouns = this.cleanArray(NOUNS);
@@ -564,20 +567,46 @@ class TitleGen {
             );
     }
 
+    printFancyNext () {
+        console.log(`  ${this.next()}\n`);
+    }
+
+    /* LATER: Print vertically with centered text, like a book cover:
+
+             a
+           CHILD
+            of 
+           OMENS
+             &
+         STARLIGHT
+
+            the
+         WORSHIPER
+            of 
+           OMENS
+             &
+           ANGELS
+
+            the 
+           ORACLE
+             of 
+           FLAMES
+             &
+            FUR
+    */
+
     static test () {
+        console.log();
+
         const gen = new TitleGen();
 
-        console.log();
-        console.log('  ' + gen.next());
-        console.log();
+        for (let i = 0; i < 21; i++) {
+            gen.printFancyNext();
+        }
     }
 }
 
 module.export = TitleGen;
 
 TitleGen.test();
-
-
-
-
 
