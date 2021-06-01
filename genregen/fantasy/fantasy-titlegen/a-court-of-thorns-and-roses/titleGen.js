@@ -197,6 +197,7 @@ class TitleGen {
             leaves
             branches
             brambles
+            briars
             bark
             wood
             ebony
@@ -262,6 +263,7 @@ class TitleGen {
             gargoyles
             spirits
             ghosts
+            souls
             wraiths
             phantoms
             demons
@@ -298,6 +300,7 @@ class TitleGen {
             spires
             ships
             galleons
+            sails
 
             daggers
             knives
@@ -412,6 +415,7 @@ class TitleGen {
 
             hopes
             desire
+            intellect
             memories
             horror
             terror
@@ -452,6 +456,8 @@ class TitleGen {
             emperors
             sultans
             sailors
+            soldiers
+            archers
             thieves
             corpses
             mortals
@@ -473,6 +479,7 @@ class TitleGen {
             giants
             titans
             goblins
+            mermaids
             gremlins
             elves
         `;
@@ -638,7 +645,7 @@ class TitleGen {
         const gen = new TitleGen();
 
         // for (let i = 0; i < 21; i++) {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 5; i++) {
             gen.printVertical();
         }
     }
