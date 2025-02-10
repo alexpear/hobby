@@ -2,7 +2,7 @@
 
 '''
 never mind the below, unicode saves! 
-chr(0x2588)
+unichr(0x2588)
 
 good chars to use for displaying grid
 0 # @ X O = | H - 8 + 
@@ -11,20 +11,23 @@ would be nice if could use extended ascii like a solid rect but idk how to expre
 
 import random 
 from pprint import pprint
+import StringIO
 import math 
 import sys
 
 def gridstr(grid):
-  outstr = ''
+  outstr = StringIO.StringIO()
   for i in range(len(grid)):
-    outstr += '  '
+    outstr.write('  ')
     for j in range(len(grid[i])):
       if grid[i][j]:
-        outstr += chr(0x2588) + chr(0x2588)
+        outstr.write(unichr(0x2588) + unichr(0x2588))
       else:
-        outstr += '  '
-    outstr += '\n'
-  return outstr
+        outstr.write('  ')
+    outstr.write('\n')
+  str = outstr.getvalue()
+  outstr.close()
+  return str
 
 def rorschach(rows, cols):
   grid = [ [False for i in range(cols)] for j in range(rows)]

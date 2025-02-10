@@ -4,6 +4,7 @@ import rorschach
 #should make rorscach-specific stuff in separate file i know. 
 
 from random import choice
+import StringIO
 
 class Result:
   def __init__(self, words):
